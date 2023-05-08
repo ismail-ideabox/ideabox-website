@@ -1,4 +1,4 @@
-import { images } from "../../../public/ourworkdetails";
+import { images } from "../../../public/ourWorkDetails";
 
 const workDetail = [
   {
