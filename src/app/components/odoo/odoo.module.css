@@ -1,0 +1,412 @@
+.odoo_partners {
+  background: #ededed;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  scroll-snap-align: center;
+}
+
+.odoo_content {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 60px;
+  margin: 0 auto;
+}
+
+.odoo {
+  width: 30%;
+}
+
+.odoo h2 {
+  color: #9c5789;
+  font-size: 38px;
+  letter-spacing: -2px;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.odoo img {
+  width: 80%;
+  height: auto;
+}
+
+.odoo p {
+  font-size: 14px;
+  color: #636363;
+  opacity: 70%;
+  margin-top: 20px;
+  /* letter-spacing: 1px; */
+  /* font-weight: 600; */
+}
+
+.odoo_crm_container {
+  display: flex;
+  width: 55%;
+  gap: 10%;
+}
+
+.odoo_crm {
+  width: 45%;
+}
+
+.odoo_crm_2 {
+  width: 45%;
+}
+
+.odoo_crm_para {
+  transition: all 0.2s ease;
+  cursor: default;
+}
+
+.odoo_crm_para:hover {
+  color: #9c5789;
+  transform: scale(1.05);
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
+.odoo_crm p {
+  max-width: 250px;
+  margin-bottom: 18px;
+  color: #636363;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.odoo_stats_container {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 60px;
+}
+
+.odoo_stats_image {
+  width: 30%;
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: rgba(156, 87, 137, 0.87);
+}
+
+.odoo_stats_image:hover .overlay {
+  opacity: 0.7;
+}
+
+.zoom {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.odoocomponent {
+  width: 100%;
+  height: auto;
+}
+
+.odoo_stats {
+  width: 55%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  height: fit-content;
+  row-gap: 40px;
+}
+
+.odoo_stats_content,
+.odoo_stats_content_1 {
+  width: 33%;
+  position: relative;
+}
+
+.odoo_stats_content::before,
+.odoo_stats_content_1::before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  right: 3.5vw;
+  top: 0;
+  background-color: #acaaa6;
+  transform: translateX(-50%);
+}
+
+.odoo_stats_content_2 {
+  width: 33%;
+}
+
+.odoo_stats_content_3 {
+  width: 33%;
+}
+
+.purple_h2 {
+  font-size: 65px;
+  color: #9c5789;
+  font-family: var(--secondary-font);
+  font-weight: 600;
+}
+
+.green_h2 {
+  font-size: 65px;
+  color: #18a09c;
+  font-family: var(--secondary-font);
+  font-weight: 600;
+}
+
+.odoo_stats_content p,
+.odoo_stats_content_1 p,
+.odoo_stats_content_2 p,
+.odoo_stats_content_3 p {
+  color: #8a8a8a;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.odoo_crm p:nth-child(1) svg {
+  display: none;
+}
+
+.odoo_crm_container_mob {
+  display: none;
+}
+
+.odoo_crm_container_mob_body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s;
+  position: absolute;
+  width: 100%;
+  z-index: 9999;
+  background-color: #fff;
+}
+
+.odoo_crm_container_mob p {
+  padding: 8px 20px;
+  background-color: #fff;
+  border-radius: 2px;
+  font-size: 12px;
+  color: #9c5789;
+  font-weight: 500;
+}
+
+.odoo_crm_container_mob {
+  position: relative;
+}
+
+.odoo_crm_container_mob_body_active {
+  max-height: 282px;
+  overflow-y: auto;
+}
+
+.odoo_crm_container_mob p:nth-child(1) svg {
+  font-size: 16px;
+  transition: all 0.3s;
+}
+
+.odoo_crm_container_mob_active svg {
+  transform: rotate(180deg);
+}
+
+.odoo_crm_container_mob p:nth-child(1) {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.odoo_crm_container_mob p:hover {
+  transform: none;
+  text-decoration: none;
+}
+@media screen and (max-width: 1466px) {
+  .odoo_stats_content::before,
+  .odoo_stats_content_1::before {
+    right: 2vw;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .odoo_stats_content::before,
+  .odoo_stats_content_1::before {
+    right: 1vw;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .purple_h2 {
+    font-size: 50px;
+  }
+  .green_h2 {
+    font-size: 50px;
+  }
+  .odoo_stats_content::before,
+  .odoo_stats_content_1::before {
+    right: 2vw;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .green_h2,
+  .purple_h2 {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 894px) {
+  .odoo_crm p {
+    margin-bottom: 25px;
+  }
+  .odoo_stats_content::before,
+  .odoo_stats_content_1::before {
+    right: 1vw;
+  }
+}
+@media screen and (max-width: 800px) {
+  .odoo_stats_content p,
+  .odoo_stats_content_1 p,
+  .odoo_stats_content_2 p,
+  .odoo_stats_content_3 p {
+    font-size: 11px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .odoo_stats_content::before {
+    right: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .odoo_crm p {
+    margin-bottom: 25px;
+    font-size: 13px;
+  }
+
+  .odoo p {
+    /* font-size: 12px; */
+    margin-top: 10px;
+  }
+  .odoo_stats_content p,
+  .odoo_stats_content_1 p,
+  .odoo_stats_content_2 p,
+  .odoo_stats_content_3 p {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .odoo_partners {
+    min-height: auto;
+  }
+  .odoo_content {
+    padding-top: 30px;
+  }
+
+  .odoo_content {
+    flex-direction: column;
+  }
+
+  .odoo {
+    width: 100%;
+  }
+
+  .odoo h2 {
+    margin-bottom: 20px;
+    width: 40%;
+  }
+
+  /*  */
+
+  .odoo p {
+    /* max-width: 90%; */
+    margin-bottom: 25px;
+  }
+
+  .odoo_crm_container {
+    display: none;
+  }
+
+  .odoo_crm_container_mob {
+    display: block;
+  }
+
+  .odoo_crm {
+    width: 100%;
+  }
+
+  .odoo_crm p {
+    max-width: inherit;
+  }
+
+  .odoo_stats_container {
+    flex-direction: column;
+    padding-bottom: 30px;
+  }
+
+  .odoo_stats_image {
+    width: 100%;
+    order: 2;
+  }
+
+  .odoo_stats {
+    width: 100%;
+    margin: 20px 0;
+    row-gap: 20px;
+  }
+
+  .purple_h2 {
+    font-size: 50px !important;
+  }
+
+  .green_h2 {
+    font-size: 50px !important;
+  }
+
+  .odoo_stats_content::before {
+    width: 0;
+  }
+
+  .odoo_stats_content_1::before {
+    width: 0;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .purple_h2 {
+    font-size: 40px !important;
+  }
+
+  .green_h2 {
+    font-size: 40px !important;
+  }
+}
+
+@media screen and (max-width: 345px) {
+  .odoo_stats_content p {
+    /* font-size: 12px; */
+  }
+
+  .odoo_stats_content_1 p {
+    font-size: 12px;
+  }
+
+  .odoo_stats_content_2 p {
+    font-size: 12px;
+  }
+
+  .odoo_stats_content_3 p {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .odoo_partners {
+    scroll-snap-align: initial;
+  }
+}

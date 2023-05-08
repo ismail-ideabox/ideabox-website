@@ -1,0 +1,283 @@
+.blogsDetails h4 {
+  font-size: 30px;
+  color: #ff5f36;
+  padding: 20px 0;
+}
+.blogs_bg {
+  background: #ededed;
+}
+.marketing {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  width: 100%;
+  padding: 120px 0 50px;
+}
+
+.marketing .content {
+  width: 40%;
+  color: #a02021;
+}
+
+.marketing .img {
+  width: 60%;
+}
+
+.marketing .content h2 {
+  color: #a02021;
+  font-size: 40px;
+  font-weight: 500;
+}
+
+.marketing .content p {
+  color: #636363;
+  font-size: 22px;
+  line-height: 25px;
+}
+
+.marketing .content .date {
+  color: #636363;
+  font-size: 15px;
+  padding: 20px 0;
+  letter-spacing: 5px;
+  text-decoration: underline;
+}
+
+.marketing .img img {
+  width: 100%;
+  height: auto;
+}
+
+.brandAwareness {
+  padding: 50px 0;
+}
+
+.brandAwareness h4 {
+  width: 25ch;
+}
+
+.brandAwareness p {
+  color: #636363;
+  font-size: 20px;
+}
+
+.strategies {
+  padding: 20px 0;
+}
+
+.strategies h4 {
+  width: 50ch;
+  padding: 20px 0 70px;
+}
+
+.strategies p {
+  color: #636363;
+  font-size: 20px;
+  padding: 50px 0;
+}
+
+.strategies .strategiesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 90px;
+  grid-row-gap: 30px;
+}
+
+.strategies .strategiesGrid .innerContent h5 {
+  color: #a02021;
+  font-size: 23px;
+  padding: 10px 0;
+  font-weight: 500;
+  letter-spacing: -1px;
+}
+
+.strategies .strategiesGrid .innerContent p {
+  color: #636363;
+  font-size: 18px;
+  padding: 0;
+}
+
+.customerEngagement {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  width: 100%;
+  padding: 50px 0;
+}
+
+.customerEngagement .customerContent {
+  width: 60%;
+}
+
+.customerEngagement .customerContent h4 {
+  width: 25ch;
+}
+
+.customerEngagement .customerContent p {
+  font-size: 20px;
+  color: #636363;
+}
+
+.customerEngagement .engagementImage {
+  width: 40%;
+}
+
+.customerEngagement .engagementImage img {
+  width: 100%;
+  height: auto;
+}
+
+.costEffective {
+  padding: 20px 0;
+}
+
+.costEffective h4 {
+  width: 20ch;
+}
+
+.costEffective p {
+  font-size: 20px;
+  color: #636363;
+}
+
+.costEffective .effectiveContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 90px;
+  grid-row-gap: 30px;
+  padding: 15px 0;
+}
+
+.costEffective .costImage {
+  padding: 50px 0;
+}
+
+.costEffective .costImage img {
+  width: 100%;
+  height: auto;
+}
+.moreBlogs {
+  width: 80%;
+  margin: 0 auto;
+}
+.moreBlogs h4 {
+  font-size: 30px;
+  color: var(--primary-heading-color);
+  padding: 20px 0;
+}
+.blogs_padding {
+  background: #ededed;
+  padding: 80px 0;
+}
+
+@media only screen and (max-width: 950px) {
+  .marketing {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .marketing .content {
+    width: 100%;
+    color: #a02021;
+  }
+
+  .marketing .img {
+    width: 100%;
+  }
+
+  .strategies h4 {
+    width: 100%;
+  }
+
+  .strategies .strategiesGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 50px;
+    grid-row-gap: 30px;
+  }
+
+  .customerEngagement {
+    display: flex;
+    gap: 50px;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 50px 0;
+  }
+
+  .customerEngagement .customerContent {
+    width: 100%;
+  }
+
+  .customerEngagement .engagementImage {
+    width: 100%;
+  }
+
+  .costEffective .effectiveContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 60px;
+    grid-row-gap: 30px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .marketing {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .marketing .content {
+    width: 100%;
+    color: #a02021;
+  }
+
+  .marketing .img {
+    width: 100%;
+  }
+
+  .strategies h4 {
+    width: 100%;
+  }
+
+  .strategies .strategiesGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .customerEngagement {
+    display: flex;
+    gap: 50px;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 50px 0;
+  }
+
+  .customerEngagement .customerContent {
+    width: 100%;
+  }
+
+  .customerEngagement .engagementImage {
+    width: 100%;
+  }
+
+  .costEffective .effectiveContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .costEffective h4 {
+    width: 100%;
+  }
+
+  .customerEngagement .customerContent h4 {
+    width: 100%;
+  }
+
+  .brandAwareness h4 {
+    width: 100%;
+  }
+}

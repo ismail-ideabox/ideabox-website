@@ -1,0 +1,90 @@
+.testimonials_section {
+  background-color: var(--primary-color);
+  min-height: 100vh;
+  place-items: center;
+  scroll-snap-align: center;
+}
+
+.testimonials_container {
+  padding: 60px 0;
+}
+
+.testimonial_heading {
+  text-align: right;
+}
+
+.review_container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  margin-top: 60px;
+}
+
+.testimonial_review {
+  /* width: 32%; */
+  padding: 25px;
+  border: 5px solid var(--secondary-color);
+  border-radius: 20px;
+}
+
+.review_person {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.person_image {
+  width: 20%;
+  margin-right: 10px;
+}
+
+.person_image img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.person_details {
+  padding-left: 10px;
+}
+
+.person_name h5 {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: var(--secondary-font);
+  line-height: 1.2;
+}
+
+.person_position h5 {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: var(--secondary-font);
+}
+
+.person_company h5 {
+  color: #fd9a36;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: var(--secondary-font);
+  text-decoration: underline;
+  line-height: 1.2;
+}
+
+.review_content p {
+  color: #fff;
+  font-size: 16px;
+  font-family: var(--secondary-font);
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 800px) {
+  .testimonials_section {
+    scroll-snap-align: initial;
+  }
+}
+@media screen and (max-width: 600px) {
+  .testimonials_section {
+    min-height: auto;
+  }
+}

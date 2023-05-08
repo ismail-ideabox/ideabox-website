@@ -1,0 +1,144 @@
+.ourpeople_section {
+  min-height: 100vh;
+  background: var(--primary-color);
+  place-items: center;
+  scroll-snap-align: center;
+}
+
+.ourpeople_container {
+  padding: 60px 0;
+}
+
+.ourpeople_container h3,
+.leaderboard h2 {
+  text-align: right;
+}
+
+.founder_container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.founder_content {
+  width: 40%;
+}
+
+.founder_name h2 {
+  font-family: var(--secondary-font);
+  padding-bottom: 5px;
+  font-weight: 600;
+}
+
+.founder_ceo h4 {
+  font-family: var(--secondary-font);
+  color: #fff;
+  opacity: 70%;
+  font-size: 20px;
+  padding-bottom: 15px;
+}
+
+.founder_flags {
+  padding-bottom: 20px;
+}
+
+.founder_flags img {
+  width: 150px;
+  height: auto;
+}
+
+.founder_para p {
+  font-size: 16px;
+  color: #fff;
+  opacity: 70%;
+  padding-bottom: 20px;
+}
+
+.founder_work_logo img {
+  width: 90%;
+  height: auto;
+  display: block;
+}
+
+.founder_work_logo a {
+  margin-top: 50px;
+}
+
+.founder_image {
+  width: fit-content;
+  position: relative;
+}
+
+.founder_linkedin {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: rgb(207, 74, 40);
+}
+
+.founder_image:hover .founder_linkedin {
+  opacity: 0.7;
+}
+
+.founder_linkedin_icon {
+  color: white;
+  font-size: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.founder_image img {
+  width: 100%;
+  object-fit: cover;
+  height: auto;
+  max-width: 600px;
+  margin-left: auto;
+  display: block;
+}
+
+@media screen and (max-width: 900px) {
+  .founder_container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .founder_image {
+    order: 1;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 400px;
+  }
+
+  .founder_content {
+    width: 100%;
+    order: 2;
+  }
+
+  .founder_work_logo img {
+    width: 100%;
+  }
+
+  .founder_work_logo a {
+    margin-top: 30px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .ourpeople_container {
+    padding: 30px 0;
+  }
+}
+@media screen and (max-width: 800px) {
+  .ourpeople_section {
+    scroll-snap-align: initial;
+  }
+}

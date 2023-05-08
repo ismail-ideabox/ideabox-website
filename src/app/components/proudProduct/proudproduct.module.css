@@ -1,0 +1,163 @@
+.proudproduct_section {
+  min-height: 100vh;
+  background-image: url("../../../../public/saloonPlus/saloonbg.png");
+  display: grid;
+  background-size: cover;
+  background-repeat: no-repeat;
+  place-items: center;
+  scroll-snap-align: center;
+}
+
+.proudproduct_container {
+  margin: 0 auto;
+  padding: 60px 0;
+}
+
+.proudproduct_heading h2 {
+  margin-bottom: 20px;
+}
+
+.saloonplus_content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.saloonplus_image {
+  width: 40%;
+}
+
+.saloonplus_image P {
+  color: #fff;
+  opacity: 70%;
+  font-size: 16px;
+  /* font-weight: 500; */
+}
+
+.saloonplus_para {
+  width: 50%;
+}
+
+.saloonplus_para p {
+  color: #fff;
+  font-size: 18px;
+  /* font-weight: 500; */
+}
+
+.saloonplus_image img {
+  width: 100%;
+  margin-bottom: 30px;
+  height: auto;
+}
+
+.modules_ul {
+  margin-top: 30px;
+}
+
+.modules_ul li {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  display: inline-block;
+  margin: 10px 0;
+  position: relative;
+  padding: 0 25px 0 0;
+}
+
+.modules_ul li:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  right: 12.5px;
+  top: 0;
+  width: 1px;
+  height: 100%;
+  background-color: #fff;
+}
+
+.modules_ul li:nth-child(1) svg {
+  display: none;
+}
+
+.software_modules_mob {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .proudproduct_container {
+    padding: 30px 0;
+  }
+
+  .software_modules {
+    display: none;
+  }
+
+  .software_modules_mob {
+    display: block;
+  }
+
+  .software_modules_mob li::before {
+    display: none;
+  }
+
+  .software_modules_mob {
+    position: relative;
+  }
+
+  .software_modules_mob li:nth-child(1) svg {
+    display: inline-block;
+    color: #acaaa6;
+    font-size: 16px;
+    transition: all 0.3s;
+  }
+  .software_modules_mob_active li:nth-child(1) svg {
+    transform: rotate(180deg);
+  }
+
+  .software_modules_mob_body {
+    max-height: 0;
+    transition: max-height 0.3s;
+    position: absolute;
+    width: 100%;
+    z-index: 9999;
+    overflow: hidden;
+  }
+
+  .software_modules_mob_body_active {
+    max-height: 300px;
+  }
+
+  .software_modules_mob li:nth-child(1) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .software_modules_mob li {
+    display: block;
+    font-size: 12px;
+    padding: 10px 20px;
+    background-color: #707070;
+    font-weight: 500;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .saloonplus_content {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .saloonplus_image,
+  .saloonplus_para {
+    width: 100%;
+  }
+
+  .saloonplus_para p {
+    opacity: 75%;
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .proudproduct_section {
+    scroll-snap-align: initial;
+  }
+}

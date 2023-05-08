@@ -1,0 +1,269 @@
+.header {
+  padding-top: 25px;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 99;
+  scroll-snap-align: center;
+}
+
+.header .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: #dcdddf;
+  font-size: 30px;
+  font-weight: 500;
+  letter-spacing: -1px;
+  font-family: var(--primary-font);
+}
+
+.social_icons {
+  display: flex;
+  gap: 13px;
+}
+
+.social_icons li a svg {
+  color: #dcdddf;
+  font-size: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.social_icons li a:hover svg {
+  color: #fff;
+}
+
+.menu_btn {
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu_btn:hover li {
+  background: #ff5f36;
+}
+
+.menu_btn li {
+  margin-bottom: 5px;
+  width: 28px;
+  height: 3px;
+  background: var(--secondary-color);
+  transition: all 0.3s ease-out;
+}
+
+.menu_btn_white li {
+  background: #dcdddf;
+}
+
+.menu_btn_white:hover li {
+  background-color: #fff;
+}
+
+.activeCloseBtn {
+  z-index: 9999999;
+  position: fixed;
+  right: 10%;
+}
+
+.menu_btn_active li:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+  background: #dcdddf;
+}
+
+.menu_btn_active li:nth-child(2) {
+  opacity: 0;
+}
+
+.menu_btn_active li:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
+  background: #dcdddf;
+}
+
+.menu {
+  position: fixed;
+  top: -150%;
+  width: 100%;
+  height: 100vh;
+  background: var(--secondary-color);
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  justify-content: space-between;
+  z-index: 9999;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu_active {
+  top: 0%;
+}
+
+.nav_link {
+  font-size: 40px;
+  color: #dcdddf;
+  font-weight: 500;
+  line-height: 1.7;
+  font-family: var(--primary-font);
+}
+
+.menu_nav {
+  width: 80%;
+  margin: 5% auto;
+}
+
+.menu_active .menu_nav li a {
+  color: var(--secondary-color);
+  animation-name: example;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  position: relative;
+  animation-delay: 200ms;
+  opacity: 0;
+}
+
+.menu_active .menu_nav li:nth-child(2) a {
+  animation-delay: 400ms;
+}
+
+.menu_active .menu_nav li:nth-child(3) a {
+  animation-delay: 600ms;
+}
+
+.menu_active .menu_nav li:nth-child(4) a {
+  animation-delay: 800ms;
+}
+
+.menu_active .menu_nav li:nth-child(5) a {
+  animation-delay: 1000ms;
+}
+
+@keyframes example {
+  from {
+    top: -50px;
+  }
+
+  to {
+    opacity: 1;
+    top: 0;
+    color: #dcdddf;
+  }
+}
+
+.contact_block {
+  position: absolute;
+  right: 10%;
+  bottom: 5%;
+
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  animation-delay: 900ms;
+  opacity: 0;
+}
+
+.menu_active .contact_block {
+  animation-name: example5;
+}
+
+@keyframes example5 {
+  from {
+    bottom: 0%;
+  }
+
+  to {
+    opacity: 1;
+    bottom: 5%;
+
+    color: #dcdddf;
+  }
+}
+
+@keyframes exampleMob {
+  from {
+    bottom: 0%;
+  }
+
+  to {
+    opacity: 1;
+    bottom: 10%;
+
+    color: #dcdddf;
+  }
+}
+
+.contact_block_social {
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+.contact_block_social a svg {
+  font-size: 45px;
+  color: #dcdddf;
+  margin: 0 15px;
+}
+
+.contact_details h3 {
+  font-size: 28px;
+  color: #dcdddf;
+  text-align: right;
+  font-weight: 500;
+  line-height: 1.3;
+  transition: all 0.5s ease-out;
+  cursor: pointer;
+}
+
+.contact_details h3:hover {
+  /* color: #E74038; */
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+  .header .nav_link {
+    font-size: 32px;
+  }
+
+  .header .contact_block h3 {
+    font-size: 22px;
+  }
+
+  .contact_block_social a svg {
+    font-size: 36px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .header {
+    padding-top: 15px;
+  }
+
+  .activeCloseBtn {
+    right: 5%;
+  }
+
+  .header .menu_nav {
+    margin-top: 50px;
+  }
+
+  .header .nav_link {
+    font-size: 28px;
+  }
+
+  .contact_block_social {
+    margin-bottom: 10px;
+  }
+
+  .contact_block_social a svg {
+    margin-right: 0px;
+  }
+
+  .menu_active .contact_block {
+    animation-name: exampleMob;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .header {
+    scroll-snap-align: initial;
+  }
+}

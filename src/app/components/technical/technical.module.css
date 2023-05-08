@@ -1,0 +1,160 @@
+.tech_section {
+  background: #b83524;
+  min-height: 100vh;
+  place-items: center;
+  scroll-snap-align: center;
+}
+
+.technical_section {
+  display: flex;
+  flex-direction: column;
+  padding: 60px 0;
+}
+
+.be_spoke {
+  width: 40%;
+}
+
+.technical_services {
+  text-align: right;
+}
+
+.bespoke_things {
+  display: flex;
+  justify-content: space-between;
+}
+
+.gifs_inner {
+  width: 25%;
+}
+
+.gifs_inner img {
+  max-width: 110px;
+  height: auto;
+}
+
+.be_spoke p {
+  color: #fff;
+  font-weight: 400;
+  /* font-size: 18px; */
+  opacity: 70%;
+}
+
+.things_we_do {
+  width: 35%;
+}
+
+.things_we_do h2 {
+  font-weight: 500;
+  font-size: 38px;
+  text-align: right;
+}
+
+.gifs_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 30px;
+  row-gap: 20px;
+}
+
+.gifs_inner p {
+  color: #fff;
+  max-width: 150px;
+  font-size: 15px;
+  font-weight: 500;
+  margin: auto auto;
+}
+
+@media (max-width: 1100px) {
+  .be_spoke {
+    width: 50%;
+  }
+
+  .things_we_do {
+    width: 35%;
+  }
+
+  .gifs_inner {
+    width: 30%;
+    display: grid;
+    place-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .bespoke_things {
+    flex-direction: column;
+  }
+
+  .things_we_do h2,
+  .technical_services {
+    text-align: left;
+  }
+
+  .be_spoke {
+    order: 2;
+    width: 100%;
+  }
+
+  .gifs_inner img {
+    max-width: 100px;
+  }
+
+  .gifs_container {
+    column-gap: 20px;
+  }
+
+  .things_we_do {
+    margin-bottom: 20px;
+    width: 60%;
+  }
+
+  .things_we_do {
+    order: 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .tech_section {
+    min-height: auto;
+  }
+  .technical_section {
+    padding: 40px 0;
+  }
+
+  .be_spoke p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 500px) {
+  .things_we_do {
+    width: 80%;
+  }
+
+  .gifs_container {
+    margin-top: 30px;
+  }
+
+  .gifs_inner p {
+    font-size: 10px;
+    font-weight: 400;
+  }
+
+  .gifs_inner img {
+    max-width: 70px;
+  }
+
+  .gifs_container {
+    column-gap: 10px;
+    row-gap: 20px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .tech_section {
+    scroll-snap-align: initial;
+  }
+}

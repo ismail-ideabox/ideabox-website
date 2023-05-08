@@ -1,0 +1,38 @@
+.grid {
+  display: grid;
+}
+
+.grid_col80 {
+  grid-template: auto / 10fr 80fr 10fr;
+}
+
+.grid_col80 .block__inner {
+  grid-column: 3/2;
+  max-width: 1600px;
+  margin: 0 auto;
+  width: 100%;
+  min-width: 0;
+}
+
+.block {
+  padding: 80px 0;
+}
+
+.block_primary {
+  background-color: var(--primary-color);
+}
+
+.block_secondary {
+  background-color: #EDEDED;
+}
+
+.block_tertiary {
+  background-color: var(--secondary-color);
+}
+
+@media screen and (max-width: 500px) {
+
+  .grid_col80 {
+    grid-template: auto / 5fr 90fr 5fr;
+  }
+}

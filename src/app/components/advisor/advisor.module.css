@@ -1,0 +1,108 @@
+.advisor_section {
+  background: #ededed;
+  padding: 100px 0;
+  scroll-snap-align: center;
+}
+
+.advisor_board h3 {
+  font-family: var(--secondary-font);
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--primary-color);
+  letter-spacing: 3px;
+}
+
+.advisor_profile_container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  flex-wrap: wrap;
+}
+
+.advisor_profile {
+  width: 22%;
+}
+
+.advisor_image {
+  position: relative;
+}
+
+.advisor_linkedin {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: #cf4a28;
+}
+
+.advisor_image:hover .advisor_linkedin {
+  opacity: 0.7;
+}
+
+.linkedin_icon {
+  color: white;
+  font-size: 42px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.advisor_image img {
+  width: 100%;
+  height: auto;
+}
+
+.advisor_name h4 {
+  font-family: var(--secondary-font);
+  color: var(--primary-color);
+  font-weight: 600;
+  font-size: 18px;
+  padding-top: 20px;
+}
+
+.advisor_desig p {
+  font-size: 14px;
+  color: #8a8a8a;
+  font-weight: 500;
+  padding-top: 5px;
+  /* padding-bottom: 60px; */
+}
+
+@media screen and (max-width: 768px) {
+  .advisor_profile_container {
+    margin-top: 30px;
+    row-gap: 50px;
+  }
+
+  .advisor_profile {
+    width: 45%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .advisor_section {
+    padding: 30px 0;
+  }
+
+  .advisor_name h4 {
+    padding-top: 10px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .advisor_profile_container {
+    row-gap: 30px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .advisor_section {
+    scroll-snap-align: initial;
+  }
+}

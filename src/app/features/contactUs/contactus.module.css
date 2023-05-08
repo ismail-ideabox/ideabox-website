@@ -1,0 +1,263 @@
+.banner_bg {
+  background-color: #d92027;
+}
+.banner_container {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  padding-top: 60px;
+}
+.banner_heading {
+  width: 40%;
+}
+.banner_heading h2 {
+  width: 20ch;
+}
+.banner_image {
+  width: 60%;
+  position: relative;
+}
+.banner_image_girl img {
+  width: 100%;
+  height: auto;
+}
+.banner_image_arrow img {
+  width: 100%;
+  height: auto;
+}
+.banner_image_clock img {
+  width: 100%;
+  height: auto;
+}
+
+.banner_image_arrow {
+  position: absolute;
+  left: 23%;
+  top: 37%;
+  transform: translate(-50%, -40%);
+  width: 55%;
+}
+.banner_image_clock {
+  position: absolute;
+  right: -12%;
+  top: 40%;
+  transform: translate(-10%, -60%);
+  width: 20%;
+}
+.location_container {
+  background: #ededed;
+}
+.margin_top {
+  margin: 80px 0;
+}
+.flex {
+  display: flex;
+  min-height: 80vh;
+}
+.location_map {
+  width: 70%;
+}
+.loaction_address {
+  width: 30%;
+  background: #fff;
+  padding: 5% 0 5% 5%;
+}
+.loaction_address h2 {
+  color: var(--primary-color);
+  margin-bottom: 15%;
+  min-width: 13ch;
+  font-size: 32px;
+}
+
+.loaction_address p {
+  max-width: 20ch;
+  margin-bottom: 20%;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.contact_form {
+  width: 90%;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+.contact_form h2 {
+  color: var(--primary-color);
+  margin-bottom: 40px;
+}
+.input_fields {
+  width: 100%;
+  display: block;
+  padding: 15px 30px;
+  border: none;
+  margin-bottom: 20px;
+  resize: none;
+  outline: none;
+  font-size: 16px;
+}
+.input_fields::placeholder {
+  color: #848484;
+  opacity: 30%;
+  font-size: 16px;
+}
+.contact_form a {
+  padding: 10px 50px;
+}
+.contact_form textarea {
+  height: 250px;
+  margin-bottom: 50px;
+}
+
+@media screen and (min-width: 1750px) {
+  .banner_heading h2 {
+    font-size: 60px !important;
+  }
+}
+@media screen and (max-width: 1500px) {
+  .banner_heading h2 {
+    font-size: 50px !important;
+  }
+  .flex {
+    min-height: 60vh;
+  }
+  .loaction_address h2 {
+    font-size: 26px !important;
+  }
+  .loaction_address p {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .banner_heading h2 {
+    font-size: 36px !important;
+  }
+  .loaction_address h2 {
+    font-size: 22px !important;
+  }
+  .loaction_address p {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 1020px) {
+  .banner_heading h2 {
+    font-size: 30px !important;
+  }
+  .flex {
+    min-height: 50vh;
+  }
+  .loaction_address h2 {
+    font-size: 18px !important;
+  }
+  .loaction_address p {
+    font-size: 13px;
+  }
+  .loaction_address a {
+    font-size: 12px;
+    padding: 10px 15px;
+  }
+}
+@media screen and (max-width: 860px) {
+  .banner_heading h2 {
+    font-size: 24px !important;
+  }
+  .flex {
+    min-height: 45vh;
+  }
+  .loaction_address h2 {
+    font-size: 16px !important;
+  }
+  .loaction_address p {
+    font-size: 12px;
+  }
+  .loaction_address a {
+    padding: 5px 8px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .banner_heading h2 {
+    font-size: 20px !important;
+  }
+  .loaction_address h2 {
+    font-size: 14px !important;
+  }
+  .loaction_address p {
+    font-size: 10px;
+  }
+  .loaction_address a {
+    font-size: 10px;
+    padding: 5px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .banner_container {
+    flex-direction: column;
+  }
+  .banner_heading {
+    width: 100%;
+    position: relative;
+    top: 30px;
+  }
+  .banner_image {
+    width: 100%;
+  }
+  .banner_image_arrow {
+    transform: rotate3d(0, 0, 1, 60deg) translate(-15%, 30%);
+  }
+  .banner_image_clock {
+    right: 0%;
+    top: 0%;
+    transform: translateY(-100%);
+    width: 25%;
+  }
+  .banner_image_girl img {
+    position: relative;
+    z-index: 1;
+  }
+  .banner_heading h2 {
+    width: 10ch;
+    font-size: 28px !important;
+  }
+  .flex {
+    flex-direction: column;
+  }
+  .location_map {
+    width: 100%;
+    height: 50vh;
+  }
+  .loaction_address {
+    width: 100%;
+  }
+  .loaction_address h2 {
+    font-size: 32px !important;
+    margin-top: 30px;
+  }
+  .loaction_address p {
+    max-width: 25ch;
+    font-size: 18px;
+  }
+  .loaction_address a {
+    font-size: 15px;
+    padding: 10px 25px;
+    margin-bottom: 10%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .loaction_address h2 {
+    font-size: 25px !important;
+  }
+  .loaction_address p {
+    font-size: 16px;
+  }
+  .loaction_address a {
+    font-size: 13px;
+  }
+  .input_fields {
+    padding: 10px 25px;
+  }
+}
+@media screen and (max-width: 499px) {
+  .banner_heading h2 {
+    font-size: 24px !important;
+  }
+}

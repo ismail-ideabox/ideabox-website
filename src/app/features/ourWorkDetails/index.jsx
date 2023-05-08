@@ -1,0 +1,82 @@
+import Header from "@/app/components/header";
+import Image from "next/image";
+import React from "react";
+import styles from "./ourWorkDetails.module.css";
+import layout from "../../styles/layout.module.css";
+import Button from "@/app/components/button/button";
+import { classNames } from "@/app/utils";
+import Projectcard from "@/app/components/ourWork/projectcard";
+import Faqs from "@/app/components/faqs";
+import Footer from "@/app/components/footer";
+import { ScrollToTop } from "@/app/components/scrollToTop";
+import workDetail from "@/app/data/work";
+import { usePathname, useSearchParams, useRouter } from "next/navigation";
+
+function OurWorkDetails({ filteredWork }) {
+  const searchParams = useSearchParams();
+
+  const params = new URLSearchParams(searchParams);
+  const id = Number(params.get("id"));
+
+  return (
+    <>
+      <div className={styles.header_bg}>
+        <Header innerPage={true} />
+      </div>
+      <div className={styles.banner_container}>
+        <div className={styles.banner_image}>
+          <Image src={filteredWork.cardImage} alt="" />
+        </div>
+        <div className={styles.work_logo}>
+          <Image src={filteredWork.workLogo} alt="" />
+        </div>
+      </div>
+      <div className={styles.content_bg}>
+        <div className={classNames(layout.grid, layout.grid_col80)}>
+          <div
+            className={classNames(
+              styles.content_container,
+              layout.block__inner
+            )}
+          >
+            <div className={styles.button_byco}>
+              <Button redirect={""} text={filteredWork.url} type="primary" />
+            </div>
+            <div className={styles.byco_information}>
+              <pre>{filteredWork.workInfo}</pre>
+              <h3>Implementation</h3>
+              <pre>{filteredWork.implementation}</pre>
+              <h3>Technologies</h3>
+              <pre>{filteredWork.technologies}</pre>
+            </div>
+            <div className={styles.more_casestudies}>
+              <div className={styles.case_studies_heading}>
+                <h3>More Case Studies</h3>
+              </div>
+              <div className={styles.case_studie_cards}>
+                <div className={styles.projectcard}>
+                  <Projectcard
+                    workData={workDetail.filter((ele) => ele.id !== id)}
+                    isHomePage={true}
+                  />
+                </div>
+                <div className={styles.load_more_btn}>
+                  <Button
+                    redirect={"/our-work"}
+                    text={"VIEW MORE WORK"}
+                    type="primary"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <Faqs />
+      </div>
+      <ScrollToTop />
+      <Footer />
+    </>
+  );
+}
+
+export default OurWorkDetails;

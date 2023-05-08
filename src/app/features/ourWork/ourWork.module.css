@@ -1,0 +1,163 @@
+.banner_container {
+  background: var(--secondary-color);
+}
+.banner_content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 60px;
+}
+.banner_heading {
+  width: 30%;
+}
+.banner_heading h2 {
+  font-size: 50px;
+  width: 11ch;
+}
+.banner_image {
+  width: 50%;
+  position: relative;
+}
+.image_arrow img {
+  width: 100%;
+  height: auto;
+}
+.banner_work img {
+  width: 100%;
+  height: auto;
+}
+.image_arrow {
+  position: absolute;
+  width: 60%;
+  z-index: 1;
+  top: 50%;
+  left: 0;
+  transform: translate(-68.5%, -19.5%);
+}
+.banner_work {
+  z-index: 2;
+  position: relative;
+}
+.casestudies_container {
+  background: var(--primary-color);
+  padding: 60px 0;
+}
+.project_container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+.ourwork_project {
+  width: 32%;
+  padding: 15px;
+  background: var(--secondary-color);
+  margin-bottom: 40px;
+}
+.project_image {
+  margin-bottom: 15px;
+}
+.project_image img {
+  width: 100%;
+  height: auto;
+}
+.project_name h4 {
+  font-size: 18px;
+  color: #fff;
+  font-family: var(--secondary-font);
+  font-weight: 600;
+  margin-bottom: 15px;
+  padding: 0 20px;
+  letter-spacing: 2px;
+  width: 20ch;
+}
+.project_description h3 {
+  width: 22ch;
+  margin-bottom: 20px;
+  color: #fff;
+  font-size: 18px;
+  padding: 0 20px;
+  opacity: 60%;
+  font-weight: 500;
+}
+
+.project_view {
+  margin-bottom: 10px;
+  padding: 0 20px;
+}
+
+.ourwork_viewmore {
+  text-align: center;
+}
+.casestudies_loadmore {
+  margin-top: 30px;
+  text-align: center;
+}
+
+@media screen and (min-width: 1500px) {
+  .banner_heading h2 {
+    font-size: 70px !important;
+  }
+}
+@media screen and (max-width: 1160px) {
+  .banner_heading h2 {
+    font-size: 42px !important;
+  }
+  .project_description h3 {
+    font-size: 16px;
+    margin-bottom: 40px;
+  }
+}
+@media screen and (max-width: 980px) {
+  .ourwork_project {
+    width: 48%;
+  }
+}
+@media screen and (max-width: 900px) {
+  .banner_heading h2 {
+    font-size: 32px !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  .banner_heading h2 {
+    font-size: 25px !important;
+  }
+}
+@media screen and (max-width: 650px) {
+  .banner_content {
+    flex-direction: column;
+    row-gap: 50px;
+    padding-top: 100px;
+  }
+  .banner_heading {
+    width: 100%;
+  }
+  .banner_image {
+    width: 100%;
+  }
+  .image_arrow {
+    width: 55%;
+    top: -25%;
+    right: 0px;
+    transform: translateX(90%) rotate3d(90, 45, 0, 180deg);
+  }
+  .banner_heading h2 {
+    font-size: 32px !important;
+  }
+  .ourwork_project {
+    width: 100%;
+  }
+  .project_description h3 {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .banner_heading h2 {
+    font-size: 25px !important;
+  }
+  .image_arrow {
+    width: 60%;
+    top: -34%;
+    transform: translateX(80%) rotate3d(90, 45, 0, 180deg);
+  }
+}
