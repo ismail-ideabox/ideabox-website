@@ -1,5 +1,6 @@
 .clientele_section {
-  background: #ededed;
+  background: url(../../../../public/images/clientelebg.png) no-repeat center
+    center/cover;
   scroll-snap-align: center;
 }
 

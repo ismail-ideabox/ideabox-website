@@ -123,6 +123,7 @@
 
   .software_modules_mob_body_active {
     max-height: 300px;
+    overflow-y: auto;
   }
 
   .software_modules_mob li:nth-child(1) {

@@ -41,7 +41,7 @@ function Projectcard({ workData, isHomePage }) {
                 <SwiperSlide key={index}>
                   <div
                     className={styles.ourwork_project}
-                    style={{ width: "100%" }}
+                    style={{ width: "100%", height: "100%" }}
                   >
                     <div className={styles.project_image}>
                       <Image src={workData.cardImage} alt="" />

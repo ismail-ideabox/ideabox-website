@@ -35,7 +35,9 @@ export default function Home() {
 
   return (
     <>
-
+      <head>
+        <title>Home | Ideabox</title>
+      </head>
       <div className={Loading ? "loader-active" : "loader"}>
         <Image src={images.loader} alt={"Loader Image"} />
       </div>

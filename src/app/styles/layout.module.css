@@ -23,7 +23,7 @@
 }
 
 .block_secondary {
-  background-color: #EDEDED;
+  background-color: #ededed;
 }
 
 .block_tertiary {
@@ -31,8 +31,7 @@
 }
 
 @media screen and (max-width: 500px) {
-
   .grid_col80 {
-    grid-template: auto / 5fr 90fr 5fr;
+    grid-template: auto / 8fr 84fr 8fr;
   }
 }

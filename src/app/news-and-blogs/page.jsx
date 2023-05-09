@@ -4,6 +4,9 @@ import NewsBlogsPage from "../features/newsBlogs";
 function NewsBlogs() {
   return (
     <>
+      <head>
+        <title>News & Blogs | Ideabox</title>
+      </head>
       <NewsBlogsPage />
     </>
   );
