@@ -6,6 +6,7 @@ import { classNames } from "@/app/utils";
 import CountUp from "react-countup";
 
 function Overview({ childRef, isVisible }) {
+  console.log(isVisible, "isVisible");
   return (
     <section
       ref={childRef}

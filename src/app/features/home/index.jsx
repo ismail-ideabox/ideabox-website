@@ -19,6 +19,7 @@ import styles from "./page.module.css";
 import { classNames, isSticky } from "@/app/utils";
 import Blogs from "@/app/components/blogs";
 import blogsData from "@/app/data/blogs";
+import { useMediaQuery } from "react-responsive";
 
 function Home() {
   const parentRef = useRef(null);
@@ -26,6 +27,7 @@ function Home() {
   const [isVisible, setIsVisible] = useState(false);
   const [scrollToTopVisible, setScrollToTopVisible] = useState(false);
   const [headerVisible, setHeaderVisible] = useState(false);
+  const isSmallScreen = useMediaQuery({ query: "(max-width: 800px)" });
 
   useEffect(() => {
     const handleScroll = () => {
@@ -41,22 +43,37 @@ function Home() {
       } else {
         setScrollToTopVisible(false);
       }
-      const isChildVisible =
-        childRect.top >= parentRect.top ||
-        childRect.bottom + 300 <= parentRect.bottom;
-
-      if (!isChildVisible) {
-        setIsVisible(true);
+      if (isSmallScreen) {
+        const isChildVisible =
+          childRect.top >= 0 &&
+          childRect.top <= window.innerHeight - (childRect.height - 100);
+        if (isChildVisible) {
+          setIsVisible(true);
+        }
       } else {
-        setIsVisible(false);
+        const isChildVisible =
+          childRect.top >= parentRect.top ||
+          childRect.bottom + 300 <= parentRect.bottom;
+
+        if (!isChildVisible) {
+          setIsVisible(true);
+        } else {
+          setIsVisible(false);
+        }
       }
     };
-    parentRef?.current?.addEventListener("scroll", handleScroll);
+
+    if (isSmallScreen) {
+      window.addEventListener("scroll", handleScroll);
+    } else {
+      parentRef?.current?.addEventListener("scroll", handleScroll);
+    }
 
     return () => {
       parentRef?.current?.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [isSmallScreen]);
 
   return (
     <>
