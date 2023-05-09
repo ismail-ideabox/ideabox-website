@@ -9,6 +9,7 @@ import Footer from "@/app/components/footer";
 import ContactUsForm from "@/app/components/getInTouch/input";
 import TextArea from "@/app/components/getInTouch/textarea";
 import Input from "@/app/components/getInTouch/input";
+import Link from "next/link";
 
 function ContactUs() {
   return (
@@ -67,7 +68,7 @@ function ContactUs() {
                   Authority, Karachi, Karachi City, Sindh 75500
                   <br />
                   <br />
-                  info@ideabox.com.pk
+                  <Link href={"mailto:info@ideabox.pk"}>info@ideabox.pk</Link>
                 </p>
                 <Button
                   target="_blank"

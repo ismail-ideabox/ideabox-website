@@ -57,7 +57,10 @@ function OurPeople() {
             <div className={styles.founder_image}>
               <Image src={images.founder} alt="Obaid Rehman" />
               <div className={styles.founder_linkedin}>
-                <Link href="" className={styles.founder_linkedin_icon}>
+                <Link
+                  href="https://pk.linkedin.com/in/obaidrehman"
+                  className={styles.founder_linkedin_icon}
+                >
                   <FontAwesomeIcon icon={faLinkedinIn} />
                 </Link>
               </div>

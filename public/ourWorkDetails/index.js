@@ -1,4 +1,4 @@
-import byco from "./bycobanner.png";
+import byco from "./bycotank.jpg";
 import bycologo from "./bycologo.png";
 import rently from "./rently.png";
 import zod from "./zod.png";

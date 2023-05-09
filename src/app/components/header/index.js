@@ -97,7 +97,10 @@ function Header({ innerPage, headerVisible }) {
               </Link> */}
             </li>
             <li>
-              <Link href="" className={classNames(styles.nav_link, "")}>
+              <Link
+                href="#technical-services"
+                className={classNames(styles.nav_link, "")}
+              >
                 Services
               </Link>
             </li>
@@ -137,7 +140,9 @@ function Header({ innerPage, headerVisible }) {
             </Link>
           </div>
           <div className={styles.contact_details}>
-            <h3>info@ideabox.com</h3>
+            <h3>
+              <Link href={"mailto:info@ideabox.pk"}>info@ideabox.pk</Link>
+            </h3>
             <h3>+971 55 117 1248</h3>
             <h3>+1 (832) 361 8199</h3>
           </div>

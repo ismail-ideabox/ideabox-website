@@ -8,6 +8,7 @@ import { classNames } from "@/app/utils";
 function Technical() {
   return (
     <section
+      id="technical-section"
       className={classNames(
         layout.grid,
         layout.grid_col80,
