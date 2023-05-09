@@ -2,9 +2,17 @@ import React from "react";
 import styles from "./button.module.css";
 import Link from "next/link";
 import { classNames } from "@/app/utils";
-function Button({ redirect, text, onClick, type = "primary", ...rest }) {
+function Button({
+  redirect,
+  text,
+  onClick,
+  isLoading,
+  type = "primary",
+  ...rest
+}) {
   return (
     <Link
+      isLoading={isLoading}
       {...rest}
       onClick={onClick}
       href={redirect}

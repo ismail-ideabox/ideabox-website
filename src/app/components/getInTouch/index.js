@@ -70,7 +70,37 @@ import TextArea from "./textarea";
 //   });
 // };
 
+const initValues = {
+  fullName: "",
+  companyName: "",
+  emailAddress: "",
+  phoneNo: "",
+  message: "",
+};
+
+const initState = { values: initValues };
+
 function GetInTouch({ headerVisible }) {
+  const [state, setState] = useState(initState);
+  const { values, isLoading } = state;
+
+  const handleChange = (target) =>
+    setState((prev) => ({
+      ...prev,
+      values: {
+        ...prev.values,
+        [target.name]: target.value,
+      },
+    }));
+
+  const onSubmit = async (e) => {
+    e.preventDefault();
+    setState((prev) => ({
+      ...prev,
+      isLoading: true,
+    }));
+  };
+
   const [toggle, setToggle] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
   const swiperRef = useRef(null);
@@ -250,40 +280,55 @@ function GetInTouch({ headerVisible }) {
                   </div>
                   <div className={styles.input_flex}>
                     <Input
+                      onChange={handleChange}
+                      name="full-name"
                       id={"full-name"}
                       type="text"
                       placeholder="Full Name"
+                      value={values.fullName}
                     />
                     <Input
+                      onChange={handleChange}
+                      name="company-name"
                       id={"company-name"}
                       type="text"
                       placeholder="Company Name"
+                      value={values.companyName}
                     />
                   </div>
                   <div className={styles.input_flex}>
                     <Input
+                      onChange={handleChange}
+                      name="email-address"
                       id={"email-address"}
-                      type="text"
+                      type="email"
                       placeholder="Email Address"
+                      value={values.emailAddress}
                     />
                     <Input
+                      onChange={handleChange}
+                      name="phone-no"
                       id={"phone-no"}
                       type="text"
                       placeholder="Phone No."
+                      value={values.phoneNo}
                     />
                   </div>
                   <div className={styles.text_area}>
                     <TextArea
+                      onChange={handleChange}
+                      name="message"
                       input_type="text"
                       placeholder="Tell us about your project"
-                      name=""
                       id="message"
+                      value={values.message}
                     />
                     <Button
+                      isLoading={isLoading}
                       redirect={""}
                       text={"SEND"}
                       type="primary"
-                      onClick={() => sendEmail()}
+                      onClick={onSubmit}
                     />
                   </div>
                 </div>
