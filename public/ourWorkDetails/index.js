@@ -1,10 +1,10 @@
-import byco from "./bycotank.png";
+import byco from "./bycotank.jpg";
 import bycologo from "./bycologo.png";
 import rently from "./rently.png";
 import zod from "./zod.png";
 import tb from "./tb.png";
-import mediacenter from "./mediacenter.PNG";
-import zahraebrahim from "./zahraebrahim.PNG";
+import mediacenter from "./media.png";
+import zahraebrahim from "./zahra.png";
 import oshoot from "./oshoot.png";
 
 export const images = {

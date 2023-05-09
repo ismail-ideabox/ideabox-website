@@ -5,13 +5,11 @@ config.autoAddCss = false;
 import "./styles/globals.css";
 import Head from "next/head";
 
-
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <Head>
-        <title>Ideabox</title>
+        <title>Home | Ideabox</title>
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
       </Head>
       <body>{children}</body>
