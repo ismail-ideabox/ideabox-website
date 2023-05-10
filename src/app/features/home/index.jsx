@@ -24,6 +24,8 @@ import { useMediaQuery } from "react-responsive";
 function Home() {
   const parentRef = useRef(null);
   const childRef = useRef(null);
+  const bottomRef = useRef(null);
+
   const [isVisible, setIsVisible] = useState(false);
   const [scrollToTopVisible, setScrollToTopVisible] = useState(false);
   const [headerVisible, setHeaderVisible] = useState(false);
@@ -75,6 +77,8 @@ function Home() {
     };
   }, [isSmallScreen]);
 
+  
+
   return (
     <>
       <div
@@ -83,7 +87,7 @@ function Home() {
       >
         <GetInTouch headerVisible={headerVisible} />
         <Commitments />
-        <Technical />
+        <Technical bottomRef={bottomRef}/>
         <Odoo />
         <Overview childRef={childRef} isVisible={isVisible} />
         <ProudProduct />

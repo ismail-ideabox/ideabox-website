@@ -33,19 +33,20 @@ function Odoo() {
                 <p className={styles.odoo_crm_para}>
                   ODOO CRM & ERP IMPLEMENTATION
                 </p>
-                <p className={styles.odoo_crm_para}>ERP MIGRATION</p>
-                <p className={styles.odoo_crm_para}>ODOO CUSTOMIZATION</p>
-                <p className={styles.odoo_crm_para}>ODOO CONSULTANCY</p>
-              </div>
-              <div className={styles.odoo_crm}>
-                <p className={styles.odoo_crm_para}>ODOO TRAINING & SUPPORT</p>
-                <p className={styles.odoo_crm_para}>ODOO INTEGRATION</p>
                 <p className={styles.odoo_crm_para}>
                   INTEGRATION OF OTHER WEB APPLICATION WITH ERP &CRM
                 </p>
                 <p className={styles.odoo_crm_para}>
                   TECHNICAL & FUNCTIONAL CONSULTANTS OUTSOURCING.
                 </p>
+              </div>
+              <div className={styles.odoo_crm}>
+                <p className={styles.odoo_crm_para}>ODOO CUSTOMIZATION</p>
+                <p className={styles.odoo_crm_para}>ODOO CONSULTANCY</p>
+                <p className={styles.odoo_crm_para}>ODOO TRAINING & SUPPORT</p>
+                <p className={styles.odoo_crm_para}>ODOO INTEGRATION</p>
+
+                <p className={styles.odoo_crm_para}>ERP MIGRATION</p>
               </div>
             </div>
             <div
@@ -76,9 +77,6 @@ function Odoo() {
                 }
               >
                 <p className={styles.odoo_crm_para}>ERP MIGRATION</p>
-                <p className={styles.odoo_crm_para}>
-                  INTEGRATION OF OTHER WEB APPLICATION WITH ERP & CRM
-                </p>
                 <p className={styles.odoo_crm_para}>ODOO CUSTOMIZATION</p>
                 <p className={styles.odoo_crm_para}>ODOO CONSULTANCY</p>
 
@@ -123,7 +121,7 @@ function Odoo() {
               </div>
               <div className={styles.odoo_stats_content}>
                 <h2 className={styles.green_h2}>175+</h2>
-                <p>COUNTRIES</p>
+                <p>CONTINENTS</p>
               </div>
               <div className={styles.odoo_stats_content_3}>
                 <h2 className={styles.purple_h2}>26K</h2>

@@ -147,6 +147,9 @@ img {
 .swiper-wrapper {
   display: flex;
 }
+.clienteleslider .swiper-wrapper {
+  transition-timing-function: linear;
+}
 .ourworkSlider,
 .testimonialSlider,
 .blogsSwiper {

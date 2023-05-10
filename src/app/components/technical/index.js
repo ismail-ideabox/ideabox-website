@@ -1,14 +1,18 @@
-import React from "react";
+import React, { useRef } from "react";
 import styles from "./technical.module.css";
 import layout from "../../styles/layout.module.css";
 import Image from "next/image";
 import { image } from "../../../../public/gifs";
 import { classNames } from "@/app/utils";
+import { useRouter } from "next/navigation";
 
-function Technical() {
+function Technical({ bottomRef }) {
+  const router = useRouter();
+  const isHomePage = router.pathname === "/" && !childRef;
   return (
     <section
-      id="technical-section"
+      // ref={serviceRef}
+      ref={bottomRef}
       className={classNames(
         layout.grid,
         layout.grid_col80,

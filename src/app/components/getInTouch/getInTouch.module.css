@@ -48,7 +48,7 @@
 
 .GetInTouch_content {
   position: absolute;
-  width: 60%;
+  width: 50%;
   left: 0;
   top: 50%;
   transform: translateY(-50%);
@@ -57,7 +57,7 @@
 
 .slider_content h2 {
   margin-bottom: 25px;
-  font-size: 40px;
+  font-size: 36px !important;
   font-weight: 500;
   text-transform: uppercase;
   word-spacing: 3px;

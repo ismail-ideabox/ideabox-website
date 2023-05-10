@@ -85,7 +85,7 @@ function Overview({ childRef, isVisible }) {
                   "0"
                 )}
               </span>
-              <p>COUNTRIES</p>
+              <p>CONTINENTS</p>
             </div>
           </div>
         </div>

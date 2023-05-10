@@ -7,6 +7,7 @@ import { classNames } from "@/app/utils";
 import clienteleLogo from "@/app/data/clientele";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper";
+import Link from "next/link";
 
 function Clientele() {
   return (
@@ -23,7 +24,7 @@ function Clientele() {
             <h4 className={"heading"}>CLIENTELE</h4>
           </div>
           <div className={styles.trusted_client}>
-            <h2 className="main-heading">
+            <h2 className={styles.trusted_client_heading}>
               Our Trusted
               <br /> Clients
             </h2>
@@ -31,23 +32,41 @@ function Clientele() {
           <div className={styles.clientele_images}>
             <Swiper
               className="clienteleslider"
-              slidesPerView={3}
+              slidesPerView={6}
               freeMode={true}
-              spaceBetween={20}
+              spaceBetween={50}
+              speed={3000}
+              loop={true}
+              Autoplay={true}
               autoplay={{
-                delay: 2000,
+                delay: 0,
                 disableOnInteraction: false,
+                pauseOnMouseEnter: true,
               }}
-              pagination={{
-                clickable: false,
+              breakpoints={{
+                300: {
+                  slidesPerView: 3,
+                },
+                600: {
+                  slidesPerView: 5,
+                },
+                840: {
+                  slidesPerView: 6,
+                },
               }}
+              // _freeModeNoMomentumRelease={false}
+              // pagination={{
+              //   clickable: false,
+              // }}
               modules={[Pagination, Autoplay]}
             >
               {clienteleLogo.map((clienteleLogo, index) => {
                 return (
                   <SwiperSlide key={index}>
                     <div className={styles.work_logo_img}>
-                      <Image alt="Clientele Logo" src={clienteleLogo.logo} />
+                      <Link href={""}>
+                        <Image alt="Clientele Logo" src={clienteleLogo.logo} />
+                      </Link>
                     </div>
                   </SwiperSlide>
                 );

@@ -75,8 +75,13 @@
 }
 .work_image:hover .work_image_img {
   opacity: 1;
+  transform: scale(1.09);
 }
-.work_image::before {
+.work_image_container :nth-child(1).work_image::before,
+.work_image_container :nth-child(2).work_image::before,
+.work_image_container :nth-child(3).work_image::before,
+.work_image_container :nth-child(5).work_image::before,
+.work_image_container :nth-child(6).work_image::before {
   content: "";
   position: absolute;
   width: 1px;

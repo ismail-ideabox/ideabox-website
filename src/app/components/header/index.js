@@ -5,11 +5,16 @@ import styles from "./header.module.css";
 import layout from "../../styles/layout.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedinIn, faTwitter } from "@fortawesome/free-brands-svg-icons";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { classNames, isSticky } from "@/app/utils";
 import { useMediaQuery } from "react-responsive";
+import { useRouter } from "next/navigation";
+import Technical from "../technical";
 
 function Header({ innerPage, headerVisible }) {
+  const childRef = useRef(null);
+  const router = useRouter();
+  const isHomePage = router.usePathname === "/";
   const [toggleMenu, setToggleMenu] = useState(false);
   const handleToggle = () => setToggleMenu(!toggleMenu);
   const isSmallScreen = useMediaQuery({ query: "(min-width: 800px)" });
@@ -101,7 +106,7 @@ function Header({ innerPage, headerVisible }) {
             </li>
             <li>
               <Link
-                href="#technical-services"
+                href={isHomePage ? "technical-section" : "/#technical-section"}
                 className={classNames(styles.nav_link, "")}
               >
                 Services
