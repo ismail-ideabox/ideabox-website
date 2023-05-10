@@ -27,7 +27,10 @@ function Footer() {
                 </p>
               </div>
               <div className={styles.ideabox_social}>
-                <Link href="https://pk.linkedin.com/company/ideaboxpakistan">
+                <Link
+                  target="_blank"
+                  href="https://pk.linkedin.com/company/ideaboxpakistan"
+                >
                   <FontAwesomeIcon icon={faLinkedinIn} />
                 </Link>
                 <Link href="">

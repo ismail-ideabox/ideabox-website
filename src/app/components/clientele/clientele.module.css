@@ -31,6 +31,10 @@
   width: 100%;
   height: auto;
 }
+.work_logo_img img {
+  width: 100%;
+  height: auto;
+}
 
 @media (max-width: 600px) {
   .clientele_container {

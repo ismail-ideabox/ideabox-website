@@ -40,7 +40,12 @@ function OurWorkDetails({ filteredWork }) {
             )}
           >
             <div className={styles.button_byco}>
-              <Button redirect={""} text={filteredWork.url} type="primary" />
+              <Button
+                target={"_blank"}
+                redirect={filteredWork.url}
+                text={filteredWork.buttontext}
+                type="primary"
+              />
             </div>
             <div className={styles.byco_information}>
               <pre>{filteredWork.workInfo}</pre>

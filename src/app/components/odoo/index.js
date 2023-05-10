@@ -34,9 +34,6 @@ function Odoo() {
                   ODOO CRM & ERP IMPLEMENTATION
                 </p>
                 <p className={styles.odoo_crm_para}>ERP MIGRATION</p>
-                <p className={styles.odoo_crm_para}>
-                  INTEGRATION OF OTHER WEB APPLICATION WITH ERP & CRM
-                </p>
                 <p className={styles.odoo_crm_para}>ODOO CUSTOMIZATION</p>
                 <p className={styles.odoo_crm_para}>ODOO CONSULTANCY</p>
               </div>
@@ -103,13 +100,13 @@ function Odoo() {
                 src={image.odoocomponent}
                 alt="Odoo Components"
               />
-              <div className={styles.overlay}>
+              {/* <div className={styles.overlay}>
                 <Image
                   className={styles.zoom}
                   src={image.zoom1}
                   alt="Odoo Zoom"
                 />
-              </div>
+              </div> */}
             </div>
             <div className={styles.odoo_stats}>
               <div className={styles.odoo_stats_content_1}>

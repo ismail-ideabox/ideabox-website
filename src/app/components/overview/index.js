@@ -32,7 +32,7 @@ function Overview({ childRef, isVisible }) {
                 {isVisible ? (
                   <CountUp
                     start={0}
-                    end={350}
+                    end={352}
                     duration={2}
                     delay={0}
                     suffix="+"

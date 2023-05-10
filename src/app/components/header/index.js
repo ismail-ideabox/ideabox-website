@@ -48,7 +48,10 @@ function Header({ innerPage, headerVisible }) {
         <nav>
           <ul className={styles.social_icons}>
             <li>
-              <Link href="https://pk.linkedin.com/company/ideaboxpakistan">
+              <Link
+                target="_blank"
+                href="https://pk.linkedin.com/company/ideaboxpakistan"
+              >
                 <FontAwesomeIcon icon={faLinkedinIn} />
               </Link>
             </li>
@@ -135,7 +138,10 @@ function Header({ innerPage, headerVisible }) {
             <Link href="">
               <FontAwesomeIcon icon={faTwitter} />
             </Link>
-            <Link href="https://pk.linkedin.com/company/ideaboxpakistan">
+            <Link
+              target="_blank"
+              href="https://pk.linkedin.com/company/ideaboxpakistan"
+            >
               <FontAwesomeIcon icon={faLinkedinIn} />
             </Link>
           </div>

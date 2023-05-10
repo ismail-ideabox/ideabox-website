@@ -8,6 +8,7 @@ import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 import Button from "../button/button";
 import Link from "next/link";
 import { classNames } from "@/app/utils";
+import { image } from "../../../../public/gifs";
 
 function OurPeople() {
   return (
@@ -46,7 +47,73 @@ function OurPeople() {
                 </p>
               </div>
               <div className={styles.founder_work_logo}>
-                <Image src={images.worklogo} alt="Work Logo" />
+                <div className={styles.work_image_container}>
+                  <div className={styles.work_image}>
+                    <Link
+                      target="_blank"
+                      href={"https://www.hilton.com/en/corporate/"}
+                    >
+                      <Image
+                        className={styles.work_image_img}
+                        src={images.hilton}
+                      />
+                    </Link>
+                  </div>
+                  <div className={styles.work_image}>
+                    <Link
+                      target="_blank"
+                      href={"https://www.networkrail.co.uk/"}
+                    >
+                      <Image
+                        className={styles.work_image_img}
+                        src={images.networkrail}
+                      />
+                    </Link>
+                  </div>
+                  <div className={styles.work_image}>
+                    <Link
+                      target="_blank"
+                      href={"https://sports.ladbrokes.com/"}
+                    >
+                      <Image
+                        className={styles.work_image_img}
+                        src={images.ladbrokes}
+                      />
+                    </Link>
+                  </div>
+                  <div className={styles.work_image}>
+                    <Link target="_blank" href={"https://shop.zod.media/"}>
+                      <Image
+                        className={styles.work_image_img}
+                        src={images.zod}
+                      />
+                    </Link>
+                  </div>
+                  <div className={styles.work_image}>
+                    <Link target="_blank" href={"https://www.nhs.uk/"}>
+                      <Image
+                        className={styles.work_image_img}
+                        src={images.nhs}
+                      />
+                    </Link>
+                  </div>
+                  <div className={styles.work_image}>
+                    <Link target="_blank" href={"https://www.ke.com.pk/"}>
+                      <Image
+                        className={styles.work_image_img}
+                        src={images.ke}
+                      />
+                    </Link>
+                  </div>
+                  <div className={styles.work_image}>
+                    <Link target="_blank" href={"https://temasek.com.sg/"}>
+                      <Image
+                        className={styles.work_image_img}
+                        src={images.temasek}
+                      />
+                    </Link>
+                  </div>
+                </div>
                 <Button
                   redirect={"/our-team"}
                   text={"VIEW OUR TEAM"}
