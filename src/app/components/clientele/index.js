@@ -39,8 +39,9 @@ function Clientele() {
               loop={true}
               // Autoplay={true}
               autoplay={{
-                delay: 1000,
-                pauseOnMouseEnter: true,
+                delay: 2000,
+                disableOnInteraction: false,
+                // pauseOnMouseEnter: true,
               }}
               breakpoints={{
                 300: {

@@ -88,6 +88,9 @@
   .ourwork_project {
     width: 100%;
   }
+  .project_image img {
+    height: 30vh;
+  }
 }
 
 @media screen and (max-width: 800px) {

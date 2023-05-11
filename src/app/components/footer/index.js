@@ -41,7 +41,7 @@ function Footer() {
             <div className={styles.footer_navbar}>
               <ul>
                 <li>
-                  <Link href="" className={""}>
+                  <Link href={"/?services=true"} className={""}>
                     Services
                   </Link>
                 </li>

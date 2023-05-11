@@ -99,6 +99,26 @@ function GetInTouch({ headerVisible }) {
       ...prev,
       isLoading: true,
     }));
+    try {
+      const response = await fetch("src/pages/api/server", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: name,
+          email: email,
+          subject: subject,
+          phone: phone,
+          message: message,
+        }),
+      });
+
+      const data = await response.json();
+      console.log(data.message);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   const [toggle, setToggle] = useState(false);
