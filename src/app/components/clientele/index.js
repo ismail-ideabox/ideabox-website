@@ -37,10 +37,9 @@ function Clientele() {
               spaceBetween={70}
               speed={3000}
               loop={true}
-              Autoplay={true}
+              // Autoplay={true}
               autoplay={{
                 delay: 1000,
-                disableOnInteraction: false,
                 pauseOnMouseEnter: true,
               }}
               breakpoints={{
