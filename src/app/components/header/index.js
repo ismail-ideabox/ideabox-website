@@ -106,7 +106,7 @@ function Header({ innerPage, headerVisible }) {
             </li>
             <li>
               <Link
-                href={isHomePage ? "technical-section" : "/#technical-section"}
+                href={"/#services"}
                 className={classNames(styles.nav_link, "")}
               >
                 Services

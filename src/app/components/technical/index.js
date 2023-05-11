@@ -11,6 +11,7 @@ function Technical({ bottomRef }) {
   const isHomePage = router.pathname === "/" && !childRef;
   return (
     <section
+      id="services"
       // ref={serviceRef}
       ref={bottomRef}
       className={classNames(

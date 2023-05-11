@@ -47,6 +47,7 @@ import imrooz from "./imrooz.png";
 
 export const images = {
   shell,
+  
   exa,
   usaid,
   teameda,

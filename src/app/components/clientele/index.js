@@ -34,12 +34,12 @@ function Clientele() {
               className="clienteleslider"
               slidesPerView={6}
               freeMode={true}
-              spaceBetween={50}
+              spaceBetween={70}
               speed={3000}
               loop={true}
               Autoplay={true}
               autoplay={{
-                delay: 0,
+                delay: 1000,
                 disableOnInteraction: false,
                 pauseOnMouseEnter: true,
               }}
@@ -54,7 +54,7 @@ function Clientele() {
                   slidesPerView: 6,
                 },
               }}
-              // _freeModeNoMomentumRelease={false}
+              _freeModeNoMomentumRelease={false}
               // pagination={{
               //   clickable: false,
               // }}
@@ -64,7 +64,7 @@ function Clientele() {
                 return (
                   <SwiperSlide key={index}>
                     <div className={styles.work_logo_img}>
-                      <Link href={""}>
+                      <Link target="_blank" href={clienteleLogo.url}>
                         <Image alt="Clientele Logo" src={clienteleLogo.logo} />
                       </Link>
                     </div>

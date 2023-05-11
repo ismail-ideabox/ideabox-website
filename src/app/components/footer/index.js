@@ -127,7 +127,10 @@ function Footer() {
         </div>
       </div>
       <div className={styles.footer_copywrite}>
-        <p>All Right Reserved ® Narrative Adverting | Ideabox </p>
+        <p>
+          All Rights Reserved ® <span>{new Date().getFullYear()}</span> |
+          Ideabox
+        </p>
       </div>
     </section>
   );

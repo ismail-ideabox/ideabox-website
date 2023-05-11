@@ -20,6 +20,7 @@ import { classNames, isSticky } from "@/app/utils";
 import Blogs from "@/app/components/blogs";
 import blogsData from "@/app/data/blogs";
 import { useMediaQuery } from "react-responsive";
+import { useRouter } from "next/navigation";
 
 function Home() {
   const parentRef = useRef(null);
@@ -30,7 +31,7 @@ function Home() {
   const [scrollToTopVisible, setScrollToTopVisible] = useState(false);
   const [headerVisible, setHeaderVisible] = useState(false);
   const isSmallScreen = useMediaQuery({ query: "(max-width: 800px)" });
-
+  const router = useRouter();
   useEffect(() => {
     const handleScroll = () => {
       const parentRect = parentRef?.current?.getBoundingClientRect();
@@ -77,7 +78,9 @@ function Home() {
     };
   }, [isSmallScreen]);
 
-  
+  useEffect(() => {
+    console.log(router);
+  }, [router]);
 
   return (
     <>
@@ -87,7 +90,7 @@ function Home() {
       >
         <GetInTouch headerVisible={headerVisible} />
         <Commitments />
-        <Technical bottomRef={bottomRef}/>
+        <Technical bottomRef={bottomRef} />
         <Odoo />
         <Overview childRef={childRef} isVisible={isVisible} />
         <ProudProduct />

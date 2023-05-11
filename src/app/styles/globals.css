@@ -148,7 +148,9 @@ img {
   display: flex;
 }
 .clienteleslider .swiper-wrapper {
-  transition-timing-function: linear;
+  /* transition-timing-function: linear; */
+  display: flex;
+  align-items: flex-end;
 }
 .ourworkSlider,
 .testimonialSlider,

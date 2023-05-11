@@ -125,6 +125,7 @@ function OurPeople() {
               <Image src={images.founder} alt="Obaid Rehman" />
               <div className={styles.founder_linkedin}>
                 <Link
+                  target="_blank"
                   href="https://pk.linkedin.com/in/obaidrehman"
                   className={styles.founder_linkedin_icon}
                 >

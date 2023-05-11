@@ -5,7 +5,7 @@
 }
 
 .clientele_container {
-  padding: 40px 0;
+  padding: 50px 0;
 }
 
 .clientele_heading h4 {
@@ -19,7 +19,7 @@
 
 .clientele_images {
   display: flex;
-  margin-top: 100px;
+  margin-top: 30px;
   justify-content: space-between;
   align-items: center;
 }
@@ -31,6 +31,9 @@
 .clientele_brands img {
   width: 100%;
   height: auto;
+}
+.work_logo_img {
+  margin-inline: auto;
 }
 .work_logo_img img {
   width: 100%;
