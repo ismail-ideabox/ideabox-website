@@ -6,14 +6,14 @@ import { image } from "../../../../public/gifs";
 import { classNames } from "@/app/utils";
 import { useRouter } from "next/navigation";
 
-function Technical({ bottomRef }) {
+function Technical({ servicesRef }) {
   const router = useRouter();
   const isHomePage = router.pathname === "/" && !childRef;
   return (
     <section
       id="services"
       // ref={serviceRef}
-      ref={bottomRef}
+      ref={servicesRef}
       className={classNames(
         layout.grid,
         layout.grid_col80,

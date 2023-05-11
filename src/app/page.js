@@ -18,7 +18,7 @@ export default function Home() {
     const handleRouteStart = () => {
       setLoading(true);
     };
-    console.log(Router.events, " Router.events");
+
     const handleRouteDone = () => {
       setLoading(false);
     };

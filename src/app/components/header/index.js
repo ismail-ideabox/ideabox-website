@@ -4,11 +4,15 @@ import Link from "next/link";
 import styles from "./header.module.css";
 import layout from "../../styles/layout.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLinkedinIn, faTwitter } from "@fortawesome/free-brands-svg-icons";
+import {
+  faAlgolia,
+  faLinkedinIn,
+  faTwitter,
+} from "@fortawesome/free-brands-svg-icons";
 import { useEffect, useRef, useState } from "react";
 import { classNames, isSticky } from "@/app/utils";
 import { useMediaQuery } from "react-responsive";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import Technical from "../technical";
 
 function Header({ innerPage, headerVisible }) {
@@ -18,7 +22,7 @@ function Header({ innerPage, headerVisible }) {
   const [toggleMenu, setToggleMenu] = useState(false);
   const handleToggle = () => setToggleMenu(!toggleMenu);
   const isSmallScreen = useMediaQuery({ query: "(min-width: 800px)" });
-
+  const searchParams = useSearchParams();
   useEffect(() => {
     if (!headerVisible) {
       window.addEventListener("scroll", isSticky);
@@ -27,6 +31,7 @@ function Header({ innerPage, headerVisible }) {
       };
     }
   }, []);
+
   useEffect(() => {
     if (!isSmallScreen) {
       const header = document.querySelector(".headerWrapper");
@@ -35,6 +40,10 @@ function Header({ innerPage, headerVisible }) {
         : header.classList.remove("is-sticky");
     }
   }, [headerVisible]);
+
+  useEffect(() => {
+    setToggleMenu(false);
+  }, [searchParams]);
 
   return (
     <header
@@ -106,7 +115,7 @@ function Header({ innerPage, headerVisible }) {
             </li>
             <li>
               <Link
-                href={"/#services"}
+                href={"/?services=true"}
                 className={classNames(styles.nav_link, "")}
               >
                 Services

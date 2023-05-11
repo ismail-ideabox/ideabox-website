@@ -20,18 +20,22 @@ import { classNames, isSticky } from "@/app/utils";
 import Blogs from "@/app/components/blogs";
 import blogsData from "@/app/data/blogs";
 import { useMediaQuery } from "react-responsive";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
+import { usePathname } from "next/navigation";
 
 function Home() {
   const parentRef = useRef(null);
   const childRef = useRef(null);
-  const bottomRef = useRef(null);
+  const servicesRef = useRef(null);
 
   const [isVisible, setIsVisible] = useState(false);
   const [scrollToTopVisible, setScrollToTopVisible] = useState(false);
   const [headerVisible, setHeaderVisible] = useState(false);
   const isSmallScreen = useMediaQuery({ query: "(max-width: 800px)" });
   const router = useRouter();
+  const searchParams = useSearchParams();
+  const params = new URLSearchParams(searchParams);
+
   useEffect(() => {
     const handleScroll = () => {
       const parentRect = parentRef?.current?.getBoundingClientRect();
@@ -79,8 +83,11 @@ function Home() {
   }, [isSmallScreen]);
 
   useEffect(() => {
-    console.log(router);
-  }, [router]);
+    if (params.get("services")) {
+      const serviceRect = servicesRef?.current?.getBoundingClientRect();
+      parentRef.current.scrollTop = serviceRect.top;
+    }
+  }, [searchParams]);
 
   return (
     <>
@@ -90,7 +97,7 @@ function Home() {
       >
         <GetInTouch headerVisible={headerVisible} />
         <Commitments />
-        <Technical bottomRef={bottomRef} />
+        <Technical servicesRef={servicesRef} />
         <Odoo />
         <Overview childRef={childRef} isVisible={isVisible} />
         <ProudProduct />
