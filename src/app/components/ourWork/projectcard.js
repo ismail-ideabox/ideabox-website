@@ -44,7 +44,7 @@ function Projectcard({ workData, isHomePage }) {
                     style={{ width: "100%", height: "100%" }}
                   >
                     <div className={styles.project_image}>
-                      <Image src={workData.cardImage} alt="" />
+                      <Image src={workData.workCardImage} alt="" />
                     </div>
                     <div className={styles.project_name}>
                       <h4>{workData.projectName}</h4>
@@ -76,7 +76,7 @@ function Projectcard({ workData, isHomePage }) {
               return (
                 <div className={styles.ourwork_project}>
                   <div className={styles.project_image}>
-                    <Image src={workData.cardImage} alt="" />
+                    <Image src={workData.workCardImage} alt="" />
                   </div>
                   <div className={styles.project_name}>
                     <h4>{workData.projectName}</h4>

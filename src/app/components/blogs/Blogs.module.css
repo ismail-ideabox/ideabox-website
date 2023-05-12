@@ -12,6 +12,12 @@
 .blogs_heading h3 {
   text-align: right;
 }
+.blogs_heading h3 {
+  margin-bottom: 0 !important;
+}
+.leaderboard h2 {
+  margin-bottom: 30px !important;
+}
 
 .leaderboard h2 {
   margin-bottom: 50px;

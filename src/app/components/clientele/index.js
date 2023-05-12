@@ -34,7 +34,7 @@ function Clientele() {
               className="clienteleslider"
               slidesPerView={6}
               freeMode={true}
-              spaceBetween={70}
+              spaceBetween={0}
               speed={3000}
               loop={true}
               // Autoplay={true}
@@ -45,7 +45,7 @@ function Clientele() {
               }}
               breakpoints={{
                 300: {
-                  slidesPerView: 3,
+                  slidesPerView: 4,
                 },
                 600: {
                   slidesPerView: 5,

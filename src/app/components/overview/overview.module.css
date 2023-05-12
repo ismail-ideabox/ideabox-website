@@ -28,12 +28,13 @@
 }
 
 .overview_stats_content {
-  width: 15%;
+  width: 10%;
 }
 
 .overview_stats_content p {
   color: #fff;
   font-size: 13px;
+  width: 19ch;
 }
 
 @media screen and (max-width: 1000px) {
@@ -70,6 +71,9 @@
 @media screen and (max-width: 400px) {
   .overview_stats_content span {
     font-size: 48px;
+  }
+  .overview_stats_content p {
+    width: 15ch;
   }
 }
 

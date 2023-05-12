@@ -78,6 +78,22 @@ function Overview({ childRef, isVisible }) {
             </div>
             <div className={styles.overview_stats_content}>
               <span>
+                {isVisible ? (
+                  <CountUp
+                    start={0}
+                    end={17}
+                    duration={2}
+                    delay={0}
+                    suffix="+"
+                  />
+                ) : (
+                  "0"
+                )}
+              </span>
+              <p>COUNTRIES</p>
+            </div>
+            <div className={styles.overview_stats_content}>
+              <span>
                 0
                 {isVisible ? (
                   <CountUp start={0} end={5} duration={2} delay={0} />

@@ -55,15 +55,20 @@
 .blogs_card_web {
   width: 31.5%;
   height: fit-content;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   border-radius: 12px;
   background: #fff;
   box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px,
     rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
-  transition: 0.2s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 .blogs_card_web:hover {
   transform: scale(1.02);
+}
+.blogs_card_web:hover .card_image::before,
+.blogs_card_web:hover .card_image img {
+  background: transparent;
+  transform: scale(1.05);
 }
 .card_bg {
   background: #ededed;
@@ -74,15 +79,29 @@
   overflow: hidden;
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
+  position: relative;
 }
+
+.card_image::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 2;
+  transition: all 0.2s ease-in-out;
+}
+
 .card_image img {
   width: 100%;
   height: auto;
-  transition: 0.3s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
 .card_content {
-  padding: 35px 25px;
+  padding: 25px 25px;
 }
 .card_content a h2 {
   color: var(--primary-color);
@@ -96,57 +115,20 @@
 }
 .blog_description p {
   color: #8a8a8a;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
 }
 .author_details {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
-.author_image {
-  width: 40px;
-  height: 40px;
-  margin-right: 10px;
-  overflow: hidden;
-  border-radius: 50%;
-}
-.author_image img {
-  transform: scale(1.5);
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-}
-.author_writer {
-  flex: 1;
-}
-.author_verified {
-  display: flex;
-}
-.author_name p {
-  margin-bottom: 5px;
-}
-.author_name p a {
-  font-size: 13px;
-  min-width: 14ch;
-}
-.author_name p a:hover {
-  color: var(--primary-color);
-}
-.verified_check {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background: #e1f4ec;
-  text-align: center;
-  margin-right: 5px;
-}
-.verified_check svg {
-  font-size: 12px;
-  color: #36b37e;
-}
-.author_verified p {
+.blogs_read_more {
   color: #5a7184;
-  font-size: 11px;
-  font-style: italic;
+  transition: all 0.3s ease-in-out;
+}
+.blogs_read_more:hover .read_more {
+  color: var(--primary-color);
+  transition: all 0.3s ease-in-out;
 }
 .day_date p {
   color: #5a7184;
