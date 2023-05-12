@@ -38,10 +38,25 @@ export default function Home() {
       <head>
         <title>Home | Ideabox</title>
       </head>
-      <div className={Loading ? "loader-active" : "loader"}>
+      <div
+        style={{
+          position: "fixed",
+          width: "100%",
+          height: "100vh",
+          display: Loading ? "flex" : "none",
+          alignItems: "center",
+          justifyContent: "center",
+          backgroundColor: "#000000",
+          zIndex: "999",
+          top: "0",
+          left: "0",
+          transition: "all 0.2s ease-in-out",
+        }}
+      >
         <Image src={images.loader} alt={"Loader Image"} />
       </div>
       <HomePage />
     </>
   );
 }
+// className={Loading ? "loader-active" : "loader"}
