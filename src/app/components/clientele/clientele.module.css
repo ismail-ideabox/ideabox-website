@@ -63,6 +63,9 @@
   .clientele_brands img {
     filter: none;
   }
+  .work_logo_img {
+    padding: 0 15px;
+  }
 }
 
 @media screen and (max-width: 800px) {

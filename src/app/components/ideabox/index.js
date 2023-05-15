@@ -1,7 +1,9 @@
 import React from "react";
 import styles from "./ideabox.module.css";
 import layout from "../../styles/layout.module.css";
+import Image from "next/image";
 import { classNames } from "@/app/utils";
+import { images } from "../../../../public/ideabox";
 
 function Ideabox() {
   return (
@@ -69,6 +71,99 @@ function Ideabox() {
                 Numbers never lie. Purpose Path focuses on relevant metrics, not
                 empty numbers.
               </p>
+            </div>
+          </div>
+          <div className={styles.tech_container}>
+            <div className={styles.tech_images}>
+              <Image
+                className={styles.tech_images_img}
+                alt=""
+                src={images.angular}
+              />
+            </div>
+            <div className={styles.tech_images}>
+              <Image
+                className={styles.tech_images_img}
+                alt=""
+                src={images.node}
+              />
+            </div>
+            <div className={styles.tech_images}>
+              <Image
+                className={styles.tech_images_img}
+                alt=""
+                src={images.reactnative}
+              />
+            </div>
+            <div className={styles.tech_images}>
+              <Image
+                className={styles.tech_images_img}
+                alt=""
+                src={images.react}
+              />
+            </div>
+            <div className={styles.tech_images}>
+              <Image
+                className={styles.tech_images_img}
+                alt=""
+                src={images.dotnet}
+              />
+            </div>
+            <div className={styles.tech_images}>
+              <Image
+                className={styles.tech_images_img}
+                alt=""
+                src={images.php}
+              />
+            </div>
+            <div className={styles.tech_images}>
+              <Image
+                className={styles.tech_images_img}
+                alt=""
+                src={images.android}
+              />
+            </div>
+            <div className={styles.tech_images}>
+              <Image
+                className={styles.tech_images_img}
+                alt=""
+                src={images.ios}
+              />
+            </div>
+            <div className={styles.tech_images}>
+              <Image
+                className={styles.tech_images_img}
+                alt=""
+                src={images.python}
+              />
+            </div>
+            <div className={styles.tech_images}>
+              <Image
+                className={styles.tech_images_img}
+                alt=""
+                src={images.odoo}
+              />
+            </div>
+            <div className={styles.tech_images}>
+              <Image
+                className={styles.tech_images_img}
+                alt=""
+                src={images.sap}
+              />
+            </div>
+            <div className={styles.tech_images}>
+              <Image
+                className={styles.tech_images_img}
+                alt=""
+                src={images.aws}
+              />
+            </div>
+            <div className={styles.tech_images}>
+              <Image
+                className={styles.tech_images_img}
+                alt=""
+                src={images.azure}
+              />
             </div>
           </div>
         </div>

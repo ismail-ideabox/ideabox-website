@@ -31,7 +31,7 @@ function Odoo() {
             <div className={styles.odoo_crm_container}>
               <div className={styles.odoo_crm}>
                 <p className={styles.odoo_crm_para}>
-                  TECHNICAL & FUNCTIONAL CONSULTANTS OUTSOURCING.
+                  TECHNICAL & FUNCTIONAL CONSULTANTS OUTSOURCING
                 </p>
                 <p className={styles.odoo_crm_para}>ODOO CUSTOMIZATION</p>
                 <p className={styles.odoo_crm_para}>
@@ -86,7 +86,7 @@ function Odoo() {
                   INTEGRATION OF OTHER WEB APPLICATION WITH ERP &CRM
                 </p>
                 <p className={styles.odoo_crm_para}>
-                  TECHNICAL & FUNCTIONAL CONSULTANTS OUTSOURCING.
+                  TECHNICAL & FUNCTIONAL CONSULTANTS OUTSOURCING
                 </p>
               </div>
             </div>

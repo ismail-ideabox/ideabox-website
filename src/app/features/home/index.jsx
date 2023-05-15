@@ -102,10 +102,10 @@ function Home() {
         <Overview childRef={childRef} isVisible={isVisible} />
         <ProudProduct />
         <OurPeople />
-        <Advisor />
+        {/* <Advisor /> */}
         <Ideabox />
-        <Clientele />
         <OurWork isHomePage={true} />
+        <Clientele />
         <Testimonials />
         <Blogs blogsCard={blogsData.slice(0, 3)} />
         <Faqs />

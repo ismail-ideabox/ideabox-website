@@ -169,6 +169,7 @@ function GetInTouch({ headerVisible }) {
                   autoplay={{
                     delay: 3500,
                     pauseOnMouseEnter: true,
+                    disableOnInteraction: false,
                   }}
                   onSlideChange={(swiper) => {
                     setCurrentSlide(swiper.activeIndex);

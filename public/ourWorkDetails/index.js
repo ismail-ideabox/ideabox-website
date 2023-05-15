@@ -7,9 +7,12 @@ import zod from "./zod.png";
 import tb from "./tb.jpg";
 import tbcardimage from "./tbcard.jpg";
 import tblogo from "./tblogo.png";
-import mediacenter from "./media.png";
-import zahraebrahim from "./zahra.png";
-import oshoot from "./oshoot.png";
+import zahrabanner from "./zahrabanner.png";
+import zahralogo from "./zahralogo.png";
+import saloonbanner from "./saloonbanner.png";
+import salonlogo from "./salonlogo.png";
+import bmmbanner from "./bmmbanner.png";
+import bmmlogo from "./bmmlogo.png";
 
 export const images = {
   byco,
@@ -21,7 +24,10 @@ export const images = {
   tb,
   tbcardimage,
   tblogo,
-  mediacenter,
-  zahraebrahim,
-  oshoot,
+  zahrabanner,
+  zahralogo,
+  saloonbanner,
+  salonlogo,
+  bmmbanner,
+  bmmlogo,
 };

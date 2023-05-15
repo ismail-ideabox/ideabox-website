@@ -75,21 +75,10 @@ function BlogsCards({ blogsCard }) {
                     <p>{blogCard.blogDescription}</p>
                   </div>
                   <div className={styles.author_details}>
-                    <div className={styles.author_image}>
-                      <Image src={blogCard.authorImage} alt="Author" />
-                    </div>
-                    <div className={styles.author_writer}>
-                      <div className={styles.author_name}>
-                        <p>
-                          <Link href={""}>{blogCard.authorName}</Link>
-                        </p>
-                      </div>
-                      <div className={styles.author_verified}>
-                        <div className={styles.verified_check}>
-                          <FontAwesomeIcon icon={faCheck} />
-                        </div>
-                        <p>{blogCard.verified}</p>
-                      </div>
+                    <div className={styles.blogs_read_more}>
+                      <Link href={""}>
+                        <p className={styles.read_more}>Read More</p>
+                      </Link>
                     </div>
                     <div className={styles.day_date}>
                       <p>{blogCard.date}</p>
