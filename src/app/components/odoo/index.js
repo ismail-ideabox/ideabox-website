@@ -10,15 +10,15 @@ import { classNames } from "@/app/utils";
 function Odoo() {
   const [toggleList, setToggleList] = useState(false);
   return (
-    <section className={styles.odoo_partners}>
+    <section
+      className={styles.odoo_partners}
+      onClick={() => {
+        toggleList ? setToggleList(false) : "";
+      }}
+    >
       <div className={classNames(layout.grid, layout.grid_col80)}>
         <div className={layout.block__inner}>
-          <div
-            className={styles.odoo_content}
-            onClick={() => {
-              toggleList ? setToggleList(false) : "";
-            }}
-          >
+          <div className={styles.odoo_content}>
             <div className={styles.odoo}>
               <h2 className="main-heading">Official Partners</h2>
               <Image src={image.odoo} alt="Odoo" />

@@ -11,7 +11,12 @@ function Proudproduct() {
   const [toggleList, setToggleList] = useState(false);
   return (
     <section className={styles.proudproduct_section}>
-      <div className={classNames(layout.grid, layout.grid_col80)}>
+      <div
+        className={classNames(layout.grid, layout.grid_col80)}
+        onClick={() => {
+          toggleList ? setToggleList(false) : "";
+        }}
+      >
         <div className={layout.block__inner}>
           <div className={styles.proudproduct_container}>
             <div className={styles.proudproduct_heading}>

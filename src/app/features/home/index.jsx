@@ -20,13 +20,15 @@ import { classNames, isSticky } from "@/app/utils";
 import Blogs from "@/app/components/blogs";
 import blogsData from "@/app/data/blogs";
 import { useMediaQuery } from "react-responsive";
-import { useRouter, useSearchParams } from "next/navigation";
-import { usePathname } from "next/navigation";
+import { useRouter, useSearchParams, usePathname } from "next/navigation";
+import { Router } from "next/router";
 
 function Home() {
+  const pathname = usePathname();
   const parentRef = useRef(null);
   const childRef = useRef(null);
   const servicesRef = useRef(null);
+  // const scrollRef = useRef(null);
 
   const [isVisible, setIsVisible] = useState(false);
   const [scrollToTopVisible, setScrollToTopVisible] = useState(false);
@@ -88,6 +90,27 @@ function Home() {
       parentRef.current.scrollTop = serviceRect.top;
     }
   }, [searchParams]);
+
+  // useEffect(() => {
+  //   const parentRect = parentRef?.current?.getBoundingClientRect();
+  //   const handleRouteChangeStart = () => {
+  //     scrollRef.current = parentRect.scrollY;
+  //   };
+  //   if (router.events) {
+  //     router.events.on("routeChangeStart", handleRouteChangeStart);
+  //   }
+  //   router.events.on("routeChangeStart", handleRouteChangeStart);
+  //   const handleRouteChangeComplete = () => {
+  //     if (router.pathname === "/") {
+  //       parentRect.scrollTo(0, scrollRef.current);
+  //     }
+  //   };
+  //   router.events.on("routeChangeComplete", handleRouteChangeComplete);
+  //   return () => {
+  //     router.events.off("routeChangeStart", handleRouteChangeStart);
+  //     router.events.off("routeChangeComplete", handleRouteChangeComplete);
+  //   };
+  // }, [router]);
 
   return (
     <>

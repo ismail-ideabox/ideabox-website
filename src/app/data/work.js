@@ -8,7 +8,7 @@ const workDetail = [
     cardImage: images.byco,
     workLogo: images.bycologo,
     url: "http://www.byco.com.pk",
-    buttontext: "www.byco.com.pk",
+    buttontext: "BYCO",
     workInfo: `Cnergyico (Previously BYCO) is Pakistan’s leading petroleum company engaged in the businesses of oil refining, petroleum marketing, and petroleum logistics. Headquartered in Karachi, They are serving their mission to fulfil Pakistan's energy demand.
     
 Cnergyico has Pakistan's largest refining capacity of 156,000 barrels a day, converting crude oil into various saleable components including Liquefied Petroleum Gas, Light Naphtha, Heavy Naphtha, High Octane Blending Component, Motor Gasoline, Kerosene, Jet Fuels, High Speed Diesel and Furnace Oil.
@@ -35,11 +35,11 @@ AWS Services`,
   {
     id: 2,
     projectName: "Takaful Bazaar",
-    workCardImage: images.tbcardimage,
-    cardImage: images.tb,
+    workCardImage: images.tbbanner,
+    cardImage: images.tbbanner,
     workLogo: images.tblogo,
     url: "https://takafulbazaar.pk/",
-    buttontext: "https://zahraebrahim.com",
+    buttontext: "TAKAFUL BAZAAR",
     workInfo: `Takaful Bazaar is a leading online insurance aggregator in Pakistan that provides a platform for customers to compare and buy insurance policies from various insurance companies. 
     
 Takaful Bazaar was envisioned as a first-of-its-kind online platform for comparing and purchasing Takaful products. They are revolutionising the way people protect their assets and in-turn, their well-being. The founders of Takaful Bazaar dreamed of reimagining Takaful, so they brought an easy and user-friendly platform to bring the Takaful process into the digital age
@@ -66,7 +66,7 @@ ODOO CRM`,
     cardImage: images.rently,
     workLogo: images.rentlylogo,
     url: "https://rently.pk/",
-    buttontext: "https://rently.pk",
+    buttontext: "RENTLY",
     workInfo: `Rently is the best emerging car renting provider in Pakistan awarded at the 15th Consumer Choice Awards.
     
 Renting cars in the past was nothing less of a hassle. Traditional renting industry called for several rounds finding a car of your choice, inconsistent rates, and low quality assurance. Rently is the first on-demand car rental service that solves all these problems on a single platform.
@@ -106,7 +106,7 @@ SEO Services`,
     cardImage: images.zahrabanner,
     workLogo: images.zahralogo,
     url: "https://zahraebrahim.com/",
-    buttontext: "https://zahraebrahim.com",
+    buttontext: "ZAHRA EBRAHIM",
     workInfo: `Over the last 15 years, Zahra Ebrahim has worked with different local craftsmen in their many collections and has exhibited at exhibitions and craft shows locally and internationally.
     
 They had the honour to design the furniture for the carefully curated state lounge and the CIP lounge at the Islamabad international airport. Their unique design and solid craftsmanship enabled them to land the design and manufacturing contract for all the furniture within the Pakistan pavilion at the Dubai Expo. They have worked with the biggest names in design in Pakistan on the project which received an overwhelming response. 
@@ -171,7 +171,7 @@ Azure Services`,
     cardImage: images.bmmbanner,
     workLogo: images.bmmlogo,
     url: "",
-    buttontext: "www.oshoot.com.pk",
+    buttontext: "BOOK MY MEMORIES",
     workInfo: `Book My Memories is a software application designed to help users capture and preserve their memories. The software offers a range of features that enable users to create personalised photo albums, scrapbooks, and memory books that capture their most cherished memories and moments.`,
     implementation: `Ideabox has made sure that the software is user-friendly and offers a simple drag-and-drop interface that enables users to create their albums and memory books easily. The software also offers a range of customization options, including templates, layouts, and design elements, enabling users to create unique and personalised memory books.
     

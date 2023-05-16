@@ -4,8 +4,7 @@ import bycologo from "./bycologo.png";
 import rently from "./rently.png";
 import rentlylogo from "./rentlylogo.png";
 import zod from "./zod.png";
-import tb from "./tb.jpg";
-import tbcardimage from "./tbcard.jpg";
+import tbbanner from "./tbbanner.png";
 import tblogo from "./tblogo.png";
 import zahrabanner from "./zahrabanner.png";
 import zahralogo from "./zahralogo.png";
@@ -21,8 +20,7 @@ export const images = {
   rently,
   rentlylogo,
   zod,
-  tb,
-  tbcardimage,
+  tbbanner,
   tblogo,
   zahrabanner,
   zahralogo,

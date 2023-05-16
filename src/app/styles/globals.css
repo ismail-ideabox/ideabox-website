@@ -152,6 +152,10 @@ img {
   display: flex;
   align-items: flex-end;
 }
+.testimonialSlider .swiper-wrapper {
+  max-width: 1080px;
+}
+
 .ourworkSlider,
 .testimonialSlider,
 .blogsSwiper {

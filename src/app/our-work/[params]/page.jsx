@@ -3,7 +3,6 @@ import workData from "@/app/data/work";
 import OurWorkDetails from "@/app/features/ourWorkDetails";
 import { usePathname, useSearchParams, useRouter } from "next/navigation";
 import React from "react";
-import Head from "next/head";
 
 function WorkDetail() {
   const pathname = usePathname();

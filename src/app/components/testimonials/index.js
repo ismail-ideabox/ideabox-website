@@ -1,14 +1,23 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import layout from "../../styles/layout.module.css";
 import styles from "./testimonials.module.css";
-import { images } from "../../../../public/testimonials";
 import { classNames } from "@/app/utils";
 import { Autoplay, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
+import testimonial from "@/app/data/testimonial";
+import Link from "next/link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faClose } from "@fortawesome/free-solid-svg-icons";
 
 function Testimonials() {
+  const [toggle, setToggle] = useState(false);
+  const [activeTestimonial, setActiveTestimonial] = useState(null);
+  const handleReadMore = (index) => {
+    setActiveTestimonial(index);
+    setToggle(true);
+  };
   return (
     <section
       className={classNames(
@@ -34,10 +43,10 @@ function Testimonials() {
             className="testimonialSlider"
             slidesPerView={1}
             spaceBetween={20}
-            autoplay={{
-              delay: 2000,
-              disableOnInteraction: false,
-            }}
+            // autoplay={{
+            //   delay: 2000,
+            //   disableOnInteraction: false,
+            // }}
             pagination={{
               clickable: true,
             }}
@@ -46,120 +55,92 @@ function Testimonials() {
               300: {
                 slidesPerView: 1,
               },
-              600: {
+              700: {
                 slidesPerView: 2,
               },
-              840: {
+              1000: {
                 slidesPerView: 3,
               },
             }}
           >
-            <SwiperSlide>
-              <div className={styles.testimonial_review}>
-                <div className={styles.review_person}>
-                  <div className={styles.person_image}>
-                    <Image src={images.testimonials} alt="Testimonials" />
-                  </div>
-                  <div className={styles.person_details}>
-                    <div className={styles.person_name}>
-                      <h5>Ahmed Rizvi</h5>
+            {testimonial.map((testimonial, index) => {
+              return (
+                <SwiperSlide key={index}>
+                  <div className={styles.testimonial_review}>
+                    <div className={styles.review_person}>
+                      <div className={styles.person_image}>
+                        <Image src={testimonial.logo} alt="Testimonials" />
+                      </div>
+                      <div className={styles.person_details}>
+                        <div className={styles.person_name}>
+                          <h5>{testimonial.person}</h5>
+                        </div>
+                        <div className={styles.person_position}>
+                          <h5>{testimonial.position}</h5>
+                        </div>
+                        <div className={styles.person_company}>
+                          <h5>{testimonial.company}</h5>
+                        </div>
+                      </div>
                     </div>
-                    <div className={styles.person_position}>
-                      <h5>Head of HR</h5>
-                    </div>
-                    <div className={styles.person_company}>
-                      <h5>Hubco</h5>
-                    </div>
-                  </div>
-                </div>
-                <div className={styles.review_content}>
-                  <p>
-                    Great experience! Such a resourceful, Creative Team! I
-                    highly recommend Purpose path
-                  </p>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className={styles.testimonial_review}>
-                <div className={styles.review_person}>
-                  <div className={styles.person_image}>
-                    <Image src={images.testimonials} alt="" />
-                  </div>
-                  <div className={styles.person_details}>
-                    <div className={styles.person_name}>
-                      <h5>Ahmed Rizvi</h5>
-                    </div>
-                    <div className={styles.person_position}>
-                      <h5>Head of HR</h5>
-                    </div>
-                    <div className={styles.person_company}>
-                      <h5>Hubco</h5>
+                    <div className={styles.review_content}>
+                      <p>{testimonial.testimonial.slice(0, 109)}...</p>
+                      <Link
+                        className={styles.read_more}
+                        onClick={(e) => {
+                          e.preventDefault;
+                          handleReadMore(index);
+                        }}
+                        href={""}
+                      >
+                        Read More
+                      </Link>
                     </div>
                   </div>
-                </div>
-                <div className={styles.review_content}>
-                  <p>
-                    Great experience! Such a resourceful, Creative Team! I
-                    highly recommend Purpose path
-                  </p>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className={styles.testimonial_review}>
-                <div className={styles.review_person}>
-                  <div className={styles.person_image}>
-                    <Image src={images.testimonials} alt="" />
-                  </div>
-                  <div className={styles.person_details}>
-                    <div className={styles.person_name}>
-                      <h5>Ahmed Rizvi</h5>
-                    </div>
-                    <div className={styles.person_position}>
-                      <h5>Head of HR</h5>
-                    </div>
-                    <div className={styles.person_company}>
-                      <h5>Hubco</h5>
-                    </div>
-                  </div>
-                </div>
-                <div className={styles.review_content}>
-                  <p>
-                    Great experience! Such a resourceful, Creative Team! I
-                    highly recommend Purpose path
-                  </p>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className={styles.testimonial_review}>
-                <div className={styles.review_person}>
-                  <div className={styles.person_image}>
-                    <Image src={images.testimonials} alt="" />
-                  </div>
-                  <div className={styles.person_details}>
-                    <div className={styles.person_name}>
-                      <h5>Ahmed Rizvi</h5>
-                    </div>
-                    <div className={styles.person_position}>
-                      <h5>Head of HR</h5>
-                    </div>
-                    <div className={styles.person_company}>
-                      <h5>Hubco</h5>
-                    </div>
-                  </div>
-                </div>
-                <div className={styles.review_content}>
-                  <p>
-                    Great experience! Such a resourceful, Creative Team! I
-                    highly recommend Purpose path
-                  </p>
-                </div>
-              </div>
-            </SwiperSlide>
+                </SwiperSlide>
+              );
+            })}
           </Swiper>
         </div>
+        {activeTestimonial !== null && (
+          <div
+            className={
+              toggle
+                ? classNames(styles.modal_container, styles.modal_active)
+                : styles.modal_container
+            }
+          >
+            <div className={styles.close_btn} onClick={() => setToggle(false)}>
+              <FontAwesomeIcon icon={faClose} />
+            </div>
+            <div className={styles.testimonial_modal}>
+              <div className={styles.testimonial_border}>
+                <div className={styles.review_person_modal}>
+                  <div className={styles.person_image}>
+                    <Image
+                      src={testimonial[activeTestimonial].logo}
+                      alt="Testimonials"
+                    />
+                  </div>
+                  <div className={styles.person_details}>
+                    <div className={styles.person_name}>
+                      <h5>{testimonial[activeTestimonial].person}</h5>
+                    </div>
+                    <div className={styles.person_position}>
+                      <h5>{testimonial[activeTestimonial].position}</h5>
+                    </div>
+                    <div className={styles.person_company}>
+                      <h5>{testimonial[activeTestimonial].company}</h5>
+                    </div>
+                  </div>
+                </div>
+                <div className={styles.review_content_modal}>
+                  <p>{testimonial[activeTestimonial].testimonial}...</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );
