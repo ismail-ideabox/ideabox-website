@@ -79,7 +79,9 @@ function Testimonials() {
                           <h5>{testimonial.position}</h5>
                         </div>
                         <div className={styles.person_company}>
-                          <h5>{testimonial.company}</h5>
+                          <Link href={testimonial.companyUrl}>
+                            <h5>{testimonial.company}</h5>
+                          </Link>
                         </div>
                       </div>
                     </div>
@@ -130,7 +132,9 @@ function Testimonials() {
                       <h5>{testimonial[activeTestimonial].position}</h5>
                     </div>
                     <div className={styles.person_company}>
-                      <h5>{testimonial[activeTestimonial].company}</h5>
+                      <Link href={testimonial[activeTestimonial].companyUrl}>
+                        <h5>{testimonial[activeTestimonial].company}</h5>
+                      </Link>
                     </div>
                   </div>
                 </div>

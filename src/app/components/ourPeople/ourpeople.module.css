@@ -21,7 +21,7 @@
 }
 
 .founder_content {
-  width: 40%;
+  width: 45%;
 }
 
 .founder_name h2 {
@@ -145,6 +145,11 @@
   display: block;
 }
 
+@media screen and (max-width: 1400px) {
+  .founder_image img {
+    max-width: 400px;
+  }
+}
 @media screen and (max-width: 900px) {
   .founder_container {
     flex-direction: column;

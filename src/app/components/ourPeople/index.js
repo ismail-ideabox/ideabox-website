@@ -114,11 +114,11 @@ function OurPeople() {
                     </Link>
                   </div>
                 </div>
-                <Button
+                {/* <Button
                   redirect={"/our-team"}
                   text={"VIEW OUR TEAM"}
                   type="primary"
-                />
+                /> */}
               </div>
             </div>
             <div className={styles.founder_image}>

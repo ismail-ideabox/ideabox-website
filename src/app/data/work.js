@@ -35,7 +35,7 @@ AWS Services`,
   {
     id: 2,
     projectName: "Takaful Bazaar",
-    workCardImage: images.tbbanner,
+    workCardImage: images.tbcard,
     cardImage: images.tbbanner,
     workLogo: images.tblogo,
     url: "https://takafulbazaar.pk/",
@@ -62,7 +62,7 @@ ODOO CRM`,
   {
     id: 3,
     projectName: "RENTLY",
-    workCardImage: images.rently,
+    workCardImage: images.rentlycard,
     cardImage: images.rently,
     workLogo: images.rentlylogo,
     url: "https://rently.pk/",
@@ -167,7 +167,7 @@ Azure Services`,
   {
     id: 6,
     projectName: "Book My Memories",
-    workCardImage: images.bmmbanner,
+    workCardImage: images.bmmcard,
     cardImage: images.bmmbanner,
     workLogo: images.bmmlogo,
     url: "",
@@ -193,6 +193,33 @@ MY SQL
 AWS Services
 Design and Creative Services
 SEO Services`,
+  },
+  {
+    id: 7,
+    projectName: "ZOD",
+    workCardImage: images.zodcard,
+    cardImage: images.zodbanner,
+    workLogo: images.zodlogo,
+    url: "https://shop.zod.media/",
+    buttontext: "ZOD",
+    workInfo: `ZOD is a B2B technology platform that has gained significant popularity and recognition in recent years. Designed specifically for independent retailers and makers, ZOD aims to revolutionise the South Asian wholesale purchasing process by providing a streamlined and efficient marketplace.
+    
+ZOD platform connects retailers with a vast network of manufacturers, offering a wide range of products across various categories, including fashion, accessories, and more. Retailers can browse through thousands of unique products/assortments, access detailed product information, place bulk orders, and manage their inventory all in one place. This simplifies the purchasing process, eliminates the need for manual paperwork, and saves time for both retailers and suppliers.`,
+    implementation: `One of the standout features of ZOD is its data-driven approach. The platform leverages data and analytics to provide personalised product recommendations to retailers, helping them discover new and trending items that align with their customers' preferences. ZOD also offers retailers insights into industry trends and consumer behaviour, empowering them to make informed buying decisions.
+    
+ZOD offers extensive product selection based on various AI based logics which  provides access to a vast catalogue of products across various categories, including home goods, fashion, accessories, and more. Retailers can explore thousands of unique and high-quality products from a diverse network of brands and suppliers.
+    
+ZOD simplifies the wholesale purchasing process by offering a user-friendly interface for placing orders. Retailers can browse product listings, access detailed information and images, and easily add items to their cart. The platform also streamlines the payment and checkout process, making it convenient and efficient
+    
+ZOD provides retailers and manufactures with tools to manage their inventory effectively. Retailers & manufacturers can track stock levels, receive notifications for low inventory, and easily reorder products, ensuring they can meet customer demand without overstocking.`,
+    technologies: `Node.JS
+Angular
+React.JS
+React.Native
+Next.JS
+SQL
+Python
+AWS Services`,
   },
 ];
 export default workDetail;

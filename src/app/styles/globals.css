@@ -148,12 +148,9 @@ img {
   display: flex;
 }
 .clienteleslider .swiper-wrapper {
-  /* transition-timing-function: linear; */
+  transition-timing-function: linear;
   display: flex;
   align-items: flex-end;
-}
-.testimonialSlider .swiper-wrapper {
-  max-width: 1080px;
 }
 
 .ourworkSlider,

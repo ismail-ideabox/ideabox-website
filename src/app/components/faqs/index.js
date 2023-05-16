@@ -9,27 +9,48 @@ import { classNames } from "@/app/utils";
 function Faqs() {
   const [faqsData, setFaqsData] = useState([
     {
-      question: "What is SEO?",
+      question: "What services do you provide?",
       answers:
-        "A	SEO is the process of improving your site to increase its visibility when people search for products or services related to your business in Google, Bing and other engines. The better that you can make sure these pages show up on the first page results list; the easier it will be to attract prospective customers and keep them coming back again because they found what best suited their needs through us!",
+        "We offer a range of software development services, including custom software development, web application development, mobile app development, business process re-engineering, MVP’s for startup’s, CRM & ERP development, ODOO implementation, software testing, maintenance, and support",
       istoggle: false,
     },
     {
-      question: "What is SEO?",
+      question:
+        "What technologies and programming languages do you specialise in?",
       answers:
-        "A	SEO is the process of improving your site to increase its visibility when people search for products or services related to your business in Google, Bing and other engines. The better that you can make sure these pages show up on the first page results list; the easier it will be to attract prospective customers and keep them coming back again because they found what best suited their needs through us!",
+        "We specialise in various technologies and programming languages, such as Java, Python, .NET, PHP, JavaScript, React.JS, React.Native, Angular, Node.js, and more. We stay up to date with the latest industry trends and continuously expand our skill set",
       istoggle: false,
     },
     {
-      question: "What is SEO?",
+      question: "What is your development process like?",
       answers:
-        "A	SEO is the process of improving your site to increase its visibility when people search for products or services related to your business in Google, Bing and other engines. The better that you can make sure these pages show up on the first page results list; the easier it will be to attract prospective customers and keep them coming back again because they found what best suited their needs through us!",
+        "Our development process follows agile methodologies. We collaborate closely with clients, conduct regular meetings for requirement gathering, provide regular progress updates, and incorporate feedback throughout the development cycle",
       istoggle: false,
     },
     {
-      question: "What is SEO?",
+      question: "How do you handle scalability and future growth?",
       answers:
-        "A	SEO is the process of improving your site to increase its visibility when people search for products or services related to your business in Google, Bing and other engines. The better that you can make sure these pages show up on the first page results list; the easier it will be to attract prospective customers and keep them coming back again because they found what best suited their needs through us!",
+        "We design our software solutions with scalability in mind. Our architecture and infrastructure allow for seamless scalability, ensuring that your software can accommodate future growth and increased user demand",
+      istoggle: false,
+    },
+    {
+      question:
+        "How do you ensure the security and confidentiality of our project?",
+      answers:
+        "We prioritise the security of our clients' projects. We follow industry-standard best practices for data protection, implement secure coding practices, and maintain strict confidentiality agreements with our team members",
+      istoggle: false,
+    },
+    {
+      question:
+        "What kind of support and maintenance do you provide post development?",
+      answers:
+        "We offer ongoing support and maintenance services to address any issues or updates that may arise after the development phase. Our team is available for timely bug fixes, performance optimizations, and feature enhancements. Majority of our clients do sign up a retainer with us.",
+      istoggle: false,
+    },
+    {
+      question: "What is your pricing structure?",
+      answers:
+        "Our pricing structure is based on various factors such as project complexity, scope, and duration. We provide detailed project proposals with transparent pricing, ensuring that you have a clear understanding of the cost involved.",
       istoggle: false,
     },
   ]);
@@ -97,8 +118,7 @@ function Faqs() {
                   </div>
                   <div className={styles.faq__body}>
                     <p>
-                      A
-                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      Ans. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                       {faq.answers}
                     </p>
                   </div>

@@ -1,7 +1,7 @@
 import angular from "./angular1.png";
 import node from "./node.png";
 import reactnative from "./reactnative.png";
-import react from "./react.png";
+import reactjs from "./reactjs.png";
 import dotnet from "./dotnet.png";
 import php from "./php.png";
 import android from "./android.png";
@@ -16,7 +16,7 @@ export const images = {
   angular,
   node,
   reactnative,
-  react,
+  reactjs,
   dotnet,
   php,
   android,

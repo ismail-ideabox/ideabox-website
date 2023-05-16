@@ -11,10 +11,12 @@ function WorkDetail() {
   const params = new URLSearchParams(searchParams);
   const id = Number(params.get("id"));
 
-
   const filteredWork = workData.find((ele) => ele.id === id);
   return (
     <>
+      <head>
+        <title>{filteredWork.projectName + " | Ideabox"}</title>
+      </head>
       <div>
         <OurWorkDetails filteredWork={filteredWork} />
       </div>

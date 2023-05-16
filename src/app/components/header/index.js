@@ -161,10 +161,9 @@ function Header({ innerPage, headerVisible }) {
           </div>
           <div className={styles.contact_details}>
             <h3>
-              <Link href={"mailto:info@ideabox.pk"}>info@ideabox.pk</Link>
+              <Link href={"mailto:info@ideabox.pk"}>hello@ideabox.pk</Link>
             </h3>
-            <h3>+971 55 117 1248</h3>
-            <h3>+1 (832) 361 8199</h3>
+            <h3>+92 21 37234945</h3>
           </div>
         </div>
       </div>

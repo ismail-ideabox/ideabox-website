@@ -5,7 +5,7 @@
 }
 
 .clientele_container {
-  padding: 60px 0;
+  padding: 60px 0 0 0;
 }
 
 .clientele_heading h4 {
@@ -27,6 +27,9 @@
 .clientele_brands {
   width: 15%;
 }
+.padding_bottom {
+  padding-bottom: 60px;
+}
 
 .clientele_brands img {
   width: 100%;
@@ -34,7 +37,7 @@
 }
 .work_logo_img {
   margin-inline: auto;
-  padding: 10px 30px;
+  padding: 0 30px;
 }
 .work_logo_img a {
   -webkit-tap-highlight-color: transparent !important;

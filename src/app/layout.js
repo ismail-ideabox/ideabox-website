@@ -4,6 +4,7 @@ import { config } from "@fortawesome/fontawesome-svg-core";
 config.autoAddCss = false;
 import "./styles/globals.css";
 import { Router } from "next/router";
+import { useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
 import { images } from "../../public/loader";
 import Image from "next/image";
@@ -16,6 +17,7 @@ export default function RootLayout({ children }) {
     console.log(children, "child");
     console.log("adnan");
     const handleRouteStart = () => {
+      console.log("route changed");
       setLoading(true);
     };
 
@@ -31,7 +33,7 @@ export default function RootLayout({ children }) {
       Router.events.off("routeChangeComplete", handleRouteDone());
       Router.events.off("routeChangeError", handleRouteDone());
     };
-  }, []);
+  }, [Router]);
   return (
     <html lang="en">
       <Head>
@@ -49,7 +51,7 @@ export default function RootLayout({ children }) {
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              backgroundColor: "#000000",
+              backgroundColor: "#fff",
               zIndex: "999",
               top: "0",
               left: "0",

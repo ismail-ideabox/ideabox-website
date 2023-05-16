@@ -6,6 +6,7 @@ const testimonial = [
     person: "Zahra Ebrahim",
     position: "Founder, CEO, Principal",
     company: `Zahra Ebrahim – Furniture & Interiors`,
+    companyUrl: "https://zahraebrahim.com/",
     testimonial:
       "Ideabox have been our tech partners since 2019. I have seen their team grow alongside ours into the dynamic company that it is today under Obaids focused leadership. Obaids rational thinking, amazing temperament and ability to take up difficult challenges have always made me feel that we are in good hands and no task is too big to ask. They have not only helped us develop the tech support we have needed over these years, have often proposed taking up more than what we have asked in order to better the end result and have consistently helped us make better our business plan. They truly care about their clients and we wish them continued success.",
   },
@@ -15,6 +16,7 @@ const testimonial = [
     person: "Zahra Ebrahim",
     position: "Founder, CEO, Principal",
     company: `Zahra Ebrahim – Furniture & Interiors`,
+    companyUrl: "",
     testimonial:
       "Ideabox have been our tech partners since 2019. I have seen their team grow alongside ours into the dynamic company that it is today under Obaids focused leadership. Obaids rational thinking, amazing temperament and ability to take up difficult challenges have always made me feel that we are in good hands and no task is too big to ask. They have not only helped us develop the tech support we have needed over these years, have often proposed taking up more than what we have asked in order to better the end result and have consistently helped us make better our business plan. They truly care about their clients and we wish them continued success.",
   },
@@ -24,6 +26,7 @@ const testimonial = [
     person: "Zahra Ebrahim",
     position: "Founder, CEO, Principal",
     company: `Zahra Ebrahim – Furniture & Interiors`,
+    companyUrl: "",
     testimonial:
       "Ideabox have been our tech partners since 2019. I have seen their team grow alongside ours into the dynamic company that it is today under Obaids focused leadership. Obaids rational thinking, amazing temperament and ability to take up difficult challenges have always made me feel that we are in good hands and no task is too big to ask. They have not only helped us develop the tech support we have needed over these years, have often proposed taking up more than what we have asked in order to better the end result and have consistently helped us make better our business plan. They truly care about their clients and we wish them continued success.",
   },
@@ -33,6 +36,7 @@ const testimonial = [
     person: "Zahra Ebrahim",
     position: "Founder, CEO, Principal",
     company: `Zahra Ebrahim – Furniture & Interiors`,
+    companyUrl: "",
     testimonial:
       "Ideabox have been our tech partners since 2019. I have seen their team grow alongside ours into the dynamic company that it is today under Obaids focused leadership. Obaids rational thinking, amazing temperament and ability to take up difficult challenges have always made me feel that we are in good hands and no task is too big to ask. They have not only helped us develop the tech support we have needed over these years, have often proposed taking up more than what we have asked in order to better the end result and have consistently helped us make better our business plan. They truly care about their clients and we wish them continued success.",
   },
@@ -42,6 +46,7 @@ const testimonial = [
     person: "Zahra Ebrahim",
     position: "Founder, CEO, Principal",
     company: `Zahra Ebrahim – Furniture & Interiors`,
+    companyUrl: "",
     testimonial:
       "Ideabox have been our tech partners since 2019. I have seen their team grow alongside ours into the dynamic company that it is today under Obaids focused leadership. Obaids rational thinking, amazing temperament and ability to take up difficult challenges have always made me feel that we are in good hands and no task is too big to ask. They have not only helped us develop the tech support we have needed over these years, have often proposed taking up more than what we have asked in order to better the end result and have consistently helped us make better our business plan. They truly care about their clients and we wish them continued success.",
   },

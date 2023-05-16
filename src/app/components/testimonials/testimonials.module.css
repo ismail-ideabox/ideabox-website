@@ -34,7 +34,7 @@
 .review_person,
 .review_person_modal {
   display: flex;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 
 .person_image {
@@ -87,7 +87,7 @@
   color: #fff;
   font-size: 16px;
   font-family: var(--secondary-font);
-  margin-bottom: 5px;
+  margin-bottom: 15px;
 }
 .review_content_modal p {
   color: #fff;

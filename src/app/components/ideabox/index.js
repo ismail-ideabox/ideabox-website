@@ -26,7 +26,7 @@ function Ideabox() {
               </h3>
               <p>
                 Purpose Path helps you reach your goals faster with insightful
-                market research.
+                market research
               </p>
             </div>
             <div className={styles.features}>
@@ -35,7 +35,7 @@ function Ideabox() {
               </h3>
               <p>
                 Work on your most outrageously creative ideas, with a team of
-                seasoned creatives at your disposal.
+                seasoned creatives at your disposal
               </p>
             </div>
             <div className={styles.features}>
@@ -44,7 +44,7 @@ function Ideabox() {
               </h3>
               <p>
                 A dedicated project manager ensures your projects are delivered
-                before your deadlines.
+                before your deadlines
               </p>
             </div>
             <div className={styles.features}>
@@ -53,7 +53,7 @@ function Ideabox() {
               </h3>
               <p>
                 Flexible payment plans and no-monthly commitments for all
-                services.
+                services
               </p>
             </div>
             <div className={styles.features}>
@@ -62,14 +62,14 @@ function Ideabox() {
               </h3>
               <p>
                 24/7 support with a real person is standard when you work with
-                Purpose Path.
+                Purpose Path
               </p>
             </div>
             <div className={styles.features}>
               <h3>REVENUE DRIVEN</h3>
               <p>
                 Numbers never lie. Purpose Path focuses on relevant metrics, not
-                empty numbers.
+                empty numbers
               </p>
             </div>
           </div>
@@ -78,28 +78,7 @@ function Ideabox() {
               <Image
                 className={styles.tech_images_img}
                 alt=""
-                src={images.angular}
-              />
-            </div>
-            <div className={styles.tech_images}>
-              <Image
-                className={styles.tech_images_img}
-                alt=""
                 src={images.node}
-              />
-            </div>
-            <div className={styles.tech_images}>
-              <Image
-                className={styles.tech_images_img}
-                alt=""
-                src={images.reactnative}
-              />
-            </div>
-            <div className={styles.tech_images}>
-              <Image
-                className={styles.tech_images_img}
-                alt=""
-                src={images.react}
               />
             </div>
             <div className={styles.tech_images}>
@@ -120,9 +99,31 @@ function Ideabox() {
               <Image
                 className={styles.tech_images_img}
                 alt=""
+                src={images.angular}
+              />
+            </div>
+            <div className={styles.tech_images}>
+              <Image
+                className={styles.tech_images_img}
+                alt=""
+                src={images.reactjs}
+              />
+            </div>
+            <div className={styles.tech_images}>
+              <Image
+                className={styles.tech_images_img}
+                alt=""
                 src={images.android}
               />
             </div>
+            <div className={styles.tech_images}>
+              <Image
+                className={styles.tech_images_img}
+                alt=""
+                src={images.reactnative}
+              />
+            </div>
+
             <div className={styles.tech_images}>
               <Image
                 className={styles.tech_images_img}
