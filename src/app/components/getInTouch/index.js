@@ -97,7 +97,6 @@ function GetInTouch({ headerVisible }) {
     e.preventDefault();
     setState((prev) => ({
       ...prev,
-      isLoading: true,
     }));
     try {
       const response = await fetch("src/pages/api/server", {
@@ -122,6 +121,7 @@ function GetInTouch({ headerVisible }) {
   };
 
   const [toggle, setToggle] = useState(false);
+  const [formSubmit, setFormSubmit] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
   const swiperRef = useRef(null);
   const toSlide = (num) => {
@@ -295,62 +295,95 @@ function GetInTouch({ headerVisible }) {
                 <div className={styles.form_input}>
                   <div
                     className={styles.close_btn}
-                    onClick={() => setToggle(false)}
+                    onClick={() => {
+                      setToggle(false);
+                      setFormSubmit(false);
+                    }}
                   >
                     <FontAwesomeIcon icon={faClose} />
                   </div>
-                  <div className={styles.input_flex}>
-                    <Input
-                      onChange={handleChange}
-                      name="full-name"
-                      id={"full-name"}
-                      type="text"
-                      placeholder="Full Name"
-                      value={values.fullName}
-                    />
-                    <Input
-                      onChange={handleChange}
-                      name="company-name"
-                      id={"company-name"}
-                      type="text"
-                      placeholder="Company Name"
-                      value={values.companyName}
-                    />
+                  <div
+                    className={
+                      formSubmit ? styles.form_submit : styles.display_block
+                    }
+                  >
+                    <div className={styles.input_flex}>
+                      <Input
+                        onChange={handleChange}
+                        name="full-name"
+                        id={"full-name"}
+                        type="text"
+                        placeholder="Full Name"
+                        // value={values.fullName}
+                      />
+                      <Input
+                        onChange={handleChange}
+                        name="company-name"
+                        id={"company-name"}
+                        type="text"
+                        placeholder="Company Name"
+                        // value={values.companyName}
+                      />
+                    </div>
+                    <div className={styles.input_flex}>
+                      <Input
+                        onChange={handleChange}
+                        name="email-address"
+                        id={"email-address"}
+                        type="email"
+                        placeholder="Email Address"
+                        // value={values.emailAddress}
+                      />
+                      <Input
+                        onChange={handleChange}
+                        name="phone-no"
+                        id={"phone-no"}
+                        type="text"
+                        placeholder="Phone No."
+                        // value={values.phoneNo}
+                      />
+                    </div>
+                    <div className={styles.text_area}>
+                      <TextArea
+                        onChange={handleChange}
+                        name="message"
+                        input_type="text"
+                        placeholder="Tell us about your project"
+                        id="message"
+                        // value={values.message}
+                      />
+                      <Button
+                        isLoading={isLoading}
+                        redirect={""}
+                        text={"SEND"}
+                        type="primary"
+                        onClick={() => setFormSubmit(true)}
+                      />
+                    </div>
                   </div>
-                  <div className={styles.input_flex}>
-                    <Input
-                      onChange={handleChange}
-                      name="email-address"
-                      id={"email-address"}
-                      type="email"
-                      placeholder="Email Address"
-                      value={values.emailAddress}
-                    />
-                    <Input
-                      onChange={handleChange}
-                      name="phone-no"
-                      id={"phone-no"}
-                      type="text"
-                      placeholder="Phone No."
-                      value={values.phoneNo}
-                    />
-                  </div>
-                  <div className={styles.text_area}>
-                    <TextArea
-                      onChange={handleChange}
-                      name="message"
-                      input_type="text"
-                      placeholder="Tell us about your project"
-                      id="message"
-                      value={values.message}
-                    />
-                    <Button
-                      isLoading={isLoading}
-                      redirect={""}
-                      text={"SEND"}
-                      type="primary"
-                      onClick={onSubmit}
-                    />
+                  <div
+                    className={
+                      formSubmit
+                        ? styles.form_submitted
+                        : styles.form_notSubmitted
+                    }
+                  >
+                    <div className={styles.form_submit_flex}>
+                      <h2>Thank You</h2>
+                      <h4>
+                        Your Form Has Been Submitted We'll Contact You As Soon
+                        As Possible
+                      </h4>
+                      <p>
+                        For Quick Response Please Contact us at{" "}
+                        <Link
+                          className={styles.mail_at}
+                          href={"mailto:info@ideabox.pk"}
+                        >
+                          hello@ideabox.pk
+                        </Link>
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>

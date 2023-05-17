@@ -129,14 +129,14 @@ function Header({ innerPage, headerVisible }) {
                 Our Work
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link
                 href="/news-and-blogs"
                 className={classNames(styles.nav_link, "")}
               >
                 News and Blogs
               </Link>
-            </li>
+            </li> */}
             <li>
               <Link
                 href="/contact-us"

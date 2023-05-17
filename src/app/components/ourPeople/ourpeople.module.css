@@ -150,6 +150,11 @@
     max-width: 400px;
   }
 }
+@media screen and (max-width: 1140px) {
+  .work_image {
+    width: 16%;
+  }
+}
 @media screen and (max-width: 900px) {
   .founder_container {
     flex-direction: column;
@@ -162,7 +167,7 @@
   .founder_image {
     order: 1;
     width: 100%;
-    margin: 0 auto;
+    /* margin: 0 auto; */
     max-width: 400px;
   }
 
@@ -189,6 +194,11 @@
   }
   .work_image::before {
     right: -25%;
+  }
+}
+@media screen and (max-width: 400px) {
+  .work_image {
+    margin-right: 25px;
   }
 }
 @media screen and (max-width: 800px) {

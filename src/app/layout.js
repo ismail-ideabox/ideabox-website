@@ -4,24 +4,27 @@ import { config } from "@fortawesome/fontawesome-svg-core";
 config.autoAddCss = false;
 import "./styles/globals.css";
 import { Router } from "next/router";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useState, useEffect } from "react";
 import { images } from "../../public/loader";
 import Image from "next/image";
-
 import Head from "next/head";
 
 export default function RootLayout({ children }) {
   const [Loading, setLoading] = useState(true);
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+
   useEffect(() => {
-    console.log(children, "child");
-    console.log("adnan");
+    setLoading(false);
+    // console.log(children, "child");
     const handleRouteStart = () => {
-      console.log("route changed");
+      console.log("route start");
       setLoading(true);
     };
 
     const handleRouteDone = () => {
+      console.log("Route changed");
       setLoading(false);
     };
     Router.events.on("routeChangeStart", handleRouteStart());
@@ -33,22 +36,22 @@ export default function RootLayout({ children }) {
       Router.events.off("routeChangeComplete", handleRouteDone());
       Router.events.off("routeChangeError", handleRouteDone());
     };
-  }, [Router]);
+  }, [pathname, searchParams]);
   return (
-    <html lang="en">
-      <Head>
-        <title>Home | Ideabox</title>
-        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-      </Head>
+    <>
+      <html lang="en">
+        <Head>
+          <title>Home | Ideabox</title>
+          <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+        </Head>
 
-      {Loading && (
         <body>
           <div
             style={{
               position: "fixed",
               width: "100%",
               height: "100vh",
-              display: "flex",
+              display: Loading ? "flex" : "none",
               alignItems: "center",
               justifyContent: "center",
               backgroundColor: "#fff",
@@ -60,9 +63,10 @@ export default function RootLayout({ children }) {
           >
             <Image src={images.loader} alt={"Loader Image"} />
           </div>
+
+          {children}
         </body>
-      )}
-      {!Loading && <body>{children}</body>}
-    </html>
+      </html>
+    </>
   );
 }

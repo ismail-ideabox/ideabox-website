@@ -182,6 +182,45 @@
   width: 60%;
   padding: 5%;
 }
+.form_submit {
+  display: none;
+}
+.display_block {
+  display: block;
+}
+.form_notSubmitted {
+  display: none;
+}
+.form_submitted {
+  display: block;
+}
+.form_submit_flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.form_submitted h2 {
+  color: var(--primary-color);
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 25px;
+}
+.form_submitted h4 {
+  color: #acaaa6;
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 25px;
+}
+.form_submitted p {
+  font-size: 18px;
+  color: #acaaa6;
+  text-align: center;
+}
+.mail_at {
+  font-size: 20px;
+  color: var(--primary-color);
+  text-decoration: underline;
+}
 .input_flex {
   display: flex;
   gap: 40px;

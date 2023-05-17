@@ -50,11 +50,11 @@ function Footer() {
                     Our Work
                   </Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link href="/news-and-blogs" className={""}>
                     News and Blogs
                   </Link>
-                </li>
+                </li> */}
                 <li>
                   <Link href="/contact-us" className={""}>
                     Contact
@@ -79,13 +79,14 @@ function Footer() {
                   </div>
                   <div className={styles.view_direction}>
                     <Button
-                      redirect={""}
+                      target={"_blank"}
+                      redirect={"https://goo.gl/maps/Yf9eiWA64m6bND796"}
                       type="primary"
                       text={"view direction"}
                     />
                   </div>
                 </div>
-                <div className={styles.address_direction}>
+                {/* <div className={styles.address_direction}>
                   <div className={styles.direction_country}>
                     <h5>UK</h5>
                   </div>
@@ -120,9 +121,20 @@ function Footer() {
                       text={"view direction"}
                     />
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
+            {/* <div className={styles.footer_map}>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3620.959398979597!2d67.07270061566327!3d24.831062052548955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33c53f5ced18b%3A0xb527f2354c7936a6!2sIdeabox%20Pakistan!5e0!3m2!1sen!2s!4v1680993933348!5m2!1sen!2s"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div> */}
           </div>
         </div>
       </div>

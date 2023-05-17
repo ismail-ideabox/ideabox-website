@@ -7,7 +7,7 @@ function OurWork() {
       <head>
         <title>Our Work | Ideabox</title>
       </head>
-      <OurWorkPage />;
+      <OurWorkPage />
     </>
   );
 }

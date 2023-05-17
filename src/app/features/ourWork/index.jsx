@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./ourWork.module.css";
 import layout from "../../styles/layout.module.css";
 import { images } from "../../../../public/caseStudies";
@@ -11,9 +11,13 @@ import Footer from "@/app/components/footer";
 import { ScrollToTop } from "@/app/components/scrollToTop";
 import Projectcard from "@/app/components/ourWork/projectcard";
 import workDetail from "@/app/data/work";
-import { useState } from "react";
 
 function OurWork({ isHomePage }) {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [data]);
   const [offset, setOffset] = useState(6);
   const handleLoadMore = (e) => {
     e.preventDefault();

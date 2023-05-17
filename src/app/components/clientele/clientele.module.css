@@ -10,7 +10,7 @@
 
 .clientele_heading h4 {
   margin-bottom: 10px;
-  color: #ff5f36;
+  color: var(--secondary-color);
 }
 
 .trusted_client h2 {
@@ -47,17 +47,20 @@
   height: auto;
 }
 .trusted_client_heading {
-  font-size: 32px;
+  font-size: 36px;
   font-weight: 500;
   font-family: var(--primary-font);
 }
 
 @media (max-width: 600px) {
   .clientele_container {
-    padding: 30px 0;
+    padding: 30px 0 0 0;
   }
   .clientele_brands {
     width: 17%;
+  }
+  .trusted_client_heading {
+    font-size: 28px;
   }
 
   .clientele_images {
@@ -67,7 +70,16 @@
     filter: none;
   }
   .work_logo_img {
-    padding: 0 15px;
+    padding: 0 10px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .clientele_images {
+    margin-top: 25px;
+  }
+  .trusted_client_heading {
+    margin-bottom: 15px;
   }
 }
 

@@ -4,6 +4,8 @@ import layout from "../../styles/layout.module.css";
 import Image from "next/image";
 import { classNames } from "@/app/utils";
 import { images } from "../../../../public/ideabox";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination } from "swiper";
 
 function Ideabox() {
   return (
@@ -166,6 +168,154 @@ function Ideabox() {
                 src={images.azure}
               />
             </div>
+          </div>
+          <div className={styles.tech_container_slider}>
+            <Swiper
+              className="ideaboxSlider"
+              slidesPerView={7}
+              loop={true}
+              // freeMode={true}
+              spaceBetween={0}
+              speed={8000}
+              // Autoplay={true}
+              autoplay={{
+                delay: 0,
+                disableOnInteraction: false,
+              }}
+              breakpoints={{
+                300: {
+                  slidesPerView: 4,
+                },
+                600: {
+                  slidesPerView: 5,
+                },
+                840: {
+                  slidesPerView: 8,
+                },
+              }}
+              modules={[Pagination, Autoplay]}
+            >
+              <SwiperSlide>
+                <div className={styles.tech_images}>
+                  <Image
+                    className={styles.tech_images_img}
+                    alt=""
+                    src={images.node}
+                  />
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className={styles.tech_images}>
+                  <Image
+                    className={styles.tech_images_img}
+                    alt=""
+                    src={images.dotnet}
+                  />
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className={styles.tech_images}>
+                  <Image
+                    className={styles.tech_images_img}
+                    alt=""
+                    src={images.php}
+                  />
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className={styles.tech_images}>
+                  <Image
+                    className={styles.tech_images_img}
+                    alt=""
+                    src={images.angular}
+                  />
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className={styles.tech_images}>
+                  <Image
+                    className={styles.tech_images_img}
+                    alt=""
+                    src={images.reactjs}
+                  />
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className={styles.tech_images}>
+                  <Image
+                    className={styles.tech_images_img}
+                    alt=""
+                    src={images.android}
+                  />
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                {" "}
+                <div className={styles.tech_images}>
+                  <Image
+                    className={styles.tech_images_img}
+                    alt=""
+                    src={images.reactnative}
+                  />
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className={styles.tech_images}>
+                  <Image
+                    className={styles.tech_images_img}
+                    alt=""
+                    src={images.ios}
+                  />
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                {" "}
+                <div className={styles.tech_images}>
+                  <Image
+                    className={styles.tech_images_img}
+                    alt=""
+                    src={images.python}
+                  />
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className={styles.tech_images}>
+                  <Image
+                    className={styles.tech_images_img}
+                    alt=""
+                    src={images.odoo}
+                  />
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                {" "}
+                <div className={styles.tech_images}>
+                  <Image
+                    className={styles.tech_images_img}
+                    alt=""
+                    src={images.sap}
+                  />
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className={styles.tech_images}>
+                  <Image
+                    className={styles.tech_images_img}
+                    alt=""
+                    src={images.aws}
+                  />
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className={styles.tech_images}>
+                  <Image
+                    className={styles.tech_images_img}
+                    alt=""
+                    src={images.azure}
+                  />
+                </div>
+              </SwiperSlide>
+            </Swiper>
           </div>
         </div>
       </div>

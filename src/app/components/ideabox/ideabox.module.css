@@ -55,6 +55,9 @@
   height: auto;
   filter: brightness(0) invert(1);
 }
+.tech_container_slider {
+  display: none;
+}
 
 @media (max-width: 768px) {
   .features {
@@ -65,10 +68,13 @@
     padding-top: 30px;
   }
   .tech_container {
-    justify-content: center;
+    display: none;
+  }
+  .tech_container_slider {
+    display: block;
   }
   .tech_images {
-    width: 14%;
+    width: 100%;
     padding: 0 10px;
   }
 }
@@ -76,6 +82,9 @@
 @media (max-width: 600px) {
   .ideabox_section {
     min-height: auto;
+  }
+  .tech_images {
+    padding: 0 15px;
   }
   .ideabox_container {
     padding: 30px 0;
@@ -89,12 +98,7 @@
     width: 100%;
   }
 }
-@media screen and (max-width: 500px) {
-  .tech_images {
-    width: 14%;
-    padding: 0 5px;
-  }
-}
+
 @media screen and (max-width: 800px) {
   .ideabox_section {
     scroll-snap-align: initial;

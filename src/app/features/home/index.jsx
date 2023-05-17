@@ -130,7 +130,7 @@ function Home() {
         <OurWork isHomePage={true} />
         <Clientele />
         <Testimonials />
-        <Blogs blogsCard={blogsData.slice(0, 3)} />
+        {/* <Blogs blogsCard={blogsData.slice(0, 3)} /> */}
         <Faqs />
         <Footer />
         <ScrollToTop visible={scrollToTopVisible} parentRef={parentRef} />

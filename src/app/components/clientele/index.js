@@ -43,13 +43,13 @@ function Clientele() {
             }}
             breakpoints={{
               300: {
-                slidesPerView: 5,
+                slidesPerView: 4,
               },
               600: {
-                slidesPerView: 6,
+                slidesPerView: 5,
               },
               840: {
-                slidesPerView: 7,
+                slidesPerView: 8,
               },
             }}
             modules={[Pagination, Autoplay]}
@@ -82,13 +82,13 @@ function Clientele() {
             }}
             breakpoints={{
               300: {
-                slidesPerView: 5,
+                slidesPerView: 4,
               },
               600: {
-                slidesPerView: 6,
+                slidesPerView: 5,
               },
               840: {
-                slidesPerView: 7,
+                slidesPerView: 8,
               },
             }}
             modules={[Pagination, Autoplay]}

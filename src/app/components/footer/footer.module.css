@@ -11,6 +11,7 @@
 
 .footer_ideabox {
   width: 25%;
+  margin-right: 20px;
 }
 
 .ideabox_image {
@@ -44,6 +45,7 @@
 
 .footer_navbar {
   width: 15%;
+  flex: 1;
 }
 
 .footer_navbar ul li {
@@ -58,7 +60,7 @@
 }
 
 .footer_address {
-  width: 50%;
+  width: 15%;
 }
 
 .address_heading p {
@@ -71,12 +73,16 @@
 
 .address_direction_container {
   display: flex;
-  justify-content: space-between;
+  justify-content: end;
   margin-bottom: 20px;
 }
 
 .address_direction {
+  width: 100%;
+}
+.footer_map {
   width: 30%;
+  /* border: 1px solid #8a8a8a; */
 }
 
 .direction_country h5 {

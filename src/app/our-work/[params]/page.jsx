@@ -2,9 +2,14 @@
 import workData from "@/app/data/work";
 import OurWorkDetails from "@/app/features/ourWorkDetails";
 import { usePathname, useSearchParams, useRouter } from "next/navigation";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 function WorkDetail() {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [data]);
   const pathname = usePathname();
   const searchParams = useSearchParams();
 

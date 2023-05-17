@@ -40,7 +40,7 @@ function Proudproduct() {
                   focus on making their clients look and feel their best. It’s a
                   complete web-based software which is accessible through
                   laptop, tablet or even mobile phone so all the operations can
-                  be viewed and managed from any location in the world.
+                  be viewed and managed from any location in the world
                 </p>
               </div>
             </div>

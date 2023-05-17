@@ -40,10 +40,11 @@ function OurPeople() {
               </div>
               <div className={styles.founder_para}>
                 <p>
-                  With a keen understanding of business analytics and scope,
-                  Obaid leads business development and client relations at
-                  Ideabox. He ensures clients get top quality service for all
-                  their projects.
+                  Obaid possesses a unique blend of technical expertise and
+                  business acumen. With over 20+ years of experience working
+                  with start up’s, financial, energy and health sectors, Obaid
+                  has a deep understanding of the software industry, emerging
+                  technologies and market trends
                 </p>
               </div>
               <div className={styles.founder_work_logo}>
@@ -89,6 +90,7 @@ function OurPeople() {
                       />
                     </Link>
                   </div>
+
                   <div className={styles.work_image}>
                     <Link target="_blank" href={"https://www.nhs.uk/"}>
                       <Image

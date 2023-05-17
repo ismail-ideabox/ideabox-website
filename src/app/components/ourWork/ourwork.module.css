@@ -89,7 +89,13 @@
     width: 100%;
   }
   .project_image img {
-    height: 30vh;
+    height: 28vh;
+  }
+}
+@media (max-width: 400px) {
+  .project_image img {
+    height: 23vh;
+    object-fit: cover;
   }
 }
 

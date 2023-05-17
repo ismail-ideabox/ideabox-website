@@ -12,7 +12,8 @@ import tbcard from "./tbcard.jpg";
 import tblogo from "./tblogo.png";
 import zahrabanner from "./zahrabanner.png";
 import zahralogo from "./zahralogo.png";
-import saloonbanner from "./saloonbanner.png";
+import salonbanner from "./salonbanner.jpg";
+import saloncard from "./saloncard.jpg";
 import salonlogo from "./salonlogo.png";
 import bmmbanner from "./bmmbanner.png";
 import bmmcard from "./bmmcard.png";
@@ -33,7 +34,8 @@ export const images = {
   tblogo,
   zahrabanner,
   zahralogo,
-  saloonbanner,
+  salonbanner,
+  saloncard,
   salonlogo,
   bmmbanner,
   bmmlogo,

@@ -86,18 +86,18 @@ function Testimonials() {
                       </div>
                     </div>
                     <div className={styles.review_content}>
-                      <p>{testimonial.testimonial.slice(0, 109)}...</p>
-                      <Link
-                        className={styles.read_more}
-                        onClick={(e) => {
-                          e.preventDefault;
-                          handleReadMore(index);
-                        }}
-                        href={""}
-                      >
-                        Read More
-                      </Link>
+                      <p>{testimonial.testimonial.slice(0, 75)}...</p>
                     </div>
+                    <Link
+                      className={styles.read_more}
+                      onClick={(e) => {
+                        e.preventDefault;
+                        handleReadMore(index);
+                      }}
+                      href={""}
+                    >
+                      Read More
+                    </Link>
                   </div>
                 </SwiperSlide>
               );
