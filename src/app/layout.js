@@ -1,5 +1,7 @@
 "use client";
 import "./styles/globals.css";
+import Image from "next/image";
+import { images } from "../../public/loader";
 import Head from "next/head";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
@@ -7,9 +9,7 @@ config.autoAddCss = false;
 import { Router } from "next/router";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useState, useEffect } from "react";
-import { images } from "../../public/loader";
-import Image from "next/image";
-import cssFilePaths from "./data/css";
+// import cssFilePaths from "./data/css";
 
 export default function RootLayout({ children }) {
   const [Loading, setLoading] = useState(true);
@@ -17,7 +17,6 @@ export default function RootLayout({ children }) {
   const searchParams = useSearchParams();
 
   useEffect(() => {
-    setLoading(false);
     // console.log(children, "child");
     const handleRouteStart = () => {
       console.log("route start");
@@ -37,39 +36,41 @@ export default function RootLayout({ children }) {
       Router.events.off("routeChangeComplete", handleRouteDone());
       Router.events.off("routeChangeError", handleRouteDone());
     };
-  }, [pathname, searchParams]);
+  });
   return (
     <>
       <html lang="en">
         <Head>
-          {cssFilePaths.map((path, index) => (
+          {/* {cssFilePaths.map((path, index) => (
             <link key={index} rel="stylesheet" href={path.path} />
-          ))}
+          ))} */}
           <title>Home | Ideabox</title>
           <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
         </Head>
 
-        <body>
-          <div
-            style={{
-              position: "fixed",
-              width: "100%",
-              height: "100vh",
-              display: Loading ? "flex" : "none",
-              alignItems: "center",
-              justifyContent: "center",
-              backgroundColor: "#fff",
-              zIndex: "999",
-              top: "0",
-              left: "0",
-              transition: "all 0.2s ease-in-out",
-            }}
-          >
-            <Image src={images.loader} alt={"Loader Image"} />
-          </div>
+        {Loading && (
+          <body>
+            <div
+              style={{
+                position: "fixed",
+                width: "100%",
+                height: "100vh",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                backgroundColor: "#fff",
+                zIndex: "999",
+                top: "0",
+                left: "0",
+                transition: "all 0.2s ease-in-out",
+              }}
+            >
+              <Image src={images.loader} alt={"Loader Image"} />
+            </div>
+          </body>
+        )}
 
-          {children}
-        </body>
+        {!Loading && <body>{children}</body>}
       </html>
     </>
   );

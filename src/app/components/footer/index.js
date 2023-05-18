@@ -77,6 +77,7 @@ function Footer() {
                   </div>
                   <div className={styles.view_direction}>
                     <Button
+                      target={"_blank"}
                       redirect={"https://goo.gl/maps/4cmuMo4TU8m3VKtq8"}
                       type="primary"
                       text={"view direction"}
