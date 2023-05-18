@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./button.module.css";
-import Link from "next/link";
 import { classNames } from "@/app/utils";
+import Link from "next/link";
 function Button({
   target,
   redirect,

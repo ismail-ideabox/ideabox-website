@@ -1,14 +1,13 @@
 import React from "react";
-import Image from "next/image";
 import styles from "./ourpeople.module.css";
 import layout from "../../styles/layout.module.css";
+import { classNames } from "@/app/utils";
+import Image from "next/image";
 import { images } from "../../../../public/ourPeople";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 import Button from "../button/button";
 import Link from "next/link";
-import { classNames } from "@/app/utils";
-import { image } from "../../../../public/gifs";
 
 function OurPeople() {
   return (

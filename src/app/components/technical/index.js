@@ -1,9 +1,9 @@
-import React, { useRef } from "react";
 import styles from "./technical.module.css";
 import layout from "../../styles/layout.module.css";
+import { classNames } from "@/app/utils";
+import React, { useRef } from "react";
 import Image from "next/image";
 import { image } from "../../../../public/gifs";
-import { classNames } from "@/app/utils";
 import { useRouter } from "next/navigation";
 
 function Technical({ servicesRef }) {

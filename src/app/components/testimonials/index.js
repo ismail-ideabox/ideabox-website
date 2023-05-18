@@ -1,9 +1,9 @@
 "use client";
-import React, { useState } from "react";
-import Image from "next/image";
 import layout from "../../styles/layout.module.css";
 import styles from "./testimonials.module.css";
 import { classNames } from "@/app/utils";
+import React, { useState } from "react";
+import Image from "next/image";
 import { Autoplay, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import testimonial from "@/app/data/testimonial";

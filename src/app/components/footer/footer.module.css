@@ -60,7 +60,7 @@
 }
 
 .footer_address {
-  width: 15%;
+  width: 50%;
 }
 
 .address_heading p {
@@ -73,16 +73,13 @@
 
 .address_direction_container {
   display: flex;
-  justify-content: end;
+  justify-content: space-between;
   margin-bottom: 20px;
 }
 
 .address_direction {
-  width: 100%;
-}
-.footer_map {
-  width: 30%;
-  /* border: 1px solid #8a8a8a; */
+  width: 45%;
+  position: relative;
 }
 
 .direction_country h5 {
@@ -92,7 +89,10 @@
   font-weight: 700;
   margin-bottom: 10px;
 }
-
+.view_direction {
+  position: absolute;
+  bottom: -25%;
+}
 .view_direction a span {
   background: var(--secondary-color);
   font-size: 12px;
@@ -111,7 +111,13 @@
 .country_address p {
   color: #8a8a8a;
   font-size: 13px;
-  margin-bottom: 20px;
+  /* margin-bottom: 5px; */
+}
+.country_address span {
+  font-size: 13px;
+  display: block;
+  margin-bottom: 15px;
+  color: var(--primary-color);
 }
 
 .footer_copywrite {
@@ -182,9 +188,15 @@
   .footer_copywrite p {
     font-size: 12px;
   }
+  .view_direction {
+    bottom: -25%;
+  }
 }
 
 @media (max-width: 450px) {
+  .view_direction {
+    bottom: -20%;
+  }
   .address_direction {
     width: 45%;
   }

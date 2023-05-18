@@ -1,10 +1,11 @@
 "use client";
 import React, { useRef, useState } from "react";
-import Image from "next/image";
+import styles from "./getInTouch.module.css";
 import layout from "../../styles/layout.module.css";
+import { classNames } from "@/app/utils";
+import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClose } from "@fortawesome/free-solid-svg-icons";
-import styles from "./getInTouch.module.css";
 import Button from "../button/button";
 import { images } from "../../../../public/getInTouch";
 import Link from "next/link";
@@ -13,7 +14,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Autoplay, Pagination } from "swiper";
-import { classNames } from "@/app/utils";
 import Input from "./input";
 import TextArea from "./textarea";
 
@@ -131,267 +131,275 @@ function GetInTouch({ headerVisible }) {
   const bannerBg = "banner_bg_" + currentSlide;
 
   return (
-    <div className={classNames(styles.getInTouchWrapper, bannerBg)}>
-      <Header headerVisible={headerVisible} />
-      <div className={styles.pagination_container}>
-        <ul>
-          <li
-            style={{ background: currentSlide === 0 ? "#CF4A28" : "#ACAAA6" }}
-            onClick={() => toSlide(0)}
-          ></li>
-          <li
-            style={{ background: currentSlide === 1 ? "#A02021" : "#ACAAA6" }}
-            onClick={() => toSlide(1)}
-          ></li>
-          <li
-            style={{ background: currentSlide === 2 ? "#CF4A28" : "#ACAAA6" }}
-            onClick={() => toSlide(2)}
-          ></li>
-        </ul>
-      </div>
-      <section
-        className={classNames(
-          styles[bannerBg],
-          layout.grid,
-          layout.grid_col80,
-          styles.GetInTouch_section
-        )}
-      >
-        <div className={layout.block__inner}>
-          <div className={styles.GetInTouch_container}>
-            <div className={styles.GetInTouch_content}>
-              <div className={styles.content_heading_container}>
-                <Swiper
-                  ref={swiperRef}
-                  pagination={false}
-                  modules={[Pagination, Autoplay]}
-                  className="mySwiper"
-                  autoplay={{
-                    delay: 3500,
-                    pauseOnMouseEnter: true,
-                    disableOnInteraction: false,
-                  }}
-                  onSlideChange={(swiper) => {
-                    setCurrentSlide(swiper.activeIndex);
-                  }}
-                >
-                  <SwiperSlide>
-                    <div className={styles.slider_content}>
-                      <h2
-                        className={[
-                          "main-heading",
-                          styles.slider_content_h2,
-                        ].join(" ")}
-                      >
-                        AGGRESSIVE GROWTH <br /> FOR FORWARD THINKING <br />{" "}
-                        BUSINESSES
-                      </h2>
-                      <p>Ditch the unnecessary marketing jargon. </p>
-                      <p>
-                        At Ideabox, we focus on the thing that <br /> matters
-                        most:
-                        <Link href={""}> RESULTS.</Link>
-                      </p>
-                      <Button
-                        redirect={""}
-                        text={"GET IN TOUCH"}
-                        type="primary"
-                        onClick={() => setToggle(true)}
-                      />
-                    </div>
-                  </SwiperSlide>
-                  <SwiperSlide>
-                    <div className={styles.slider_content}>
-                      <h2
-                        className={[
-                          "main-heading",
-                          styles.slider_content_h2,
-                        ].join(" ")}
-                      >
-                        Success <br /> Together
-                      </h2>
-                      <p>
-                        We believe in our clients and our strength <br /> lies
-                        in developing close working relationships <br /> to help
-                        them succeed.
-                      </p>
-                      <Button
-                        redirect={""}
-                        text={"GET IN TOUCH"}
-                        type="secondary"
-                        onClick={() => setToggle(true)}
-                      />
-                    </div>
-                  </SwiperSlide>
-                  <SwiperSlide>
-                    <div className={styles.slider_content}>
-                      <h2
-                        className={[
-                          "main-heading",
-                          styles.slider_content_h2,
-                        ].join(" ")}
-                      >
-                        Bespoke Services FOR <br /> THE NEXT GENERATION <br />{" "}
-                        of BUSINESSES.
-                      </h2>
-                      <p>
-                        From bespoke web platforms and mobile <br /> apps, to
-                        big data analytics - we have the <br /> experience and
-                        expertise to develop & <br /> deliver complex systems.
-                      </p>
-                      <Button
-                        redirect={""}
-                        text={"GET IN TOUCH"}
-                        type="secondary"
-                        onClick={() => setToggle(true)}
-                      />
-                    </div>
-                  </SwiperSlide>
-                </Swiper>
-              </div>
-            </div>
-            <div className={styles.GetInTouch_images_container}>
-              <div className={styles.image_up}>
-                <Image
-                  loading="eager"
-                  src={images.up}
-                  onClick={() => toSlide(1)}
-                  alt=""
-                />
-              </div>
-              <div className={styles.image_right}>
-                <Image
-                  loading="eager"
-                  src={images.left}
-                  onClick={() => toSlide(2)}
-                  alt=""
-                />
-                <Image
-                  loading="eager"
-                  src={images.right}
-                  onClick={() => toSlide(0)}
-                  alt=""
-                />
-              </div>
-              <div className={styles.image_box}>
-                <Image loading="eager" src={images.box} alt="" />
-              </div>
-            </div>
-          </div>
+    <>
+      {/* <Head>
+        <link rel="stylesheet" href="./getInTouch.module.css" />
+      </Head> */}
+      <div className={classNames(styles.getInTouchWrapper, bannerBg)}>
+        <Header headerVisible={headerVisible} />
+        <div className={styles.pagination_container}>
+          <ul>
+            <li
+              style={{ background: currentSlide === 0 ? "#CF4A28" : "#ACAAA6" }}
+              onClick={() => toSlide(0)}
+            ></li>
+            <li
+              style={{ background: currentSlide === 1 ? "#A02021" : "#ACAAA6" }}
+              onClick={() => toSlide(1)}
+            ></li>
+            <li
+              style={{ background: currentSlide === 2 ? "#CF4A28" : "#ACAAA6" }}
+              onClick={() => toSlide(2)}
+            ></li>
+          </ul>
         </div>
-        <div
-          className={
-            toggle
-              ? classNames(styles.modal_container, styles.modal_active)
-              : styles.modal_container
-          }
+        <section
+          className={classNames(
+            styles[bannerBg],
+            layout.grid,
+            layout.grid_col80,
+            styles.GetInTouch_section
+          )}
         >
-          <div className={styles.form_container}>
-            <div className={styles.modal}>
-              <div className={styles.form}>
-                <div className={styles.form_image}>
-                  <Image src={images.modal} alt="" />
-                </div>
-                <div className={styles.form_input}>
-                  <div
-                    className={styles.close_btn}
-                    onClick={() => {
-                      setToggle(false);
-                      setFormSubmit(false);
+          <div className={layout.block__inner}>
+            <div className={styles.GetInTouch_container}>
+              <div className={styles.GetInTouch_content}>
+                <div className={styles.content_heading_container}>
+                  <Swiper
+                    ref={swiperRef}
+                    pagination={false}
+                    modules={[Pagination, Autoplay]}
+                    className="mySwiper"
+                    autoplay={{
+                      delay: 3500,
+                      pauseOnMouseEnter: true,
+                      disableOnInteraction: false,
+                    }}
+                    onSlideChange={(swiper) => {
+                      setCurrentSlide(swiper.activeIndex);
                     }}
                   >
-                    <FontAwesomeIcon icon={faClose} />
-                  </div>
-                  <div
-                    className={
-                      formSubmit ? styles.form_submit : styles.display_block
-                    }
-                  >
-                    <div className={styles.input_flex}>
-                      <Input
-                        onChange={handleChange}
-                        name="full-name"
-                        id={"full-name"}
-                        type="text"
-                        placeholder="Full Name"
-                        // value={values.fullName}
-                      />
-                      <Input
-                        onChange={handleChange}
-                        name="company-name"
-                        id={"company-name"}
-                        type="text"
-                        placeholder="Company Name"
-                        // value={values.companyName}
-                      />
-                    </div>
-                    <div className={styles.input_flex}>
-                      <Input
-                        onChange={handleChange}
-                        name="email-address"
-                        id={"email-address"}
-                        type="email"
-                        placeholder="Email Address"
-                        // value={values.emailAddress}
-                      />
-                      <Input
-                        onChange={handleChange}
-                        name="phone-no"
-                        id={"phone-no"}
-                        type="text"
-                        placeholder="Phone No."
-                        // value={values.phoneNo}
-                      />
-                    </div>
-                    <div className={styles.text_area}>
-                      <TextArea
-                        onChange={handleChange}
-                        name="message"
-                        input_type="text"
-                        placeholder="Tell us about your project"
-                        id="message"
-                        // value={values.message}
-                      />
-                      <Button
-                        isLoading={isLoading}
-                        redirect={""}
-                        text={"SEND"}
-                        type="primary"
-                        onClick={() => setFormSubmit(true)}
-                      />
-                    </div>
-                  </div>
-                  <div
-                    className={
-                      formSubmit
-                        ? styles.form_submitted
-                        : styles.form_notSubmitted
-                    }
-                  >
-                    <div className={styles.form_submit_flex}>
-                      <h2>Thank You</h2>
-                      <h4>
-                        Your Form Has Been Submitted We'll Contact You As Soon
-                        As Possible
-                      </h4>
-                      <p>
-                        For Quick Response Please Contact us at{" "}
-                        <Link
-                          className={styles.mail_at}
-                          href={"mailto:info@ideabox.pk"}
+                    <SwiperSlide>
+                      <div className={styles.slider_content}>
+                        <h2
+                          className={[
+                            "main-heading",
+                            styles.slider_content_h2,
+                          ].join(" ")}
                         >
-                          hello@ideabox.pk
-                        </Link>
-                      </p>
+                          AGGRESSIVE GROWTH <br /> FOR FORWARD THINKING <br />{" "}
+                          BUSINESSES
+                        </h2>
+                        <p>Ditch the unnecessary marketing jargon. </p>
+                        <p>
+                          At Ideabox, we focus on the thing that <br /> matters
+                          most:
+                          <Link href={""}> RESULTS.</Link>
+                        </p>
+                        <Button
+                          redirect={""}
+                          text={"GET IN TOUCH"}
+                          type="primary"
+                          onClick={() => setToggle(true)}
+                        />
+                      </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                      <div className={styles.slider_content}>
+                        <h2
+                          className={[
+                            "main-heading",
+                            styles.slider_content_h2,
+                          ].join(" ")}
+                        >
+                          Success <br /> Together
+                        </h2>
+                        <p>
+                          We believe in our clients and our strength <br /> lies
+                          in developing close working relationships <br /> to
+                          help them succeed.
+                        </p>
+                        <Button
+                          redirect={""}
+                          text={"GET IN TOUCH"}
+                          type="secondary"
+                          onClick={() => setToggle(true)}
+                        />
+                      </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                      <div className={styles.slider_content}>
+                        <h2
+                          className={[
+                            "main-heading",
+                            styles.slider_content_h2,
+                          ].join(" ")}
+                        >
+                          Bespoke Services FOR <br /> THE NEXT GENERATION <br />{" "}
+                          of BUSINESSES.
+                        </h2>
+                        <p>
+                          From bespoke web platforms and mobile <br /> apps, to
+                          big data analytics - we have the <br /> experience and
+                          expertise to develop & <br /> deliver complex systems.
+                        </p>
+                        <Button
+                          redirect={""}
+                          text={"GET IN TOUCH"}
+                          type="secondary"
+                          onClick={() => setToggle(true)}
+                        />
+                      </div>
+                    </SwiperSlide>
+                  </Swiper>
+                </div>
+              </div>
+              <div className={styles.GetInTouch_images_container}>
+                <div className={styles.image_up}>
+                  <Image
+                    loading="eager"
+                    src={images.up}
+                    onClick={() => toSlide(1)}
+                    alt=""
+                  />
+                </div>
+                <div className={styles.image_right}>
+                  <Image
+                    loading="eager"
+                    src={images.left}
+                    onClick={() => toSlide(2)}
+                    alt=""
+                  />
+                  <Image
+                    loading="eager"
+                    src={images.right}
+                    onClick={() => toSlide(0)}
+                    alt=""
+                  />
+                </div>
+                <div className={styles.image_box}>
+                  <Image loading="eager" src={images.box} alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className={
+              toggle
+                ? classNames(styles.modal_container, styles.modal_active)
+                : styles.modal_container
+            }
+          >
+            <div className={styles.form_container}>
+              <div className={styles.modal}>
+                <div className={styles.form}>
+                  <div className={styles.form_image}>
+                    <Image src={images.modal} alt="" />
+                  </div>
+                  <div className={styles.form_input}>
+                    <div
+                      className={styles.close_btn}
+                      onClick={() => {
+                        setToggle(false);
+                        setFormSubmit(false);
+                      }}
+                    >
+                      <FontAwesomeIcon icon={faClose} />
+                    </div>
+                    <div
+                      className={
+                        formSubmit ? styles.form_submit : styles.display_block
+                      }
+                    >
+                      <div className={styles.input_flex}>
+                        <Input
+                          onChange={handleChange}
+                          name="full-name"
+                          id={"full-name"}
+                          type="text"
+                          placeholder="Full Name"
+                          // value={values.fullName}
+                        />
+                        <Input
+                          onChange={handleChange}
+                          name="company-name"
+                          id={"company-name"}
+                          type="text"
+                          placeholder="Company Name"
+                          // value={values.companyName}
+                        />
+                      </div>
+                      <div className={styles.input_flex}>
+                        <Input
+                          onChange={handleChange}
+                          name="email-address"
+                          id={"email-address"}
+                          type="email"
+                          placeholder="Email Address"
+                          // value={values.emailAddress}
+                        />
+                        <Input
+                          onChange={handleChange}
+                          name="phone-no"
+                          id={"phone-no"}
+                          type="text"
+                          placeholder="Phone No."
+                          // value={values.phoneNo}
+                        />
+                      </div>
+                      <div className={styles.text_area}>
+                        <TextArea
+                          onChange={handleChange}
+                          name="message"
+                          input_type="text"
+                          placeholder="Tell us about your project"
+                          id="message"
+                          // value={values.message}
+                        />
+                        <Button
+                          isLoading={isLoading}
+                          redirect={""}
+                          text={"SEND"}
+                          type="primary"
+                          onClick={() => setFormSubmit(true)}
+                        />
+                      </div>
+                    </div>
+                    <div
+                      className={
+                        formSubmit
+                          ? styles.form_submitted
+                          : styles.form_notSubmitted
+                      }
+                    >
+                      <div className={styles.form_submit_flex}>
+                        <h2>Thank You</h2>
+                        <h4>
+                          for submitting your request with Ideabox. We
+                          appreciate your interest and will review it promptly.
+                          We will be in touch with you soon.
+                        </h4>
+                        <p>
+                          In case of an emergency, please feel free to contact
+                          us on
+                          <br />
+                          <Link
+                            className={styles.mail_at}
+                            href={"mailto:info@ideabox.pk"}
+                          >
+                            hello@ideabox.pk
+                          </Link>
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-    </div>
+        </section>
+      </div>
+    </>
   );
 }
 

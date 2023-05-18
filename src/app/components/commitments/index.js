@@ -1,9 +1,9 @@
 import React from "react";
 import styles from "./commitments.module.css";
 import layout from "../../styles/layout.module.css";
+import { classNames } from "@/app/utils";
 import Image from "next/image";
 import handshake from "../../../../public/images/handshake.png";
-import { classNames } from "@/app/utils";
 
 function Secondary() {
   return (

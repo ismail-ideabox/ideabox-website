@@ -1,8 +1,8 @@
 "use client";
-import { React, useState } from "react";
 import styles from "./overview.module.css";
 import layout from "../../styles/layout.module.css";
 import { classNames } from "@/app/utils";
+import { React, useState } from "react";
 import CountUp from "react-countup";
 
 function Overview({ childRef, isVisible }) {

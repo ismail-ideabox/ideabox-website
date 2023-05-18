@@ -1,12 +1,12 @@
 import React from "react";
-import Link from "next/link";
-import Image from "next/image";
 import styles from "./footer.module.css";
 import layout from "../../styles/layout.module.css";
+import { classNames } from "@/app/utils";
+import Link from "next/link";
+import Image from "next/image";
 import { images } from "../../../../public/footer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedinIn, faTwitter } from "@fortawesome/free-brands-svg-icons";
-import { classNames } from "@/app/utils";
 import Button from "../button/button";
 
 function Footer() {
@@ -69,6 +69,22 @@ function Footer() {
               <div className={styles.address_direction_container}>
                 <div className={styles.address_direction}>
                   <div className={styles.direction_country}>
+                    <h5>UAE</h5>
+                  </div>
+                  <div className={styles.country_address}>
+                    <p>3702, South Tower 1, Dubai Creek Harbour, Dubai</p>
+                    <span>hello@ideabox.pk</span>
+                  </div>
+                  <div className={styles.view_direction}>
+                    <Button
+                      redirect={"https://goo.gl/maps/4cmuMo4TU8m3VKtq8"}
+                      type="primary"
+                      text={"view direction"}
+                    />
+                  </div>
+                </div>
+                <div className={styles.address_direction}>
+                  <div className={styles.direction_country}>
                     <h5>PAKISTAN</h5>
                   </div>
                   <div className={styles.country_address}>
@@ -76,6 +92,7 @@ function Footer() {
                       2nd floor, Plot 1C Khayaban-e-Saadi, Phase 7 Defence
                       Housing Authority, Karachi, Karachi City, Sindh 75500
                     </p>
+                    <span>hello@ideabox.pk</span>
                   </div>
                   <div className={styles.view_direction}>
                     <Button
@@ -86,24 +103,8 @@ function Footer() {
                     />
                   </div>
                 </div>
-                {/* <div className={styles.address_direction}>
-                  <div className={styles.direction_country}>
-                    <h5>UK</h5>
-                  </div>
-                  <div className={styles.country_address}>
-                    <p>
-                      2nd floor, Plot 1C Khayaban-e-Saadi, Phase 7 Defence
-                      Housing Authority, Karachi, Karachi City, Sindh 75500
-                    </p>
-                  </div>
-                  <div className={styles.view_direction}>
-                    <Button
-                      redirect={""}
-                      type="primary"
-                      text={"view direction"}
-                    />
-                  </div>
-                </div>
+
+                {/*
                 <div className={styles.address_direction}>
                   <div className={styles.direction_country}>
                     <h5>USA</h5>

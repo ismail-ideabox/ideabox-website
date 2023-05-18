@@ -1,9 +1,9 @@
 "use client";
+import styles from "./style.module.css";
+import { classNames } from "@/app/utils";
 import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
-import styles from "./style.module.css";
-import { classNames } from "@/app/utils";
 
 export const ScrollToTop = ({ visible, parentRef }) => {
   const [isVisible, setIsVisible] = useState(false);

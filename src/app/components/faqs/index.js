@@ -1,10 +1,10 @@
 "use client";
 import React, { useState } from "react";
-import layout from "../../styles/layout.module.css";
 import styles from "./faqs.module.css";
+import layout from "../../styles/layout.module.css";
+import { classNames } from "@/app/utils";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMinus, faPlus } from "@fortawesome/free-solid-svg-icons";
-import { classNames } from "@/app/utils";
 
 function Faqs() {
   const [faqsData, setFaqsData] = useState([

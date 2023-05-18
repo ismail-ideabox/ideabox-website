@@ -7,7 +7,7 @@ import rentlylogo from "./rentlylogo.png";
 import zodbanner from "./zodbanner.jpg";
 import zodcard from "./zodcard.jpg";
 import zodlogo from "./zodlogo.png";
-import tbbanner from "./tbbanner.png";
+import tbbanner from "./tbbanner.jpg";
 import tbcard from "./tbcard.jpg";
 import tblogo from "./tblogo.png";
 import zahrabanner from "./zahrabanner.png";

@@ -1,14 +1,15 @@
 "use client";
+import "./styles/globals.css";
+import Head from "next/head";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
 config.autoAddCss = false;
-import "./styles/globals.css";
 import { Router } from "next/router";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useState, useEffect } from "react";
 import { images } from "../../public/loader";
 import Image from "next/image";
-import Head from "next/head";
+import cssFilePaths from "./data/css";
 
 export default function RootLayout({ children }) {
   const [Loading, setLoading] = useState(true);
@@ -41,6 +42,9 @@ export default function RootLayout({ children }) {
     <>
       <html lang="en">
         <Head>
+          {cssFilePaths.map((path, index) => (
+            <link key={index} rel="stylesheet" href={path.path} />
+          ))}
           <title>Home | Ideabox</title>
           <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
         </Head>

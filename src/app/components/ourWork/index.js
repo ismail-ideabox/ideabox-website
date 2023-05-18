@@ -2,8 +2,8 @@
 import React from "react";
 import layout from "../../styles/layout.module.css";
 import styles from "./ourwork.module.css";
-import Button from "../button/button";
 import { classNames } from "@/app/utils";
+import Button from "../button/button";
 import Projectcard from "./projectcard";
 import workDetail from "@/app/data/work";
 function Ourwork({ isHomePage }) {

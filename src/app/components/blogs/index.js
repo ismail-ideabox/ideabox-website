@@ -1,8 +1,8 @@
 import React from "react";
 import styles from "./Blogs.module.css";
 import layout from "../../styles/layout.module.css";
-import BlogsCards from "@/app/features/newsBlogs/blogsCards";
 import { classNames } from "@/app/utils";
+import BlogsCards from "@/app/features/newsBlogs/blogsCards";
 
 function Blogs({ blogsCard }) {
   return (
