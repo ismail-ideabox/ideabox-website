@@ -374,11 +374,11 @@ function GetInTouch({ headerVisible }) {
                     >
                       <div className={styles.form_submit_flex}>
                         <h2>Thank You</h2>
-                        <h4>
+                        <p>
                           for submitting your request with Ideabox. We
                           appreciate your interest and will review it promptly.
                           We will be in touch with you soon.
-                        </h4>
+                        </p>
                         <p>
                           In case of an emergency, please feel free to contact
                           us on

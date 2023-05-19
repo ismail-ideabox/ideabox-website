@@ -117,13 +117,8 @@ function Faqs() {
                     )}
                   </div>
                   <div className={styles.faq__body}>
-                    <p>
-                      <span>
-                        Ans. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
-                      </span>
-
-                      {faq.answers}
-                    </p>
+                    <span>Ans.</span>
+                    <p>{faq.answers}</p>
                   </div>
                 </div>
               );
