@@ -47,30 +47,26 @@ export default function RootLayout({ children }) {
           <title>Home | Ideabox</title>
           <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
         </Head>
-
-        {Loading && (
-          <body>
-            <div
-              style={{
-                position: "fixed",
-                width: "100%",
-                height: "100vh",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                backgroundColor: "#fff",
-                zIndex: "999",
-                top: "0",
-                left: "0",
-                transition: "all 0.2s ease-in-out",
-              }}
-            >
-              <Image src={images.loader} alt={"Loader Image"} />
-            </div>
-          </body>
-        )}
-
-        {!Loading && <body>{children}</body>}
+        <body>
+          <div
+            style={{
+              position: "fixed",
+              width: "100%",
+              height: "100vh",
+              display: Loading ? "flex" : "none",
+              alignItems: "center",
+              justifyContent: "center",
+              backgroundColor: "#fff",
+              zIndex: "999",
+              top: "0",
+              left: "0",
+              transition: "all 0.2s ease-in-out",
+            }}
+          >
+            <Image priority src={images.loader} alt={"Loader Image"} />
+          </div>
+          {children}
+        </body>
       </html>
     </>
   );

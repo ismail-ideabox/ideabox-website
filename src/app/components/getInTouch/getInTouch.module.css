@@ -195,6 +195,7 @@
   display: block;
 }
 .form_submit_flex {
+  padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;

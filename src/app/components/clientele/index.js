@@ -30,6 +30,7 @@ function Clientele() {
       <div className={styles.padding_bottom}>
         <div className={styles.clientele_images}>
           <Swiper
+            sl
             className="clienteleslider"
             slidesPerView={7}
             loop={true}
@@ -73,10 +74,11 @@ function Clientele() {
             slidesPerView={8}
             loop={true}
             // freeMode={true}
-            spaceBetween={2}
+            spaceBetween={20}
             speed={10000}
             // Autoplay={true}
             autoplay={{
+              reverseDirection: true,
               delay: 0,
               disableOnInteraction: false,
             }}
@@ -91,6 +93,7 @@ function Clientele() {
                 slidesPerView: 8,
               },
             }}
+            grabCursor={true}
             modules={[Pagination, Autoplay]}
           >
             {clienteleLogoTwo.map((clienteleLogo, index) => {

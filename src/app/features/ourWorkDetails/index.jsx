@@ -25,7 +25,7 @@ function OurWorkDetails({ filteredWork }) {
       </div>
       <div className={styles.banner_container}>
         <div className={styles.banner_image}>
-          <Image src={filteredWork.cardImage} alt="" />
+          <Image src={filteredWork.cardImage} srcSet alt="" />
         </div>
         <div className={styles.work_logo}>
           <Image src={filteredWork.workLogo} alt="" />

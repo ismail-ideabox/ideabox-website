@@ -106,6 +106,7 @@ function Testimonials() {
         </div>
         {activeTestimonial !== null && (
           <div
+            onClick={() => setToggle(false)}
             className={
               toggle
                 ? classNames(styles.modal_container, styles.modal_active)
@@ -132,7 +133,10 @@ function Testimonials() {
                       <h5>{testimonial[activeTestimonial].position}</h5>
                     </div>
                     <div className={styles.person_company}>
-                      <Link href={testimonial[activeTestimonial].companyUrl}>
+                      <Link
+                        target={"_blank"}
+                        href={testimonial[activeTestimonial].companyUrl}
+                      >
                         <h5>{testimonial[activeTestimonial].company}</h5>
                       </Link>
                     </div>

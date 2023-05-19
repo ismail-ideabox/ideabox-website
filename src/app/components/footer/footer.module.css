@@ -62,6 +62,9 @@
 .footer_address {
   width: 50%;
 }
+.address_heading {
+  padding-left: 54.8%;
+}
 
 .address_heading p {
   font-family: var(--primary-font);
@@ -116,7 +119,7 @@
 .country_address span {
   font-size: 13px;
   display: block;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   color: var(--primary-color);
 }
 

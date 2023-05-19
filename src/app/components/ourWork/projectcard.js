@@ -52,7 +52,7 @@ function Projectcard({ workData, isHomePage }) {
                     <div className={styles.project_description}>
                       <h3>
                         {workData.workInfo
-                          ? workData.workInfo.slice(0, 70) + "..."
+                          ? workData.workInfo.slice(0, 80) + "..."
                           : workData.workInfo}
                       </h3>
                     </div>

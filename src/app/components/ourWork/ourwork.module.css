@@ -44,7 +44,6 @@
 }
 
 .project_description h3 {
-  width: 90%;
   margin-bottom: 20px;
   color: #fff;
   font-size: 16px;
@@ -54,7 +53,7 @@
 }
 
 .project_view {
-  margin-bottom: 10px;
+  /* margin-bottom: 10px; */
   padding: 0 15px;
 }
 

@@ -37,6 +37,12 @@ function Home() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const params = new URLSearchParams(searchParams);
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    const parentRect = parentRef?.current?.getBoundingClientRect();
+    parentRect?.current?.scrollTop(0);
+  }, [data]);
 
   useEffect(() => {
     const handleScroll = () => {
