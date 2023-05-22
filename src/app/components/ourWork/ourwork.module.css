@@ -18,7 +18,11 @@
   gap: 15px;
   /* overflow-y: scroll; */
 }
-
+.ourwork_flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 .ourwork_project {
   width: 32%;
   padding: 15px;

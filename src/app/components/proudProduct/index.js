@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styles from "./proudproduct.module.css";
 import layout from "../../styles/layout.module.css";
 import { classNames } from "@/app/utils";
-import Image from "next/image";
+import Image from "../image";
 import { image } from "../../../../public/saloonPlus";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleChevronDown } from "@fortawesome/free-solid-svg-icons";

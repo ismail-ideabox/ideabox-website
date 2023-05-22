@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import styles from "./ourWork.module.css";
 import layout from "../../styles/layout.module.css";
 import { images } from "../../../../public/caseStudies";
-import Image from "next/image";
+import Image from "../../components/image";
 import Button from "../../components/button/button";
 import Faqs from "../../components/faqs";
 import Header from "@/app/components/header";

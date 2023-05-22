@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./newsBlogs.module.css";
 import layout from "../../styles/layout.module.css";
-import Image from "next/image";
+import Image from "../../components/image";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";

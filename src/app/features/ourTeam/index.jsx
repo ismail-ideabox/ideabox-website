@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./ourTeam.module.css";
 import layout from "../../styles/layout.module.css";
-import Image from "next/image";
+import Image from "../../components/image";
 import { images } from "../../../../public/ourTeam";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

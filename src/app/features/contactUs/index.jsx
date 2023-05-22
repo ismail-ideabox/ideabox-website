@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./contactus.module.css";
 import layout from "../../styles/layout.module.css";
-import Image from "next/image";
+import Image from "../../components/image";
 import { images } from "../../../../public/contactUs";
 import Button from "../../components/button/button";
 import Header from "@/app/components/header";

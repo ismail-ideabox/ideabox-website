@@ -1,5 +1,5 @@
 import Header from "@/app/components/header";
-import Image from "next/image";
+import Image from "../../components/image";
 import React from "react";
 import styles from "./ourWorkDetails.module.css";
 import layout from "../../styles/layout.module.css";

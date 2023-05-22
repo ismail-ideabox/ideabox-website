@@ -6,6 +6,7 @@
   align-items: center;
   justify-content: space-between;
   padding-top: 60px;
+  overflow: hidden;
 }
 .banner_heading {
   width: 30%;

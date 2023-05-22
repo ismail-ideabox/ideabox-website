@@ -1,10 +1,7 @@
 "use client";
 import HomePage from "./features/home";
 import "./styles/globals.css";
-import { Router } from "next/router";
 import { useState, useEffect } from "react";
-import { images } from "../../public/loader";
-import Image from "next/image";
 
 // export const metadata = {
 //   title: "Ideabox",

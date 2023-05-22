@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./clientele.module.css";
 import layout from "../../styles/layout.module.css";
 import { classNames } from "@/app/utils";
-import Image from "next/image";
+import Image from "../image";
 import clienteleLogo from "@/app/data/clientele";
 import clienteleLogoTwo from "@/app/data/clienteletwo";
 import { Swiper, SwiperSlide } from "swiper/react";

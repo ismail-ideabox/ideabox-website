@@ -1,6 +1,6 @@
 "use client";
 import "./styles/globals.css";
-import Image from "next/image";
+import Image from "./components/image";
 import { images } from "../../public/loader";
 import Head from "next/head";
 import "@fortawesome/fontawesome-svg-core/styles.css";

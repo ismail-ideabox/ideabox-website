@@ -2,7 +2,7 @@ import styles from "./technical.module.css";
 import layout from "../../styles/layout.module.css";
 import { classNames } from "@/app/utils";
 import React, { useRef } from "react";
-import Image from "next/image";
+import Image from "../image";
 import { image } from "../../../../public/gifs";
 import { useRouter } from "next/navigation";
 

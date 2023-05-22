@@ -2,11 +2,10 @@ import React from "react";
 import styles from "./ourpeople.module.css";
 import layout from "../../styles/layout.module.css";
 import { classNames } from "@/app/utils";
-import Image from "next/image";
+import Image from "../image";
 import { images } from "../../../../public/ourPeople";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
-import Button from "../button/button";
 import Link from "next/link";
 
 function OurPeople() {

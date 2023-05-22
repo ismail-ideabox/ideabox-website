@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./commitments.module.css";
 import layout from "../../styles/layout.module.css";
 import { classNames } from "@/app/utils";
-import Image from "next/image";
+import Image from "../image";
 import handshake from "../../../../public/images/handshake.png";
 
 function Secondary() {

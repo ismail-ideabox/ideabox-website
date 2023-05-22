@@ -4,7 +4,7 @@ import React from "react";
 import layout from "../../styles/layout.module.css";
 import styles from "./newsBlogs.module.css";
 import { images } from "../../../../public/newsBlogs";
-import Image from "next/image";
+import Image from "../../components/image";
 
 function NewsFeeds() {
   return (

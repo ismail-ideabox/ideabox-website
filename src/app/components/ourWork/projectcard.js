@@ -2,10 +2,11 @@
 import React from "react";
 import styles from "./ourwork.module.css";
 import Button from "../button/button";
-import Image from "next/image";
+import Image from "../image";
 import { Autoplay, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import { classNames } from "@/app/utils";
 
 function Projectcard({ workData, isHomePage }) {
   return (
@@ -43,25 +44,29 @@ function Projectcard({ workData, isHomePage }) {
                     className={styles.ourwork_project}
                     style={{ width: "100%", height: "100%" }}
                   >
-                    <div className={styles.project_image}>
-                      <Image src={workData.workCardImage} alt="" />
-                    </div>
-                    <div className={styles.project_name}>
-                      <h4>{workData.projectName}</h4>
-                    </div>
-                    <div className={styles.project_description}>
-                      <h3>
-                        {workData.workInfo
-                          ? workData.workInfo.slice(0, 80) + "..."
-                          : workData.workInfo}
-                      </h3>
-                    </div>
-                    <div className={styles.project_view}>
-                      <Button
-                        redirect={urlSlug}
-                        text={"View Project"}
-                        type="secondary"
-                      />
+                    <div className={styles.ourwork_flex}>
+                      <div>
+                        <div className={styles.project_image}>
+                          <Image src={workData.workCardImage} alt="" />
+                        </div>
+                        <div className={styles.project_name}>
+                          <h4>{workData.projectName}</h4>
+                        </div>
+                        <div className={styles.project_description}>
+                          <h3>
+                            {workData.workInfo
+                              ? workData.workInfo.slice(0, 80) + "..."
+                              : workData.workInfo}
+                          </h3>
+                        </div>
+                      </div>
+                      <div className={styles.project_view}>
+                        <Button
+                          redirect={urlSlug}
+                          text={"View Project"}
+                          type="secondary"
+                        />
+                      </div>
                     </div>
                   </div>
                 </SwiperSlide>
@@ -74,19 +79,26 @@ function Projectcard({ workData, isHomePage }) {
               let urlSlug = workData.projectName.replace(/\s+/g, "-");
               urlSlug = "/our-work/" + urlSlug + "?id=" + workData.id;
               return (
-                <div className={styles.ourwork_project}>
-                  <div className={styles.project_image}>
-                    <Image src={workData.workCardImage} alt="" />
-                  </div>
-                  <div className={styles.project_name}>
-                    <h4>{workData.projectName}</h4>
-                  </div>
-                  <div className={styles.project_description}>
-                    <h3>
-                      {workData.workInfo
-                        ? workData.workInfo.slice(0, 70) + "..."
-                        : workData.workInfo}
-                    </h3>
+                <div
+                  className={classNames(
+                    styles.ourwork_project,
+                    styles.ourwork_flex
+                  )}
+                >
+                  <div className={styles.ourwork_with_flex}>
+                    <div className={styles.project_image}>
+                      <Image src={workData.workCardImage} alt="" />
+                    </div>
+                    <div className={styles.project_name}>
+                      <h4>{workData.projectName}</h4>
+                    </div>
+                    <div className={styles.project_description}>
+                      <h3>
+                        {workData.workInfo
+                          ? workData.workInfo.slice(0, 70) + "..."
+                          : workData.workInfo}
+                      </h3>
+                    </div>
                   </div>
                   <div className={styles.project_view}>
                     <Button

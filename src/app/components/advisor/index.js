@@ -3,7 +3,7 @@ import styles from "./advisor.module.css";
 import layout from "../../styles/layout.module.css";
 import { classNames } from "@/app/utils";
 import Link from "next/link";
-import Image from "next/image";
+import Image from "../image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 import { images } from "../../../../public/advisor";

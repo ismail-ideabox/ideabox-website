@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import layout from "../../styles/layout.module.css";
 import styles from "./odoo.module.css";
 import { classNames } from "@/app/utils";
-import Image from "next/image";
+import Image from "../image";
 import { image } from "../../../../public/odoo";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleChevronDown } from "@fortawesome/free-solid-svg-icons";
@@ -121,7 +121,7 @@ function Odoo() {
               </div>
               <div className={styles.odoo_stats_content}>
                 <h2 className={styles.green_h2}>175+</h2>
-                <p>CONTINENTS</p>
+                <p>COUNTRIES</p>
               </div>
               <div className={styles.odoo_stats_content_3}>
                 <h2 className={styles.purple_h2}>26K</h2>

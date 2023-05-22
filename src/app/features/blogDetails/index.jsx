@@ -3,7 +3,7 @@ import React from "react";
 import styles from "./blogDetails.module.css";
 import layout from "../../styles/layout.module.css";
 import { images } from "../../../../public/newsBlogs";
-import Image from "next/image";
+import Image from "../../components/image";
 import Header from "@/app/components/header";
 import Footer from "@/app/components/footer";
 import Faqs from "@/app/components/faqs";

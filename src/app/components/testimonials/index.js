@@ -3,7 +3,7 @@ import layout from "../../styles/layout.module.css";
 import styles from "./testimonials.module.css";
 import { classNames } from "@/app/utils";
 import React, { useState } from "react";
-import Image from "next/image";
+import Image from "../image";
 import { Autoplay, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import testimonial from "@/app/data/testimonial";
@@ -79,7 +79,7 @@ function Testimonials() {
                           <h5>{testimonial.position}</h5>
                         </div>
                         <div className={styles.person_company}>
-                          <Link href={testimonial.companyUrl}>
+                          <Link target={"_blank"} href={testimonial.companyUrl}>
                             <h5>{testimonial.company}</h5>
                           </Link>
                         </div>

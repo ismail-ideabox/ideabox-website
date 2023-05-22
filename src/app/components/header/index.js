@@ -5,16 +5,10 @@ import styles from "./header.module.css";
 import layout from "../../styles/layout.module.css";
 import { classNames, isSticky } from "@/app/utils";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faAlgolia,
-  faLinkedinIn,
-  faTwitter,
-} from "@fortawesome/free-brands-svg-icons";
+import { faLinkedinIn, faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { useEffect, useRef, useState } from "react";
 import { useMediaQuery } from "react-responsive";
 import { useRouter, useSearchParams } from "next/navigation";
-import Technical from "../technical";
-import Head from "next/head";
 
 function Header({ innerPage, headerVisible }) {
   const childRef = useRef(null);
