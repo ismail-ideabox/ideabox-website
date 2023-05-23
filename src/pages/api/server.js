@@ -1,4 +1,7 @@
 import nodemailer from "nodemailer";
+const express = require("express");
+const app = express();
+app.use(express.json());
 
 export default async function handler(req, res) {
   if (req.method === "POST") {

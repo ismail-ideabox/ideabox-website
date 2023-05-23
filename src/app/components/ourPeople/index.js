@@ -55,6 +55,7 @@ function OurPeople() {
                       <Image
                         className={styles.work_image_img}
                         src={images.hilton}
+                        alt=""
                       />
                     </Link>
                   </div>
@@ -66,6 +67,7 @@ function OurPeople() {
                       <Image
                         className={styles.work_image_img}
                         src={images.networkrail}
+                        alt=""
                       />
                     </Link>
                   </div>
@@ -77,6 +79,7 @@ function OurPeople() {
                       <Image
                         className={styles.work_image_img}
                         src={images.ladbrokes}
+                        alt=""
                       />
                     </Link>
                   </div>
@@ -85,6 +88,7 @@ function OurPeople() {
                       <Image
                         className={styles.work_image_img}
                         src={images.zod}
+                        alt=""
                       />
                     </Link>
                   </div>
@@ -94,6 +98,7 @@ function OurPeople() {
                       <Image
                         className={styles.work_image_img}
                         src={images.nhs}
+                        alt=""
                       />
                     </Link>
                   </div>
@@ -102,6 +107,7 @@ function OurPeople() {
                       <Image
                         className={styles.work_image_img}
                         src={images.ke}
+                        alt=""
                       />
                     </Link>
                   </div>
@@ -110,6 +116,7 @@ function OurPeople() {
                       <Image
                         className={styles.work_image_img}
                         src={images.temasek}
+                        alt=""
                       />
                     </Link>
                   </div>

@@ -6,7 +6,7 @@ const testimonial = [
     person: "Khawaja Khurram",
     position: "Chief Information Officer",
     company: `Cnergyico Pk Limited (formerly BYCO Petroleum)`,
-    companyUrl: "",
+    companyUrl: "http://www.byco.com.pk/",
     testimonial: `Ideabox has been an invaluable partner for Cnergyico formerly BYCO Petroleum for the past 5 plus years. Their exceptional grip on technology, coupled with their deep understanding of our business processes, have significantly enhanced our operations. what sets them apart from the rest is their "Customer first" mindset. I highly recommend their expertise!`,
   },
   {

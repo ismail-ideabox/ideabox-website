@@ -2,12 +2,14 @@ import React from "react";
 import styles from "./commitments.module.css";
 import layout from "../../styles/layout.module.css";
 import { classNames } from "@/app/utils";
+import { images } from "../../../../public/commitments";
 import Image from "../image";
-import handshake from "../../../../public/images/handshake.png";
 
-function Secondary() {
+function Secondary({ animate, animateRef }) {
+  // console.log(animate, "animate");
   return (
     <section
+      ref={animateRef}
       className={classNames(
         styles.section2,
         styles.section2_container,
@@ -35,12 +37,47 @@ function Secondary() {
             </p>
           </div>
           <div className={styles.section2_image}>
-            <Image
-              alt="Shaking Hand"
-              src={handshake}
-              width={480}
-              height={480}
-            />
+            <div
+              className={
+                animate
+                  ? classNames(
+                      styles.lefthand_container,
+                      styles.lefthand_container_animate
+                    )
+                  : styles.lefthand_container
+              }
+            >
+              <Image
+                className={
+                  animate
+                    ? classNames(styles.leftthumb_animate, styles.leftthumb)
+                    : styles.leftthumb
+                }
+                src={images.leftthumb}
+                alt=""
+              />
+              <Image className={styles.lefthand} src={images.lefthand} alt="" />
+              <Image
+                className={
+                  animate
+                    ? classNames(styles.leftfingers_animate, styles.leftfingers)
+                    : styles.leftfingers
+                }
+                src={images.leftfingers}
+                alt=""
+              />
+            </div>
+            <div className={styles.righthand_container}>
+              <Image
+                className={
+                  animate
+                    ? classNames(styles.righthand, styles.righthand_animate)
+                    : styles.righthand
+                }
+                src={images.righthand}
+                alt=""
+              />
+            </div>
           </div>
         </div>
       </div>

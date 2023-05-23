@@ -22,15 +22,18 @@ import blogsData from "@/app/data/blogs";
 import { useMediaQuery } from "react-responsive";
 import { useRouter, useSearchParams, usePathname } from "next/navigation";
 import { Router } from "next/router";
+import { faL } from "@fortawesome/free-solid-svg-icons";
 
 function Home() {
   const pathname = usePathname();
   const parentRef = useRef(null);
   const childRef = useRef(null);
   const servicesRef = useRef(null);
+  const animateRef = useRef(null);
   // const scrollRef = useRef(null);
 
   const [isVisible, setIsVisible] = useState(false);
+  const [animate, setAnimate] = useState(false);
   const [scrollToTopVisible, setScrollToTopVisible] = useState(false);
   const [headerVisible, setHeaderVisible] = useState(false);
   const isSmallScreen = useMediaQuery({ query: "(max-width: 800px)" });
@@ -44,10 +47,35 @@ function Home() {
     parentRect?.current?.scrollTop(0);
   }, [data]);
 
+  // useEffect(() => {
+  //   const parentRect = parentRef?.current?.getBoundingClientRect();
+  //   const animateRect = animateRef?.current?.getBoundingClientRect();
+  //   if (isSmallScreen) {
+  //     const isAnimateVisible =
+  //       animateRect.top >= 0 &&
+  //       animateRect.top <= window.innerHeight - (animateRect.height - 100);
+  //     if (isAnimateVisible) {
+  //       setAnimate(true);
+  //     }
+  //   } else {
+  //     const isAnimateVisible =
+  //       animateRect.top >= parentRect.top ||
+  //       animateRect.bottom + 300 <= parentRect.bottom;
+  //     if (!isAnimateVisible) {
+  //       setAnimate(true);
+  //     } else {
+  //       setAnimate(false);
+  //     }
+  //   }
+  // });
+
   useEffect(() => {
     const handleScroll = () => {
       const parentRect = parentRef?.current?.getBoundingClientRect();
       const childRect = childRef?.current?.getBoundingClientRect();
+      const animateRect = animateRef?.current?.getBoundingClientRect();
+      // console.log(parentRect, "parent Rect");
+      // console.log(animateRect, "animate Rect");
       if (parentRef.current.scrollTop > 250) {
         setHeaderVisible(true);
       } else {
@@ -58,6 +86,32 @@ function Home() {
       } else {
         setScrollToTopVisible(false);
       }
+      if (isSmallScreen) {
+        const animateTop = animateRect?.top || 0;
+        const animateBottom = animateRect?.bottom || 0;
+        // console.log(animateRect, "animateRect Mobile");
+        // console.log(window.innerHeight, "window.innerheight");
+        const isChildVisible =
+          animateTop <= window.innerHeight &&
+          animateBottom >= window.innerHeight;
+        // console.log(isChildVisible, "mobile child visible");
+        if (isChildVisible) {
+          setAnimate(true);
+        } else {
+          setAnimate(false);
+        }
+      } else {
+        const isChildVisible =
+          animateRect.top >= parentRect.top &&
+          animateRect.bottom - 300 <= parentRect.bottom;
+        // console.log(isChildVisible, "isChildVisible");
+        if (isChildVisible) {
+          setAnimate(true);
+        } else {
+          setAnimate(false);
+        }
+      }
+
       if (isSmallScreen) {
         const isChildVisible =
           childRect.top >= 0 &&
@@ -125,7 +179,7 @@ function Home() {
         ref={parentRef}
       >
         <GetInTouch headerVisible={headerVisible} />
-        <Commitments />
+        <Commitments animateRef={animateRef} animate={animate} />
         <Technical servicesRef={servicesRef} />
         <Odoo />
         <Overview childRef={childRef} isVisible={isVisible} />

@@ -57,7 +57,7 @@ export default function RootLayout({ children }) {
               alignItems: "center",
               justifyContent: "center",
               backgroundColor: "#fff",
-              zIndex: "999",
+              zIndex: "1000",
               top: "0",
               left: "0",
               transition: "all 0.2s ease-in-out",

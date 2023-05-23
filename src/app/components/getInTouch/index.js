@@ -94,7 +94,7 @@ function GetInTouch({ headerVisible }) {
     }));
 
   const onSubmit = async (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     setState((prev) => ({
       ...prev,
     }));
@@ -105,7 +105,7 @@ function GetInTouch({ headerVisible }) {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          name: name,
+          name: full_name,
           email: email,
           subject: subject,
           phone: phone,
@@ -311,59 +311,61 @@ function GetInTouch({ headerVisible }) {
                         formSubmit ? styles.form_submit : styles.display_block
                       }
                     >
-                      <div className={styles.input_flex}>
-                        <Input
-                          onChange={handleChange}
-                          name="full-name"
-                          id={"full-name"}
-                          type="text"
-                          placeholder="Full Name"
-                          // value={values.fullName}
-                        />
-                        <Input
-                          onChange={handleChange}
-                          name="company-name"
-                          id={"company-name"}
-                          type="text"
-                          placeholder="Company Name"
-                          // value={values.companyName}
-                        />
-                      </div>
-                      <div className={styles.input_flex}>
-                        <Input
-                          onChange={handleChange}
-                          name="email-address"
-                          id={"email-address"}
-                          type="email"
-                          placeholder="Email Address"
-                          // value={values.emailAddress}
-                        />
-                        <Input
-                          onChange={handleChange}
-                          name="phone-no"
-                          id={"phone-no"}
-                          type="text"
-                          placeholder="Phone No."
-                          // value={values.phoneNo}
-                        />
-                      </div>
-                      <div className={styles.text_area}>
-                        <TextArea
-                          onChange={handleChange}
-                          name="message"
-                          input_type="text"
-                          placeholder="Tell us about your project"
-                          id="message"
-                          // value={values.message}
-                        />
-                        <Button
-                          isLoading={isLoading}
-                          redirect={""}
-                          text={"SEND"}
-                          type="primary"
-                          onClick={() => setFormSubmit(true)}
-                        />
-                      </div>
+                      <form action="">
+                        <div className={styles.input_flex}>
+                          <Input
+                            onChange={handleChange}
+                            name="full-name"
+                            id={"full-name"}
+                            type="text"
+                            placeholder="Full Name"
+                            // value={values.fullName}
+                          />
+                          <Input
+                            onChange={handleChange}
+                            name="company-name"
+                            id={"company-name"}
+                            type="text"
+                            placeholder="Company Name"
+                            // value={values.companyName}
+                          />
+                        </div>
+                        <div className={styles.input_flex}>
+                          <Input
+                            onChange={handleChange}
+                            name="email-address"
+                            id={"email-address"}
+                            type="email"
+                            placeholder="Email Address"
+                            // value={values.emailAddress}
+                          />
+                          <Input
+                            onChange={handleChange}
+                            name="phone-no"
+                            id={"phone-no"}
+                            type="text"
+                            placeholder="Phone No."
+                            // value={values.phoneNo}
+                          />
+                        </div>
+                        <div className={styles.text_area}>
+                          <TextArea
+                            onChange={handleChange}
+                            name="message"
+                            input_type="text"
+                            placeholder="Tell us about your project"
+                            id="message"
+                            // value={values.message}
+                          />
+                          <Button
+                            isLoading={isLoading}
+                            redirect={""}
+                            text={"SEND"}
+                            type="primary"
+                            onClick={() => onSubmit}
+                          />
+                        </div>
+                      </form>
                     </div>
                     <div
                       className={
