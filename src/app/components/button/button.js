@@ -9,33 +9,60 @@ function Button({
   onClick,
   isLoading,
   loadingText,
+  componentType,
   type = "primary",
   ...rest
 }) {
   return (
-    <Link
-      target={target}
-      {...rest}
-      onClick={!isLoading && onClick}
-      href={redirect}
-      className={
-        type === "primary"
-          ? classNames(
-              styles.butn,
-              styles.butn__new,
-              styles.primary,
-              isLoading && styles.btn__loading
-            )
-          : classNames(
-              styles.butn,
-              styles.butn__new,
-              styles.secondary,
-              isLoading && styles.btn__loading
-            )
-      }
-    >
-      {isLoading ? loadingText : <span>{text}</span>}
-    </Link>
+    <>
+      {componentType === "button" ? (
+        <button
+          {...rest}
+          onClick={!isLoading && onClick}
+          className={
+            type === "primary"
+              ? classNames(
+                  styles.butn,
+                  styles.butn__new,
+                  styles.primary,
+                  isLoading && styles.btn__loading
+                )
+              : classNames(
+                  styles.butn,
+                  styles.butn__new,
+                  styles.secondary,
+                  isLoading && styles.btn__loading
+                )
+          }
+        >
+          {isLoading ? loadingText : <span>{text}</span>}
+        </button>
+      ) : (
+        <Link
+          target={target}
+          {...rest}
+          onClick={!isLoading && onClick}
+          href={redirect}
+          className={
+            type === "primary"
+              ? classNames(
+                  styles.butn,
+                  styles.butn__new,
+                  styles.primary,
+                  isLoading && styles.btn__loading
+                )
+              : classNames(
+                  styles.butn,
+                  styles.butn__new,
+                  styles.secondary,
+                  isLoading && styles.btn__loading
+                )
+          }
+        >
+          {isLoading ? loadingText : <span>{text}</span>}
+        </Link>
+      )}
+    </>
   );
 }
 

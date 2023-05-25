@@ -28,6 +28,10 @@ body {
   width: 0px;
 }
 
+.grecaptcha-badge {
+  visibility: hidden;
+}
+
 * {
   scrollbar-width: none;
   /* Firefox */
@@ -100,6 +104,7 @@ img {
   h2.main-heading {
     font-size: 30px !important;
   }
+
   .loader-img img {
     width: 100%;
     height: auto;
@@ -146,11 +151,13 @@ img {
 .swiper-wrapper {
   display: flex;
 }
+
 .clienteleslider .swiper-wrapper {
   transition-timing-function: linear;
   display: flex;
   align-items: center;
 }
+
 .ideaboxSlider .swiper-wrapper {
   transition-timing-function: linear;
   display: flex;

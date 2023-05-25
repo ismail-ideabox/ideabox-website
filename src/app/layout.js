@@ -9,6 +9,7 @@ config.autoAddCss = false;
 import { Router } from "next/router";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useState, useEffect } from "react";
+import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
 
 export default function RootLayout({ children }) {
   const [Loading, setLoading] = useState(true);
@@ -17,12 +18,10 @@ export default function RootLayout({ children }) {
 
   useEffect(() => {
     const handleRouteStart = () => {
-      console.log("route start");
       setLoading(true);
     };
 
     const handleRouteDone = () => {
-      console.log("Route changed");
       setLoading(false);
     };
     Router.events.on("routeChangeStart", handleRouteStart());
@@ -35,6 +34,8 @@ export default function RootLayout({ children }) {
       Router.events.off("routeChangeError", handleRouteDone());
     };
   });
+  const SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
+
   return (
     <>
       <html lang="en">
@@ -60,7 +61,17 @@ export default function RootLayout({ children }) {
           >
             <Image priority src={images.loader} alt={"Loader Image"} />
           </div>
-          {children}
+          <GoogleReCaptchaProvider
+            reCaptchaKey={SITE_KEY}
+            scriptProps={{
+              async: false,
+              defer: false,
+              appendTo: "head",
+              nonce: undefined,
+            }}
+          >
+            {children}
+          </GoogleReCaptchaProvider>
         </body>
       </html>
     </>

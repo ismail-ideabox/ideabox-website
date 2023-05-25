@@ -11,6 +11,7 @@ import ContactUsForm from "@/app/components/getInTouch/input";
 import TextArea from "@/app/components/getInTouch/textarea";
 import Input from "@/app/components/getInTouch/input";
 import Link from "next/link";
+import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 
 const initValues = {
   fullName: "",
@@ -24,49 +25,62 @@ const initState = { values: initValues };
 function ContactUs() {
   const [state, setState] = useState(initState);
   const [isSuccess, setIsSuccess] = useState(false);
-  const [toggle, setToggle] = useState(false);
-  const { values, isLoading } = state;
-  const [isMounted, setisMounted] = useState(false);
+  const [gReCaptchaToken, setGReCaptchaToken] = useState("");
+  const [isMounted, setIsMounted] = useState(false);
   const [errors, setErrors] = useState({
     fullName: false,
     emailAddress: false,
     phoneNo: false,
   });
+  const { values } = state;
+  const { executeRecaptcha } = useGoogleReCaptcha();
+
   useEffect(() => {
-    if (!errors.emailAddress && !errors.fullName && !errors.phoneNo) {
-      if (isMounted) {
-        postGetInTouch();
+    if (isMounted) {
+      if (!errors.emailAddress && !errors.fullName && !errors.phoneNo) {
+        if (!executeRecaptcha) {
+          console.log("Execute recaptcha not yet available");
+          return;
+        }
+      executeRecaptcha("enquiryFormSubmit").then((gReCaptchaToken) => {
+          console.log(gReCaptchaToken, "response Google reCaptcha server");
+          setGReCaptchaToken(gReCaptchaToken);
+          postGetInTouch(gReCaptchaToken);
+        });
       }
     }
   }, [errors]);
 
-  useEffect(() => {
-    setisMounted(true);
-  }, []);
-
-  const postGetInTouch = async () => {
+  const postGetInTouch = async (gReCaptchaToken) => {
     setState((prev) => ({
       ...prev,
       isLoading: true,
     }));
     try {
-      const response = await fetch("http://localhost:5000/api/mailer", {
-        method: "POST",
-        body: JSON.stringify({
-          name: state.values.fullName,
-          email: state.values.emailAddress,
-          companyName: state.values.companyName,
-          phone: state.values.phoneNo,
-          message: state.values.message,
-        }),
-      });
+      const response = await fetch(
+        process.env.NEXT_PUBLIC_BASE_API_URL + "mailer",
+        {
+          method: "POST",
+          body: JSON.stringify({
+            name: state.values.fullName,
+            email: state.values.emailAddress,
+            companyName: state.values.companyName,
+            phone: state.values.phoneNo,
+            message: state.values.message,
+            gReCaptchaToken: gReCaptchaToken,
+          }),
+        }
+      );
 
       const data = await response.json();
-      setState((prev) => ({
-        ...prev,
-        isLoading: false,
-      }));
-      setIsSuccess(true);
+      if (data) {
+        setState((prev) => ({
+          ...prev,
+          isLoading: false,
+        }));
+        setIsSuccess(true);
+        resetForm();
+      }
     } catch (error) {
       setState((prev) => ({
         ...prev,
@@ -85,31 +99,13 @@ function ContactUs() {
     }));
   };
 
-  const onSubmit = async (e) => {
-    const recaptchaResponse = await recaptchaRef.current.executeAsync();
-    recaptchaRef.current.reset();
-
-    const response = await fetch("/api/validateRecaptcha", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ recaptchaResponse }),
-    });
-    if (response.ok) {
-      checkFormValidity();
-    } else {
-      console.log("Invalid User");
-    }
+  const onSubmit = (e) => {
+    checkFormValidity();
   };
 
   const resetForm = () => {
     setIsSuccess(false);
-    setErrors({
-      fullName: false,
-      emailAddress: false,
-      phoneNo: false,
-    });
+
     setState({
       values: {
         fullName: "",
@@ -120,7 +116,6 @@ function ContactUs() {
       },
       isLoading: false,
     });
-    setisMounted(false);
   };
 
   const checkFormValidity = () => {
@@ -147,8 +142,9 @@ function ContactUs() {
     return !state.values.emailAddress.match(validRegex);
   };
   useEffect(() => {
-    setisMounted(toggle);
-  }, [toggle]);
+    setIsMounted(true);
+  }, []);
+
   return (
     <>
       <Header innerPage={true} />
@@ -267,11 +263,12 @@ function ContactUs() {
             <Button
               loadingText={"SENDING..."}
               isLoading={state.isLoading}
-              redirect={""}
               text={"SEND"}
               type="primary"
+              componentType="button"
               onClick={() => onSubmit()}
             />
+            {/* <button >send</button> */}
           </div>
         </div>
       </div>

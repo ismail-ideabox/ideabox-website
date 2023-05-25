@@ -1,7 +1,6 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
 import styles from "./getInTouch.module.css";
-// import ReCAPTCHA from "react-google-recaptcha";
 import layout from "../../styles/layout.module.css";
 import { classNames, verifyRecaptcha } from "@/app/utils";
 import Image from "../image";
@@ -17,6 +16,7 @@ import "swiper/css/pagination";
 import { Autoplay, Pagination } from "swiper";
 import Input from "./input";
 import TextArea from "./textarea";
+import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 
 const initValues = {
   fullName: "",
@@ -33,7 +33,7 @@ function GetInTouch({ headerVisible }) {
   const [isSuccess, setIsSuccess] = useState(false);
   const [toggle, setToggle] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
-  const recaptchaRef = useRef();
+  const [gReCaptchaToken, setGReCaptchaToken] = useState("");
   const [errors, setErrors] = useState({
     fullName: false,
     emailAddress: false,
@@ -45,44 +45,59 @@ function GetInTouch({ headerVisible }) {
     swiperRef.current?.swiper.slideTo(num);
   };
   const bannerBg = "banner_bg_" + currentSlide;
-  const { values, isLoading } = state;
-  const [isMounted, setisMounted] = useState(false);
+  const { values } = state;
+  const [isMounted, setIsMounted] = useState(false);
+  const { executeRecaptcha } = useGoogleReCaptcha();
 
   useEffect(() => {
     if (!errors.emailAddress && !errors.fullName && !errors.phoneNo) {
       if (isMounted) {
-        postGetInTouch();
+        if (!executeRecaptcha) {
+          console.log("Execute recaptcha not yet available");
+          return;
+        }
+        executeRecaptcha("enquiryFormSubmit").then((gReCaptchaToken) => {
+          console.log(gReCaptchaToken, "response Google reCaptcha server");
+          setGReCaptchaToken(gReCaptchaToken);
+          postGetInTouch(gReCaptchaToken);
+        });
       }
     }
   }, [errors]);
 
   useEffect(() => {
-    setisMounted(true);
+    setIsMounted(true);
   }, []);
 
-  const postGetInTouch = async () => {
+  const postGetInTouch = async (gReCaptchaToken) => {
     setState((prev) => ({
       ...prev,
       isLoading: true,
     }));
     try {
-      const response = await fetch("http://localhost:5000/api/mailer", {
-        method: "POST",
-        body: JSON.stringify({
-          name: state.values.fullName,
-          email: state.values.emailAddress,
-          companyName: state.values.companyName,
-          phone: state.values.phoneNo,
-          message: state.values.message,
-        }),
-      });
+      const response = await fetch(
+        process.env.NEXT_PUBLIC_BASE_API_URL + "mailer",
+        {
+          method: "POST",
+          body: JSON.stringify({
+            name: state.values.fullName,
+            email: state.values.emailAddress,
+            companyName: state.values.companyName,
+            phone: state.values.phoneNo,
+            message: state.values.message,
+            gReCaptchaToken: gReCaptchaToken,
+          }),
+        }
+      );
 
       const data = await response.json();
-      setState((prev) => ({
-        ...prev,
-        isLoading: false,
-      }));
-      setIsSuccess(true);
+      if (data) {
+        setState((prev) => ({
+          ...prev,
+          isLoading: false,
+        }));
+        setIsSuccess(true);
+      }
     } catch (error) {
       setState((prev) => ({
         ...prev,
@@ -102,21 +117,7 @@ function GetInTouch({ headerVisible }) {
   };
 
   const onSubmit = async (e) => {
-    const recaptchaResponse = await recaptchaRef.current.executeAsync();
-    recaptchaRef.current.reset();
-
-    const response = await fetch("/api/validateRecaptcha", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ recaptchaResponse }),
-    });
-    if (response.ok) {
-      checkFormValidity();
-    } else {
-      console.log("Invalid User");
-    }
+    checkFormValidity();
   };
 
   const resetForm = () => {
@@ -136,7 +137,7 @@ function GetInTouch({ headerVisible }) {
       },
       isLoading: false,
     });
-    setisMounted(false);
+    setIsMounted(false);
   };
 
   const checkFormValidity = () => {
@@ -162,12 +163,11 @@ function GetInTouch({ headerVisible }) {
       /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
     return !state.values.emailAddress.match(validRegex);
   };
+
   useEffect(() => {
-    setisMounted(toggle);
+    setIsMounted(toggle);
   }, [toggle]);
-  const handleRecaptcha = (token) => {
-    setRecaptchaToken(token);
-  };
+
   return (
     <>
       <div className={classNames(styles.getInTouchWrapper, bannerBg)}>
