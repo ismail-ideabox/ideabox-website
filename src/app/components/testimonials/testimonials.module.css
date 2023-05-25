@@ -90,10 +90,16 @@
   font-family: var(--secondary-font);
   margin-bottom: 15px;
 }
+.review_content_modal {
+  max-height: 300px;
+  overflow-y: scroll;
+}
 .review_content_modal p {
   color: #fff;
   font-size: 16px;
   font-family: var(--secondary-font);
+  white-space: pre-line;
+
   /* margin-bottom: 20px */
 }
 .close_btn {
