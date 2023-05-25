@@ -8,23 +8,33 @@ function Button({
   text,
   onClick,
   isLoading,
+  loadingText,
   type = "primary",
   ...rest
 }) {
   return (
     <Link
       target={target}
-      isLoading={isLoading}
       {...rest}
-      onClick={onClick}
+      onClick={!isLoading && onClick}
       href={redirect}
       className={
         type === "primary"
-          ? classNames(styles.butn, styles.butn__new, styles.primary)
-          : classNames(styles.butn, styles.butn__new, styles.secondary)
+          ? classNames(
+              styles.butn,
+              styles.butn__new,
+              styles.primary,
+              isLoading && styles.btn__loading
+            )
+          : classNames(
+              styles.butn,
+              styles.butn__new,
+              styles.secondary,
+              isLoading && styles.btn__loading
+            )
       }
     >
-      <span>{text}</span>
+      {isLoading ? loadingText : <span>{text}</span>}
     </Link>
   );
 }

@@ -1,8 +1,9 @@
 "use client";
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styles from "./getInTouch.module.css";
+// import ReCAPTCHA from "react-google-recaptcha";
 import layout from "../../styles/layout.module.css";
-import { classNames } from "@/app/utils";
+import { classNames, verifyRecaptcha } from "@/app/utils";
 import Image from "../image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClose } from "@fortawesome/free-solid-svg-icons";
@@ -17,59 +18,6 @@ import { Autoplay, Pagination } from "swiper";
 import Input from "./input";
 import TextArea from "./textarea";
 
-// const nodemailer = require("nodemailer");
-
-// let transporter = nodemailer.createTransport({
-//   host: "smtp.gmail.com",
-//   port: 465,
-//   secure: true,
-//   auth: {
-//     user: "noreply.ideabox.pk@gmail.com",
-//     pass: "Hello@Ideabox",
-//   },
-// });
-
-// const sendEmail = () => {
-//   // Get the input and textarea values
-//   const fullName = document.getElementById("full-name").value;
-//   const companyName = document.getElementById("company-name").value;
-//   const emailAddress = document.getElementById("email-address").value;
-//   const phoneNo = document.getElementById("phone-no").value;
-//   const message = document.getElementById("message").value;
-
-//   // Validate the input and textarea values
-//   if (!fullName || !companyName || !emailAddress || !phoneNo || !message) {
-//     alert("Please fill in all the fields");
-//     return;
-//   }
-
-//   // Create the email message
-//   let mailOptions = {
-//     from: emailAddress,
-//     to: "noreply.ideabox.pk@gmail.com",
-//     subject: "New message from Ideabox website",
-//     html: `
-//       <p><strong>Full Name:</strong> ${fullName}</p>
-//       <p><strong>Company Name:</strong> ${companyName}</p>
-//       <p><strong>Email Address:</strong> ${emailAddress}</p>
-//       <p><strong>Phone No.:</strong> ${phoneNo}</p>
-//       <p><strong>Message:</strong> ${message}</p>
-//     `,
-//   };
-
-//   // Send the email
-//   transporter.sendMail(mailOptions, (error, info) => {
-//     if (error) {
-//       console.log(error);
-//       alert("An error occurred while sending the email");
-//     } else {
-//       console.log("Email sent: " + info.response);
-//       alert("Your message has been sent");
-//       setToggle(false);
-//     }
-//   });
-// };
-
 const initValues = {
   fullName: "",
   companyName: "",
@@ -82,59 +30,146 @@ const initState = { values: initValues };
 
 function GetInTouch({ headerVisible }) {
   const [state, setState] = useState(initState);
-  const { values, isLoading } = state;
-
-  const handleChange = (target) =>
-    setState((prev) => ({
-      ...prev,
-      values: {
-        ...prev.values,
-        [target.name]: target.value,
-      },
-    }));
-
-  const onSubmit = async (e) => {
-    // e.preventDefault();
-    setState((prev) => ({
-      ...prev,
-    }));
-    try {
-      const response = await fetch("src/pages/api/server", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          name: full_name,
-          email: email,
-          subject: subject,
-          phone: phone,
-          message: message,
-        }),
-      });
-
-      const data = await response.json();
-      console.log(data.message);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
+  const [isSuccess, setIsSuccess] = useState(false);
   const [toggle, setToggle] = useState(false);
-  const [formSubmit, setFormSubmit] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
+  const recaptchaRef = useRef();
+  const [errors, setErrors] = useState({
+    fullName: false,
+    emailAddress: false,
+    phoneNo: false,
+  });
   const swiperRef = useRef(null);
   const toSlide = (num) => {
     setCurrentSlide(num);
     swiperRef.current?.swiper.slideTo(num);
   };
   const bannerBg = "banner_bg_" + currentSlide;
+  const { values, isLoading } = state;
+  const [isMounted, setisMounted] = useState(false);
 
+  useEffect(() => {
+    if (!errors.emailAddress && !errors.fullName && !errors.phoneNo) {
+      if (isMounted) {
+        postGetInTouch();
+      }
+    }
+  }, [errors]);
+
+  useEffect(() => {
+    setisMounted(true);
+  }, []);
+
+  const postGetInTouch = async () => {
+    setState((prev) => ({
+      ...prev,
+      isLoading: true,
+    }));
+    try {
+      const response = await fetch("http://localhost:5000/api/mailer", {
+        method: "POST",
+        body: JSON.stringify({
+          name: state.values.fullName,
+          email: state.values.emailAddress,
+          companyName: state.values.companyName,
+          phone: state.values.phoneNo,
+          message: state.values.message,
+        }),
+      });
+
+      const data = await response.json();
+      setState((prev) => ({
+        ...prev,
+        isLoading: false,
+      }));
+      setIsSuccess(true);
+    } catch (error) {
+      setState((prev) => ({
+        ...prev,
+        isLoading: false,
+      }));
+    }
+  };
+
+  const handleChange = (event) => {
+    setState((prev) => ({
+      ...prev,
+      values: {
+        ...prev.values,
+        [event.target.name]: event.target.value,
+      },
+    }));
+  };
+
+  const onSubmit = async (e) => {
+    const recaptchaResponse = await recaptchaRef.current.executeAsync();
+    recaptchaRef.current.reset();
+
+    const response = await fetch("/api/validateRecaptcha", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ recaptchaResponse }),
+    });
+    if (response.ok) {
+      checkFormValidity();
+    } else {
+      console.log("Invalid User");
+    }
+  };
+
+  const resetForm = () => {
+    setIsSuccess(false);
+    setErrors({
+      fullName: false,
+      emailAddress: false,
+      phoneNo: false,
+    });
+    setState({
+      values: {
+        fullName: "",
+        companyName: "",
+        emailAddress: "",
+        phoneNo: "",
+        message: "",
+      },
+      isLoading: false,
+    });
+    setisMounted(false);
+  };
+
+  const checkFormValidity = () => {
+    if (!state.values.fullName.trim()) {
+      setErrors((prevValue) => ({ ...prevValue, fullName: true }));
+    } else {
+      setErrors((prevValue) => ({ ...prevValue, fullName: false }));
+    }
+    if (!state.values.phoneNo.trim()) {
+      setErrors((prevValue) => ({ ...prevValue, phoneNo: true }));
+    } else {
+      setErrors((prevValue) => ({ ...prevValue, phoneNo: false }));
+    }
+    if (validateEmail()) {
+      setErrors((prevValue) => ({ ...prevValue, emailAddress: true }));
+    } else {
+      setErrors((prevValue) => ({ ...prevValue, emailAddress: false }));
+    }
+  };
+
+  const validateEmail = () => {
+    const validRegex =
+      /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    return !state.values.emailAddress.match(validRegex);
+  };
+  useEffect(() => {
+    setisMounted(toggle);
+  }, [toggle]);
+  const handleRecaptcha = (token) => {
+    setRecaptchaToken(token);
+  };
   return (
     <>
-      {/* <Head>
-        <link rel="stylesheet" href="./getInTouch.module.css" />
-      </Head> */}
       <div className={classNames(styles.getInTouchWrapper, bannerBg)}>
         <Header headerVisible={headerVisible} />
         <div className={styles.pagination_container}>
@@ -301,51 +336,62 @@ function GetInTouch({ headerVisible }) {
                       className={styles.close_btn}
                       onClick={() => {
                         setToggle(false);
-                        setFormSubmit(false);
+                        resetForm();
                       }}
                     >
                       <FontAwesomeIcon icon={faClose} />
                     </div>
                     <div
                       className={
-                        formSubmit ? styles.form_submit : styles.display_block
+                        isSuccess ? styles.form_submit : styles.display_block
                       }
                     >
                       <form action="">
+                        {/* <ReCAPTCHA
+                          ref={recaptchaRef}
+                          sitekey={"6LfFcswkAAAAAGlybf-de5_XXvbBXyOcZXllBmPT"}
+                        /> */}
+
                         <div className={styles.input_flex}>
                           <Input
+                            isError={errors.fullName}
+                            message={"Name Required"}
                             onChange={handleChange}
-                            name="full-name"
+                            name="fullName"
                             id={"full-name"}
                             type="text"
                             placeholder="Full Name"
-                            // value={values.fullName}
+                            value={values.fullName}
                           />
                           <Input
                             onChange={handleChange}
-                            name="company-name"
+                            name="companyName"
                             id={"company-name"}
                             type="text"
                             placeholder="Company Name"
-                            // value={values.companyName}
+                            value={values.companyName}
                           />
                         </div>
                         <div className={styles.input_flex}>
                           <Input
+                            isError={errors.emailAddress}
+                            message={"Enter Valid Email"}
                             onChange={handleChange}
-                            name="email-address"
+                            name="emailAddress"
                             id={"email-address"}
                             type="email"
                             placeholder="Email Address"
-                            // value={values.emailAddress}
+                            value={values.emailAddress}
                           />
                           <Input
                             onChange={handleChange}
-                            name="phone-no"
+                            name="phoneNo"
                             id={"phone-no"}
                             type="text"
+                            isError={errors.phoneNo}
+                            message={"Phone Number Required"}
                             placeholder="Phone No."
-                            // value={values.phoneNo}
+                            value={values.phoneNo}
                           />
                         </div>
                         <div className={styles.text_area}>
@@ -355,21 +401,23 @@ function GetInTouch({ headerVisible }) {
                             input_type="text"
                             placeholder="Tell us about your project"
                             id="message"
-                            // value={values.message}
+                            value={values.message}
                           />
                           <Button
-                            isLoading={isLoading}
+                            loadingText={"SENDING..."}
+                            isLoading={state.isLoading}
                             redirect={""}
                             text={"SEND"}
                             type="primary"
-                            onClick={() => onSubmit}
+                            onClick={() => onSubmit()}
                           />
                         </div>
                       </form>
                     </div>
+
                     <div
                       className={
-                        formSubmit
+                        isSuccess
                           ? styles.form_submitted
                           : styles.form_notSubmitted
                       }

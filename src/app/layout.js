@@ -9,7 +9,6 @@ config.autoAddCss = false;
 import { Router } from "next/router";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useState, useEffect } from "react";
-// import cssFilePaths from "./data/css";
 
 export default function RootLayout({ children }) {
   const [Loading, setLoading] = useState(true);
@@ -17,7 +16,6 @@ export default function RootLayout({ children }) {
   const searchParams = useSearchParams();
 
   useEffect(() => {
-    // console.log(children, "child");
     const handleRouteStart = () => {
       console.log("route start");
       setLoading(true);
@@ -41,9 +39,6 @@ export default function RootLayout({ children }) {
     <>
       <html lang="en">
         <Head>
-          {/* {cssFilePaths.map((path, index) => (
-            <link key={index} rel="stylesheet" href={path.path} />
-          ))} */}
           <title>Home | Ideabox</title>
           <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
         </Head>
