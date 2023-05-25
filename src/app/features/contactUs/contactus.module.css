@@ -253,6 +253,17 @@
     padding: 5px;
   }
 }
+@media screen and (max-width: 650px) {
+  .modal_img {
+    display: none;
+  }
+  .form_submit_flex {
+    width: 100%;
+  }
+  .modal_container {
+    height: 80vh;
+  }
+}
 @media screen and (max-width: 600px) {
   .banner_container {
     flex-direction: column;
