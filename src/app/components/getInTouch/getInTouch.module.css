@@ -428,6 +428,13 @@
 }
 
 @media screen and (max-width: 700px) {
+  .formItem p {
+    font-size: 11px;
+    bottom: 0;
+  }
+  .formItem {
+    margin-bottom: 0;
+  }
   .form {
     width: 100%;
     flex-direction: column;

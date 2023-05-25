@@ -48,6 +48,11 @@
 }
 
 .project_description h3 {
+  display: inline-block;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  overflow: hidden;
+  max-height: 2.5em;
   margin-bottom: 20px;
   color: #fff;
   font-size: 16px;
