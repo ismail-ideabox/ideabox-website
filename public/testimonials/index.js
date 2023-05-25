@@ -3,6 +3,7 @@ import zahralogo from "./zahralogo.png";
 import larilogo from "./larilogo.png";
 import bycologo from "../ourWorkDetails/bycologo.png";
 import matcologo from "./matcologo.png";
+import rentlylogo from "./rentlylogo.png";
 
 export const images = {
   testimonials,
@@ -10,4 +11,5 @@ export const images = {
   larilogo,
   bycologo,
   matcologo,
+  rentlylogo,
 };
