@@ -27,7 +27,7 @@ const testimonial = [
     company: `Lari & Co. Advocates`,
     companyUrl: "http://larilaw.co/login",
     testimonial:
-      "We are a law firm who were looking for a end to end solution for our specific requirements to manage our database including but not limited to case files, case scheduling and invoicing. We approached Ideabox for a customised solution and they handled everything perfectly, all our requirements were addressed and they created a fantastic ERP application for our daily use. We have had the pleasure of working with Ideabox since 2016 and it has been a flawless and fantastic experience",
+      "We are a law firm who were looking for a end to end solution for our specific requirements to manage our database including but not limited to case files, case scheduling and invoicing. We approached Ideabox for a customised solution and they handled everything perfectly, all our requirements were addressed and they created a fantastic ERP application for our daily use. We have had the pleasure of working with Ideabox since 2016 and it has been a flawless and fantastic experience.",
   },
   {
     id: 4,
