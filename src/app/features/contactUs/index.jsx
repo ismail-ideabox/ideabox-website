@@ -27,6 +27,7 @@ function ContactUs() {
   const [isSuccess, setIsSuccess] = useState(false);
   const [gReCaptchaToken, setGReCaptchaToken] = useState("");
   const [isMounted, setIsMounted] = useState(false);
+  const [toggle, setToggle] = useState(false);
   const [errors, setErrors] = useState({
     fullName: false,
     emailAddress: false,
@@ -42,7 +43,7 @@ function ContactUs() {
           console.log("Execute recaptcha not yet available");
           return;
         }
-      executeRecaptcha("enquiryFormSubmit").then((gReCaptchaToken) => {
+        executeRecaptcha("enquiryFormSubmit").then((gReCaptchaToken) => {
           console.log(gReCaptchaToken, "response Google reCaptcha server");
           setGReCaptchaToken(gReCaptchaToken);
           postGetInTouch(gReCaptchaToken);
@@ -79,6 +80,7 @@ function ContactUs() {
           isLoading: false,
         }));
         setIsSuccess(true);
+        setToggle(true);
         resetForm();
       }
     } catch (error) {
@@ -104,8 +106,6 @@ function ContactUs() {
   };
 
   const resetForm = () => {
-    setIsSuccess(false);
-
     setState({
       values: {
         fullName: "",
@@ -144,6 +144,16 @@ function ContactUs() {
   useEffect(() => {
     setIsMounted(true);
   }, []);
+
+  useEffect(() => {
+    console.log(isSuccess, "isSuccess");
+    if (isSuccess) {
+      setTimeout(() => {
+        setToggle(false);
+        console.log(setToggle);
+      }, 3000);
+    }
+  }, [isSuccess]);
 
   return (
     <>
@@ -269,6 +279,35 @@ function ContactUs() {
               onClick={() => onSubmit()}
             />
             {/* <button >send</button> */}
+          </div>
+          <div
+            className={
+              toggle ? styles.form_submitted : styles.form_notSubmitted
+            }
+          >
+            <div className={styles.modal_container}>
+              <div className={styles.modal_img}>
+                <Image src={images.modal} alt="" />
+              </div>
+              <div className={styles.form_submit_flex}>
+                <h2>Thank You</h2>
+                <p>
+                  for submitting your request with Ideabox. We appreciate your
+                  interest and will review it promptly. We will be in touch with
+                  you soon.
+                </p>
+                <p>
+                  In case of an emergency, please feel free to contact us on
+                  <br />
+                  <Link
+                    className={styles.mail_at}
+                    href={"mailto:info@ideabox.pk"}
+                  >
+                    hello@ideabox.pk
+                  </Link>
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
