@@ -143,7 +143,7 @@ function Testimonials() {
                   </div>
                 </div>
                 <div className={styles.review_content_modal}>
-                  <p>{testimonial[activeTestimonial].testimonial}...</p>
+                  <p>{testimonial[activeTestimonial].testimonial}</p>
                 </div>
               </div>
             </div>
