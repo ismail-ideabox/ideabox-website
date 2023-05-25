@@ -21,6 +21,20 @@ const testimonial = [
   },
   {
     id: 3,
+    logo: images.rentlylogo,
+    person: "Zeeshan Jamote",
+    position: "CEO",
+    company: `Rently`,
+    companyUrl: "https://rently.pk/",
+    testimonial: `We are thrilled to share our experience with Ideabox, an exceptional software company that has truly transformed our car rental platform, Rently. As a rapidly growing business in the car rental industry, we were searching for a technology partner that could provide innovative solutions to enhance our operations and user experience. Ideabox exceeded our expectations and delivered outstanding results.
+    From the very beginning, Ideabox showcased their expertise and dedication to understanding our specific needs. Their team of talented professionals collaborated closely with us to identify pain points in our existing system and develop customized software solutions to address them. Their attention to detail and ability to translate our requirements into practical features were remarkable.
+    One aspect that truly impressed us was the user-friendly interface they created. Ideabox designed a sleek and intuitive platform that greatly improved the overall experience for both our customers and internal team. The streamlined booking process, comprehensive vehicle management tools, and seamless integration with third-party services have greatly enhanced our efficiency and customer satisfaction.
+    Moreover, Ideabox's commitment to ongoing support and continuous improvement has been invaluable to our success. They have been proactive in providing updates, resolving any issues promptly, and offering valuable insights to optimize our operations. Their responsiveness and dedication to delivering top-notch customer service have fostered a strong partnership between our two companies.
+    Thanks to Ideabox, we have experienced substantial growth in our business. Their innovative solutions have helped us attract new customers, improve operational efficiency, and ultimately increase our revenue. We cannot express our gratitude enough for the transformative impact they have made on our car rental platform.
+    In conclusion, we wholeheartedly recommend Ideabox to any company seeking a reliable and forward-thinking software partner. Their expertise, professionalism, and commitment to delivering outstanding results are truly unparalleled.`,
+  },
+  {
+    id: 4,
     logo: images.larilogo,
     person: "Ibaad M.Lari",
     position: "Partner",
@@ -30,12 +44,12 @@ const testimonial = [
       "We are a law firm who were looking for a end to end solution for our specific requirements to manage our database including but not limited to case files, case scheduling and invoicing. We approached Ideabox for a customised solution and they handled everything perfectly, all our requirements were addressed and they created a fantastic ERP application for our daily use. We have had the pleasure of working with Ideabox since 2016 and it has been a flawless and fantastic experience.",
   },
   {
-    id: 4,
+    id: 5,
     logo: images.matcologo,
     person: "Ameera Ghori",
     position: "Director",
     company: `Matco Foods`,
-    companyUrl: "https://matcofoods.com/  ",
+    companyUrl: "https://matcofoods.com/",
     testimonial:
       "A very good experience working with Ideabox for developing and redesigning our entire website. The best part is the flexibility of the team and thorough service they provided. Great people to work with!",
   },

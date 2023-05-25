@@ -70,6 +70,9 @@
   font-weight: 400;
   width: 80%;
 }
+.slider_content p br {
+  display: none;
+}
 
 .slider_content > a {
   margin-top: 25px;
@@ -364,6 +367,9 @@
 }
 
 @media (max-width: 600px) {
+  .slider_content p br {
+    display: none;
+  }
   .GetInTouch_section {
     min-height: auto;
   }
@@ -432,7 +438,10 @@
     font-size: 11px;
     bottom: 0;
   }
-  .formItem {
+  .input_flex a {
+    margin-bottom: 0 !important;
+  }
+  .text_area textarea {
     margin-bottom: 0;
   }
   .form {
@@ -451,6 +460,6 @@
     gap: 0;
   }
   .input_flex input {
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
   }
 }
