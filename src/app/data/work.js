@@ -169,7 +169,7 @@ Azure Services`,
     cardImage: images.bmmbanner,
     workLogo: images.bmmlogo,
     url: "",
-    buttontext: "BOOK MY MEMORIES",
+    buttontext: "Book My Memories",
     workInfo: `Book My Memories is a software application designed to help users capture and preserve their memories. The software offers a range of features that enable users to create personalised photo albums, scrapbooks, and memory books that capture their most cherished memories and moments.`,
     implementation: `Ideabox has made sure that the software is user-friendly and offers a simple drag-and-drop interface that enables users to create their albums and memory books easily. The software also offers a range of customization options, including templates, layouts, and design elements, enabling users to create unique and personalised memory books.
     

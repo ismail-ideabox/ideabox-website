@@ -1,7 +1,7 @@
 "use client";
 import workData from "@/app/data/work";
 import OurWorkDetails from "@/app/features/ourWorkDetails";
-import { usePathname, useSearchParams, useRouter } from "next/navigation";
+import { redirect, usePathname } from "next/navigation";
 import React, { useEffect, useState } from "react";
 
 function WorkDetail() {
@@ -11,12 +11,19 @@ function WorkDetail() {
     window.scrollTo(0, 0);
   }, [data]);
   const pathname = usePathname();
-  const searchParams = useSearchParams();
 
-  const params = new URLSearchParams(searchParams);
-  const id = Number(params.get("id"));
+  console.log(pathname, "pathname");
+  const workTitle = pathname.split("/").pop().replaceAll("-", " ");
+  console.log(workTitle, workTitle);
 
-  const filteredWork = workData.find((ele) => ele.id === id);
+  const filteredWork = workData.find(
+    (ele) =>
+      ele.projectName.toLocaleLowerCase() === workTitle.toLocaleLowerCase()
+  );
+  if (!filteredWork) {
+    redirect("/404");
+  }
+
   return (
     <>
       <head>

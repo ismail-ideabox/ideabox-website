@@ -27,7 +27,7 @@ function Advisor() {
               <div className={styles.advisor_image}>
                 <Image src={images.omer} alt="Advisor Image" />
                 <div className={styles.advisor_linkedin}>
-                  <Link href="" className={styles.linkedin_icon}>
+                  <Link rel="nofollow" href="" className={styles.linkedin_icon}>
                     <FontAwesomeIcon icon={faLinkedinIn} />
                   </Link>
                 </div>
@@ -43,7 +43,7 @@ function Advisor() {
               <div className={styles.advisor_image}>
                 <Image src={images.syed} alt="Advisor Image" />
                 <div className={styles.advisor_linkedin}>
-                  <Link href="" className={styles.linkedin_icon}>
+                  <Link rel="nofollow" href="" className={styles.linkedin_icon}>
                     <FontAwesomeIcon icon={faLinkedinIn} />
                   </Link>
                 </div>
@@ -59,7 +59,7 @@ function Advisor() {
               <div className={styles.advisor_image}>
                 <Image src={images.umair} alt="Advisor Image" />
                 <div className={styles.advisor_linkedin}>
-                  <Link href="" className={styles.linkedin_icon}>
+                  <Link rel="nofollow" href="" className={styles.linkedin_icon}>
                     <FontAwesomeIcon icon={faLinkedinIn} />
                   </Link>
                 </div>
@@ -75,7 +75,7 @@ function Advisor() {
               <div className={styles.advisor_image}>
                 <Image src={images.ayesha} alt="Advisor Image" />
                 <div className={styles.advisor_linkedin}>
-                  <Link href="" className={styles.linkedin_icon}>
+                  <Link rel="nofollow" href="" className={styles.linkedin_icon}>
                     <FontAwesomeIcon icon={faLinkedinIn} />
                   </Link>
                 </div>

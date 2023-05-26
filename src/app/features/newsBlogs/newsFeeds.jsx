@@ -28,7 +28,7 @@ function NewsFeeds() {
               </div>
             </div>
             <div className={styles.news_feed_image}>
-              <Image src={images.newsfeed} alt="" />
+              <Image src={images.newsfeed} alt="News Feeds" />
             </div>
           </div>
         </div>

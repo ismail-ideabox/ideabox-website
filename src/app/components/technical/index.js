@@ -43,35 +43,35 @@ function Technical({ servicesRef }) {
         </div>
         <div className={styles.gifs_container}>
           <div className={styles.gifs_inner}>
-            <Image src={image.software} alt="" />
+            <Image src={image.software} alt="Software Development gif" />
             <p>Software Development</p>
           </div>
           <div className={styles.gifs_inner}>
-            <Image src={image.ecommerce} alt="" />
+            <Image src={image.ecommerce} alt="Ecommerce Integration gif" />
             <p>E-Commerce Integration</p>
           </div>
           <div className={styles.gifs_inner}>
-            <Image src={image.enterprise} alt="" />
+            <Image src={image.enterprise} alt="Enterprise Service gif" />
             <p>Emterprise Services & Consultancy</p>
           </div>
           <div className={styles.gifs_inner}>
-            <Image src={image.crms} alt="" />
+            <Image src={image.crms} alt="CRMs & Support Services gif" />
             <p>CRMs & Support Services</p>
           </div>
           <div className={styles.gifs_inner}>
-            <Image src={image.bigdata} alt="" />
+            <Image src={image.bigdata} alt="Big Data gif" />
             <p>Big Data Analytics</p>
           </div>
           <div className={styles.gifs_inner}>
-            <Image src={image.devops} alt="" />
+            <Image src={image.devops} alt="DEVOPS & Cloud Services gif" />
             <p>DEVOPS & Cloud Services</p>
           </div>
           <div className={styles.gifs_inner}>
-            <Image src={image.mobIcon} alt="" />
+            <Image src={image.mobIcon} alt="Mobile App Development gif" />
             <p>Mobile App Development</p>
           </div>
           <div className={styles.gifs_inner}>
-            <Image src={image.artificial} alt="" />
+            <Image src={image.artificial} alt="Artificial Intelligence gif" />
             <p>Artificial Intelligence</p>
           </div>
         </div>

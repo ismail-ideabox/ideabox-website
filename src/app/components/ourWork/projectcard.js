@@ -37,7 +37,7 @@ function Projectcard({ workData, isHomePage }) {
           >
             {workData.map((workData, index) => {
               let urlSlug = workData.projectName.replace(/\s+/g, "-");
-              urlSlug = "/our-work/" + urlSlug + "?id=" + workData.id;
+              urlSlug = "/our-work/" + urlSlug;
               return (
                 <SwiperSlide key={index}>
                   <div
@@ -47,7 +47,10 @@ function Projectcard({ workData, isHomePage }) {
                     <div className={styles.ourwork_flex}>
                       <div>
                         <div className={styles.project_image}>
-                          <Image src={workData.workCardImage} alt="" />
+                          <Image
+                            src={workData.workCardImage}
+                            alt="Case Study Card Image"
+                          />
                         </div>
                         <div className={styles.project_name}>
                           <h4>{workData.projectName}</h4>
@@ -77,7 +80,7 @@ function Projectcard({ workData, isHomePage }) {
           <>
             {workData.map((workData, index) => {
               let urlSlug = workData.projectName.replace(/\s+/g, "-");
-              urlSlug = "/our-work/" + urlSlug + "?id=" + workData.id;
+              urlSlug = "/our-work/" + urlSlug;
               return (
                 <div
                   className={classNames(
@@ -87,7 +90,10 @@ function Projectcard({ workData, isHomePage }) {
                 >
                   <div className={styles.ourwork_with_flex}>
                     <div className={styles.project_image}>
-                      <Image src={workData.workCardImage} alt="" />
+                      <Image
+                        src={workData.workCardImage}
+                        alt="Case Study Card Image"
+                      />
                     </div>
                     <div className={styles.project_name}>
                       <h4>{workData.projectName}</h4>

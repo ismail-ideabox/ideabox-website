@@ -216,7 +216,7 @@ function GetInTouch({ headerVisible }) {
                   >
                     <SwiperSlide>
                       <div className={styles.slider_content}>
-                        <h2
+                        <h1
                           className={[
                             "main-heading",
                             styles.slider_content_h2,
@@ -224,7 +224,7 @@ function GetInTouch({ headerVisible }) {
                         >
                           AGGRESSIVE GROWTH <br /> FOR FORWARD THINKING <br />{" "}
                           BUSINESSES
-                        </h2>
+                        </h1>
                         <p>Ditch the unnecessary marketing jargon. </p>
                         <p>
                           At Ideabox, we focus on the thing that <br /> matters
@@ -241,14 +241,14 @@ function GetInTouch({ headerVisible }) {
                     </SwiperSlide>
                     <SwiperSlide>
                       <div className={styles.slider_content}>
-                        <h2
+                        <h1
                           className={[
                             "main-heading",
                             styles.slider_content_h2,
                           ].join(" ")}
                         >
                           Success <br /> Together
-                        </h2>
+                        </h1>
                         <p>
                           We believe in our clients and our strength <br /> lies
                           in developing close working relationships <br /> to
@@ -264,7 +264,7 @@ function GetInTouch({ headerVisible }) {
                     </SwiperSlide>
                     <SwiperSlide>
                       <div className={styles.slider_content}>
-                        <h2
+                        <h1
                           className={[
                             "main-heading",
                             styles.slider_content_h2,
@@ -272,7 +272,7 @@ function GetInTouch({ headerVisible }) {
                         >
                           Bespoke Services FOR <br /> THE NEXT GENERATION <br />{" "}
                           of BUSINESSES.
-                        </h2>
+                        </h1>
                         <p>
                           From bespoke web platforms and mobile <br /> apps, to
                           big data analytics - we have the <br /> experience and
@@ -295,7 +295,7 @@ function GetInTouch({ headerVisible }) {
                     loading="eager"
                     src={images.up}
                     onClick={() => toSlide(1)}
-                    alt=""
+                    alt="upper side of the cube"
                   />
                 </div>
                 <div className={styles.image_right}>
@@ -303,17 +303,21 @@ function GetInTouch({ headerVisible }) {
                     loading="eager"
                     src={images.left}
                     onClick={() => toSlide(2)}
-                    alt=""
+                    alt="left side of the cube"
                   />
                   <Image
                     loading="eager"
                     src={images.right}
                     onClick={() => toSlide(0)}
-                    alt=""
+                    alt="right side of the cube"
                   />
                 </div>
                 <div className={styles.image_box}>
-                  <Image loading="eager" src={images.box} alt="" />
+                  <Image
+                    loading="eager"
+                    src={images.box}
+                    alt="center box of the cube"
+                  />
                 </div>
               </div>
             </div>
@@ -329,7 +333,7 @@ function GetInTouch({ headerVisible }) {
               <div className={styles.modal}>
                 <div className={styles.form}>
                   <div className={styles.form_image}>
-                    <Image src={images.modal} alt="" />
+                    <Image src={images.modal} alt="ideabox image of the homepage contact form" />
                   </div>
                   <div className={styles.form_input}>
                     <div
