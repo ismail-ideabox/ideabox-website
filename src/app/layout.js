@@ -40,7 +40,7 @@ export default function RootLayout({ children }) {
     <>
       <html lang="en">
         <Head>
-          <title>Home | Ideabox</title>
+          {/* <title>Home | Ideabox</title> */}
           <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
         </Head>
         <body>

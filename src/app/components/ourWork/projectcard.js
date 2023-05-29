@@ -18,7 +18,7 @@ function Projectcard({ workData, isHomePage }) {
             slidesPerView={1}
             lazy={true}
             spaceBetween={20}
-            preLoadImages={true}
+            preloadimages={true}
             pagination={{
               clickable: true,
             }}

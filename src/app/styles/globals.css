@@ -10,6 +10,9 @@
   --primary-font: "Arvo";
   --secondary-font: "Poppins";
 }
+/* html {
+  scroll-behavior: smooth !important;
+} */
 
 body {
   font-family: var(--primary-font);
@@ -102,7 +105,7 @@ img {
 
 @media (max-width: 600px) {
   h2.main-heading {
-    font-size: 30px !important;
+    font-size: 27px !important;
   }
 
   .loader-img img {

@@ -139,6 +139,19 @@ function OurPeople() {
                       />
                     </Link>
                   </div>
+                  <div className={styles.work_image}>
+                    <Link
+                      rel="nofollow"
+                      target="_blank"
+                      href={"https://temasek.com.sg/"}
+                    >
+                      <Image
+                        className={styles.work_image_img}
+                        src={images.salonlogo}
+                        alt="Salon Plus Logo"
+                      />
+                    </Link>
+                  </div>
                 </div>
                 {/* <Button
                   redirect={"/our-team"}

@@ -47,7 +47,7 @@
 }
 @keyframes lefthand {
   0% {
-    left: -20%;
+    left: -10%;
   }
 
   100% {
@@ -76,7 +76,7 @@
 }
 @keyframes righthand {
   0% {
-    right: -20%;
+    right: -10%;
   }
 
   100% {

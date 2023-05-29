@@ -56,7 +56,11 @@ function Secondary({ animate, animateRef }) {
                 src={images.leftthumb}
                 alt="handshake thumb"
               />
-              <Image className={styles.lefthand} src={images.lefthand} alt="handshake left hand" />
+              <Image
+                className={styles.lefthand}
+                src={images.lefthand}
+                alt="handshake left hand"
+              />
               <Image
                 className={
                   animate
