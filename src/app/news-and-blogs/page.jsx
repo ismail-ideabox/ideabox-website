@@ -2,7 +2,7 @@
 import React from "react";
 import NewsBlogsPage from "../features/newsBlogs";
 
-export const metadata = {
+const metadata = {
   title: "News & Blogs | Ideabox",
   description: "",
   canonical: "https://ideabox.com.pk/news-and-blogs",
