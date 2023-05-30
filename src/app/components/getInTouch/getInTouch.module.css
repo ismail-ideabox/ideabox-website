@@ -62,6 +62,13 @@
   text-transform: uppercase;
   word-spacing: 3px;
 }
+.slider_content h2 {
+  margin-bottom: 25px;
+  font-size: 36px !important;
+  font-weight: 500;
+  text-transform: uppercase;
+  word-spacing: 3px;
+}
 
 .slider_content p {
   margin: 15px 0;

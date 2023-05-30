@@ -18,6 +18,7 @@ import styles from "./page.module.css";
 import { classNames, isSticky } from "@/app/utils";
 import { useMediaQuery } from "react-responsive";
 import { useSearchParams, usePathname } from "next/navigation";
+import Script from "next/script";
 function Home() {
   const pathname = usePathname();
   const parentRef = useRef(null);
@@ -122,6 +123,7 @@ function Home() {
         <meta name="description" content={metadata.description} />
         <meta name="canonical" content={metadata.canonical} />
         <meta property="og:url" content={metadata.openGraph.url} />
+        <meta name="google-site-verification" content="iHXuTgH9REkt-943HIQIAAZJMM0iwx-1e6lIoNDaJ4A" />
         {/* <meta property="og:title" content={metadata.openGraph.title} /> */}
         <meta
           property="og:description"
