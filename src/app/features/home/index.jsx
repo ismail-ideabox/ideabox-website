@@ -170,7 +170,7 @@ function Home() {
 
 export default Home;
 
-export const metadata = {
+const metadata = {
   title: "Ideabox | Official Website ® | Tech Solution Provider",
   description: "",
   canonical: "https://ideabox.com.pk/contact-us",
