@@ -23,7 +23,7 @@ function OurTeam() {
               <h2>Dreams And Team Work Together</h2>
             </div>
             <div className={styles.banner_image_1}>
-              <Image src={images.arrow} alt="" />
+              <Image src={images.arrow} alt="Arrow on Our Team Banner" />
             </div>
             <div className={styles.banner_image}>
               <Image src={images.banner} alt="Our Team Banner" />
@@ -41,9 +41,13 @@ function OurTeam() {
             <div className={styles.team_container}>
               <div className={styles.team_card}>
                 <div className={styles.team_image}>
-                  <Image src={images.team} alt="" />
+                  <Image src={images.team} alt="Ideabox Team Member Image" />
                   <div className={styles.team_linkedin}>
-                    <Link href="" className={styles.team_linkedin_icon}>
+                    <Link
+                      rel="nofollow"
+                      href=""
+                      className={styles.team_linkedin_icon}
+                    >
                       <FontAwesomeIcon icon={faLinkedinIn} />
                     </Link>
                   </div>
@@ -69,9 +73,13 @@ function OurTeam() {
               </div>
               <div className={styles.team_card}>
                 <div className={styles.team_image}>
-                  <Image src={images.team} alt="" />
+                  <Image src={images.team} alt="Ideabox Team Member Image" />
                   <div className={styles.team_linkedin}>
-                    <Link href="" className={styles.team_linkedin_icon}>
+                    <Link
+                      rel="nofollow"
+                      href=""
+                      className={styles.team_linkedin_icon}
+                    >
                       <FontAwesomeIcon icon={faLinkedinIn} />
                     </Link>
                   </div>
@@ -97,9 +105,13 @@ function OurTeam() {
               </div>
               <div className={styles.team_card}>
                 <div className={styles.team_image}>
-                  <Image src={images.team} alt="" />
+                  <Image src={images.team} alt="Ideabox Team Member Image" />
                   <div className={styles.team_linkedin}>
-                    <Link href="" className={styles.team_linkedin_icon}>
+                    <Link
+                      rel="nofollow"
+                      href=""
+                      className={styles.team_linkedin_icon}
+                    >
                       <FontAwesomeIcon icon={faLinkedinIn} />
                     </Link>
                   </div>
@@ -125,9 +137,13 @@ function OurTeam() {
               </div>
               <div className={styles.team_card}>
                 <div className={styles.team_image}>
-                  <Image src={images.team} alt="" />
+                  <Image src={images.team} alt="Ideabox Team Member Image" />
                   <div className={styles.team_linkedin}>
-                    <Link href="" className={styles.team_linkedin_icon}>
+                    <Link
+                      rel="nofollow"
+                      href=""
+                      className={styles.team_linkedin_icon}
+                    >
                       <FontAwesomeIcon icon={faLinkedinIn} />
                     </Link>
                   </div>
@@ -152,9 +168,13 @@ function OurTeam() {
               </div>
               <div className={styles.team_card}>
                 <div className={styles.team_image}>
-                  <Image src={images.team} alt="" />
+                  <Image src={images.team} alt="Ideabox Team Member Image" />
                   <div className={styles.team_linkedin}>
-                    <Link href="" className={styles.team_linkedin_icon}>
+                    <Link
+                      rel="nofollow"
+                      href=""
+                      className={styles.team_linkedin_icon}
+                    >
                       <FontAwesomeIcon icon={faLinkedinIn} />
                     </Link>
                   </div>
@@ -180,9 +200,13 @@ function OurTeam() {
               </div>
               <div className={styles.team_card}>
                 <div className={styles.team_image}>
-                  <Image src={images.team} alt="" />
+                  <Image src={images.team} alt="Ideabox Team Member Image" />
                   <div className={styles.team_linkedin}>
-                    <Link href="" className={styles.team_linkedin_icon}>
+                    <Link
+                      rel="nofollow"
+                      href=""
+                      className={styles.team_linkedin_icon}
+                    >
                       <FontAwesomeIcon icon={faLinkedinIn} />
                     </Link>
                   </div>
@@ -195,7 +219,6 @@ function OurTeam() {
                 </div>
                 <div className={styles.team_para}>
                   <p>
-                    {" "}
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                     Iste, doloribus reiciendis! Illo facere voluptatibus nostrum
                     molestiae provident at numquam aliquam! Nisi, minus esse

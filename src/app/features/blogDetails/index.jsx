@@ -65,7 +65,7 @@ function BlogsDetail() {
                 </p>
               </div>
               <div className={styles.img}>
-                <Image src={images.marketing} alt="" />
+                <Image src={images.marketing} alt="Blog Marketing Image" />
               </div>
             </div>
 
@@ -143,7 +143,10 @@ function BlogsDetail() {
                 </p>
               </div>
               <div className={styles.engagementImage}>
-                <Image src={images.engagement} alt="" />
+                <Image
+                  src={images.engagement}
+                  alt="IMPROVED CUSTOMER ENGAGEMENT AND LOYALTY"
+                />
               </div>
             </div>
 
@@ -159,7 +162,10 @@ function BlogsDetail() {
                 ))}
               </div>
               <div className={styles.costImage}>
-                <Image src={images.cost} alt="" />
+                <Image
+                  src={images.cost}
+                  alt="Cost-Effective Marketing Strategy"
+                />
               </div>
             </div>
           </div>

@@ -54,9 +54,13 @@ function Secondary({ animate, animateRef }) {
                     : styles.leftthumb
                 }
                 src={images.leftthumb}
-                alt=""
+                alt="handshake thumb"
               />
-              <Image className={styles.lefthand} src={images.lefthand} alt="" />
+              <Image
+                className={styles.lefthand}
+                src={images.lefthand}
+                alt="handshake left hand"
+              />
               <Image
                 className={
                   animate
@@ -64,7 +68,7 @@ function Secondary({ animate, animateRef }) {
                     : styles.leftfingers
                 }
                 src={images.leftfingers}
-                alt=""
+                alt="handshake fingers"
               />
             </div>
             <div className={styles.righthand_container}>
@@ -75,7 +79,7 @@ function Secondary({ animate, animateRef }) {
                     : styles.righthand
                 }
                 src={images.righthand}
-                alt=""
+                alt="handshake right hand"
               />
             </div>
           </div>
