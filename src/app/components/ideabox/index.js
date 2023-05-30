@@ -79,49 +79,49 @@ function Ideabox() {
             <div className={styles.tech_images}>
               <Image
                 className={styles.tech_images_img}
-                alt=""
+                alt="Node Js technology"
                 src={images.node}
               />
             </div>
             <div className={styles.tech_images}>
               <Image
                 className={styles.tech_images_img}
-                alt=""
+                alt="Dot Net technology"
                 src={images.dotnet}
               />
             </div>
             <div className={styles.tech_images}>
               <Image
                 className={styles.tech_images_img}
-                alt=""
+                alt="Php technology"
                 src={images.php}
               />
             </div>
             <div className={styles.tech_images}>
               <Image
                 className={styles.tech_images_img}
-                alt=""
+                alt="Angular FrontEnd technology"
                 src={images.angular}
               />
             </div>
             <div className={styles.tech_images}>
               <Image
                 className={styles.tech_images_img}
-                alt=""
+                alt="React FrontEnd technology"
                 src={images.reactjs}
               />
             </div>
             <div className={styles.tech_images}>
               <Image
                 className={styles.tech_images_img}
-                alt=""
+                alt="Android Technology"
                 src={images.android}
               />
             </div>
             <div className={styles.tech_images}>
               <Image
                 className={styles.tech_images_img}
-                alt=""
+                alt="React Native Technology"
                 src={images.reactnative}
               />
             </div>
@@ -129,42 +129,42 @@ function Ideabox() {
             <div className={styles.tech_images}>
               <Image
                 className={styles.tech_images_img}
-                alt=""
+                alt="Ios Technology"
                 src={images.ios}
               />
             </div>
             <div className={styles.tech_images}>
               <Image
                 className={styles.tech_images_img}
-                alt=""
+                alt="Python Technology"
                 src={images.python}
               />
             </div>
             <div className={styles.tech_images}>
               <Image
                 className={styles.tech_images_img}
-                alt=""
+                alt="Odoo Crm Technology"
                 src={images.odoo}
               />
             </div>
             <div className={styles.tech_images}>
               <Image
                 className={styles.tech_images_img}
-                alt=""
+                alt="SAP Technology"
                 src={images.sap}
               />
             </div>
             <div className={styles.tech_images}>
               <Image
                 className={styles.tech_images_img}
-                alt=""
+                alt="AWS Technology"
                 src={images.aws}
               />
             </div>
             <div className={styles.tech_images}>
               <Image
                 className={styles.tech_images_img}
-                alt=""
+                alt="Azure cloud Technology"
                 src={images.azure}
               />
             </div>
@@ -199,7 +199,7 @@ function Ideabox() {
                 <div className={styles.tech_images}>
                   <Image
                     className={styles.tech_images_img}
-                    alt=""
+                    alt="Node Js Technology"
                     src={images.node}
                   />
                 </div>
@@ -208,7 +208,7 @@ function Ideabox() {
                 <div className={styles.tech_images}>
                   <Image
                     className={styles.tech_images_img}
-                    alt=""
+                    alt="Dot Net Technology"
                     src={images.dotnet}
                   />
                 </div>
@@ -217,7 +217,7 @@ function Ideabox() {
                 <div className={styles.tech_images}>
                   <Image
                     className={styles.tech_images_img}
-                    alt=""
+                    alt="Php Technology"
                     src={images.php}
                   />
                 </div>
@@ -226,7 +226,7 @@ function Ideabox() {
                 <div className={styles.tech_images}>
                   <Image
                     className={styles.tech_images_img}
-                    alt=""
+                    alt="Angular Frontend Technology"
                     src={images.angular}
                   />
                 </div>
@@ -235,7 +235,7 @@ function Ideabox() {
                 <div className={styles.tech_images}>
                   <Image
                     className={styles.tech_images_img}
-                    alt=""
+                    alt="React Frontend Technology"
                     src={images.reactjs}
                   />
                 </div>
@@ -244,7 +244,7 @@ function Ideabox() {
                 <div className={styles.tech_images}>
                   <Image
                     className={styles.tech_images_img}
-                    alt=""
+                    alt="Android Technology"
                     src={images.android}
                   />
                 </div>
@@ -254,7 +254,7 @@ function Ideabox() {
                 <div className={styles.tech_images}>
                   <Image
                     className={styles.tech_images_img}
-                    alt=""
+                    alt="React Native Technology"
                     src={images.reactnative}
                   />
                 </div>
@@ -263,7 +263,7 @@ function Ideabox() {
                 <div className={styles.tech_images}>
                   <Image
                     className={styles.tech_images_img}
-                    alt=""
+                    alt="Ios Technology"
                     src={images.ios}
                   />
                 </div>
@@ -273,7 +273,7 @@ function Ideabox() {
                 <div className={styles.tech_images}>
                   <Image
                     className={styles.tech_images_img}
-                    alt=""
+                    alt="Pyhton Technology"
                     src={images.python}
                   />
                 </div>
@@ -282,7 +282,7 @@ function Ideabox() {
                 <div className={styles.tech_images}>
                   <Image
                     className={styles.tech_images_img}
-                    alt=""
+                    alt="Odoo Technology"
                     src={images.odoo}
                   />
                 </div>
@@ -292,7 +292,7 @@ function Ideabox() {
                 <div className={styles.tech_images}>
                   <Image
                     className={styles.tech_images_img}
-                    alt=""
+                    alt="SAP Technology"
                     src={images.sap}
                   />
                 </div>
@@ -301,7 +301,7 @@ function Ideabox() {
                 <div className={styles.tech_images}>
                   <Image
                     className={styles.tech_images_img}
-                    alt=""
+                    alt="AWS Technology"
                     src={images.aws}
                   />
                 </div>
@@ -310,7 +310,7 @@ function Ideabox() {
                 <div className={styles.tech_images}>
                   <Image
                     className={styles.tech_images_img}
-                    alt=""
+                    alt="Azure Technology"
                     src={images.azure}
                   />
                 </div>

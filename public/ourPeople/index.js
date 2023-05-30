@@ -7,6 +7,7 @@ import zod from "./zod.png";
 import nhs from "./nhs.png";
 import ke from "./ke.png";
 import temasek from "./temasek.png";
+import salonlogo from "./salonlogo.png";
 
 export const images = {
   flags,
@@ -18,4 +19,5 @@ export const images = {
   nhs,
   ke,
   temasek,
+  salonlogo,
 };

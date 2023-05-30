@@ -62,6 +62,7 @@ function Header({ innerPage, headerVisible }) {
             <ul className={styles.social_icons}>
               <li>
                 <Link
+                  rel="nofollow"
                   target="_blank"
                   href="https://pk.linkedin.com/company/ideaboxpakistan"
                 >
@@ -69,7 +70,7 @@ function Header({ innerPage, headerVisible }) {
                 </Link>
               </li>
               <li>
-                <Link href="">
+                <Link rel="nofollow" href="">
                   <FontAwesomeIcon icon={faTwitter} />
                 </Link>
               </li>
@@ -148,10 +149,11 @@ function Header({ innerPage, headerVisible }) {
           </div>
           <div className={styles.contact_block}>
             <div className={styles.contact_block_social}>
-              <Link href="">
+              <Link rel="nofollow" href="">
                 <FontAwesomeIcon icon={faTwitter} />
               </Link>
               <Link
+                rel="nofollow"
                 target="_blank"
                 href="https://pk.linkedin.com/company/ideaboxpakistan"
               >

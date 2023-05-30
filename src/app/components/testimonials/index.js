@@ -69,7 +69,10 @@ function Testimonials() {
                   <div className={styles.testimonial_review}>
                     <div className={styles.review_person}>
                       <div className={styles.person_image}>
-                        <Image src={testimonial.logo} alt="Testimonials" />
+                        <Image
+                          src={testimonial.logo}
+                          alt="Testimonials Client Logo"
+                        />
                       </div>
                       <div className={styles.person_details}>
                         <div className={styles.person_name}>
@@ -79,7 +82,11 @@ function Testimonials() {
                           <h5>{testimonial.position}</h5>
                         </div>
                         <div className={styles.person_company}>
-                          <Link target={"_blank"} href={testimonial.companyUrl}>
+                          <Link
+                            rel="nofollow"
+                            target={"_blank"}
+                            href={testimonial.companyUrl}
+                          >
                             <h5>{testimonial.company}</h5>
                           </Link>
                         </div>
@@ -122,7 +129,7 @@ function Testimonials() {
                   <div className={styles.person_image}>
                     <Image
                       src={testimonial[activeTestimonial].logo}
-                      alt="Testimonials"
+                      alt="Testimonials Client Logo"
                     />
                   </div>
                   <div className={styles.person_details}>
@@ -134,6 +141,7 @@ function Testimonials() {
                     </div>
                     <div className={styles.person_company}>
                       <Link
+                        rel="nofollow"
                         target={"_blank"}
                         href={testimonial[activeTestimonial].companyUrl}
                       >

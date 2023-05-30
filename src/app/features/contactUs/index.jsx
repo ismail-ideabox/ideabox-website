@@ -168,13 +168,19 @@ function ContactUs() {
               </div>
               <div className={styles.banner_image}>
                 <div className={styles.banner_image_arrow}>
-                  <Image src={images.arrow} alt="" />
+                  <Image
+                    src={images.arrow}
+                    alt="Arrow image for Contact Us Page"
+                  />
                 </div>
                 <div className={styles.banner_image_girl}>
-                  <Image src={images.banner} alt="Banner" />
+                  <Image
+                    src={images.banner}
+                    alt="Girl Avatar on Contact Us Page"
+                  />
                 </div>
                 <div className={styles.banner_image_clock}>
-                  <Image src={images.clock} alt="" />
+                  <Image src={images.clock} alt="Clock Image on Contact Page" />
                 </div>
               </div>
             </div>
@@ -287,7 +293,10 @@ function ContactUs() {
           >
             <div className={styles.modal_container}>
               <div className={styles.modal_img}>
-                <Image src={images.modal} alt="" />
+                <Image
+                  src={images.modal}
+                  alt="Ideabox image on Contact Us form "
+                />
               </div>
               <div className={styles.form_submit_flex}>
                 <h2>Thank You</h2>

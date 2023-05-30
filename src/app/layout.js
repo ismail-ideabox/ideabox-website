@@ -10,6 +10,7 @@ import { Router } from "next/router";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useState, useEffect } from "react";
 import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
+import Script from "next/script";
 
 export default function RootLayout({ children }) {
   const [Loading, setLoading] = useState(true);
@@ -40,9 +41,26 @@ export default function RootLayout({ children }) {
     <>
       <html lang="en">
         <Head>
-          <title>Home | Ideabox</title>
+          {/* <title>Home | Ideabox</title> */}
           <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+          <meta
+            name="google-site-verification"
+            content="iHXuTgH9REkt-943HIQIAAZJMM0iwx-1e6lIoNDaJ4A"
+          />
         </Head>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-VXRMS74048"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){window.dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-VXRMS74048');
+        `}
+        </Script>
         <body>
           <div
             style={{

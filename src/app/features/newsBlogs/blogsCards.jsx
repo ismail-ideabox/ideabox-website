@@ -17,7 +17,7 @@ function BlogsCards({ blogsCard }) {
         {blogsCard.map((blogCard, index) => (
           <div className={styles.blogs_card_web} key={index}>
             <div className={styles.card_image}>
-              <Image src={blogCard.cardImage} alt="" />
+              <Image src={blogCard.cardImage} alt="Card Image for the Blog" />
             </div>
             <div className={styles.card_content}>
               <Link href={""}>
@@ -65,7 +65,10 @@ function BlogsCards({ blogsCard }) {
             <SwiperSlide key={index}>
               <div className={styles.blogs_card}>
                 <div className={styles.card_image}>
-                  <Image src={blogCard.cardImage} alt="" />
+                  <Image
+                    src={blogCard.cardImage}
+                    alt="Card Image for the Blog"
+                  />
                 </div>
                 <div className={styles.card_content}>
                   <Link href={""}>

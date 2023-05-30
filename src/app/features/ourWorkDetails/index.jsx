@@ -14,9 +14,9 @@ import { usePathname, useSearchParams, useRouter } from "next/navigation";
 
 function OurWorkDetails({ filteredWork }) {
   const searchParams = useSearchParams();
+  const pathname = usePathname();
 
-  const params = new URLSearchParams(searchParams);
-  const id = Number(params.get("id"));
+  const workTitle = pathname.split("/").pop().replace("-", " ");
 
   return (
     <>
@@ -25,10 +25,10 @@ function OurWorkDetails({ filteredWork }) {
       </div>
       <div className={styles.banner_container}>
         <div className={styles.banner_image}>
-          <Image src={filteredWork.cardImage} srcSet alt="" />
+          <Image src={filteredWork.cardImage} alt="Case Study Card Image" />
         </div>
         <div className={styles.work_logo}>
-          <Image src={filteredWork.workLogo} alt="" />
+          <Image src={filteredWork.workLogo} alt="Client Case Study Logo" />
         </div>
       </div>
       <div className={styles.content_bg}>
@@ -61,7 +61,11 @@ function OurWorkDetails({ filteredWork }) {
               <div className={styles.case_studie_cards}>
                 <div className={styles.projectcard}>
                   <Projectcard
-                    workData={workDetail.filter((ele) => ele.id !== id)}
+                    workData={workDetail.filter(
+                      (ele) =>
+                        ele.projectName.toLocaleLowerCase() !==
+                        workTitle.toLocaleLowerCase()
+                    )}
                     isHomePage={true}
                   />
                 </div>

@@ -49,74 +49,106 @@ function OurPeople() {
                 <div className={styles.work_image_container}>
                   <div className={styles.work_image}>
                     <Link
+                      rel="nofollow"
                       target="_blank"
                       href={"https://www.hilton.com/en/corporate/"}
                     >
                       <Image
                         className={styles.work_image_img}
                         src={images.hilton}
-                        alt=""
+                        alt="Hilton Logo"
                       />
                     </Link>
                   </div>
                   <div className={styles.work_image}>
                     <Link
+                      rel="nofollow"
                       target="_blank"
                       href={"https://www.networkrail.co.uk/"}
                     >
                       <Image
                         className={styles.work_image_img}
                         src={images.networkrail}
-                        alt=""
+                        alt="Network Rail Logo"
                       />
                     </Link>
                   </div>
                   <div className={styles.work_image}>
                     <Link
+                      rel="nofollow"
                       target="_blank"
                       href={"https://sports.ladbrokes.com/"}
                     >
                       <Image
                         className={styles.work_image_img}
                         src={images.ladbrokes}
-                        alt=""
+                        alt="Lad Brokes Logo"
                       />
                     </Link>
                   </div>
                   <div className={styles.work_image}>
-                    <Link target="_blank" href={"https://shop.zod.media/"}>
+                    <Link
+                      rel="nofollow"
+                      target="_blank"
+                      href={"https://shop.zod.media/"}
+                    >
                       <Image
                         className={styles.work_image_img}
                         src={images.zod}
-                        alt=""
+                        alt="Zod Logo"
                       />
                     </Link>
                   </div>
 
                   <div className={styles.work_image}>
-                    <Link target="_blank" href={"https://www.nhs.uk/"}>
+                    <Link
+                      rel="nofollow"
+                      target="_blank"
+                      href={"https://www.nhs.uk/"}
+                    >
                       <Image
                         className={styles.work_image_img}
                         src={images.nhs}
-                        alt=""
+                        alt="National Health Service (NHS) Logo"
                       />
                     </Link>
                   </div>
                   <div className={styles.work_image}>
-                    <Link target="_blank" href={"https://www.ke.com.pk/"}>
+                    <Link
+                      rel="nofollow"
+                      target="_blank"
+                      href={"https://www.ke.com.pk/"}
+                    >
                       <Image
                         className={styles.work_image_img}
                         src={images.ke}
-                        alt=""
+                        alt="K-Electric (KE) Logo"
                       />
                     </Link>
                   </div>
                   <div className={styles.work_image}>
-                    <Link target="_blank" href={"https://temasek.com.sg/"}>
+                    <Link
+                      rel="nofollow"
+                      target="_blank"
+                      href={"https://temasek.com.sg/"}
+                    >
                       <Image
                         className={styles.work_image_img}
                         src={images.temasek}
-                        alt=""
+                        alt="Temasek Logo"
+                      />
+                    </Link>
+                  </div>
+                  <div className={styles.work_image}>
+                    <Link
+                      rel="nofollow"
+                      target="_blank"
+                      href={"https://temasek.com.sg/"}
+                    >
+                      <Image
+                        className={styles.work_image_img}
+                        src={images.salonlogo}
+                        alt="Salon Plus Logo"
                       />
                     </Link>
                   </div>
@@ -132,6 +164,7 @@ function OurPeople() {
               <Image src={images.founder} alt="Obaid Rehman" />
               <div className={styles.founder_linkedin}>
                 <Link
+                  rel="nofollow"
                   target="_blank"
                   href="https://pk.linkedin.com/in/obaidrehman"
                   className={styles.founder_linkedin_icon}
