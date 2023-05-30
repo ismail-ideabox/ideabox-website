@@ -241,14 +241,14 @@ function GetInTouch({ headerVisible }) {
                     </SwiperSlide>
                     <SwiperSlide>
                       <div className={styles.slider_content}>
-                        <h1
+                        <h2
                           className={[
                             "main-heading",
                             styles.slider_content_h2,
                           ].join(" ")}
                         >
                           Success <br /> Together
-                        </h1>
+                        </h2>
                         <p>
                           We believe in our clients and our strength <br /> lies
                           in developing close working relationships <br /> to
@@ -264,7 +264,7 @@ function GetInTouch({ headerVisible }) {
                     </SwiperSlide>
                     <SwiperSlide>
                       <div className={styles.slider_content}>
-                        <h1
+                        <h2
                           className={[
                             "main-heading",
                             styles.slider_content_h2,
@@ -272,7 +272,7 @@ function GetInTouch({ headerVisible }) {
                         >
                           Bespoke Services FOR <br /> THE NEXT GENERATION <br />{" "}
                           of BUSINESSES.
-                        </h1>
+                        </h2>
                         <p>
                           From bespoke web platforms and mobile <br /> apps, to
                           big data analytics - we have the <br /> experience and
@@ -333,7 +333,10 @@ function GetInTouch({ headerVisible }) {
               <div className={styles.modal}>
                 <div className={styles.form}>
                   <div className={styles.form_image}>
-                    <Image src={images.modal} alt="ideabox image of the homepage contact form" />
+                    <Image
+                      src={images.modal}
+                      alt="ideabox image of the homepage contact form"
+                    />
                   </div>
                   <div className={styles.form_input}>
                     <div
