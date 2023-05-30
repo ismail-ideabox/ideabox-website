@@ -43,10 +43,6 @@ export default function RootLayout({ children }) {
         <Head>
           {/* <title>Home | Ideabox</title> */}
           <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-          <meta
-            name="google-site-verification"
-            content="iHXuTgH9REkt-943HIQIAAZJMM0iwx-1e6lIoNDaJ4A"
-          />
         </Head>
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-VXRMS74048"
