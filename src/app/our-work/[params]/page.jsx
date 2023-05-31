@@ -28,6 +28,8 @@ function WorkDetail() {
     <>
       <head>
         <title>{filteredWork.projectName + " | Ideabox"}</title>
+        <meta name="description" content={filteredWork.metaDescription} />
+        <link rel="canonical" href={filteredWork.canonicalTag} />
       </head>
       <div>
         <OurWorkDetails filteredWork={filteredWork} />
