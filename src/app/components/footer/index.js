@@ -34,7 +34,7 @@ function Footer() {
                 >
                   <FontAwesomeIcon icon={faLinkedinIn} />
                 </Link>
-                <Link rel="nofollow" href="">
+                <Link rel="nofollow" href="https://twitter.com/IdeaboxPakistan">
                   <FontAwesomeIcon icon={faTwitter} />
                 </Link>
               </div>
@@ -42,7 +42,7 @@ function Footer() {
             <div className={styles.footer_navbar}>
               <ul>
                 <li>
-                  <Link  href={"/?services=true"} className={""}>
+                  <Link href={"/?services=true"} className={""}>
                     Services
                   </Link>
                 </li>

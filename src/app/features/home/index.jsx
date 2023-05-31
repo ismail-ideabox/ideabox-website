@@ -25,7 +25,6 @@ function Home() {
   const childRef = useRef(null);
   const servicesRef = useRef(null);
   const animateRef = useRef(null);
-
   const [isVisible, setIsVisible] = useState(false);
   const [animate, setAnimate] = useState(false);
   const [scrollToTopVisible, setScrollToTopVisible] = useState(false);

@@ -6,35 +6,21 @@ import Head from "next/head";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
 config.autoAddCss = false;
-import { Router } from "next/router";
-import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useState, useEffect } from "react";
-import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
 import Script from "next/script";
 
 export default function RootLayout({ children }) {
   const [Loading, setLoading] = useState(true);
-  const pathname = usePathname();
-  const searchParams = useSearchParams();
 
   useEffect(() => {
-    const handleRouteStart = () => {
-      setLoading(true);
-    };
-
-    const handleRouteDone = () => {
+    const handleLoad = () => {
       setLoading(false);
     };
-    Router.events.on("routeChangeStart", handleRouteStart());
-    Router.events.on("routeChangeComplete", handleRouteDone());
-    Router.events.on("routeChangeError", handleRouteDone());
+    window.addEventListener("load", handleLoad);
     return () => {
-      // Make sure to remove the event handler on unmount!
-      Router.events.off("routeChangeStart", handleRouteStart());
-      Router.events.off("routeChangeComplete", handleRouteDone());
-      Router.events.off("routeChangeError", handleRouteDone());
+      window.removeEventListener("load", handleLoad);
     };
-  });
+  }, []);
   const SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
 
   return (
@@ -58,7 +44,7 @@ export default function RootLayout({ children }) {
           gtag('config', 'G-VXRMS74048');
         `}
         </Script>
-        <body>
+        <body style={{ scrollbarWidth: "none" }}>
           <div
             style={{
               position: "fixed",
@@ -72,21 +58,13 @@ export default function RootLayout({ children }) {
               top: "0",
               left: "0",
               transition: "all 0.2s ease-in-out",
+              overflow: "hidden",
+              scrollbarWidth: "none",
             }}
           >
             <Image priority src={images.loader} alt={"Loader Image"} />
           </div>
-          <GoogleReCaptchaProvider
-            reCaptchaKey={SITE_KEY}
-            scriptProps={{
-              async: false,
-              defer: false,
-              appendTo: "head",
-              nonce: undefined,
-            }}
-          >
-            {children}
-          </GoogleReCaptchaProvider>
+          {children}
         </body>
       </html>
     </>

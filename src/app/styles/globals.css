@@ -36,9 +36,9 @@ body {
 }
 
 * {
-  scrollbar-width: none;
+  /* scrollbar-width: none; */
   /* Firefox */
-  -ms-overflow-style: none;
+  /* -ms-overflow-style: none; */
   /* IE 10+ */
 }
 
