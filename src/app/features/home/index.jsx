@@ -25,7 +25,6 @@ function Home() {
   const childRef = useRef(null);
   const servicesRef = useRef(null);
   const animateRef = useRef(null);
-
   const [isVisible, setIsVisible] = useState(false);
   const [animate, setAnimate] = useState(false);
   const [scrollToTopVisible, setScrollToTopVisible] = useState(false);
@@ -121,9 +120,12 @@ function Home() {
       <head>
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} />
-        <meta name="canonical" content={metadata.canonical} />
+        <link rel="canonical" href={metadata.canonical} />
         <meta property="og:url" content={metadata.openGraph.url} />
-        <meta name="google-site-verification" content="iHXuTgH9REkt-943HIQIAAZJMM0iwx-1e6lIoNDaJ4A" />
+        <meta
+          name="google-site-verification"
+          content="iHXuTgH9REkt-943HIQIAAZJMM0iwx-1e6lIoNDaJ4A"
+        />
         {/* <meta property="og:title" content={metadata.openGraph.title} /> */}
         <meta
           property="og:description"
@@ -133,14 +135,6 @@ function Home() {
         <meta
           property="og:image:width"
           content={metadata.openGraph.images[0].width}
-        />
-        <meta
-          property="og:image:height"
-          content={metadata.openGraph.images[0].height}
-        />
-        <meta
-          property="og:image:alt"
-          content={metadata.openGraph.images[0].alt}
         />
         <meta property="og:site_name" content={metadata.openGraph.siteName} />
         <meta name="twitter:card" content={metadata.twitter.cardType} />
@@ -174,12 +168,14 @@ export default Home;
 
 const metadata = {
   title: "Ideabox | Official Website ® | Tech Solution Provider",
-  description: "",
-  canonical: "https://ideabox.com.pk/contact-us",
+  description:
+    "We Hand-Craft creative tech solutions with solid strategies & powerful technologies. We have the experience & expertise to develop & deliver complex applications",
+  canonical: "https://ideabox.com.pk",
   openGraph: {
-    url: "https://ideabox.com.pk/contact-us",
+    url: "https://ideabox.com.pk",
     title: "Ideabox | Official Website ® | Tech Solution Provider",
-    description: "Open Graph Description",
+    description:
+      "We Hand-Craft creative tech solutions with solid strategies & powerful technologies. We have the experience & expertise to develop & deliver complex applications",
     images: [
       {
         url: "../../../../public/footer/ideabox.png",

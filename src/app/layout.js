@@ -6,35 +6,21 @@ import Head from "next/head";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
 config.autoAddCss = false;
-import { Router } from "next/router";
-import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useState, useEffect } from "react";
-import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
 import Script from "next/script";
 
 export default function RootLayout({ children }) {
   const [Loading, setLoading] = useState(true);
-  const pathname = usePathname();
-  const searchParams = useSearchParams();
 
   useEffect(() => {
-    const handleRouteStart = () => {
-      setLoading(true);
-    };
-
-    const handleRouteDone = () => {
+    const handleLoad = () => {
       setLoading(false);
     };
-    Router.events.on("routeChangeStart", handleRouteStart());
-    Router.events.on("routeChangeComplete", handleRouteDone());
-    Router.events.on("routeChangeError", handleRouteDone());
+    window.addEventListener("load", handleLoad);
     return () => {
-      // Make sure to remove the event handler on unmount!
-      Router.events.off("routeChangeStart", handleRouteStart());
-      Router.events.off("routeChangeComplete", handleRouteDone());
-      Router.events.off("routeChangeError", handleRouteDone());
+      window.removeEventListener("load", handleLoad);
     };
-  });
+  }, []);
   const SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
 
   return (
@@ -43,16 +29,13 @@ export default function RootLayout({ children }) {
         <Head>
           {/* <title>Home | Ideabox</title> */}
           <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-          <meta
-            name="google-site-verification"
-            content="iHXuTgH9REkt-943HIQIAAZJMM0iwx-1e6lIoNDaJ4A"
-          />
         </Head>
         <Script
+          defer
           src="https://www.googletagmanager.com/gtag/js?id=G-VXRMS74048"
           strategy="afterInteractive"
         />
-        <Script id="google-analytics" strategy="afterInteractive">
+        <Script defer id="google-analytics" strategy="afterInteractive">
           {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){window.dataLayer.push(arguments);}
@@ -61,7 +44,7 @@ export default function RootLayout({ children }) {
           gtag('config', 'G-VXRMS74048');
         `}
         </Script>
-        <body>
+        <body style={{ scrollbarWidth: "none" }}>
           <div
             style={{
               position: "fixed",
@@ -75,21 +58,12 @@ export default function RootLayout({ children }) {
               top: "0",
               left: "0",
               transition: "all 0.2s ease-in-out",
+              overflow: "hidden",
             }}
           >
             <Image priority src={images.loader} alt={"Loader Image"} />
           </div>
-          <GoogleReCaptchaProvider
-            reCaptchaKey={SITE_KEY}
-            scriptProps={{
-              async: false,
-              defer: false,
-              appendTo: "head",
-              nonce: undefined,
-            }}
-          >
-            {children}
-          </GoogleReCaptchaProvider>
+          {children}
         </body>
       </html>
     </>

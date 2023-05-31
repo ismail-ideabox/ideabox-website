@@ -7,7 +7,7 @@ function OurWork() {
       <head>
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} />
-        <meta name="canonical" content={metadata.canonical} />
+        <link rel="canonical" href={metadata.canonical} />
         <meta property="og:url" content={metadata.openGraph.url} />
         <meta property="og:title" content={metadata.openGraph.title} />
         <meta
@@ -18,14 +18,6 @@ function OurWork() {
         <meta
           property="og:image:width"
           content={metadata.openGraph.images[0].width}
-        />
-        <meta
-          property="og:image:height"
-          content={metadata.openGraph.images[0].height}
-        />
-        <meta
-          property="og:image:alt"
-          content={metadata.openGraph.images[0].alt}
         />
         <meta property="og:site_name" content={metadata.openGraph.siteName} />
         <meta name="twitter:card" content={metadata.twitter.cardType} />
@@ -41,7 +33,8 @@ export default OurWork;
 
 const metadata = {
   title: "Our Work | Ideabox",
-  description: "",
+  description:
+    "Ideabox has the capability to transform your business with cutting-edge technology solutions. We provide expert IT services to enhance efficiency and innovation",
   canonical: "https://ideabox.com.pk/our-work",
   openGraph: {
     url: "https://ideabox.com.pk/our-work",
