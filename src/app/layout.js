@@ -59,7 +59,6 @@ export default function RootLayout({ children }) {
               left: "0",
               transition: "all 0.2s ease-in-out",
               overflow: "hidden",
-              scrollbarWidth: "none",
             }}
           >
             <Image priority src={images.loader} alt={"Loader Image"} />
