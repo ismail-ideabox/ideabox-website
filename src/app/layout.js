@@ -45,10 +45,11 @@ export default function RootLayout({ children }) {
           <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
         </Head>
         <Script
+          defer
           src="https://www.googletagmanager.com/gtag/js?id=G-VXRMS74048"
           strategy="afterInteractive"
         />
-        <Script id="google-analytics" strategy="afterInteractive">
+        <Script defer id="google-analytics" strategy="afterInteractive">
           {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){window.dataLayer.push(arguments);}

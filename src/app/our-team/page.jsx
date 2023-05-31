@@ -13,7 +13,7 @@ function OurTeam() {
       <head>
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} />
-        <meta name="canonical" content={metadata.canonical} />
+        <link rel="canonical" href={metadata.canonical} />
         <meta property="og:url" content={metadata.openGraph.url} />
         <meta property="og:title" content={metadata.openGraph.title} />
         <meta
@@ -24,14 +24,6 @@ function OurTeam() {
         <meta
           property="og:image:width"
           content={metadata.openGraph.images[0].width}
-        />
-        <meta
-          property="og:image:height"
-          content={metadata.openGraph.images[0].height}
-        />
-        <meta
-          property="og:image:alt"
-          content={metadata.openGraph.images[0].alt}
         />
         <meta property="og:site_name" content={metadata.openGraph.siteName} />
         <meta name="twitter:card" content={metadata.twitter.cardType} />

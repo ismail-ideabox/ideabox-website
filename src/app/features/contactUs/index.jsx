@@ -7,7 +7,6 @@ import { images } from "../../../../public/contactUs";
 import Button from "../../components/button/button";
 import Header from "@/app/components/header";
 import Footer from "@/app/components/footer";
-import ContactUsForm from "@/app/components/getInTouch/input";
 import TextArea from "@/app/components/getInTouch/textarea";
 import Input from "@/app/components/getInTouch/input";
 import Link from "next/link";
