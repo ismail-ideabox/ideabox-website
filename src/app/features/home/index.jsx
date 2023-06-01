@@ -15,12 +15,10 @@ import OurPeople from "../../components/ourPeople";
 import Footer from "../../components/footer";
 import { ScrollToTop } from "../../components/scrollToTop";
 import styles from "./page.module.css";
-import { classNames, isSticky } from "@/app/utils";
+import { classNames } from "@/app/utils";
 import { useMediaQuery } from "react-responsive";
 import { useSearchParams, usePathname } from "next/navigation";
-import Script from "next/script";
 function Home() {
-  const pathname = usePathname();
   const parentRef = useRef(null);
   const childRef = useRef(null);
   const servicesRef = useRef(null);
@@ -126,7 +124,7 @@ function Home() {
           name="google-site-verification"
           content="iHXuTgH9REkt-943HIQIAAZJMM0iwx-1e6lIoNDaJ4A"
         />
-        {/* <meta property="og:title" content={metadata.openGraph.title} /> */}
+        <meta property="og:title" content={metadata.openGraph.title} />
         <meta
           property="og:description"
           content={metadata.openGraph.description}
@@ -140,6 +138,46 @@ function Home() {
         <meta name="twitter:card" content={metadata.twitter.cardType} />
         <meta name="twitter:site" content={metadata.twitter.site} />
         <meta name="twitter:creator" content={metadata.twitter.handle} />
+        <script type="application/ld+json">
+          {`
+              {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Ideabox",
+  "image": "https://ideabox.com.pk/footer/ideabox.png",
+  "@id": "",
+  "url": "https://www.ideabox.com.pk/",
+  "telephone": "+92 21 37234945",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "2nd floor, Plot 1C Khayaban-e-Saadi, Phase 7 Defence Housing Authority, Karachi, Karachi City, Sindh 75500",
+    "addressLocality": "Sindh",
+    "postalCode": "75500",
+    "addressCountry": "PK"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 24.831027967090243,
+    "longitude": 67.07490002377298
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "opens": "10:00",
+    "closes": "20:00"
+  },
+  "sameAs": [
+    "https://pk.linkedin.com/company/ideaboxpakistan",
+    "https://twitter.com/IdeaboxPakistan"
+  ]
+          }`}
+        </script>
       </head>
       <div
         className={classNames(styles.home_scroll_container, "scroll_container")}
