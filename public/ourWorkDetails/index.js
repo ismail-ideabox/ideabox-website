@@ -11,12 +11,13 @@ import tbbanner from "./tbbanner.jpg";
 import tbcard from "./tbcard.jpg";
 import tblogo from "./tblogo.png";
 import zahrabanner from "./zahrabanner.png";
+import zahracard from "./zahracard.webp";
 import zahralogo from "./zahralogo.png";
 import salonbanner from "./salonbanner.jpg";
 import saloncard from "./saloncard.jpg";
 import salonlogo from "./salonlogo.png";
 import bmmbanner from "./bmmbanner.png";
-import bmmcard from "./bmmcard.png";
+import bmmcard from "./bmmcard.webp";
 import bmmlogo from "./bmmlogo.png";
 
 export const images = {
@@ -33,6 +34,7 @@ export const images = {
   tbcard,
   tblogo,
   zahrabanner,
+  zahracard,
   zahralogo,
   salonbanner,
   saloncard,

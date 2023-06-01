@@ -1,13 +1,12 @@
 "use client";
 import "./styles/globals.css";
-import Image from "./components/image";
-import { images } from "../../public/loader";
-import Head from "next/head";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
 config.autoAddCss = false;
 import { useState, useEffect } from "react";
 import Script from "next/script";
+import { images } from "../../public/loader";
+import Image from "next/image";
 
 export default function RootLayout({ children }) {
   const [Loading, setLoading] = useState(true);
@@ -26,25 +25,20 @@ export default function RootLayout({ children }) {
   return (
     <>
       <html lang="en">
-        <Head>
-          {/* <title>Home | Ideabox</title> */}
+        <head>
           <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-        </Head>
-        <Script
-          defer
-          src="https://www.googletagmanager.com/gtag/js?id=G-VXRMS74048"
-          strategy="afterInteractive"
-        />
-        <Script defer id="google-analytics" strategy="afterInteractive">
-          {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){window.dataLayer.push(arguments);}
-          gtag('js', new Date());
-
-          gtag('config', 'G-VXRMS74048');
-        `}
-        </Script>
-        <body style={{ scrollbarWidth: "none" }}>
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&display=swap"
+            rel="stylesheet"
+          />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+          />
+        </head>
+        <body>
           <div
             style={{
               position: "fixed",
@@ -65,6 +59,20 @@ export default function RootLayout({ children }) {
           </div>
           {children}
         </body>
+        <Script
+          defer
+          src="https://www.googletagmanager.com/gtag/js?id=G-VXRMS74048"
+          strategy="afterInteractive"
+        />
+        <Script defer id="google-analytics" strategy="afterInteractive">
+          {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){window.dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-VXRMS74048');
+        `}
+        </Script>
       </html>
     </>
   );

@@ -109,7 +109,7 @@ SEO Services`,
   {
     id: 4,
     projectName: "Zahra Ebrahim",
-    workCardImage: images.zahrabanner,
+    workCardImage: images.zahracard,
     metaDescription:
       "Ideabox's has transformed Zahra Ebrahim's operations & enabled the company to provide a seamless experience to its customers with the help of Ecommerce store & an ERP",
     canonicalTag: "https://ideabox.com.pk/our-work/Zahra-Ebrahim",
