@@ -34,7 +34,11 @@ function Footer() {
                 >
                   <FontAwesomeIcon icon={faLinkedinIn} />
                 </Link>
-                <Link rel="nofollow" href="https://twitter.com/IdeaboxPakistan">
+                <Link
+                  target="_blank"
+                  rel="nofollow"
+                  href="https://twitter.com/IdeaboxPakistan"
+                >
                   <FontAwesomeIcon icon={faTwitter} />
                 </Link>
               </div>

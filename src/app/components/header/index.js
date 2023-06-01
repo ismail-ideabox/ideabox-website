@@ -70,7 +70,11 @@ function Header({ innerPage, headerVisible }) {
                 </Link>
               </li>
               <li>
-                <Link rel="nofollow" href="https://twitter.com/IdeaboxPakistan">
+                <Link
+                  target="_blank"
+                  rel="nofollow"
+                  href="https://twitter.com/IdeaboxPakistan"
+                >
                   <FontAwesomeIcon icon={faTwitter} />
                 </Link>
               </li>
@@ -149,7 +153,11 @@ function Header({ innerPage, headerVisible }) {
           </div>
           <div className={styles.contact_block}>
             <div className={styles.contact_block_social}>
-              <Link rel="nofollow" href="https://twitter.com/IdeaboxPakistan">
+              <Link
+                target="_blank"
+                rel="nofollow"
+                href="https://twitter.com/IdeaboxPakistan"
+              >
                 <FontAwesomeIcon icon={faTwitter} />
               </Link>
               <Link

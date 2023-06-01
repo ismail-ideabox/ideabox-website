@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Arvo&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Arvo&display=swap"); */
 
 :root {
   --primary-color: #a02021;
@@ -36,7 +36,7 @@ body {
 }
 
 * {
-  /* scrollbar-width: none; */
+  scrollbar-width: none;
   /* Firefox */
   -ms-overflow-style: none;
   /* IE 10+ */

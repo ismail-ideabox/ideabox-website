@@ -1,11 +1,10 @@
-import software from "./software.gif";
-import ecommerce from "./ecommerce.gif";
-import enterprise from "./enterprise.gif";
-import crms from "./crms.gif";
-import bigdata from "./bigdata.gif";
-import devops from "./devops.gif";
-import mobile from "./mobile.gif";
-import artificial from "./artificial.gif";
+import software from "./software.webp";
+import ecommerce from "./ecommerce.webp";
+import enterprise from "./enterprise.webp";
+import crms from "./crms.webp";
+import bigdata from "./bigdata.webp";
+import devops from "./devops.webp";
+import artificial from "./artificial.webp";
 import mobIcon from "./mob-icon.png";
 
 export const image = {
@@ -15,7 +14,6 @@ export const image = {
   crms,
   bigdata,
   devops,
-  mobile,
   artificial,
   mobIcon,
 };
