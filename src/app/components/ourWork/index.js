@@ -6,6 +6,7 @@ import { classNames } from "@/app/utils";
 import Button from "../button/button";
 import Projectcard from "./projectcard";
 import workDetail from "@/app/data/work";
+
 function Ourwork({ isHomePage }) {
   return (
     <section

@@ -10,6 +10,7 @@ import testimonial from "@/app/data/testimonial";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClose } from "@fortawesome/free-solid-svg-icons";
+import "swiper/swiper-bundle.css";
 
 function Testimonials() {
   const [toggle, setToggle] = useState(false);

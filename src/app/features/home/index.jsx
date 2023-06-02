@@ -30,12 +30,6 @@ function Home() {
   const isSmallScreen = useMediaQuery({ query: "(max-width: 800px)" });
   const searchParams = useSearchParams();
   const params = new URLSearchParams(searchParams);
-  const [data, setData] = useState([]);
-
-  useEffect(() => {
-    const parentRect = parentRef?.current?.getBoundingClientRect();
-    parentRect?.current?.scrollTop(0);
-  }, [data]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -210,13 +204,15 @@ const metadata = {
     "We Hand-Craft creative tech solutions with solid strategies & powerful technologies. We have the experience & expertise to develop & deliver complex applications",
   canonical: "https://ideabox.com.pk",
   openGraph: {
+    type: "website",
+    locale: "en_Us",
     url: "https://ideabox.com.pk",
     title: "Ideabox | Official Website ® | Tech Solution Provider",
     description:
       "We Hand-Craft creative tech solutions with solid strategies & powerful technologies. We have the experience & expertise to develop & deliver complex applications",
     images: [
       {
-        url: "../../../../public/footer/ideabox.png",
+        url: "https://ideabox.com.pk/footer/ideabox.png",
         width: 800,
         height: 600,
         alt: "Ideabox Logo",

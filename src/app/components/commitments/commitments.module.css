@@ -160,6 +160,9 @@
 }
 
 @media (max-width: 600px) {
+  .section2_content h2 {
+    width: auto;
+  }
   .lefthand_container_animate {
     animation-duration: 1.5s;
   }
