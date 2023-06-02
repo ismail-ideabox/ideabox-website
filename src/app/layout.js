@@ -7,19 +7,21 @@ import { useState, useEffect } from "react";
 import Script from "next/script";
 import { images } from "../../public/loader";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 export default function RootLayout({ children }) {
   const [Loading, setLoading] = useState(true);
+  const pathname = usePathname();
 
-  useEffect(() => {
-    const handleLoad = () => {
-      setLoading(false);
-    };
-    window.addEventListener("load", handleLoad);
-    return () => {
-      window.removeEventListener("load", handleLoad);
-    };
-  }, []);
+  // useEffect(() => {
+  //   const handleLoad = () => {
+  //     setLoading(false);
+  //   };
+  //   window.addEventListener("load", handleLoad);
+  //   return () => {
+  //     window.removeEventListener("load", handleLoad);
+  //   };
+  // }, []);
   const SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
 
   return (
@@ -39,7 +41,7 @@ export default function RootLayout({ children }) {
           />
         </head>
         <body>
-          <div
+          {/* <div
             style={{
               position: "fixed",
               width: "100%",
@@ -56,7 +58,7 @@ export default function RootLayout({ children }) {
             }}
           >
             <Image priority src={images.loader} alt={"Loader Image"} />
-          </div>
+          </div> */}
           {children}
         </body>
         <Script

@@ -170,7 +170,7 @@ img {
 .ourworkSlider,
 .testimonialSlider,
 .blogsSwiper {
-  padding-bottom: 65px;
+  padding-bottom: 65px !important;
 }
 
 .ourworkSlider .swiper-pagination-bullet,
