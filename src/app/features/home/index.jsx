@@ -204,13 +204,15 @@ const metadata = {
     "We Hand-Craft creative tech solutions with solid strategies & powerful technologies. We have the experience & expertise to develop & deliver complex applications",
   canonical: "https://ideabox.com.pk",
   openGraph: {
+    type: "website",
+    locale: "en_Us",
     url: "https://ideabox.com.pk",
     title: "Ideabox | Official Website ® | Tech Solution Provider",
     description:
       "We Hand-Craft creative tech solutions with solid strategies & powerful technologies. We have the experience & expertise to develop & deliver complex applications",
     images: [
       {
-        url: "../../../../public/footer/ideabox.png",
+        url: "https://ideabox.com.pk/footer/ideabox.png",
         width: 800,
         height: 600,
         alt: "Ideabox Logo",

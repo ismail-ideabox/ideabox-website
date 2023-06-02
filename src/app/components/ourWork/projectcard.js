@@ -75,7 +75,6 @@ function Projectcard({ workData, isHomePage }) {
                 </SwiperSlide>
               );
             })}
-            <div className="swiper-pagination"></div>
           </Swiper>
         ) : (
           <>

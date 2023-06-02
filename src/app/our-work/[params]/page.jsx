@@ -12,9 +12,7 @@ function WorkDetail() {
   }, [data]);
   const pathname = usePathname();
 
-  console.log(pathname, "pathname");
   const workTitle = pathname.split("/").pop().replaceAll("-", " ");
-  console.log(workTitle, workTitle);
 
   const filteredWork = workData.find(
     (ele) =>
