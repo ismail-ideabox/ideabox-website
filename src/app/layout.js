@@ -64,9 +64,9 @@ export default function RootLayout({ children }) {
         <Script
           defer
           src="https://www.googletagmanager.com/gtag/js?id=G-VXRMS74048"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
-        <Script defer id="google-analytics" strategy="afterInteractive">
+        <Script defer id="google-analytics" strategy="lazyOnload">
           {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){window.dataLayer.push(arguments);}

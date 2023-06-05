@@ -17,12 +17,12 @@ import dalda from "./dalda.png";
 import matco from "./matco.png";
 import peg from "./peg.png";
 import nizamenergy from "./nizamenergy.png";
-import cfa from "./cfa.png";
+import cfa from "./cfa.webp";
 import zahra from "./zahra.png";
-import ebenefits from "./ebenefits.png";
+import ebenefits from "./ebenefits.webp";
 import firstimrooz from "./firstimrooz.png";
 import aliassociates from "./aliassociates.png";
-import lari from "./lari.png";
+import lari from "./lari.webp";
 import pinjani from "./pinjani.png";
 import zak from "./zak.png";
 import mcas from "./mcas.png";
@@ -47,7 +47,6 @@ import imrooz from "./imrooz.png";
 
 export const images = {
   shell,
-  
   exa,
   usaid,
   teameda,
