@@ -26,7 +26,7 @@ export default function RootLayout({ children }) {
 
   return (
     <>
-      <html lang="en">
+      <html className="no-fouc" lang="en">
         <head>
           <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
