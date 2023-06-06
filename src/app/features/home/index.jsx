@@ -18,6 +18,7 @@ import styles from "./page.module.css";
 import { classNames } from "@/app/utils";
 import { useMediaQuery } from "react-responsive";
 import { useSearchParams, usePathname } from "next/navigation";
+
 function Home() {
   const parentRef = useRef(null);
   const childRef = useRef(null);
@@ -106,6 +107,14 @@ function Home() {
       parentRef.current.scrollTop = serviceRect.top;
     }
   }, [searchParams]);
+
+  useEffect(() => {
+    const removeFouc = (foucElement) => {
+      foucElement.className = foucElement.className.replace("no-fouc", "fouc");
+    };
+
+    removeFouc(document.documentElement);
+  }, []);
 
   return (
     <>

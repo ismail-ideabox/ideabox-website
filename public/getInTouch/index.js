@@ -1,8 +1,8 @@
-import up from "./up.png";
-import right from "./right.png";
-import left from "./left.png";
-import box from "./box.png";
-import modal from "./modal.png";
+import up from "./up.webp";
+import right from "./right.webp";
+import left from "./left.webp";
+import box from "./box.webp";
+import modal from "./modal.webp";
 
 export const images = {
   up,

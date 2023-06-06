@@ -36,6 +36,7 @@
 .project_image img {
   width: 100%;
   height: 25vh;
+  object-fit: cover;
 }
 
 .project_name h4 {
