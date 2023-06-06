@@ -10,6 +10,14 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 export default function RootLayout({ children }) {
+  useEffect(() => {
+    const removeFouc = (foucElement) => {
+      foucElement.className = foucElement.className.replace("no-fouc", "fouc");
+    };
+
+    removeFouc(document.documentElement);
+  }, []);
+
   const [Loading, setLoading] = useState(true);
   const pathname = usePathname();
 

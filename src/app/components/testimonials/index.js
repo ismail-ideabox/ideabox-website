@@ -100,7 +100,7 @@ function Testimonials({ onModalOpen }) {
                     <div className={styles.review_content}>
                       <p>{testimonial.testimonial.slice(0, 75)}...</p>
                     </div>
-                    <Link
+                    <span
                       className={styles.read_more}
                       onClick={(e) => {
                         e.preventDefault;
@@ -109,7 +109,7 @@ function Testimonials({ onModalOpen }) {
                       href={""}
                     >
                       Read More
-                    </Link>
+                    </span>
                   </div>
                 </SwiperSlide>
               );
