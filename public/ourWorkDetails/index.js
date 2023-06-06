@@ -1,5 +1,5 @@
 import byco from "./bycotank.png";
-import bycocardimage from "./bycocard.png";
+import bycocardimage from "./bycocard.webp";
 import bycologo from "./bycologo.png";
 import rently from "./rently.png";
 import rentlycard from "./rentlycard.png";
@@ -10,7 +10,7 @@ import zodlogo from "./zodlogo.png";
 import tbbanner from "./tbbanner.jpg";
 import tbcard from "./tbcard.jpg";
 import tblogo from "./tblogo.png";
-import zahrabanner from "./zahrabanner.png";
+import zahrabanner from "./zahrabanner.webp";
 import zahracard from "./zahracard.webp";
 import zahralogo from "./zahralogo.png";
 import salonbanner from "./salonbanner.jpg";

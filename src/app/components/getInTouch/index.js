@@ -292,6 +292,7 @@ function GetInTouch({ headerVisible }) {
               <div className={styles.GetInTouch_images_container}>
                 <div className={styles.image_up}>
                   <Image
+                    priority
                     loading="eager"
                     src={images.up}
                     onClick={() => toSlide(1)}
@@ -300,12 +301,14 @@ function GetInTouch({ headerVisible }) {
                 </div>
                 <div className={styles.image_right}>
                   <Image
+                    priority
                     loading="eager"
                     src={images.left}
                     onClick={() => toSlide(2)}
                     alt="left side of the cube"
                   />
                   <Image
+                    priority
                     loading="eager"
                     src={images.right}
                     onClick={() => toSlide(0)}
@@ -314,6 +317,7 @@ function GetInTouch({ headerVisible }) {
                 </div>
                 <div className={styles.image_box}>
                   <Image
+                    priority
                     loading="eager"
                     src={images.box}
                     alt="center box of the cube"
