@@ -113,7 +113,9 @@ function Home() {
   useEffect(() => {
     if ((isSmallScreen && menuToggle) || testimonialToggle) {
       document.getElementsByTagName("body")[0].style.overflow = "hidden";
-    } else document.getElementsByTagName("body")[0].style.overflow = "auto";
+    } else if (isSmallScreen) {
+      document.getElementsByTagName("body")[0].style.overflow = "auto";
+    }
   }, [menuToggle, testimonialToggle]);
 
   useEffect(() => {
