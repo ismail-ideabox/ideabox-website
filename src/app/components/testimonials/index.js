@@ -2,7 +2,7 @@
 import layout from "../../styles/layout.module.css";
 import styles from "./testimonials.module.css";
 import { classNames } from "@/app/utils";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "../image";
 import { Autoplay, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -12,13 +12,17 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClose } from "@fortawesome/free-solid-svg-icons";
 import "swiper/swiper-bundle.css";
 
-function Testimonials() {
+function Testimonials({ onModalOpen }) {
   const [toggle, setToggle] = useState(false);
   const [activeTestimonial, setActiveTestimonial] = useState(null);
   const handleReadMore = (index) => {
     setActiveTestimonial(index);
     setToggle(true);
   };
+  useEffect(() => {
+    onModalOpen(toggle);
+  }, [toggle]);
+
   return (
     <section
       className={classNames(

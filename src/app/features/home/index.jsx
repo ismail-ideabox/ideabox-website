@@ -28,6 +28,8 @@ function Home() {
   const [animate, setAnimate] = useState(false);
   const [scrollToTopVisible, setScrollToTopVisible] = useState(false);
   const [headerVisible, setHeaderVisible] = useState(false);
+  const [menuToggle, setMenuToggle] = useState(false);
+  const [testimonialToggle, setTestimonialToggle] = useState(false);
   const isSmallScreen = useMediaQuery({ query: "(max-width: 800px)" });
   const searchParams = useSearchParams();
   const params = new URLSearchParams(searchParams);
@@ -109,10 +111,15 @@ function Home() {
   }, [searchParams]);
 
   useEffect(() => {
+    if ((isSmallScreen && menuToggle) || testimonialToggle) {
+      document.getElementsByTagName("body")[0].style.overflow = "hidden";
+    } else document.getElementsByTagName("body")[0].style.overflow = "auto";
+  }, [menuToggle, testimonialToggle]);
+
+  useEffect(() => {
     const removeFouc = (foucElement) => {
       foucElement.className = foucElement.className.replace("no-fouc", "fouc");
     };
-
     removeFouc(document.documentElement);
   }, []);
 
@@ -186,7 +193,10 @@ function Home() {
         className={classNames(styles.home_scroll_container, "scroll_container")}
         ref={parentRef}
       >
-        <GetInTouch headerVisible={headerVisible} />
+        <GetInTouch
+          headerVisible={headerVisible}
+          onMenuToggle={(isVisible) => setMenuToggle(isVisible)}
+        />
         <Commitments animateRef={animateRef} animate={animate} />
         <Technical servicesRef={servicesRef} />
         <Odoo />
@@ -196,7 +206,9 @@ function Home() {
         <Ideabox />
         <OurWork isHomePage={true} />
         <Clientele />
-        <Testimonials />
+        <Testimonials
+          onModalOpen={(isVisible) => setTestimonialToggle(isVisible)}
+        />
         <Faqs />
         <Footer />
         <ScrollToTop visible={scrollToTopVisible} parentRef={parentRef} />
