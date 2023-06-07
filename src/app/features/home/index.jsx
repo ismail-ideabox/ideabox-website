@@ -118,12 +118,6 @@ function Home() {
     }
   }, [menuToggle, testimonialToggle]);
 
-  useEffect(() => {
-    const removeFouc = (foucElement) => {
-      foucElement.className = foucElement.className.replace("no-fouc", "fouc");
-    };
-    removeFouc(document.documentElement);
-  }, []);
 
   return (
     <>
