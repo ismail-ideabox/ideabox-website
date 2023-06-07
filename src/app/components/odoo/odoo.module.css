@@ -362,11 +362,11 @@
   }
 
   .purple_h2 {
-    font-size: 50px !important;
+    font-size: 40px !important;
   }
 
   .green_h2 {
-    font-size: 50px !important;
+    font-size: 40px !important;
   }
 
   .odoo_stats_content::before {
@@ -380,11 +380,11 @@
 
 @media screen and (max-width: 380px) {
   .purple_h2 {
-    font-size: 40px !important;
+    font-size: 34px !important;
   }
 
   .green_h2 {
-    font-size: 40px !important;
+    font-size: 34px !important;
   }
 }
 

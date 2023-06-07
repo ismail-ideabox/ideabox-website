@@ -10,7 +10,7 @@ import { useEffect, useRef, useState } from "react";
 import { useMediaQuery } from "react-responsive";
 import { useRouter, useSearchParams } from "next/navigation";
 
-function Header({ innerPage, headerVisible }) {
+function Header({ innerPage, headerVisible, onMenuToggle }) {
   const childRef = useRef(null);
   const router = useRouter();
   const isHomePage = router.usePathname === "/";
@@ -39,6 +39,9 @@ function Header({ innerPage, headerVisible }) {
   useEffect(() => {
     setToggleMenu(false);
   }, [searchParams]);
+  useEffect(() => {
+    onMenuToggle(toggleMenu);
+  }, [toggleMenu]);
 
   return (
     <>

@@ -2,7 +2,7 @@
 import layout from "../../styles/layout.module.css";
 import styles from "./testimonials.module.css";
 import { classNames } from "@/app/utils";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "../image";
 import { Autoplay, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -12,13 +12,17 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClose } from "@fortawesome/free-solid-svg-icons";
 import "swiper/swiper-bundle.css";
 
-function Testimonials() {
+function Testimonials({ onModalOpen }) {
   const [toggle, setToggle] = useState(false);
   const [activeTestimonial, setActiveTestimonial] = useState(null);
   const handleReadMore = (index) => {
     setActiveTestimonial(index);
     setToggle(true);
   };
+  useEffect(() => {
+    onModalOpen(toggle);
+  }, [toggle]);
+
   return (
     <section
       className={classNames(
@@ -96,7 +100,7 @@ function Testimonials() {
                     <div className={styles.review_content}>
                       <p>{testimonial.testimonial.slice(0, 75)}...</p>
                     </div>
-                    <Link
+                    <span
                       className={styles.read_more}
                       onClick={(e) => {
                         e.preventDefault;
@@ -105,7 +109,7 @@ function Testimonials() {
                       href={""}
                     >
                       Read More
-                    </Link>
+                    </span>
                   </div>
                 </SwiperSlide>
               );

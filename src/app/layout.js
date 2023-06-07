@@ -3,25 +3,21 @@ import "./styles/globals.css";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
 config.autoAddCss = false;
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import Script from "next/script";
-import { images } from "../../public/loader";
-import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 export default function RootLayout({ children }) {
-  const [Loading, setLoading] = useState(true);
+  useEffect(() => {
+    const removeFouc = (foucElement) => {
+      foucElement.className = foucElement.className.replace("no-fouc", "fouc");
+    };
+
+    removeFouc(document.documentElement);
+  }, []);
+
   const pathname = usePathname();
 
-  // useEffect(() => {
-  //   const handleLoad = () => {
-  //     setLoading(false);
-  //   };
-  //   window.addEventListener("load", handleLoad);
-  //   return () => {
-  //     window.removeEventListener("load", handleLoad);
-  //   };
-  // }, []);
   const SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
 
   return (

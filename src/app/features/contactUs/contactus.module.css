@@ -265,6 +265,9 @@
   }
 }
 @media screen and (max-width: 600px) {
+  .contact_form {
+    width: 100%;
+  }
   .banner_container {
     flex-direction: column;
   }
@@ -313,7 +316,7 @@
   }
   .loaction_address a {
     font-size: 15px;
-    padding: 10px 25px;
+    padding: 10px 0;
     margin-bottom: 10%;
   }
 }
