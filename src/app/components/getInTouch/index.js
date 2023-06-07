@@ -28,7 +28,7 @@ const initValues = {
 
 const initState = { values: initValues };
 
-function GetInTouch({ headerVisible }) {
+function GetInTouch({ headerVisible, onMenuToggle }) {
   const [state, setState] = useState(initState);
   const [isSuccess, setIsSuccess] = useState(false);
   const [toggle, setToggle] = useState(false);
@@ -171,7 +171,7 @@ function GetInTouch({ headerVisible }) {
   return (
     <>
       <div className={classNames(styles.getInTouchWrapper, bannerBg)}>
-        <Header headerVisible={headerVisible} />
+        <Header headerVisible={headerVisible} onMenuToggle={onMenuToggle} />
         <div className={styles.pagination_container}>
           <ul>
             <li
