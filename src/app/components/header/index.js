@@ -40,7 +40,9 @@ function Header({ innerPage, headerVisible, onMenuToggle }) {
     setToggleMenu(false);
   }, [searchParams]);
   useEffect(() => {
-    onMenuToggle(toggleMenu);
+    if (onMenuToggle) {
+      onMenuToggle(toggleMenu);
+    }
   }, [toggleMenu]);
 
   return (
