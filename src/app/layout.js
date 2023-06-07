@@ -10,6 +10,8 @@ import { usePathname } from "next/navigation";
 export default function RootLayout({ children }) {
   useEffect(() => {
     const removeFouc = (foucElement) => {
+      console.log(foucElement, "Fouc");
+
       foucElement.className = foucElement.className.replace("no-fouc", "fouc");
     };
 
