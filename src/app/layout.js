@@ -5,18 +5,24 @@ import { config } from "@fortawesome/fontawesome-svg-core";
 config.autoAddCss = false;
 import { useEffect } from "react";
 import Script from "next/script";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
+import { useMediaQuery } from "react-responsive";
+
 
 export default function RootLayout({ children }) {
-  useEffect(() => {
-    const removeFouc = (foucElement) => {
-      console.log(foucElement, "Fouc");
+  const router = useRouter()
+  const isSmallScreen = useMediaQuery({ query: "(max-width: 800px)" });
+  // useEffect(() => {
+  //   const removeFouc = (foucElement) => {
+  //     console.log(foucElement, "Fouc");
 
-      foucElement.className = foucElement.className.replace("no-fouc", "fouc");
-    };
+  //     foucElement.className = foucElement.className.replace("no-fouc", "fouc");
+  //   };
 
-    removeFouc(document.documentElement);
-  }, []);
+  //   removeFouc(document.documentElement);
+  // }, []);
+  
+  
 
   const pathname = usePathname();
 
@@ -24,7 +30,7 @@ export default function RootLayout({ children }) {
 
   return (
     <>
-      <html className="no-fouc" lang="en">
+      <html lang="en">
         <head>
           <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
           <link rel="preconnect" href="https://fonts.googleapis.com" />

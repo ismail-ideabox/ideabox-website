@@ -12,7 +12,10 @@ import { ScrollToTop } from "@/app/components/scrollToTop";
 import Projectcard from "@/app/components/ourWork/projectcard";
 import workDetail from "@/app/data/work";
 
+
+
 function OurWork({ isHomePage }) {
+
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -23,11 +26,12 @@ function OurWork({ isHomePage }) {
     e.preventDefault();
     setOffset((preValue) => preValue + 6);
   };
+
   return (
     <>
       
       <Header innerPage={true} />
-      <div
+      <div 
         className={[
           styles.banner_container,
           layout.grid,
