@@ -17,9 +17,12 @@ import { ScrollToTop } from "../../components/scrollToTop";
 import styles from "./page.module.css";
 import { classNames } from "@/app/utils";
 import { useMediaQuery } from "react-responsive";
-import { useSearchParams, usePathname } from "next/navigation";
+import { useSearchParams, usePathname, useRouter } from "next/navigation";
+
 
 function Home() {
+  const router = useRouter();
+  const Pathname = usePathname();
   const parentRef = useRef(null);
   const childRef = useRef(null);
   const servicesRef = useRef(null);
@@ -111,12 +114,19 @@ function Home() {
   }, [searchParams]);
 
   useEffect(() => {
-    if ((isSmallScreen && menuToggle) || testimonialToggle) {
+    if ((isSmallScreen && menuToggle) ||   testimonialToggle) {
       document.getElementsByTagName("body")[0].style.overflow = "hidden";
-    } else if (isSmallScreen) {
+    } else  {
       document.getElementsByTagName("body")[0].style.overflow = "auto";
+      console.log("Route changed")
     }
-  }, [menuToggle, testimonialToggle]);
+    return () => {
+      document.getElementsByTagName("body")[0].style.overflow = "auto";
+      console.log("Route changed")
+    };
+    
+    
+  }, [menuToggle, testimonialToggle, router]);
 
 
   return (
@@ -185,7 +195,7 @@ function Home() {
           }`}
         </script>
       </head>
-      <div
+      <div 
         className={classNames(styles.home_scroll_container, "scroll_container")}
         ref={parentRef}
       >
