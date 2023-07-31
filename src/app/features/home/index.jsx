@@ -114,19 +114,14 @@ function Home() {
   }, [searchParams]);
 
   useEffect(() => {
-    if ((isSmallScreen && menuToggle) ||   testimonialToggle) {
+    if (isSmallScreen && testimonialToggle) {
       document.getElementsByTagName("body")[0].style.overflow = "hidden";
-    } else  {
-      document.getElementsByTagName("body")[0].style.overflow = "auto";
-      console.log("Route changed")
+    } else if(!isSmallScreen && testimonialToggle) {
+      document.getElementsByTagName("body")[0].style.overflow = "hidden";
+    } else {
+      document.getElementsByTagName("body")[0].style.overflow = "auto"
     }
-    return () => {
-      document.getElementsByTagName("body")[0].style.overflow = "auto";
-      console.log("Route changed")
-    };
-    
-    
-  }, [menuToggle, testimonialToggle, router]);
+  }, [testimonialToggle]);
 
 
   return (

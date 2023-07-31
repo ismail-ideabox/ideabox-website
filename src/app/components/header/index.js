@@ -16,7 +16,7 @@ function Header({ innerPage, headerVisible, onMenuToggle }) {
   const isHomePage = router.usePathname === "/";
   const [toggleMenu, setToggleMenu] = useState(false);
   const handleToggle = () => setToggleMenu(!toggleMenu);
-  const isSmallScreen = useMediaQuery({ query: "(max-width: 800px)" });
+  const isSmallScreen = useMediaQuery({ query: "(min-width: 800px)" });
   const searchParams = useSearchParams();
   useEffect(() => {
     if (!headerVisible) {
@@ -47,20 +47,16 @@ function Header({ innerPage, headerVisible, onMenuToggle }) {
 
   useEffect(() => {
    
-    if (isSmallScreen && toggleMenu) {
+    if (toggleMenu) {
       document.getElementsByTagName("body")[0].style.overflow = "hidden";
 
-    } else if(isSmallScreen) {
+    } else if(!isSmallScreen && toggleMenu) {
       document.getElementsByTagName("body")[0].style.overflow = "auto";
-
+    } else {
+      document.getElementsByTagName("body")[0].style.overflow = "auto";
     }
-    return () => {
-      document.getElementsByTagName("body")[0].style.overflow = "auto";
-      
-    };
     
-    
-  }, [router,toggleMenu]);
+  }, [toggleMenu]);
 
   return (
     <>
