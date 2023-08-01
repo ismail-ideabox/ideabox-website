@@ -12,15 +12,15 @@ import { useMediaQuery } from "react-responsive";
 export default function RootLayout({ children }) {
   const router = useRouter()
   const isSmallScreen = useMediaQuery({ query: "(max-width: 800px)" });
-  // useEffect(() => {
-  //   const removeFouc = (foucElement) => {
-  //     console.log(foucElement, "Fouc");
+  useEffect(() => {
+    const removeFouc = (foucElement) => {
+      console.log(foucElement, "Fouc");
 
-  //     foucElement.className = foucElement.className.replace("no-fouc", "fouc");
-  //   };
+      foucElement.className = foucElement.className.replace("no-fouc", "fouc");
+    };
 
-  //   removeFouc(document.documentElement);
-  // }, []);
+    removeFouc(document.documentElement);
+  }, []);
   
   
 
@@ -30,7 +30,7 @@ export default function RootLayout({ children }) {
 
   return (
     <>
-      <html lang="en">
+      <html className="no-fouc" lang="en">
         <head>
           <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
