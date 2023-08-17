@@ -6,7 +6,7 @@ import Link from "next/link";
 import Image from "../image";
 import { images } from "../../../../public/footer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLinkedinIn, faTwitter } from "@fortawesome/free-brands-svg-icons";
+import { faLinkedinIn,faXTwitter  } from "@fortawesome/free-brands-svg-icons";
 import Button from "../button/button";
 
 function Footer() {
@@ -39,7 +39,8 @@ function Footer() {
                   rel="nofollow"
                   href="https://twitter.com/IdeaboxPakistan"
                 >
-                  <FontAwesomeIcon icon={faTwitter} />
+                  {/* <FontAwesomeIcon icon={faTwitter} /> */}
+                  <FontAwesomeIcon icon={faXTwitter} />
                 </Link>
               </div>
             </div>
