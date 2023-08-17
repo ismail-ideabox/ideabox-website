@@ -5,7 +5,7 @@ import styles from "./header.module.css";
 import layout from "../../styles/layout.module.css";
 import { classNames, isSticky } from "@/app/utils";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLinkedinIn, faTwitter } from "@fortawesome/free-brands-svg-icons";
+import { faLinkedinIn, faXTwitter } from "@fortawesome/free-brands-svg-icons";
 import { useEffect, useRef, useState } from "react";
 import { useMediaQuery } from "react-responsive";
 import { useRouter, useSearchParams } from "next/navigation";
@@ -46,16 +46,13 @@ function Header({ innerPage, headerVisible, onMenuToggle }) {
   }, [toggleMenu]);
 
   useEffect(() => {
-   
     if (toggleMenu) {
       document.getElementsByTagName("body")[0].style.overflow = "hidden";
-
-    } else if(!isSmallScreen && toggleMenu) {
+    } else if (!isSmallScreen && toggleMenu) {
       document.getElementsByTagName("body")[0].style.overflow = "auto";
     } else {
       document.getElementsByTagName("body")[0].style.overflow = "auto";
     }
-    
   }, [toggleMenu]);
 
   return (
@@ -93,7 +90,7 @@ function Header({ innerPage, headerVisible, onMenuToggle }) {
                   rel="nofollow"
                   href="https://twitter.com/IdeaboxPakistan"
                 >
-                  <FontAwesomeIcon icon={faTwitter} />
+                  <FontAwesomeIcon icon={faXTwitter} />
                 </Link>
               </li>
               <li style={{ minWidth: "30px " }}>
@@ -176,7 +173,7 @@ function Header({ innerPage, headerVisible, onMenuToggle }) {
                 rel="nofollow"
                 href="https://twitter.com/IdeaboxPakistan"
               >
-                <FontAwesomeIcon icon={faTwitter} />
+                <FontAwesomeIcon icon={faXTwitter} />
               </Link>
               <Link
                 rel="nofollow"
