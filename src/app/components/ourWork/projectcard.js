@@ -87,6 +87,7 @@ function Projectcard({ workData, isHomePage }) {
                     styles.ourwork_project,
                     styles.ourwork_flex
                   )}
+                  key={index}
                 >
                   <div className={styles.ourwork_with_flex}>
                     <div className={styles.project_image}>

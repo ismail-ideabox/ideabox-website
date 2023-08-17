@@ -163,7 +163,7 @@ function ContactUs() {
             <div className={styles.banner_container}>
               <div className={styles.banner_heading}>
                 <div className="heading">GET IN TOUCH</div>
-                <h2>Let's Make Something Awesome Together</h2>
+                <h2>{`Let's Make Something Awesome Together`}</h2>
               </div>
               <div className={styles.banner_image}>
                 <div className={styles.banner_image_arrow}>
