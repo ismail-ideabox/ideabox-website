@@ -79,7 +79,7 @@ h1.main-heading {
   font-weight: 500;
 }
 .no-fouc {
-  visibility: hidden;
+  visibility: hidden !important;
   opacity: 0;
 }
 
