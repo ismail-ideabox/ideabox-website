@@ -185,7 +185,7 @@ function Header({ innerPage, headerVisible, onMenuToggle }) {
             </div>
             <div className={styles.contact_details}>
               <h3>
-                <Link href={"mailto:info@ideabox.pk"}>hello@ideabox.technology</Link>
+                <Link href={"mailto:info@ideabox.pk"}>hello@ideabox.pk</Link>
               </h3>
               <h3>+92 21 37234945</h3>
             </div>

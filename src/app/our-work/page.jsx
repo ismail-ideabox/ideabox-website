@@ -35,9 +35,9 @@ const metadata = {
   title: "Our Work | Ideabox",
   description:
     "Ideabox has the capability to transform your business with cutting-edge technology solutions. We provide expert IT services to enhance efficiency and innovation",
-  canonical: "https://ideabox.technology/our-work",
+  canonical: "https://ideabox.com.pk/our-work",
   openGraph: {
-    url: "https://ideabox.technology/our-work",
+    url: "https://ideabox.com.pk/our-work",
     title: "Our Work | Ideabox",
     description: "Open Graph Description",
     images: [

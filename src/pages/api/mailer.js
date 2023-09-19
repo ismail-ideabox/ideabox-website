@@ -28,7 +28,7 @@ export default async function handler(req, res) {
             let mailOptions = {
               from: email,
               to: "noreply.ideabox.pk@gmail.com",
-              cc: "hello@ideabox.technology",
+              cc: "hello@ideabox.pk",
               replyTo: email,
               subject: companyName,
               text: `Name: ${name}\nCompany Name: ${companyName}\nEmail: ${email}\nPhone: ${phone}\nMessage: ${message}`,
