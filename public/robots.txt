@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: 
 Disallow: /cgi-bin/
-Sitemap: https://ideabox.com.pk/sitemap.xml
+Sitemap: https://ideabox.technology/sitemap.xml

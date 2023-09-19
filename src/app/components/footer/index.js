@@ -79,8 +79,8 @@ function Footer() {
                   </div>
                   <div className={styles.country_address}>
                     <p>3702, South Tower 1, Dubai Creek Harbour, Dubai</p>
-                    <Link href={"mailto:hello@ideabox.pk"}>
-                      <span>hello@ideabox.pk</span>
+                    <Link href={"mailto:hello@ideabox.technology"}>
+                      <span>hello@ideabox.technology</span>
                     </Link>
                   </div>
                   <div className={styles.view_direction}>
@@ -101,8 +101,8 @@ function Footer() {
                       2nd floor, Plot 1C Khayaban-e-Saadi, Phase 7 Defence
                       Housing Authority, Karachi, Karachi City, Sindh 75500
                     </p>
-                    <Link href={"mailto:hello@ideabox.pk"}>
-                      <span>hello@ideabox.pk</span>
+                    <Link href={"mailto:hello@ideabox.technology"}>
+                      <span>hello@ideabox.technology</span>
                     </Link>
                   </div>
                   <div className={styles.view_direction}>

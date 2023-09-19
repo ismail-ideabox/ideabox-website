@@ -155,9 +155,9 @@ function Home() {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "name": "Ideabox",
-  "image": "https://ideabox.com.pk/footer/ideabox.png",
+  "image": "https://ideabox.technology/footer/ideabox.png",
   "@id": "",
-  "url": "https://www.ideabox.com.pk/",
+  "url": "https://www.ideabox.technology/",
   "telephone": "+92 21 37234945",
   "address": {
     "@type": "PostalAddress",
@@ -224,17 +224,17 @@ const metadata = {
   title: "Ideabox | Official Website ® | Tech Solution Provider",
   description:
     "We Hand-Craft creative tech solutions with solid strategies & powerful technologies. We have the experience & expertise to develop & deliver complex applications",
-  canonical: "https://ideabox.com.pk",
+  canonical: "https://ideabox.technology",
   openGraph: {
     type: "website",
     locale: "en_Us",
-    url: "https://ideabox.com.pk",
+    url: "https://ideabox.technology",
     title: "Ideabox | Official Website ® | Tech Solution Provider",
     description:
       "We Hand-Craft creative tech solutions with solid strategies & powerful technologies. We have the experience & expertise to develop & deliver complex applications",
     images: [
       {
-        url: "https://ideabox.com.pk/footer/ideabox.png",
+        url: "https://ideabox.technology/footer/ideabox.png",
         width: 800,
         height: 600,
         alt: "Ideabox Logo",

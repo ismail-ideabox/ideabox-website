@@ -5,9 +5,9 @@ import NewsBlogsPage from "../features/newsBlogs";
 const metadata = {
   title: "News & Blogs | Ideabox",
   description: "",
-  canonical: "https://ideabox.com.pk/news-and-blogs",
+  canonical: "https://ideabox.technology/news-and-blogs",
   openGraph: {
-    url: "https://ideabox.com.pk/news-and-blogs",
+    url: "https://ideabox.technology/news-and-blogs",
     title: "News & Blogs | Ideabox",
     description: "Open Graph Description",
     images: [

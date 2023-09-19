@@ -40,9 +40,9 @@ export default OurTeam;
 const metadata = {
   title: "Our Team | Ideabox",
   description: "",
-  canonical: "https://ideabox.com.pk/our-team",
+  canonical: "https://ideabox.technology/our-team",
   openGraph: {
-    url: "https://ideabox.com.pk/our-team",
+    url: "https://ideabox.technology/our-team",
     title: "Our Team | Ideabox",
     description: "Open Graph Description",
     images: [
