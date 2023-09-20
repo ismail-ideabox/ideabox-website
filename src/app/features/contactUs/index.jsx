@@ -216,7 +216,7 @@ function ContactUs() {
                   Authority, Karachi, Karachi City, Sindh 75500
                   <br />
                   <br />
-                  <Link href={"mailto:info@ideabox.pk"}>hello@ideabox.pk</Link>
+                  <Link href={"mailto:info@ideabox.pk"}>hello@ideabox.technology</Link>
                 </p>
                 <Button
                   target="_blank"
@@ -311,7 +311,7 @@ function ContactUs() {
                     className={styles.mail_at}
                     href={"mailto:info@ideabox.pk"}
                   >
-                    hello@ideabox.pk
+                    hello@ideabox.technology
                   </Link>
                 </p>
               </div>

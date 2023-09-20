@@ -11,10 +11,10 @@ function ContactUs() {
   const metadata = {
     title: "Contact Us | Ideabox",
     description:
-      "Get in touch with our skilled team for comprehensive technology solutions. Contact us today on hello@ideabox.pk and let us help you with your technology needs",
-    canonical: "https://ideabox.com.pk/contact-us",
+      "Get in touch with our skilled team for comprehensive technology solutions. Contact us today on hello@ideabox.technology and let us help you with your technology needs",
+    canonical: "https://ideabox.technology/contact-us",
     openGraph: {
-      url: "https://ideabox.com.pk/contact-us",
+      url: "https://ideabox.technology/contact-us",
       title: "Contact Us | Ideabox",
       description: "Open Graph Description",
       images: [
