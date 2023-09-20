@@ -210,15 +210,23 @@
   .flex {
     min-height: 50vh;
   }
+  .loaction_address {
+    padding: 5% 0 5% 3%;
+  }
   .loaction_address h2 {
     font-size: 18px !important;
   }
   .loaction_address p {
     font-size: 13px;
   }
+  .loaction_address p a {
+    font-size: 11px;
+  }
   .loaction_address a {
     font-size: 12px;
     padding: 10px 15px;
+    padding-left: 0;
+    
   }
 }
 @media screen and (max-width: 860px) {
@@ -227,6 +235,15 @@
   }
   .flex {
     min-height: 45vh;
+    flex-direction: column;
+  }
+  .location_map {
+    width: 100%;
+    height: 50vh;
+  }
+  .loaction_address {
+    width: 100%;
+    padding: 5% 0 5% 5%;
   }
   .loaction_address h2 {
     font-size: 16px !important;
@@ -236,21 +253,28 @@
   }
   .loaction_address a {
     padding: 5px 8px;
+    padding-left: 0;
+  }
+  .loaction_address h2 {
+    font-size: 32px !important;
+    margin-top: 30px;
+  }
+  .loaction_address p {
+    max-width: 25ch;
+    font-size: 18px;
+  }
+  .loaction_address a {
+    font-size: 15px;
+    padding: 10px 0;
+    margin-bottom: 10%;
+  }
+  .loaction_address p a {
+    font-size: 18px;
   }
 }
 @media screen and (max-width: 700px) {
   .banner_heading h2 {
     font-size: 20px !important;
-  }
-  .loaction_address h2 {
-    font-size: 14px !important;
-  }
-  .loaction_address p {
-    font-size: 10px;
-  }
-  .loaction_address a {
-    font-size: 10px;
-    padding: 5px;
   }
 }
 @media screen and (max-width: 650px) {
@@ -296,29 +320,7 @@
     width: 10ch;
     font-size: 28px !important;
   }
-  .flex {
-    flex-direction: column;
-  }
-  .location_map {
-    width: 100%;
-    height: 50vh;
-  }
-  .loaction_address {
-    width: 100%;
-  }
-  .loaction_address h2 {
-    font-size: 32px !important;
-    margin-top: 30px;
-  }
-  .loaction_address p {
-    max-width: 25ch;
-    font-size: 18px;
-  }
-  .loaction_address a {
-    font-size: 15px;
-    padding: 10px 0;
-    margin-bottom: 10%;
-  }
+  
 }
 
 @media screen and (max-width: 400px) {
@@ -330,6 +332,7 @@
   }
   .loaction_address a {
     font-size: 13px;
+    padding-left: 0;
   }
   .input_fields {
     padding: 10px 25px;
@@ -338,5 +341,10 @@
 @media screen and (max-width: 499px) {
   .banner_heading h2 {
     font-size: 24px !important;
+  }
+}
+@media screen and (max-width:400px) {
+  .loaction_address p, .loaction_address p a {
+    font-size: 14px;
   }
 }

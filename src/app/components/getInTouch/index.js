@@ -446,7 +446,7 @@ function GetInTouch({ headerVisible, onMenuToggle }) {
                           <br />
                           <Link
                             className={styles.mail_at}
-                            href={"mailto:info@ideabox.pk"}
+                            href={"mailto:hello@ideabox.technology"}
                           >
                             hello@ideabox.technology
                           </Link>

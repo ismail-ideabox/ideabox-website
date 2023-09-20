@@ -236,7 +236,14 @@
   .header {
     padding-top: 15px;
   }
-
+  .header .contact_block h3 a {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 18px;
+  }
+  .header .contact_block h3 {
+    font-size: 18px;
+  }
   .activeCloseBtn {
     right: 5%;
   }
