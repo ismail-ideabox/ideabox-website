@@ -49,6 +49,8 @@ function GetInTouch({ headerVisible, onMenuToggle }) {
   const [isMounted, setIsMounted] = useState(false);
   const { executeRecaptcha } = useGoogleReCaptcha();
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     if (!errors.emailAddress && !errors.fullName && !errors.phoneNo) {
       if (isMounted) {
@@ -56,10 +58,12 @@ function GetInTouch({ headerVisible, onMenuToggle }) {
           console.log("Execute recaptcha not yet available");
           return;
         }
-        executeRecaptcha("enquiryFormSubmit").then((gReCaptchaToken) => {
-          console.log(gReCaptchaToken, "response Google reCaptcha server");
-          setGReCaptchaToken(gReCaptchaToken);
-          postGetInTouch(gReCaptchaToken);
+        executeRecaptcha("enquiryFormSubmit").then(async (gReCaptchaToken) => {
+          try {
+            await postGetInTouch(gReCaptchaToken);
+          } catch (error) {
+            console.log("hello", error);
+          }
         });
       }
     }
@@ -91,7 +95,7 @@ function GetInTouch({ headerVisible, onMenuToggle }) {
       );
 
       const data = await response.json();
-      if (data) {
+      if (data.status === "success") {
         setState((prev) => ({
           ...prev,
           isLoading: false,

@@ -7,10 +7,10 @@ import { useEffect } from "react";
 import Script from "next/script";
 import { usePathname, useRouter } from "next/navigation";
 import { useMediaQuery } from "react-responsive";
-
+import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
 
 export default function RootLayout({ children }) {
-  const router = useRouter()
+  const router = useRouter();
   const isSmallScreen = useMediaQuery({ query: "(max-width: 800px)" });
   useEffect(() => {
     const removeFouc = (foucElement) => {
@@ -21,8 +21,6 @@ export default function RootLayout({ children }) {
 
     removeFouc(document.documentElement);
   }, []);
-  
-  
 
   const pathname = usePathname();
 
@@ -63,7 +61,17 @@ export default function RootLayout({ children }) {
           >
             <Image priority src={images.loader} alt={"Loader Image"} />
           </div> */}
-          {children}
+          <GoogleReCaptchaProvider
+            reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTHA_SITE_KEY}
+            scriptProps={{
+              async: false, // optional, default to false,
+              defer: true, // optional, default to false
+              appendTo: "body", // optional, default to "head", can be "head" or "body",
+              nonce: undefined,
+            }}
+          >
+            {children}
+          </GoogleReCaptchaProvider>
         </body>
         <Script
           defer

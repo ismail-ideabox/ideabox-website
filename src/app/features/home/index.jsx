@@ -19,7 +19,6 @@ import { classNames } from "@/app/utils";
 import { useMediaQuery } from "react-responsive";
 import { useSearchParams, usePathname, useRouter } from "next/navigation";
 
-
 function Home() {
   const router = useRouter();
   const Pathname = usePathname();
@@ -116,13 +115,12 @@ function Home() {
   useEffect(() => {
     if (isSmallScreen && testimonialToggle) {
       document.getElementsByTagName("body")[0].style.overflow = "hidden";
-    } else if(!isSmallScreen && testimonialToggle) {
+    } else if (!isSmallScreen && testimonialToggle) {
       document.getElementsByTagName("body")[0].style.overflow = "hidden";
     } else {
-      document.getElementsByTagName("body")[0].style.overflow = "auto"
+      document.getElementsByTagName("body")[0].style.overflow = "auto";
     }
   }, [testimonialToggle]);
-
 
   return (
     <>
@@ -190,7 +188,7 @@ function Home() {
           }`}
         </script>
       </head>
-      <div 
+      <div
         className={classNames(styles.home_scroll_container, "scroll_container")}
         ref={parentRef}
       >

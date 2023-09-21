@@ -10,6 +10,7 @@
   --primary-font: "Arvo";
   --secondary-font: "Poppins";
 }
+
 /* html {
   scroll-behavior: smooth !important;
 } */
@@ -78,6 +79,7 @@ h1.main-heading {
   font-size: 40px;
   font-weight: 500;
 }
+
 .no-fouc {
   visibility: hidden !important;
   opacity: 0;
@@ -103,6 +105,7 @@ img {
 }
 
 @media (max-width: 900px) {
+
   h2.main-heading,
   h1.main-heading {
     font-size: 36px !important;
@@ -115,6 +118,7 @@ img {
 }
 
 @media (max-width: 600px) {
+
   h2.main-heading,
   h1.main-heading {
     font-size: 27px !important;
