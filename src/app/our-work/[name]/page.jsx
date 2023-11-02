@@ -1,18 +1,8 @@
-"use client";
 import workData from "@/app/data/work";
 import OurWorkDetails from "@/app/features/ourWorkDetails";
-import { redirect, usePathname } from "next/navigation";
-import React, { useEffect, useState } from "react";
-
-function WorkDetail() {
-  const [data, setData] = useState([]);
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [data]);
-  const pathname = usePathname();
-
-  const workTitle = pathname.split("/").pop().replaceAll("-", " ");
+import { redirect } from "next/navigation";
+function WorkDetail({ params }) {
+  const workTitle = params?.name?.split("/")?.pop()?.replaceAll("-", " ");
 
   const filteredWork = workData.find(
     (ele) =>
@@ -25,7 +15,7 @@ function WorkDetail() {
   return (
     <>
       <head>
-        <title>{filteredWork.projectName + " | Ideabox"}</title>
+        <title>{filteredWork?.projectName + " | Ideabox"}</title>
         <meta name="description" content={filteredWork.metaDescription} />
         <link rel="canonical" href={filteredWork.canonicalTag} />
       </head>

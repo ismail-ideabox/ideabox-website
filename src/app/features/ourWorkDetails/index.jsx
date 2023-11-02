@@ -10,14 +10,9 @@ import Faqs from "@/app/components/faqs";
 import Footer from "@/app/components/footer";
 import { ScrollToTop } from "@/app/components/scrollToTop";
 import workDetail from "@/app/data/work";
-import { usePathname, useSearchParams, useRouter } from "next/navigation";
 
 function OurWorkDetails({ filteredWork }) {
-  const searchParams = useSearchParams();
-  const pathname = usePathname();
-
-  const workTitle = pathname?.split("/")?.pop()?.replace("-", " ");
-
+  console.log(filteredWork);
   return (
     <>
       <div className={styles.header_bg}>
@@ -62,9 +57,7 @@ function OurWorkDetails({ filteredWork }) {
                 <div className={styles.projectcard}>
                   <Projectcard
                     workData={workDetail.filter(
-                      (ele) =>
-                        ele.projectName.toLocaleLowerCase() !==
-                        workTitle.toLocaleLowerCase()
+                      (ele) => ele.id !== filteredWork?.id
                     )}
                     isHomePage={true}
                   />
