@@ -6,7 +6,7 @@ import Link from "next/link";
 import Image from "../image";
 import { images } from "../../../../public/footer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLinkedinIn,faXTwitter  } from "@fortawesome/free-brands-svg-icons";
+import { faLinkedinIn, faXTwitter } from "@fortawesome/free-brands-svg-icons";
 import Button from "../button/button";
 
 function Footer() {
@@ -78,7 +78,10 @@ function Footer() {
                     <h5>UAE</h5>
                   </div>
                   <div className={styles.country_address}>
-                    <p>3702, South Tower 1, Dubai Creek Harbour, Dubai</p>
+                    <p>
+                      Business Center, Sharjah Publishing City, Sharjah, United
+                      Arab Emirates
+                    </p>
                     <Link href={"mailto:hello@ideabox.technology"}>
                       <span>hello@ideabox.technology</span>
                     </Link>

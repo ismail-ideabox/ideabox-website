@@ -16,7 +16,7 @@ function OurWorkDetails({ filteredWork }) {
   const searchParams = useSearchParams();
   const pathname = usePathname();
 
-  const workTitle = pathname.split("/").pop().replace("-", " ");
+  const workTitle = pathname?.split("/")?.pop()?.replace("-", " ");
 
   return (
     <>
