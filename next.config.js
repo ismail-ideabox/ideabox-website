@@ -1,8 +1,3 @@
-const nextConfig = {
-  experimental: {
-    appDir: true,
-    scrollRestoration: false,
-  },
-};
+const nextConfig = {};
 
 module.exports = nextConfig;

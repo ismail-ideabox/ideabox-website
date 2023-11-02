@@ -10,11 +10,19 @@ import Faqs from "@/app/components/faqs";
 import Footer from "@/app/components/footer";
 import { ScrollToTop } from "@/app/components/scrollToTop";
 import workDetail from "@/app/data/work";
-
-function OurWorkDetails({ filteredWork }) {
-  console.log(filteredWork);
+import workData from "@/app/data/work";
+function OurWorkDetails({ workTitle }) {
+  const filteredWork = workData.find(
+    (ele) =>
+      ele.projectName.toLocaleLowerCase() === workTitle.toLocaleLowerCase()
+  );
   return (
     <>
+      <head>
+        <title>{filteredWork?.projectName + " | Ideabox"}</title>
+        <meta name="description" content={filteredWork.metaDescription} />
+        <link rel="canonical" href={filteredWork.canonicalTag} />
+      </head>
       <div className={styles.header_bg}>
         <Header innerPage={true} />
       </div>
