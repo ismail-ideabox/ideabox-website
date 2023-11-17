@@ -12,10 +12,8 @@ function BlogDetail() {
 
   const params = new URLSearchParams(searchParams);
   const id = Number(params.get("id"));
-  console.log("router");
 
   const filteredWork = workData.find((ele) => ele.id === id);
-  console.log(filteredWork, "filteredWork");
   return <div>{/* <BlogsDetail /> */}</div>;
 }
 

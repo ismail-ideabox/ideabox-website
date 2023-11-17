@@ -15,8 +15,6 @@ export default function RootLayout({ children }) {
   const isSmallScreen = useMediaQuery({ query: "(max-width: 800px)" });
   useEffect(() => {
     const removeFouc = (foucElement) => {
-      // console.log(foucElement, "Fouc");
-
       foucElement.className = foucElement.className.replace("no-fouc", "fouc");
     };
 
@@ -71,7 +69,7 @@ export default function RootLayout({ children }) {
             scriptProps={{
               async: false, // optional, default to false,
               defer: true, // optional, default to false
-              appendTo: "body", // optional, default to "head", can be "head" or "body",
+              appendTo: "head", // optional, default to "head", can be "head" or "body",
               nonce: undefined,
             }}
           >

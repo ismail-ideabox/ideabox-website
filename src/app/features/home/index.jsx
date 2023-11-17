@@ -19,9 +19,9 @@ import { classNames } from "@/app/utils";
 import { useMediaQuery } from "react-responsive";
 import { useSearchParams, usePathname, useRouter } from "next/navigation";
 
+
+
 function Home() {
-  const router = useRouter();
-  const Pathname = usePathname();
   const parentRef = useRef(null);
   const childRef = useRef(null);
   const servicesRef = useRef(null);
@@ -122,74 +122,9 @@ function Home() {
     }
   }, [testimonialToggle]);
 
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Ideabox",
-    "image": "https://ideabox.technology/footer/ideabox.png",
-    "@id": "",
-    "url": "https://www.ideabox.technology/",
-    "telephone": "+92 21 37234945",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "2nd floor, Plot 1C Khayaban-e-Saadi, Phase 7 Defence Housing Authority, Karachi, Karachi City, Sindh 75500",
-      "addressLocality": "Sindh",
-      "postalCode": "75500",
-      "addressCountry": "PK"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 24.831027967090243,
-      "longitude": 67.07490002377298
-    },
-    "openingHoursSpecification": {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": [
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday"
-      ],
-      "opens": "10:00",
-      "closes": "20:00"
-    },
-    "sameAs": [
-      "https://pk.linkedin.com/company/ideaboxpakistan",
-      "https://twitter.com/IdeaboxPakistan"
-    ]
-            }
 
   return (
     <>
-      <head>
-        <title>{metadata.title}</title>
-        <meta name="description" content={metadata.description} />
-        <link rel="canonical" href={metadata.canonical} />
-        <meta property="og:url" content={metadata.openGraph.url} />
-        <meta
-          name="google-site-verification"
-          content="iHXuTgH9REkt-943HIQIAAZJMM0iwx-1e6lIoNDaJ4A"
-        />
-        <meta property="og:title" content={metadata.openGraph.title} />
-        <meta
-          property="og:description"
-          content={metadata.openGraph.description}
-        />
-        <meta property="og:image" content={metadata.openGraph.images[0].url} />
-        <meta
-          property="og:image:width"
-          content={metadata.openGraph.images[0].width}
-        />
-        <meta property="og:site_name" content={metadata.openGraph.siteName} />
-        <meta name="twitter:card" content={metadata.twitter.cardType} />
-        <meta name="twitter:site" content={metadata.twitter.site} />
-        <meta name="twitter:creator" content={metadata.twitter.handle} />
-        <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-      </head>
       <div
         className={classNames(styles.home_scroll_container, "scroll_container")}
         ref={parentRef}
@@ -220,32 +155,3 @@ function Home() {
 
 export default Home;
 
-const metadata = {
-  title: "Ideabox | Official Website ® | Tech Solution Provider",
-  description:
-    "We Hand-Craft creative tech solutions with solid strategies & powerful technologies. We have the experience & expertise to develop & deliver complex applications",
-  canonical: "https://ideabox.technology",
-  openGraph: {
-    type: "website",
-    locale: "en_Us",
-    url: "https://ideabox.technology",
-    title: "Ideabox | Official Website ® | Tech Solution Provider",
-    description:
-      "We Hand-Craft creative tech solutions with solid strategies & powerful technologies. We have the experience & expertise to develop & deliver complex applications",
-    images: [
-      {
-        url: "https://ideabox.technology/footer/ideabox.png",
-        width: 800,
-        height: 600,
-        alt: "Ideabox Logo",
-        type: "image/png",
-      },
-    ],
-    siteName: "Ideabox",
-  },
-  twitter: {
-    handle: "@IdeaboxPakistan",
-    site: "@IdeaboxPakistan:Obaid Rehman",
-    cardType: "summary_large_image",
-  },
-};

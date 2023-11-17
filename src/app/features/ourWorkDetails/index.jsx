@@ -13,7 +13,7 @@ import workDetail from "@/app/data/work";
 import workData from "@/app/data/work";
 
 
- 
+
 
 function OurWorkDetails({ workTitle }) {
   const filteredWork = workData.find(
@@ -22,17 +22,12 @@ function OurWorkDetails({ workTitle }) {
   );
   return (
     <>
-      <head>
-        <title>{filteredWork?.projectName + " | Ideabox"}</title>
-        <meta name="description" content={filteredWork?.metaDescription} />
-        <link rel="canonical" href={filteredWork?.canonicalTag} />
-      </head>
       <div className={styles.header_bg}>
         <Header innerPage={true} />
       </div>
       <div className={styles.banner_container}>
         <div className={styles.banner_image}>
-          <Image src={filteredWork?.cardImage} alt="Case Study Card Image" />
+          <Image loading="eager" priority src={filteredWork?.cardImage} alt="Case Study Banner Image" />
         </div>
         <div className={styles.work_logo}>
           <Image src={filteredWork?.workLogo} alt="Client Case Study Logo" />
@@ -49,7 +44,7 @@ function OurWorkDetails({ workTitle }) {
             <div className={styles.button_byco}>
               <Button
                 target={"_blank"}
-                redirect={filteredWork?.url ? filteredWork?.url :""}
+                redirect={filteredWork?.url ? filteredWork?.url : ""}
                 text={filteredWork?.buttontext}
                 type="primary"
               />
