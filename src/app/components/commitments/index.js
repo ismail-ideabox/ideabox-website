@@ -6,7 +6,6 @@ import { images } from "../../../../public/commitments";
 import Image from "../image";
 
 function Secondary({ animate, animateRef }) {
-  // console.log(animate, "animate");
   return (
     <section
       ref={animateRef}

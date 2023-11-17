@@ -42,7 +42,7 @@ function Button({
           target={target}
           {...rest}
           onClick={!isLoading && onClick}
-          href={redirect}
+          href={redirect ? redirect : ""}
           className={
             type === "primary"
               ? classNames(

@@ -22,6 +22,11 @@ const initValues = {
 const initState = { values: initValues };
 
 function ContactUs() {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [data]);
   const [state, setState] = useState(initState);
   const [isSuccess, setIsSuccess] = useState(false);
   const [gReCaptchaToken, setGReCaptchaToken] = useState("");
@@ -145,11 +150,9 @@ function ContactUs() {
   }, []);
 
   useEffect(() => {
-    console.log(isSuccess, "isSuccess");
     if (isSuccess) {
       setTimeout(() => {
         setToggle(false);
-        console.log(setToggle);
       }, 3000);
     }
   }, [isSuccess]);

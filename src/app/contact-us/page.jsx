@@ -1,62 +1,73 @@
-"use client";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import ContactUsPage from "../features/contactUs";
+export const metadata = {
+  metadataBase: new URL("https://ideabox.technology"),
+  title: "Contact Us | Ideabox",
+  description:
+    "Get in touch with our skilled team for comprehensive technology solutions. Contact us today on hello@ideabox.technology and let us help you with your technology needs",
+  canonical: "https://ideabox.technology/contact-us",
+  openGraph: {
+    url: "https://ideabox.technology/contact-us",
+    title: "Contact Us | Ideabox",
+    description: "Get in touch with our skilled team for comprehensive technology solutions. Contact us today on hello@ideabox.technology and let us help you with your technology needs",
+    images: [
+      {
+        url: "../../../public/footer/ideabox.png",
+        width: 800,
+        height: 600,
+        alt: "Ideabox Logo",
+        type: "image/png",
+      },
+    ],
+    siteName: "Ideabox",
+  },
+  twitter: {
+    handle: "@IdeaboxPakistan",
+    site: "@IdeaboxPakistan:Obaid Rehman",
+    cardType: "summary_large_image",
+  },
+};
 
 function ContactUs() {
-  const [data, setData] = useState([]);
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [data]);
-  const metadata = {
-    title: "Contact Us | Ideabox",
-    description:
-      "Get in touch with our skilled team for comprehensive technology solutions. Contact us today on hello@ideabox.technology and let us help you with your technology needs",
-    canonical: "https://ideabox.technology/contact-us",
-    openGraph: {
-      url: "https://ideabox.technology/contact-us",
-      title: "Contact Us | Ideabox",
-      description: "Open Graph Description",
-      images: [
-        {
-          url: "../../../public/footer/ideabox.png",
-          width: 800,
-          height: 600,
-          alt: "Ideabox Logo",
-          type: "image/png",
-        },
-      ],
-      siteName: "Ideabox",
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    name: "Ideabox",
+    image: "https://ideabox.technology/footer/ideabox.png",
+    "@id": "",
+    url: "https://www.ideabox.technology/",
+    telephone: "+92 21 37234945",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress:
+        "2nd floor, Plot 1C Khayaban-e-Saadi, Phase 7 Defence Housing Authority, Karachi, Karachi City, Sindh 75500",
+      addressLocality: "Sindh",
+      postalCode: "75500",
+      addressCountry: "PK",
     },
-    twitter: {
-      handle: "@IdeaboxPakistan",
-      site: "@IdeaboxPakistan:Obaid Rehman",
-      cardType: "summary_large_image",
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: 24.831027967090243,
+      longitude: 67.07490002377298,
     },
+    openingHoursSpecification: {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      opens: "10:00",
+      closes: "20:00",
+    },
+    sameAs: [
+      "https://pk.linkedin.com/company/ideaboxpakistan",
+      "https://twitter.com/IdeaboxPakistan",
+    ],
   };
+
   return (
     <>
-      <head>
-        <title>{metadata.title}</title>
-        <meta name="description" content={metadata.description} />
-        <link rel="canonical" href={metadata.canonical} />
-        <meta property="og:url" content={metadata.openGraph.url} />
-        <meta property="og:title" content={metadata.openGraph.title} />
-        <meta
-          property="og:description"
-          content={metadata.openGraph.description}
-        />
-        <meta property="og:image" content={metadata.openGraph.images[0].url} />
-        <meta
-          property="og:image:width"
-          content={metadata.openGraph.images[0].width}
-        />
-        <meta property="og:site_name" content={metadata.openGraph.siteName} />
-        <meta name="twitter:card" content={metadata.twitter.cardType} />
-        <meta name="twitter:site" content={metadata.twitter.site} />
-        <meta name="twitter:creator" content={metadata.twitter.handle} />
-      </head>
-
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <ContactUsPage />
     </>
   );

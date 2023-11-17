@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-page-custom-font */
 "use client";
 import "./styles/globals.css";
 import "@fortawesome/fontawesome-svg-core/styles.css";
@@ -14,8 +15,6 @@ export default function RootLayout({ children }) {
   const isSmallScreen = useMediaQuery({ query: "(max-width: 800px)" });
   useEffect(() => {
     const removeFouc = (foucElement) => {
-      console.log(foucElement, "Fouc");
-
       foucElement.className = foucElement.className.replace("no-fouc", "fouc");
     };
 
@@ -32,7 +31,11 @@ export default function RootLayout({ children }) {
         <head>
           <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+          <link
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossOrigin="true"
+          />
           <link
             href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&display=swap"
             rel="stylesheet"
@@ -66,7 +69,7 @@ export default function RootLayout({ children }) {
             scriptProps={{
               async: false, // optional, default to false,
               defer: true, // optional, default to false
-              appendTo: "body", // optional, default to "head", can be "head" or "body",
+              appendTo: "head", // optional, default to "head", can be "head" or "body",
               nonce: undefined,
             }}
           >

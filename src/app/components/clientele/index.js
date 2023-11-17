@@ -30,7 +30,6 @@ function Clientele() {
       <div className={styles.padding_bottom}>
         <div className={styles.clientele_images}>
           <Swiper
-            sl
             className="clienteleslider"
             slidesPerView={7}
             loop={true}
@@ -59,7 +58,11 @@ function Clientele() {
               return (
                 <SwiperSlide key={index}>
                   <div className={styles.work_logo_img}>
-                    <Link rel="nofollow" target="_blank" href={clienteleLogo.url}>
+                    <Link
+                      rel="nofollow"
+                      target="_blank"
+                      href={clienteleLogo.url}
+                    >
                       <Image alt="Clientele Logo" src={clienteleLogo.logo} />
                     </Link>
                   </div>
@@ -100,7 +103,11 @@ function Clientele() {
               return (
                 <SwiperSlide key={index}>
                   <div className={styles.work_logo_img}>
-                    <Link rel="nofollow" target="_blank" href={clienteleLogo.url}>
+                    <Link
+                      rel="nofollow"
+                      target="_blank"
+                      href={clienteleLogo.url}
+                    >
                       <Image alt="Clientele Logo" src={clienteleLogo.logo} />
                     </Link>
                   </div>

@@ -16,9 +16,7 @@ function Projectcard({ workData, isHomePage }) {
           <Swiper
             className="ourworkSlider"
             slidesPerView={1}
-            lazy={true}
             spaceBetween={20}
-            preloadimages={true}
             pagination={{
               clickable: true,
             }}
@@ -35,9 +33,9 @@ function Projectcard({ workData, isHomePage }) {
               },
             }}
           >
-            {workData.map((workData, index) => {
-              let urlSlug = workData.projectName.replace(/\s+/g, "-");
-              urlSlug = "/our-work/" + urlSlug;
+            {workData?.map((workData, index) => {
+              let urlSlug = workData?.projectName.replace(/\s+/g, "-");
+              urlSlug = "/our-work/" + urlSlug?.toLowerCase();
               return (
                 <SwiperSlide key={index}>
                   <div
@@ -48,24 +46,25 @@ function Projectcard({ workData, isHomePage }) {
                       <div>
                         <div className={styles.project_image}>
                           <Image
-                            src={workData.workCardImage}
+                            src={workData?.workCardImage}
                             alt="Case Study Card Image"
                           />
                         </div>
                         <div className={styles.project_name}>
-                          <h4>{workData.projectName}</h4>
+                          <h4>{workData?.projectName}</h4>
                         </div>
                         <div className={styles.project_description}>
                           <h3>
-                            {workData.workInfo
-                              ? workData.workInfo.slice(0, 80) + "..."
-                              : workData.workInfo}
+                            {workData?.workInfo
+                              ? workData?.workInfo?.slice(0, 80) + "..."
+                              : workData?.workInfo}
                           </h3>
                         </div>
                       </div>
                       <div className={styles.project_view}>
                         <Button
-                          redirect={urlSlug}
+                          as={`${urlSlug}`}
+                          redirect={urlSlug ? urlSlug : ""}
                           text={"View Project"}
                           type="secondary"
                         />
@@ -78,9 +77,9 @@ function Projectcard({ workData, isHomePage }) {
           </Swiper>
         ) : (
           <>
-            {workData.map((workData, index) => {
-              let urlSlug = workData.projectName.replace(/\s+/g, "-");
-              urlSlug = "/our-work/" + urlSlug;
+            {workData?.map((workData, index) => {
+              let urlSlug = workData?.projectName?.replace(/\s+/g, "-");
+              urlSlug = "/our-work/" + urlSlug?.toLowerCase();
               return (
                 <div
                   className={classNames(
@@ -92,24 +91,25 @@ function Projectcard({ workData, isHomePage }) {
                   <div className={styles.ourwork_with_flex}>
                     <div className={styles.project_image}>
                       <Image
-                        src={workData.workCardImage}
+                        src={workData?.workCardImage}
                         alt="Case Study Card Image"
                       />
                     </div>
                     <div className={styles.project_name}>
-                      <h4>{workData.projectName}</h4>
+                      <h4>{workData?.projectName}</h4>
                     </div>
                     <div className={styles.project_description}>
                       <h3>
-                        {workData.workInfo
-                          ? workData.workInfo.slice(0, 70) + "..."
-                          : workData.workInfo}
+                        {workData?.workInfo
+                          ? workData?.workInfo?.slice(0, 70) + "..."
+                          : workData?.workInfo}
                       </h3>
                     </div>
                   </div>
                   <div className={styles.project_view}>
                     <Button
-                      redirect={urlSlug}
+                      as={`${urlSlug}`}
+                      redirect={urlSlug ? urlSlug : ""}
                       text={"View Project"}
                       type="secondary"
                     />

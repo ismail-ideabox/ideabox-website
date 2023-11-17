@@ -10,14 +10,16 @@ import Faqs from "@/app/components/faqs";
 import Footer from "@/app/components/footer";
 import { ScrollToTop } from "@/app/components/scrollToTop";
 import workDetail from "@/app/data/work";
-import { usePathname, useSearchParams, useRouter } from "next/navigation";
+import workData from "@/app/data/work";
 
-function OurWorkDetails({ filteredWork }) {
-  const searchParams = useSearchParams();
-  const pathname = usePathname();
 
-  const workTitle = pathname?.split("/")?.pop()?.replace("-", " ");
 
+
+function OurWorkDetails({ workTitle }) {
+  const filteredWork = workData.find(
+    (ele) =>
+      ele.projectName.toLocaleLowerCase() === workTitle?.toLocaleLowerCase()
+  );
   return (
     <>
       <div className={styles.header_bg}>
@@ -25,10 +27,10 @@ function OurWorkDetails({ filteredWork }) {
       </div>
       <div className={styles.banner_container}>
         <div className={styles.banner_image}>
-          <Image src={filteredWork.cardImage} alt="Case Study Card Image" />
+          <Image loading="eager" priority src={filteredWork?.cardImage} alt="Case Study Banner Image" />
         </div>
         <div className={styles.work_logo}>
-          <Image src={filteredWork.workLogo} alt="Client Case Study Logo" />
+          <Image src={filteredWork?.workLogo} alt="Client Case Study Logo" />
         </div>
       </div>
       <div className={styles.content_bg}>
@@ -42,17 +44,17 @@ function OurWorkDetails({ filteredWork }) {
             <div className={styles.button_byco}>
               <Button
                 target={"_blank"}
-                redirect={filteredWork.url}
-                text={filteredWork.buttontext}
+                redirect={filteredWork?.url ? filteredWork?.url : ""}
+                text={filteredWork?.buttontext}
                 type="primary"
               />
             </div>
             <div className={styles.byco_information}>
-              <pre>{filteredWork.workInfo}</pre>
+              <pre>{filteredWork?.workInfo}</pre>
               <h3>Implementation</h3>
-              <pre>{filteredWork.implementation}</pre>
+              <pre>{filteredWork?.implementation}</pre>
               <h3>Technologies</h3>
-              <pre>{filteredWork.technologies}</pre>
+              <pre>{filteredWork?.technologies}</pre>
             </div>
             <div className={styles.more_casestudies}>
               <div className={styles.case_studies_heading}>
@@ -62,9 +64,7 @@ function OurWorkDetails({ filteredWork }) {
                 <div className={styles.projectcard}>
                   <Projectcard
                     workData={workDetail.filter(
-                      (ele) =>
-                        ele.projectName.toLocaleLowerCase() !==
-                        workTitle.toLocaleLowerCase()
+                      (ele) => ele.id !== filteredWork?.id
                     )}
                     isHomePage={true}
                   />
