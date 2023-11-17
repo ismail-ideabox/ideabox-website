@@ -1,17 +1,12 @@
 /** @type {import('next').NextConfig} */
 module.exports = {
-  reactStrictMode: false,
-  experimental: {
-    appDir: true,
-    scrollRestoration: false,
-  },
+  reactStrictMode: true,
+
   images: {
     remotePatterns: [
       {
         protocol: "https",
         hostname: "https://ideabox.technology",
-        port: "",
-        pathname: "/**",
       },
     ],
   },

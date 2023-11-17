@@ -17,6 +17,10 @@ import { Autoplay, Pagination } from "swiper";
 import Input from "./input";
 import TextArea from "./textarea";
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
+import up from "../../../../public/getInTouch/up.webp";
+import left from "../../../../public/getInTouch/left.webp";
+import right from "../../../../public/getInTouch/right.webp";
+import box from "../../../../public/getInTouch/box.webp";
 
 const initValues = {
   fullName: "",
@@ -298,7 +302,7 @@ function GetInTouch({ headerVisible, onMenuToggle }) {
                   <Image
                     priority
                     loading="eager"
-                    src={images.up}
+                    src={up}
                     onClick={() => toSlide(1)}
                     alt="upper side of the cube"
                   />
@@ -307,14 +311,14 @@ function GetInTouch({ headerVisible, onMenuToggle }) {
                   <Image
                     priority
                     loading="eager"
-                    src={images.left}
+                    src={left}
                     onClick={() => toSlide(2)}
                     alt="left side of the cube"
                   />
                   <Image
                     priority
                     loading="eager"
-                    src={images.right}
+                    src={right}
                     onClick={() => toSlide(0)}
                     alt="right side of the cube"
                   />
@@ -323,7 +327,7 @@ function GetInTouch({ headerVisible, onMenuToggle }) {
                   <Image
                     priority
                     loading="eager"
-                    src={images.box}
+                    src={box}
                     alt="center box of the cube"
                   />
                 </div>
