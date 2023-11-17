@@ -11,10 +11,14 @@ import Footer from "@/app/components/footer";
 import { ScrollToTop } from "@/app/components/scrollToTop";
 import workDetail from "@/app/data/work";
 import workData from "@/app/data/work";
+
+
+ 
+
 function OurWorkDetails({ workTitle }) {
   const filteredWork = workData.find(
     (ele) =>
-      ele.projectName.toLocaleLowerCase() === workTitle.toLocaleLowerCase()
+      ele.projectName.toLocaleLowerCase() === workTitle?.toLocaleLowerCase()
   );
   return (
     <>

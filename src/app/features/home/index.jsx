@@ -122,6 +122,44 @@ function Home() {
     }
   }, [testimonialToggle]);
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Ideabox",
+    "image": "https://ideabox.technology/footer/ideabox.png",
+    "@id": "",
+    "url": "https://www.ideabox.technology/",
+    "telephone": "+92 21 37234945",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "2nd floor, Plot 1C Khayaban-e-Saadi, Phase 7 Defence Housing Authority, Karachi, Karachi City, Sindh 75500",
+      "addressLocality": "Sindh",
+      "postalCode": "75500",
+      "addressCountry": "PK"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 24.831027967090243,
+      "longitude": 67.07490002377298
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "opens": "10:00",
+      "closes": "20:00"
+    },
+    "sameAs": [
+      "https://pk.linkedin.com/company/ideaboxpakistan",
+      "https://twitter.com/IdeaboxPakistan"
+    ]
+            }
+
   return (
     <>
       <head>
@@ -147,46 +185,10 @@ function Home() {
         <meta name="twitter:card" content={metadata.twitter.cardType} />
         <meta name="twitter:site" content={metadata.twitter.site} />
         <meta name="twitter:creator" content={metadata.twitter.handle} />
-        <script type="application/ld+json">
-          {`
-              {
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "Ideabox",
-  "image": "https://ideabox.technology/footer/ideabox.png",
-  "@id": "",
-  "url": "https://www.ideabox.technology/",
-  "telephone": "+92 21 37234945",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "2nd floor, Plot 1C Khayaban-e-Saadi, Phase 7 Defence Housing Authority, Karachi, Karachi City, Sindh 75500",
-    "addressLocality": "Sindh",
-    "postalCode": "75500",
-    "addressCountry": "PK"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 24.831027967090243,
-    "longitude": 67.07490002377298
-  },
-  "openingHoursSpecification": {
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": [
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday"
-    ],
-    "opens": "10:00",
-    "closes": "20:00"
-  },
-  "sameAs": [
-    "https://pk.linkedin.com/company/ideaboxpakistan",
-    "https://twitter.com/IdeaboxPakistan"
-  ]
-          }`}
-        </script>
+        <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       </head>
       <div
         className={classNames(styles.home_scroll_container, "scroll_container")}
