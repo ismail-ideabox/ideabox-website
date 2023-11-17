@@ -20,18 +20,18 @@ function OurWorkDetails({ workTitle }) {
     <>
       <head>
         <title>{filteredWork?.projectName + " | Ideabox"}</title>
-        <meta name="description" content={filteredWork.metaDescription} />
-        <link rel="canonical" href={filteredWork.canonicalTag} />
+        <meta name="description" content={filteredWork?.metaDescription} />
+        <link rel="canonical" href={filteredWork?.canonicalTag} />
       </head>
       <div className={styles.header_bg}>
         <Header innerPage={true} />
       </div>
       <div className={styles.banner_container}>
         <div className={styles.banner_image}>
-          <Image src={filteredWork.cardImage} alt="Case Study Card Image" />
+          <Image src={filteredWork?.cardImage} alt="Case Study Card Image" />
         </div>
         <div className={styles.work_logo}>
-          <Image src={filteredWork.workLogo} alt="Client Case Study Logo" />
+          <Image src={filteredWork?.workLogo} alt="Client Case Study Logo" />
         </div>
       </div>
       <div className={styles.content_bg}>
@@ -45,17 +45,17 @@ function OurWorkDetails({ workTitle }) {
             <div className={styles.button_byco}>
               <Button
                 target={"_blank"}
-                redirect={filteredWork.url}
-                text={filteredWork.buttontext}
+                redirect={filteredWork?.url ? filteredWork?.url :""}
+                text={filteredWork?.buttontext}
                 type="primary"
               />
             </div>
             <div className={styles.byco_information}>
-              <pre>{filteredWork.workInfo}</pre>
+              <pre>{filteredWork?.workInfo}</pre>
               <h3>Implementation</h3>
-              <pre>{filteredWork.implementation}</pre>
+              <pre>{filteredWork?.implementation}</pre>
               <h3>Technologies</h3>
-              <pre>{filteredWork.technologies}</pre>
+              <pre>{filteredWork?.technologies}</pre>
             </div>
             <div className={styles.more_casestudies}>
               <div className={styles.case_studies_heading}>
