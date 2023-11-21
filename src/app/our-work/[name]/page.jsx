@@ -78,7 +78,7 @@ function WorkDetail({ params }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <OurWorkDetails workTitle={title} />;
+      <OurWorkDetails workTitle={title} />
     </>
   )
 }
