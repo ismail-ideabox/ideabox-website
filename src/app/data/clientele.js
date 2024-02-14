@@ -11,10 +11,6 @@ const clienteleLogo = [
     url: "https://www.usaid.gov/pakistan",
   },
   {
-    logo: images.electro,
-    url: "https://www.electropolymers.com.pk/",
-  },
-  {
     logo: images.byco,
     url: "http://www.byco.com.pk/",
   },
@@ -83,7 +79,6 @@ const clienteleLogo = [
     logo: images.farmer,
     url: "http://www.farmersfridge.com/",
   },
-
   {
     logo: images.gloria,
     url: "http://gloriajeanscoffees.com.pk/",

@@ -44,7 +44,6 @@ import sanofi from "./sanofi.png";
 import gsk from "./gsk.png";
 import bayer from "./bayer.png";
 import imrooz from "./imrooz.png";
-import electro from "./electro.png";
 
 export const images = {
   shell,
@@ -93,5 +92,4 @@ export const images = {
   silkbank,
   hbl,
   imrooz,
-  electro,
 };
