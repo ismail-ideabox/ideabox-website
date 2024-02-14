@@ -91,7 +91,7 @@ const clienteleLogoTwo = [
     url: "https://www.imrooz.com/",
   },
   {
-    logo: images.electroPolymer,
+    logo: images.electro,
     url: "https://www.electropolymers.com.pk/",
   },
 ];
