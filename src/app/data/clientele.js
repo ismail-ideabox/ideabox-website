@@ -10,7 +10,10 @@ const clienteleLogo = [
     logo: images.usaid,
     url: "https://www.usaid.gov/pakistan",
   },
-
+  {
+    logo: images.electro,
+    url: "https://www.electropolymers.com.pk/",
+  },
   {
     logo: images.byco,
     url: "http://www.byco.com.pk/",

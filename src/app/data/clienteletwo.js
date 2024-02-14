@@ -90,10 +90,6 @@ const clienteleLogoTwo = [
     logo: images.imrooz,
     url: "https://www.imrooz.com/",
   },
-  {
-    logo: images.electro,
-    url: "https://www.electropolymers.com.pk/",
-  },
 ];
 
 export default clienteleLogoTwo;
