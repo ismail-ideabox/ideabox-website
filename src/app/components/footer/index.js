@@ -66,6 +66,13 @@ function Footer() {
                     Contact
                   </Link>
                 </li>
+                <li>
+                  <p style={{ color: "#8a8a8a", fontSize: "14px" }}><strong style={{ color: "#a02021", fontFamily: "Arvo", fontWeight: "400" }}>License No:</strong> 4309264</p>
+                  <p style={{
+                    color: "#8a8a8a",
+                    fontSize: "14px"
+                  }}><strong style={{ color: "#a02021", fontFamily: "Arvo", fontWeight: "400" }}>Tax No:</strong> 104172555500003</p>
+                </li>
               </ul>
             </div>
             <div className={styles.footer_address}>
@@ -159,7 +166,7 @@ function Footer() {
           Ideabox
         </p>
       </div>
-    </section>
+    </section >
   );
 }
 
