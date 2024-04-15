@@ -108,8 +108,7 @@ function Footer() {
                   </div>
                   <div className={styles.country_address}>
                     <p>
-                      2nd floor, Plot 1C Khayaban-e-Saadi, Phase 7 Defence
-                      Housing Authority, Karachi, Karachi City, Sindh 75500
+                      Office No: 005, NASTP Sierra, Shahrah-e-Faisal Rd, Faisal Cantonment, Karachi, Karachi City, Sindh 75240
                     </p>
                     <Link href={"mailto:hello@ideabox.technology"}>
                       <span>hello@ideabox.technology</span>
@@ -118,7 +117,7 @@ function Footer() {
                   <div className={styles.view_direction}>
                     <Button
                       target={"_blank"}
-                      redirect={"https://goo.gl/maps/Yf9eiWA64m6bND796"}
+                      redirect={"https://maps.app.goo.gl/JYvGiuHZbkiJvWzt6"}
                       type="primary"
                       text={"view direction"}
                     />

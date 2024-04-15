@@ -215,8 +215,7 @@ function ContactUs() {
                   We are available <br /> 24 hours a day, <br /> 7 days a week.
                 </h2>
                 <p>
-                  2nd floor, Plot 1C Khayaban-e-Saadi, Phase 7 Defence Housing
-                  Authority, Karachi, Karachi City, Sindh 75500
+                  Office No: 005, NASTP Sierra, Shahrah-e-Faisal Rd, Faisal Cantonment, Karachi, Karachi City, Sindh 75240
                   <br />
                   <br />
                   <Link href={"mailto:hello@ideabox.technology"}>
