@@ -64,7 +64,7 @@ function Technical({ servicesRef }) {
               src={image.enterprise}
               alt="Enterprise Service gif"
             />
-            <p>Emterprise Services & Consultancy</p>
+            <p>Enterprise Services & Consultancy</p>
           </div>
           <div className={styles.gifs_inner}>
             <Image
