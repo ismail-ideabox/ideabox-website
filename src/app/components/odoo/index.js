@@ -20,7 +20,7 @@ function Odoo() {
         <div className={layout.block__inner}>
           <div className={styles.odoo_content}>
             <div className={styles.odoo}>
-              <h2 className="main-heading">Authorized Partners</h2>
+              <h2 className="main-heading">Official Partners</h2>
               <Image src={image.odoo} alt="Odoo" />
               <p>
                 Odoo is a suite of open source business apps that cover all your
