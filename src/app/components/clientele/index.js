@@ -74,12 +74,9 @@ function Clientele() {
         <div className={styles.clientele_images}>
           <Swiper
             className="clienteleslider"
-            slidesPerView={8}
             loop={true}
-            // freeMode={true}
             spaceBetween={20}
             speed={10000}
-            // Autoplay={true}
             autoplay={{
               reverseDirection: true,
               delay: 0,
@@ -97,23 +94,25 @@ function Clientele() {
               },
             }}
             grabCursor={true}
-            modules={[Pagination, Autoplay]}
+            modules={[Autoplay]}
           >
-            {clienteleLogoTwo.map((clienteleLogo, index) => {
-              return (
-                <SwiperSlide key={index}>
-                  <div className={styles.work_logo_img}>
-                    <Link
-                      rel="nofollow"
-                      target="_blank"
-                      href={clienteleLogo.url}
-                    >
-                      <Image alt="Clientele Logo" src={clienteleLogo.logo} />
-                    </Link>
-                  </div>
-                </SwiperSlide>
-              );
-            })}
+            {clienteleLogoTwo
+              .concat(clienteleLogoTwo)
+              .map((clienteleLogo, index) => {
+                return (
+                  <SwiperSlide key={index}>
+                    <div className={styles.work_logo_img}>
+                      <Link
+                        rel="nofollow"
+                        target="_blank"
+                        href={clienteleLogo.url}
+                      >
+                        <Image alt="Clientele Logo" src={clienteleLogo.logo} />
+                      </Link>
+                    </div>
+                  </SwiperSlide>
+                );
+              })}
           </Swiper>
         </div>
       </div>

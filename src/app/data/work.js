@@ -219,7 +219,7 @@ SEO Services`,
     canonicalTag: "https://ideabox.technology/our-work/zod",
     cardImage: images.zodbanner,
     workLogo: images.zodlogo,
-    url: "https://shop.zod.media/",
+    url: "https://zod.media/",
     buttontext: "ZOD",
     workInfo: `ZOD is a B2B technology platform that has gained significant popularity and recognition in recent years. Designed specifically for independent retailers and makers, ZOD aims to revolutionise the South Asian wholesale purchasing process by providing a streamlined and efficient marketplace.
     

@@ -44,6 +44,9 @@ import sanofi from "./sanofi.png";
 import gsk from "./gsk.png";
 import bayer from "./bayer.png";
 import imrooz from "./imrooz.png";
+import luxafar from "./luxafarLogo.png";
+import plush from "./plush-carwash-logo.png";
+import fauji from "./faujifoods.png";
 
 export const images = {
   shell,
@@ -56,6 +59,7 @@ export const images = {
   tb,
   haier,
   zod,
+  fauji,
   dalda,
   matco,
   peg,
@@ -92,4 +96,6 @@ export const images = {
   silkbank,
   hbl,
   imrooz,
+  luxafar,
+  plush,
 };

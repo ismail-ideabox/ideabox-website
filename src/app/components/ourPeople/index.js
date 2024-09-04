@@ -90,7 +90,7 @@ function OurPeople() {
                     <Link
                       rel="nofollow"
                       target="_blank"
-                      href={"https://shop.zod.media/"}
+                      href={"https://zod.media/"}
                     >
                       <Image
                         className={styles.work_image_img}
