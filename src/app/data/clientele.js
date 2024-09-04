@@ -51,11 +51,6 @@ const clienteleLogo = [
   },
 
   {
-    logo: images.cg,
-    url: "https://cowandgateclub.com.pk/",
-  },
-
-  {
     logo: images.tb,
     url: "https://takafulbazaar.pk/",
   },

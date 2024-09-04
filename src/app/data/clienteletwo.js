@@ -48,6 +48,11 @@ const clienteleLogoTwo = [
     logo: images.plush,
     url: "https://www.plushcarwash.co.za/",
   },
+
+  {
+    logo: images.cg,
+    url: "https://cowandgateclub.com.pk/",
+  },
 ];
 
 export default clienteleLogoTwo;
