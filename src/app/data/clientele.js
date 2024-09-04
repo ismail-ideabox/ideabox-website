@@ -122,7 +122,7 @@ const clienteleLogo = [
 
   {
     logo: images.zak,
-    url: "",
+    url: "https://zak.city/",
   },
 
   {
