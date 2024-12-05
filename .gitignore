@@ -25,22 +25,8 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-<<<<<<< Updated upstream
-# Applications
-*.app
-*.exe
-*.war
-
-# Large media files
-*.tiff
-*.avi
-*.flv
-*.mov
-*.wmv
-=======
 # local env files
 .env*.local
->>>>>>> Stashed changes
 
 # vercel
 .vercel

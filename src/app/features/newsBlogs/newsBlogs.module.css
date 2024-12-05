@@ -53,9 +53,9 @@
   transition: 0.2s ease-in-out;
 }
 .blogs_card_web {
-  width: 31.5%;
+  width: 30.5%;
   height: fit-content;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
   border-radius: 12px;
   background: #fff;
   box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px,
