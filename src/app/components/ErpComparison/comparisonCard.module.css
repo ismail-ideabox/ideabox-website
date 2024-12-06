@@ -12,6 +12,7 @@
     padding: 20px;
     width: 24%;
     text-align: center;
+    min-width: 250px
 }
 
 .comparison_item img {
@@ -138,4 +139,8 @@
 
 .erpLogo {
     height: 100px;
+}
+
+@media screen and (max-width: 670px){
+    
 }

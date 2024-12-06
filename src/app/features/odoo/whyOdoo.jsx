@@ -4,7 +4,7 @@ import styles from "./odoo.module.css";
 import { classNames } from "@/app/utils";
 import Image from "next/image";
 import { image } from "../../../../public/odoo";
-import ComparisonCard from "@/app/components/comparisonCard";
+import ErpComparison from "../../components/ErpComparison";
 
 export default function WhyOdoo() {
   return (
@@ -23,7 +23,7 @@ export default function WhyOdoo() {
             <br />
             Other Leading ERP Solutions
           </h2>
-          <ComparisonCard/>
+          <ErpComparison />
           {/* <div className={styles.erp_icons_container}>
             <div className={styles.erp_icons}>
               <div

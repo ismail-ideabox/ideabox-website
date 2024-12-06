@@ -9,13 +9,18 @@ import Button from "@/app/components/button/button";
 export default function OdooBanner() {
   return (
     <div className={styles.banner_container}>
-      <Image src={image.bannerImage} alt="" className={styles.bannerImage} />
-      <div className={styles.imageShadow}></div>
+      <div className={styles.bannerImage}>
+        <Image src={image.bannerImage} alt="" />
+        <div className={styles.imageShadow}></div>
+      </div>
+
       <div className={styles.banner_text_wrapper}>
         <div className={classNames(layout.grid, layout.grid_col80)}>
           <div className={classNames(layout.block__inner)}>
             <div className={styles.banner_text}>
-              <h1>Revolutionize Your Business With <b>Odoo</b> ERP Solutions</h1>
+              <h1>
+                Revolutionize Your Business With <b>Odoo</b> ERP Solutions
+              </h1>
               <p>
                 Seamlessly Integrated Apps To Simplify Your Business Processes!
               </p>
