@@ -19,7 +19,7 @@ export default function Pricing() {
         <div className={styles.section_container}>
           <div className={styles.pricing_container}>
             <div className={styles.pricing_text}>
-            <h4 className="heading">PRICING</h4>
+              <h4 className="heading">PRICING</h4>
               <p>
                 Odoo pricing plans are based on the number of users linked with
                 countries and Odoo apps selected for business needs. SaaS
@@ -32,13 +32,13 @@ export default function Pricing() {
                 redirect={""}
                 text={"GET STARTED NOW!"}
                 type="primary"
-                // onClick={() => setToggle(true)}
+              // onClick={() => setToggle(true)}
               />
             </div>
-
             <div className={styles.pricingImageBlock}>
-              <Image src={image.usa} alt="usa flag" className={styles.flag}/>  
-              <Image src={image.pricing} alt="pricing" className={styles.pricingImage}/>
+              <Image src={image.usa} alt="usa flag" className={styles.flag} />
+              <Image src={image.pricing} alt="pricing" className={styles.pricingImage} />
+              <Image src={image.pricingMob} alt="pricing" className={styles.pricingImageMob} />
             </div>
           </div>
         </div>

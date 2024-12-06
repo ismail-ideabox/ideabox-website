@@ -37,6 +37,8 @@ export default function Partner() {
               <Image src={image.partner1} alt="partner" />
               <Image src={image.partner2} alt="partner" />
               <Image src={image.partner3} alt="partner" />
+              <Image src={image.chooseOdoo} alt="partner" />
+
             </div>
             <p>
               The projects we have completed to date cover areas as wholesale
