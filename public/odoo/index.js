@@ -39,6 +39,7 @@ import mapImage from "./mapImage.png"
 import implementationBanner from "./implementationBanner.png"
 import ideaboxLineLogo from "./ideaboxLineLogo.png"
 import implementationBannerMob from "./implementationBannerMob.png"
+import odooIdeaboxLogo from "./odoo-ideabox-logo.png"
 
 
 
@@ -83,5 +84,6 @@ export const image = {
     mapImage,
     implementationBanner,
     ideaboxLineLogo,
-    implementationBannerMob
+    implementationBannerMob,
+    odooIdeaboxLogo
 }
