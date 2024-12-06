@@ -9,7 +9,7 @@ import { faCircleChevronDown } from "@fortawesome/free-solid-svg-icons";
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
 import Button from "../button/button";
-import { display, justifyContent } from "styled-system";
+// import { display, justifyContent } from "styled-system";
 
 function Odoo() {
   const [toggleList, setToggleList] = useState(false);
