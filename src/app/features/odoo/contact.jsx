@@ -8,8 +8,7 @@ import styles from "./odoo.module.css";
 import { classNames } from "@/app/utils";
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 
-export default function Contact() {
-  const initValues = {
+const initValues = {
     fullName: "",
     companyName: "",
     emailAddress: "",
@@ -17,6 +16,8 @@ export default function Contact() {
     message: "",
   };
   const initState = { values: initValues };
+
+export default function Contact() {
   const [state, setState] = useState(initState);
   const [isSuccess, setIsSuccess] = useState(false);
   const [gReCaptchaToken, setGReCaptchaToken] = useState("");
@@ -47,41 +48,42 @@ export default function Contact() {
   }, [errors]);
 
   const postGetInTouch = async (gReCaptchaToken) => {
-    // setState((prev) => ({
-    //   ...prev,
-    //   isLoading: true,
-    // }));
-    // try {
-    //   const response = await fetch(
-    //     process.env.NEXT_PUBLIC_BASE_API_URL + "mailer",
-    //     {
-    //       method: "POST",
-    //       body: JSON.stringify({
-    //         name: state.values.fullName,
-    //         email: state.values.emailAddress,
-    //         companyName: state.values.companyName,
-    //         phone: state.values.phoneNo,
-    //         message: state.values.message,
-    //         gReCaptchaToken: gReCaptchaToken,
-    //       }),
-    //     }
-    //   );
-    //   const data = await response.json();
-    //   if (data) {
-    //     setState((prev) => ({
-    //       ...prev,
-    //       isLoading: false,
-    //     }));
-    //     setIsSuccess(true);
-    //     setToggle(true);
-    //     resetForm();
-    //   }
-    // } catch (error) {
-    //   setState((prev) => ({
-    //     ...prev,
-    //     isLoading: false,
-    //   }));
-    // }
+    setState((prev) => ({
+      ...prev,
+      isLoading: true,
+    }));
+    try {
+      const response = await fetch(
+        process.env.NEXT_PUBLIC_BASE_API_URL + "mailer",
+        {
+          method: "POST",
+          body: JSON.stringify({
+            name: state.values.fullName,
+            email: state.values.emailAddress,
+            companyName: state.values.companyName,
+            phone: state.values.phoneNo,
+            message: state.values.message,
+            gReCaptchaToken: gReCaptchaToken,
+          }),
+        }
+      );
+
+      const data = await response.json();
+      if (data) {
+        setState((prev) => ({
+          ...prev,
+          isLoading: false,
+        }));
+        setIsSuccess(true);
+        setToggle(true);
+        resetForm();
+      }
+    } catch (error) {
+      setState((prev) => ({
+        ...prev,
+        isLoading: false,
+      }));
+    }
   };
 
   const handleChange = (event) => {
@@ -168,6 +170,14 @@ export default function Contact() {
               value={values.fullName}
             />
             <Input
+              onChange={handleChange}
+              name="companyName"
+              id={"company-name"}
+              type="text"
+              placeholder="Company Name"
+              value={values.companyName}
+            />
+            <Input
               isError={errors.emailAddress}
               message={"Enter Valid Email"}
               onChange={handleChange}
@@ -179,17 +189,19 @@ export default function Contact() {
             />
             <Input
               onChange={handleChange}
-              name="subject"
-              id={"company-name"}
+              name="phoneNo"
+              id={"phone-no"}
               type="text"
-              placeholder="Subject"
-              value={values.companyName}
+              isError={errors.phoneNo}
+              message={"Phone Number Required"}
+              placeholder="Phone No."
+              value={values.phoneNo}
             />
             <TextArea
               onChange={handleChange}
               name="message"
               input_type="text"
-              placeholder="Message"
+              placeholder="Tell us about your project"
               id="message"
               value={values.message}
             />

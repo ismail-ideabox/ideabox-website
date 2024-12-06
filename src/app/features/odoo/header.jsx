@@ -22,33 +22,33 @@ export default function OdooHeader() {
         </Link>
         <nav className={classNames(styles.navbar, "")}>
           <ul className={styles.navLinks}>
-            <li>
+            {/* <li>
               <Link rel="nofollow" href="">
                 About Us
               </Link>
-            </li>
+            </li> */}
             <li>
-              <Link rel="nofollow" href="">
+              <Link href="/?services=true">
                 Services
               </Link>
             </li>
             <li>
-              <Link rel="nofollow" href="">
+              <Link href="/our-work">
                 Our Work
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link rel="nofollow" href="">
                 News/Blogs
               </Link>
-            </li>
+            </li> */}
             <li>
-              <Link rel="nofollow" href="">
-                Oddo
+              <Link href="/odoo">
+                Odoo
               </Link>
             </li>
             <li>
-              <Link rel="nofollow" href="">
+              <Link href="/contact-us">
                 Contact
               </Link>
             </li>
@@ -72,7 +72,7 @@ export default function OdooHeader() {
                 <FontAwesomeIcon icon={faXTwitter} />
               </Link>
             </li>
-            <li style={{ minWidth: "30px " }} >
+            <li style={{ minWidth: "30px " }} className={styles.navbarButtonIcon}>
               <ul
                 className={
                   toggleMenu
@@ -115,6 +115,14 @@ export default function OdooHeader() {
                 Services
               </Link>
             </li>
+            <li>
+                <Link
+                  href={"/odoo"}
+                  className={classNames(mainStyles.nav_link, "")}
+                >
+                  Odoo
+                </Link>
+              </li>
             <li>
               <Link
                 href="/our-work"

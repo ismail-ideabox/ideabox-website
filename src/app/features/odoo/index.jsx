@@ -20,6 +20,7 @@ import GlobalFootprint from "./globalFootprint";
 import ImplementationBanner from "./implementationBanner";
 import Blogs from "./blogs";
 import Contact from "./contact";
+import FaqsOdoo from "@/app/components/faqsOdoo";
 
 export default function OdooPage() {
   return (
@@ -35,7 +36,7 @@ export default function OdooPage() {
       <Services/>
       <Testimonials/>
       <ErpBusinessCard/>
-      <Faqs />
+      <FaqsOdoo />
       <InteractiveFeatures/>
       <TopCompanies/>
       <Regions/>

@@ -11,7 +11,7 @@ const testimonialsData = [
   {
     id: 1,
     title: "CUSTOMER REVIEWS",
-    isActive:true,
+    isActive: true,
     customerReviews: [
       {
         id: 1,
@@ -58,7 +58,7 @@ const testimonialsData = [
   {
     id: 2,
     title: "PARTNER STORIES",
-    isActive:false,
+    isActive: false,
     customerReviews: [
       {
         id: 1,
@@ -120,13 +120,14 @@ export default function Testimonials() {
               {testimonialCardData.map((item, index) => (
                 <div className={styles.testimonialsCard} key={index}>
                   <div className={styles.cardImage}>
-                    <Image src={image.ideaboxLineLogo} className={styles.ideaboxLogo}/>
+                    <Image
+                      src={image.ideaboxLineLogo}
+                      className={styles.ideaboxLogo}
+                    />
                     <Image src={item.image} alt="testimonials" />
                   </div>
                   <div className={styles.cardText}>
-                    <h4>
-                     {item.title}
-                    </h4>
+                    <h4>{item.title}</h4>
                     <p>{item.date}</p>
                   </div>
                 </div>

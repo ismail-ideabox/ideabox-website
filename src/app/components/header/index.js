@@ -142,6 +142,14 @@ function Header({ innerPage, headerVisible, onMenuToggle }) {
               </li>
               <li>
                 <Link
+                  href={"/odoo"}
+                  className={classNames(styles.nav_link, "")}
+                >
+                  Odoo
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/our-work"
                   className={classNames(styles.nav_link, "")}
                 >

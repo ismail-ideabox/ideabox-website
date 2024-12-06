@@ -109,6 +109,7 @@
   margin-bottom: 20px;
   font-family: var(--primary-font);
   transition: 0.2s ease-in-out;
+  height: 200px;
 }
 .card_content a h2:hover {
   color: #d92027;

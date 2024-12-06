@@ -1,11 +1,36 @@
+"use client";
 import React from "react";
 import layout from "../../styles/layout.module.css";
 import styles from "./odoo.module.css";
 import { classNames } from "@/app/utils";
 import Image from "next/image";
-import { image } from "../../../../public/odoo";
-import { images } from "../../../../public/ideabox";
+import { usingOdooImage } from "../../../../public/usingOdoo";
+import { Autoplay, Pagination } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
 
+const logosData = [
+  usingOdooImage.airbus,
+  usingOdooImage.astrazeneca,
+  usingOdooImage.carrefour,
+  usingOdooImage.danone,
+  usingOdooImage.decathlon,
+  usingOdooImage.delmonte,
+  usingOdooImage.foodpanda,
+  usingOdooImage.fujitsu,
+  usingOdooImage.huawei,
+  usingOdooImage.hyundai,
+  usingOdooImage.louisVuitton,
+  usingOdooImage.mazda,
+  usingOdooImage.mckinsey,
+  usingOdooImage.nestle,
+  usingOdooImage.renault,
+  usingOdooImage.shell,
+  usingOdooImage.suzuki,
+  usingOdooImage.toshiba,
+  usingOdooImage.toyota,
+  usingOdooImage.wwf,
+];
 
 export default function TopCompanies() {
   return (
@@ -25,34 +50,31 @@ export default function TopCompanies() {
             Using ODOO
           </h2>
           <div className={styles.company_logo_container}>
-            <div className={styles.company_images}>
-              <Image
-                className={styles.company_images_img}
-                alt="Node Js technology"
-                src={images.node}
-              />
-            </div>
-            <div className={styles.company_images}>
-              <Image
-                className={styles.company_images_img}
-                alt="Dot Net technology"
-                src={images.dotnet}
-              />
-            </div>
-            <div className={styles.company_images}>
-              <Image
-                className={styles.company_images_img}
-                alt="Php technology"
-                src={images.php}
-              />
-            </div>
-            <div className={styles.company_images}>
-              <Image
-                className={styles.company_images_img}
-                alt="Php technology"
-                src={images.php}
-              />
-            </div>
+            <Swiper
+              className="blogsSwiper"
+              slidesPerView={4}
+              spaceBetween={20}
+              autoplay={{
+                delay: 2000,
+                disableOnInteraction: false,
+              }}
+              pagination={{
+                clickable: true,
+              }}
+              modules={[Pagination, Autoplay]}
+            >
+              {logosData.map((item, index) => (
+                <SwiperSlide key={index}>
+                  <div className={styles.company_images}>
+                    <Image
+                      className={styles.company_images_img}
+                      alt="company logo"
+                      src={item}
+                    />
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
           </div>
         </div>
       </div>

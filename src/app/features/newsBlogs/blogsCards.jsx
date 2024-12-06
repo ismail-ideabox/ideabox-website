@@ -23,12 +23,14 @@ function BlogsCards({ blogsCard }) {
               <Link href={""}>
                 <h2>{blogCard.blogTitle}</h2>
               </Link>
-              <div className={styles.blog_description}>
-                <p>{blogCard.blogDescription.slice(0, 132)}...</p>
-              </div>
+              {blogCard.blogDescription && (
+                <div className={styles.blog_description}>
+                  <p>{blogCard.blogDescription.slice(0, 132)}...</p>
+                </div>
+              )}
               <div className={styles.author_details}>
                 <div className={styles.blogs_read_more}>
-                  <Link href={""}>
+                  <Link href={blogCard.link?blogCard.link:""} target="_blank">
                     <p className={styles.read_more}>Read More</p>
                   </Link>
                 </div>
