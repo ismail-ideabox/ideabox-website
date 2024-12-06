@@ -38,6 +38,7 @@ import india from "./india.png"
 import mapImage from "./mapImage.png"
 import implementationBanner from "./implementationBanner.png"
 import ideaboxLineLogo from "./ideaboxLineLogo.png"
+import implementationBannerMob from "./implementationBannerMob.png"
 
 
 
@@ -81,5 +82,6 @@ export const image = {
     india,
     mapImage,
     implementationBanner,
-    ideaboxLineLogo
+    ideaboxLineLogo,
+    implementationBannerMob
 }

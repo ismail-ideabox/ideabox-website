@@ -17,7 +17,8 @@ export default function ImplementationBanner() {
     >
       <div className={layout.block__inner}>
         <div className={styles.implementationBanner_container}>
-          <Image src={image.implementationBanner} alt="implementation banner" />
+          <Image src={image.implementationBanner} alt="implementation banner" className={styles.web}/>
+          <Image src={image.implementationBannerMob} alt="implementation banner" className={styles.mobile}/>
           <div className={styles.bannerText}>
             <h3>End-to-end ERP implementation for all industries.</h3>
             <Button

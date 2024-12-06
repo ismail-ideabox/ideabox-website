@@ -60,11 +60,12 @@
 
 .banner_container {
     background-color: #A02021;
-    
+
     /* padding-top: 80px; */
     position: relative;
 }
-.bannerImage{
+
+.bannerImage {
     height: calc(100svh - 98px);
     position: relative;
 }
@@ -403,9 +404,10 @@
 .testimonialsCard .cardText h4 {
     color: #EDEDED;
     padding: 15px 0;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
-    height: 100px;
+    min-height: 100px;
+    text-transform: uppercase;
 }
 
 .testimonialsCard .cardText p {
@@ -479,6 +481,7 @@
     font-size: 18px;
     font-weight: 600;
     padding-bottom: 10px;
+    text-transform: uppercase;
 }
 
 .company_logo_container {
@@ -551,24 +554,13 @@
 
 .globalFootprint_stats {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
     padding: 80px 0 0 0;
     width: 100%;
     text-align: center;
+    row-gap: 50px;
 }
-
-/* .globalFootprint_stats .globalFootprint_stats_content:nth-child(1) {
-    width: 15%;
-  }
-  .globalFootprint_stats .globalFootprint_stats_content:nth-child(2) {
-    width: 15%;
-  }
-  .globalFootprint_stats .globalFootprint_stats_content:nth-child(3),
-  .globalFootprint_stats .globalFootprint_stats_content:nth-child(4),
-  .globalFootprint_stats .globalFootprint_stats_content:nth-child(5) {
-    width: 12%;
-  } */
 
 .globalFootprint_stats_content span {
     color: #ff5f36;
@@ -611,12 +603,19 @@
     width: 100%;
     height: auto;
     margin: 150px 0;
+    border-radius: 15px;
+    overflow: hidden;
 }
 
-.implementationBanner_container img {
+.implementationBanner_container .mobile {
+    display: none;
+}
+
+.implementationBanner_container .web {
     width: 100%;
     object-fit: cover;
     height: auto;
+    min-height: 350px;
 }
 
 .implementationBanner_container .bannerText {
@@ -654,81 +653,276 @@
     .video_container .video {
         width: 50%;
     }
-    
+
     .video_container .video .ideaboxLineLogo {
         top: -88px;
         right: -60px;
         width: 120px;
     }
-    
+
     .video_container p {
         width: 50%;
         font-size: 16px;
     }
-    
+
     .linksParagraph {
         font-size: 16px;
+    }
+
+    .pricingImageBlock .flag {
+        position: absolute;
+        bottom: 20px;
+        right: -20px;
+        width: 25%;
+        height: auto;
+    }
+
+    .main_card img {
+        width: 130px;
+        height: auto;
+    }
+
+    .main_card h2 {
+        font-size: 23px;
+    }
+
+    .main_card p {
+        font-size: 15px;
+    }
+
+    .side_cards {
+        display: flex;
+    }
+
+    .side_card {
+        padding: 15px 30px;
+    }
+
+    .businessCard_container {
+        padding: 60px 40px;
+    }
+
+    .businessCard_container h3 {
+        font-size: 35px;
+    }
+
+    .businessCard_container p {
+        font-size: 18px;
+    }
+
+    .businessCard_container .logoImage {
+        text-align: center;
+    }
+
+    .businessCard_container img {
+        width: 300px;
+    }
+
+    .implementationBanner_container .bannerText h3 {
+        font-size: 40px;
     }
 }
 
 @media screen and (max-width: 1100px) {
-    
+    .navbar ul:first-child {
+        display: none;
+    }
+
     .video_container p {
         font-size: 14px;
     }
-    
+
     .linksParagraph {
         font-size: 14px;
     }
+
     .video_container .video .ideaboxLineLogo {
         top: -65px;
         right: -46px;
         width: 90px;
     }
-    /* .industries_container {
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        text-align: center;
-        margin-top: 100px;
-        margin-bottom: 60px;
-        gap: 60px;
-    } */
-    
+
     .industries_card img {
         width: auto;
         height: 90px;
     }
-    
+
     .industries_card p {
         font-size: 14px;
     }
-}
 
-@media screen and (max-width: 1000px) {
-    .navbar ul:first-child {
-        display: none;
+    .pricing_container {
+        gap: 4rem;
     }
+
+    .pricing_text p {
+        font-size: 16px;
+    }
+
+    .main_card {
+        padding: 50px 30px;
+    }
+
+    .main_card img {
+        width: 130px;
+        height: auto;
+    }
+
+    .main_card h2 {
+        font-size: 22px;
+    }
+
+    .main_card p {
+        font-size: 14px;
+    }
+
+    .interactive_container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .odooAppsCard {
+        display: flex;
+        gap: 30px;
+        align-items: center;
+    }
+
+    .implementationBanner_container .bannerText h3 {
+        padding-bottom: 30px;
+    }
+
+    .implementationBanner_container .bannerText {
+        position: absolute;
+        top: 0;
+        width: 60%;
+        padding: 50px 0 0 80px;
+    }
+    .testimonialsCard .cardText h4 {
+        font-size: 15px;
+    }
+    
 }
 
 @media screen and (max-width: 900px) {
-    .video_container{
+    .video_container {
         flex-direction: column;
 
     }
+
     .video_container .video {
         width: 100%;
     }
-    
+
     .video_container p {
         width: 100%;
     }
-   .industries_container {
+
+    .industries_container {
         grid-template-columns: repeat(4, 1fr);
         gap: 50px;
     }
-    
+
     .industries_card img {
         height: 90px;
+    }
+
+    .pricing_container {
+        gap: 2rem;
+    }
+
+    .pricing_text p {
+        font-size: 14px;
+    }
+
+    .services_container {
+        flex-direction: column;
+    }
+
+    .main_card img {
+        width: 120px;
+        height: auto;
+    }
+
+    .side_card {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        writing-mode: unset;
+        margin-top: -10px;
+        width: 100%;
+    }
+
+    .side_card {
+        padding: 20px 30px;
+    }
+
+    .businessCard_container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .businessCard_container div:first-child {
+        order: 2;
+        margin-top: 4rem;
+        text-align: center;
+    }
+
+    .businessCard_container .logoImage {
+        order: 1;
+    }
+
+    .businessCard_container img {
+        width: 300px;
+    }
+
+    .odooAppsCard {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .implementationBanner_container {
+        background-color: #9C5789;
+        position: relative;
+        width: 100%;
+        height: auto;
+        margin: 150px 0;
+        border-radius: 15px;
+        overflow: hidden;
+    }
+    .implementationBanner_container .web {
+        display: none;
+    }
+
+    .implementationBanner_container .mobile {
+        display: block;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .implementationBanner_container .bannerText {
+        position: relative;
+        padding: 50px 20px 50px 20px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .implementationBanner_container .bannerText h3 {
+        font-size: 40px;
+        font-weight: 500;
+        line-height: 1.1;
+        color: #EDEDED;
+        padding-bottom: 50px;
+        
+    }
+    .testimonialsWrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: 100px;
+        grid-column-gap: 4rem;
+        grid-row-gap: 6rem;
     }
 }
 
@@ -759,8 +953,39 @@
         line-height: 1.1;
         padding-bottom: 50px;
     }
+
     .industries_container {
         grid-template-columns: repeat(3, 1fr);
         gap: 50px;
     }
+
+    .pricing_container {
+        flex-direction: column;
+    }
+
+    .pricing_text {
+        width: 100%;
+        order: 2;
+    }
+
+    .pricingImageBlock {
+        width: 100%;
+        order: 1;
+    }
+
+    .testimonialsWrapper {
+        grid-template-columns: repeat(1, 1fr);
+        grid-row-gap: 3rem;
+    }
+    .testimonialsCard .cardText h4 {
+        color: #EDEDED;
+        padding: 15px 0;
+        font-size: 18px;
+        font-weight: bold;
+        min-height: 100%;
+        text-transform: uppercase;
+    }
+}
+@media screen and (max-width: 500px){
+
 }

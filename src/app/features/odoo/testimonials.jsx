@@ -82,39 +82,6 @@ const testimonialsData = [
       },
     ],
   },
-  {
-    id: 3,
-    title: "EMPLOYEE TESTIMONIALS",
-    isActive:false,
-    customerReviews: [
-      {
-        id: 1,
-        image: image.testimonial1,
-        title: "A Journey of Comfort and Innovation: Yoosha Ergonomics",
-        date: "Nov 28, 2024",
-      },
-      {
-        id: 2,
-        image: image.testimonial1,
-        title:
-          "How Odoo Helped Al Hadaya Mall Deliver a Seamless Shopping Experience",
-        date: "Nov 28, 2024",
-      },
-      {
-        id: 3,
-        image: image.testimonial1,
-        title:
-          "Top Seedz and Odoo: The Power Duo of Tasty Crackers and the Right ERP",
-        date: "Nov 28, 2024",
-      },
-      {
-        id: 4,
-        image: image.testimonial1,
-        title: "A Journey of Comfort and Innovation: Yoosha Ergonomics",
-        date: "Nov 28, 2024",
-      },
-    ],
-  },
 ];
 
 export default function Testimonials() {

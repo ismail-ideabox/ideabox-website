@@ -141,6 +141,25 @@
     height: 100px;
 }
 
-@media screen and (max-width: 670px){
-    
+.comparison_mobile {
+    display: none;
+}
+
+@media screen and (max-width: 670px) {
+    .comparison_container {
+        display: none;
+    }
+
+    .comparison_mobile {
+        display: block;
+        margin-top: 50px;
+    }
+
+    .comparison_item {
+        width: 100%;
+        text-align: center;
+    }
+    .comparison_item ul{
+        text-align: center;
+    }
 }
