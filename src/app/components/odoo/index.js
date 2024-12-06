@@ -8,6 +8,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleChevronDown } from "@fortawesome/free-solid-svg-icons";
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
+import Button from "../button/button";
+import { display, justifyContent } from "styled-system";
 
 function Odoo() {
   const [toggleList, setToggleList] = useState(false);
@@ -64,7 +66,7 @@ function Odoo() {
               alt={"Ideabox Odoo Partnership "}
             />
           </div>
-          <div className={styles.odoo_working_domains}>
+          {/* <div className={styles.odoo_working_domains}>
             <div>
               <span>Manufacturing companies</span>
             </div>
@@ -130,6 +132,21 @@ function Odoo() {
                 Consultants & Odoo Partners
               </p>
             </div>
+          </div> */}
+
+          <div className={styles.ready_to_plan_container}>
+            <h2>
+              Transform Your Business&nbsp;
+              <span
+                style={{
+                  fontFamily: "Arvo",
+                  color: "#cf4a28",
+                }}
+              >
+                With Odoo Software
+              </span>
+            </h2>
+            <Button redirect={"/odoo"} text={"Explore Now"} />
           </div>
           <div className={styles.odoo_counter}>
             <div>
