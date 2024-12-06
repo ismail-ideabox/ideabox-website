@@ -146,7 +146,7 @@ function Odoo() {
                 With Odoo Software
               </span>
             </h2>
-            <Button text={"Explore Now"} />
+            <Button redirect={"/odoo"} text={"Explore Now"} />
           </div>
           <div className={styles.odoo_counter}>
             <div>
