@@ -24,6 +24,7 @@ import { useSearchParams, usePathname, useRouter } from "next/navigation";
 function Home() {
   const parentRef = useRef(null);
   const childRef = useRef(null);
+  const childRefs = useRef(null);
   const servicesRef = useRef(null);
   const animateRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
