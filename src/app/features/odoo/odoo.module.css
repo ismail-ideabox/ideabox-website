@@ -494,13 +494,18 @@
 }
 
 .company_logo_container {
-    margin-top: 100px;
+    margin-top: 60px;
+}
+
+.company_logo_container .swiper .swiper-wrapper .swiper-slide-active .company_images {
+    margin: 0 auto;
 }
 
 .company_images {
-    width: 150px;
-    height: auto;
+    width: 120px;
+    height: 120px;
     transition: all 0.2s ease-in-out;
+    margin: 0 auto;
 }
 
 .company_images:hover .company_images_img {
@@ -511,9 +516,10 @@
 
 .company_images img {
     width: 100%;
-    height: auto;
+    height: 100%;
     filter: brightness(0) invert(1);
     opacity: 0.6;
+    object-fit: contain;
 }
 
 .regions_container {
@@ -973,6 +979,7 @@
     .regions_container .Images {
         min-width: 180px;
     }
+
     .globalFootprint_stats_content span {
         font-size: 45px;
     }
@@ -1118,39 +1125,48 @@
     .globalFootprint_header p {
         font-size: 14px;
     }
-    
+
     .globalFootprint_header h2 {
         font-size: 20px;
     }
-    
+
     .globalFootprint_stats_content span {
         font-size: 35px;
     }
-    
+
     .globalFootprint_stats_content p {
         font-size: 14px;
         padding-top: 10px;
     }
-    
+
     .globalFootprint_stats_content p span {
         font-size: 12px;
+    }
+
+    .company_images {
+        width: 90px;
+        height: 90px;
     }
 }
 
 @media screen and (max-width: 500px) {
-    .menu_nav_odoo{
+    .menu_nav_odoo {
         margin-top: 50px !important;
     }
-    .menu_nav_odoo .nav_link_odoo{
+
+    .menu_nav_odoo .nav_link_odoo {
         font-size: 28px;
     }
-    .contact_detail_odoo_menu a{
+
+    .contact_detail_odoo_menu a {
         font-size: 18px;
         margin-bottom: 5px;
     }
-    .contact_detail_odoo_menu h3{
+
+    .contact_detail_odoo_menu h3 {
         font-size: 18px !important;
     }
+
     .header {
         padding: 20px 0;
     }
@@ -1268,6 +1284,7 @@
     .regions_container .Images h3 {
         font-size: 13px;
     }
+
     .implementationBanner_container .bannerText h3 {
         font-size: 30px;
     }

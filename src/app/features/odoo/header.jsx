@@ -72,10 +72,10 @@ export default function OdooHeader() {
                 className={
                   toggleMenu
                     ? classNames(
-                        mainStyles.menu_btn,
-                        mainStyles.menu_btn_active,
-                        mainStyles.activeCloseBtn
-                      )
+                      mainStyles.menu_btn,
+                      mainStyles.menu_btn_active,
+                      mainStyles.activeCloseBtn
+                    )
                     : classNames(mainStyles.menu_btn)
                 }
                 onClick={handleToggle}

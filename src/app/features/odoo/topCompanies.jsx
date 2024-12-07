@@ -13,7 +13,7 @@ const logosData = [
   usingOdooImage.airbus,
   usingOdooImage.astrazeneca,
   usingOdooImage.carrefour,
-//   usingOdooImage.danone,
+  //   usingOdooImage.danone,
   usingOdooImage.decathlon,
   usingOdooImage.delmonte,
   usingOdooImage.foodpanda,
@@ -25,7 +25,7 @@ const logosData = [
   usingOdooImage.mckinsey,
   usingOdooImage.nestle,
   usingOdooImage.renault,
-//   usingOdooImage.shell,
+  //   usingOdooImage.shell,
   usingOdooImage.suzuki,
   usingOdooImage.toshiba,
   usingOdooImage.toyota,
@@ -51,16 +51,17 @@ export default function TopCompanies() {
           </h2>
           <div className={styles.company_logo_container}>
             <Swiper
-              className="blogsSwiper"
+              style={{ padding: "50px 0" }}
+              className="topCompaniesSwiper"
               slidesPerView={2}
               spaceBetween={20}
               autoplay={{
-                delay: 2000,
+                delay: 6000,
                 disableOnInteraction: false,
               }}
               modules={[Autoplay]}
               loop={true}
-              breakpoints= {{
+              breakpoints={{
                 900: {
                   slidesPerView: 5,
                 },
@@ -74,11 +75,13 @@ export default function TopCompanies() {
             >
               {logosData.map((item, index) => (
                 <SwiperSlide key={index}>
-                  <div className={styles.company_images}>
+                  <div style={{ margin: "0 auto" }} className={styles.company_images}>
                     <Image
                       className={styles.company_images_img}
                       alt="company logo"
                       src={item}
+                      width={120}
+                      height={80}
                     />
                   </div>
                 </SwiperSlide>
