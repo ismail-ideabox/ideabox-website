@@ -39,7 +39,7 @@ export default function Pricing() {
               />
             </div>
             <div className={styles.pricingImageBlock}>
-              <Image src={image.usa} alt="usa flag" className={styles.flag} />
+              <Image src={image.pakistan} alt="usa flag" className={styles.flag} />
               <Image
                 src={image.pricing}
                 alt="pricing"

@@ -28,14 +28,10 @@ export default function OdooHeader() {
               </Link>
             </li> */}
             <li>
-              <Link href="/?services=true">
-                Services
-              </Link>
+              <Link href="/?services=true">Services</Link>
             </li>
             <li>
-              <Link href="/our-work">
-                Our Work
-              </Link>
+              <Link href="/our-work">Our Work</Link>
             </li>
             {/* <li>
               <Link rel="nofollow" href="">
@@ -43,14 +39,10 @@ export default function OdooHeader() {
               </Link>
             </li> */}
             <li>
-              <Link href="/odoo">
-                Odoo
-              </Link>
+              <Link href="/odoo">Odoo</Link>
             </li>
             <li>
-              <Link href="/contact-us">
-                Contact
-              </Link>
+              <Link href="/contact-us">Contact</Link>
             </li>
           </ul>
           <ul className={styles.social_icons}>
@@ -72,7 +64,10 @@ export default function OdooHeader() {
                 <FontAwesomeIcon icon={faXTwitter} />
               </Link>
             </li>
-            <li style={{ minWidth: "30px " }} className={styles.navbarButtonIcon}>
+            <li
+              style={{ minWidth: "30px " }}
+              className={styles.navbarButtonIcon}
+            >
               <ul
                 className={
                   toggleMenu
@@ -101,32 +96,41 @@ export default function OdooHeader() {
         }
       >
         <div>
-          <ul className={mainStyles.menu_nav}>
+          <ul className={classNames(mainStyles.menu_nav, styles.menu_nav_odoo)}>
             <li>
-              {/* <Link href="" className={classNames(mainStyles.nav_link, "")}>
+              {/* <Link href="" className={classNames(mainStyles.nav_link, styles.nav_link_odoo)}>
                 About Us
               </Link> */}
             </li>
             <li>
               <Link
                 href={"/?services=true"}
-                className={classNames(mainStyles.nav_link, "")}
+                className={classNames(
+                  mainStyles.nav_link,
+                  styles.nav_link_odoo
+                )}
               >
                 Services
               </Link>
             </li>
             <li>
-                <Link
-                  href={"/odoo"}
-                  className={classNames(mainStyles.nav_link, "")}
-                >
-                  Odoo
-                </Link>
-              </li>
+              <Link
+                href={"/odoo"}
+                className={classNames(
+                  mainStyles.nav_link,
+                  styles.nav_link_odoo
+                )}
+              >
+                Odoo
+              </Link>
+            </li>
             <li>
               <Link
                 href="/our-work"
-                className={classNames(mainStyles.nav_link, "")}
+                className={classNames(
+                  mainStyles.nav_link,
+                  styles.nav_link_odoo
+                )}
               >
                 Our Work
               </Link>
@@ -134,7 +138,7 @@ export default function OdooHeader() {
             {/* <li>
               <Link
                 href="/news-and-blogs"
-                className={classNames(mainStyles.nav_link, "")}
+                className={classNames(mainStyles.nav_link, styles.nav_link_odoo)}
               >
                 News and Blogs
               </Link>
@@ -142,7 +146,10 @@ export default function OdooHeader() {
             <li>
               <Link
                 href="/contact-us"
-                className={classNames(mainStyles.nav_link, "")}
+                className={classNames(
+                  mainStyles.nav_link,
+                  styles.nav_link_odoo
+                )}
               >
                 Contact
               </Link>
@@ -166,7 +173,12 @@ export default function OdooHeader() {
               <FontAwesomeIcon icon={faLinkedinIn} />
             </Link>
           </div>
-          <div className={mainStyles.contact_details}>
+          <div
+            className={classNames(
+              mainStyles.contact_details,
+              styles.contact_detail_odoo_menu
+            )}
+          >
             <h3>
               <Link href={"mailto:hello@ideabox.technology"}>
                 hello@ideabox.technology

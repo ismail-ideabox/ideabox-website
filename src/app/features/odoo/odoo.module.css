@@ -1138,6 +1138,19 @@
 }
 
 @media screen and (max-width: 500px) {
+    .menu_nav_odoo{
+        margin-top: 50px !important;
+    }
+    .menu_nav_odoo .nav_link_odoo{
+        font-size: 28px;
+    }
+    .contact_detail_odoo_menu a{
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+    .contact_detail_odoo_menu h3{
+        font-size: 18px !important;
+    }
     .header {
         padding: 20px 0;
     }
