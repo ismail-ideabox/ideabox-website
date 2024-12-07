@@ -33,7 +33,10 @@ export default function Overview() {
               operating systems include the Apple iOS and Google Android.
             </p>
             <div className={styles.video}>
-                <Image src={image.ideaboxLineLogo} className={styles.ideaboxLineLogo}/>
+              <Image
+                src={image.ideaboxLineLogo}
+                className={styles.ideaboxLineLogo}
+              />
               <video autoPlay muted>
                 <source src="./odoo/overviewVideo.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
@@ -41,12 +44,18 @@ export default function Overview() {
             </div>
           </div>
           <p className={styles.linksParagraph}>
-            Based on our Odoo review, Odoo is a reasonably good{" "}
-            <Link href={"#"}>ERP Solution For Small Businesses</Link> and some
-            mid-sized companies that you should consider in your software
-            evaluation. Odoo ERP can easily compete with pricey high-end systems
-            like <Link href={"#"}>SAP</Link> or
-            <Link href={"#"}> Oracle ERP.</Link>{" "}
+            Based on our Odoo review, Odoo is a reasonably good ERP Solution For
+            Small Businesses and some mid-sized companies that you should
+            consider in your software evaluation. Odoo ERP can easily compete
+            with pricey high-end systems like{" "}
+            <Link href={"https://www.sap.com"} target="_blank">
+              SAP
+            </Link>{" "}
+            or
+            <Link href={"https://www.oracle.com/erp/"} target="_blank">
+              {" "}
+              Oracle ERP.
+            </Link>{" "}
           </p>
         </div>
       </div>

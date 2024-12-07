@@ -1,12 +1,16 @@
+"use client"
 import Button from "@/app/components/button/button";
-import React from "react";
+import React, { useState } from "react";
 import { image } from "../../../../public/odoo";
 import layout from "../../styles/layout.module.css";
 import styles from "./odoo.module.css";
 import { classNames } from "@/app/utils";
 import Image from "next/image";
+import FormModal from "@/app/components/formModal";
 
 export default function ErpBusinessCard() {
+  const [toggle, setToggle] = useState(false);
+
   return (
     <section
       className={classNames(
@@ -28,7 +32,7 @@ export default function ErpBusinessCard() {
               text={"Contact Us Now"}
               type="primary"
               componentType="button"
-              //   onClick={() => setToggle(true)}
+                onClick={() => setToggle(true)}
             />
           </div>
           <div className={styles.logoImage}>
@@ -36,6 +40,7 @@ export default function ErpBusinessCard() {
           </div>
         </div>
       </div>
+      <FormModal toggle={toggle} setToggle={setToggle} />
     </section>
   );
 }

@@ -1,12 +1,15 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import layout from "../../styles/layout.module.css";
 import styles from "./odoo.module.css";
 import Image from "next/image";
 import { image } from "../../../../public/odoo";
 import { classNames } from "@/app/utils";
 import Button from "@/app/components/button/button";
+import FormModal from "@/app/components/formModal";
 
 export default function OdooBanner() {
+  const [toggle, setToggle] = useState(false);
   return (
     <div className={styles.banner_container}>
       <div className={styles.bannerImage}>
@@ -28,12 +31,13 @@ export default function OdooBanner() {
                 redirect={""}
                 text={"Get a Free Consultation"}
                 type="primary"
-                // onClick={() => setToggle(true)}
+                onClick={() => setToggle(true)}
               />
             </div>
           </div>
         </div>
       </div>
+      <FormModal toggle={toggle} setToggle={setToggle}/>
     </div>
   );
 }

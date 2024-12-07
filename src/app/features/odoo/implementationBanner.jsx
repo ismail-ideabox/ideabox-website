@@ -1,12 +1,16 @@
-import React from "react";
+"use client"
+import React, { useState } from "react";
 import { image } from "../../../../public/odoo";
 import layout from "../../styles/layout.module.css";
 import styles from "./odoo.module.css";
 import { classNames } from "@/app/utils";
 import Image from "next/image";
 import Button from "@/app/components/button/button";
+import FormModal from "@/app/components/formModal";
 
 export default function ImplementationBanner() {
+  const [toggle, setToggle] = useState(false);
+
   return (
     <section
       className={classNames(
@@ -26,11 +30,12 @@ export default function ImplementationBanner() {
               text={"Get Free Consultations!"}
               type="primary"
               componentType="button"
-              //   onClick={() => setToggle(true)}
+                onClick={() => setToggle(true)}
             />
           </div>
         </div>
       </div>
+      <FormModal toggle={toggle} setToggle={setToggle} />
     </section>
   );
 }

@@ -7,15 +7,20 @@ import layout from "../../styles/layout.module.css";
 import styles from "./odoo.module.css";
 import { classNames } from "@/app/utils";
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
+import contactStyles from "../contactUs/contactus.module.css";
+
+import { images } from "../../../../public/contactUs";
+import Image from "next/image";
+import Link from "next/link";
 
 const initValues = {
-    fullName: "",
-    companyName: "",
-    emailAddress: "",
-    phoneNo: "",
-    message: "",
-  };
-  const initState = { values: initValues };
+  fullName: "",
+  companyName: "",
+  emailAddress: "",
+  phoneNo: "",
+  message: "",
+};
+const initState = { values: initValues };
 
 export default function Contact() {
   const [state, setState] = useState(initState);
@@ -214,6 +219,38 @@ export default function Contact() {
               onClick={() => onSubmit()}
             />
             {/* <button >send</button> */}
+          </div>
+          <div
+            className={
+              toggle ? contactStyles.form_submitted : contactStyles.form_notSubmitted
+            }
+          >
+            <div className={contactStyles.modal_container}>
+              <div className={contactStyles.modal_img}>
+                <Image
+                  src={images.modal}
+                  alt="Ideabox image on Contact Us form "
+                />
+              </div>
+              <div className={contactStyles.form_submit_flex}>
+                <h2>Thank You</h2>
+                <p>
+                  for submitting your request with Ideabox. We appreciate your
+                  interest and will review it promptly. We will be in touch with
+                  you soon.
+                </p>
+                <p>
+                  In case of an emergency, please feel free to contact us on
+                  <br />
+                  <Link
+                    className={contactStyles.mail_at}
+                    href={"mailto:hello@ideabox.technology"}
+                  >
+                    hello@ideabox.technology
+                  </Link>
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

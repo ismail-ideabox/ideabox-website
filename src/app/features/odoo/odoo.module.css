@@ -322,7 +322,7 @@
     text-align: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     position: relative;
-    z-index: 5;
+    z-index: 6;
 }
 
 .main_card img {
@@ -498,7 +498,7 @@
 }
 
 .company_images {
-    width: 200px;
+    width: 150px;
     height: auto;
     transition: all 0.2s ease-in-out;
 }
@@ -654,6 +654,7 @@
 .contact_container textarea {
     height: 250px !important;
 }
+
 .pricingImageBlock .pricingImageMob {
     display: none;
 }
@@ -686,7 +687,7 @@
         height: auto;
     }
 
-    
+
 
     .main_card img {
         width: 130px;
@@ -732,15 +733,39 @@
     .implementationBanner_container .bannerText h3 {
         font-size: 40px;
     }
+
+    .globalFootprint_stats_content span {
+        font-size: 45px;
+    }
+
+    .globalFootprint_stats_content {
+        width: 160px;
+        border-right: 1px solid #ff5f36;
+    }
+
+    .globalFootprint_stats .globalFootprint_stats_content:nth-child(6) {
+        border-right: 1px solid #ff5f36;
+    }
+
+    .globalFootprint_stats_content p {
+        font-size: 16px;
+    }
+
+    .globalFootprint_stats_content p span {
+        font-size: 13px;
+    }
 }
-.navbarButtonIcon{
+
+.navbarButtonIcon {
     display: none;
 }
+
 @media screen and (max-width: 1100px) {
     .navbar .navLinks {
         display: none;
     }
-    .navbarButtonIcon{
+
+    .navbarButtonIcon {
         display: block;
     }
 
@@ -865,10 +890,9 @@
         writing-mode: unset;
         margin-top: -10px;
         width: 100%;
-    }
-
-    .side_card {
-        padding: 20px 30px;
+        transform: unset;
+        transform: scaleX(0.9);
+        padding: 20px;
     }
 
     .businessCard_container {
@@ -941,6 +965,25 @@
         grid-column-gap: 4rem;
         grid-row-gap: 6rem;
     }
+
+    .regions_container {
+        justify-content: center;
+    }
+
+    .regions_container .Images {
+        min-width: 180px;
+    }
+    .globalFootprint_stats_content span {
+        font-size: 45px;
+    }
+
+    .globalFootprint_stats_content {
+        border-right: none;
+    }
+
+    .globalFootprint_stats .globalFootprint_stats_content:nth-child(6) {
+        border-right: none;
+    }
 }
 
 
@@ -963,7 +1006,7 @@
     }
 
     .businessCard_container img {
-        width: 100%;
+        width: 80%;
     }
 
     .pricingImageBlock .flag {
@@ -1032,8 +1075,9 @@
 
     .banner_text_wrapper {
         position: relative;
-        top: 50px;
+        top: 0;
         transform: translate(0);
+        margin-top: 30px;
     }
 
     .banner_text {
@@ -1069,13 +1113,35 @@
         color: #EDEDED;
         padding: 15px 0;
         font-size: 18px;
-        font-weight: bold;
-        min-height: 100%;
-        text-transform: uppercase;
+    }
+
+    .globalFootprint_header p {
+        font-size: 14px;
+    }
+    
+    .globalFootprint_header h2 {
+        font-size: 20px;
+    }
+    
+    .globalFootprint_stats_content span {
+        font-size: 35px;
+    }
+    
+    .globalFootprint_stats_content p {
+        font-size: 14px;
+        padding-top: 10px;
+    }
+    
+    .globalFootprint_stats_content p span {
+        font-size: 12px;
     }
 }
 
 @media screen and (max-width: 500px) {
+    .header {
+        padding: 20px 0;
+    }
+
     .businessCard_container {
         padding: 30px 20px;
     }
@@ -1092,6 +1158,7 @@
 
     .pricingImageBlock .pricingImageMob {
         max-width: 100%;
+        height: auto;
     }
 
     .section_container {
@@ -1111,41 +1178,130 @@
     .testimonialsWrapper {
         margin-top: 40px;
     }
+
     .video_container .video .ideaboxLineLogo {
         display: none;
     }
+
     .testimonialsCard .cardImage .ideaboxLogo {
         display: none;
     }
+
     .interactive_container {
-        display: flex;
-        flex-wrap: wrap;
-        row-gap: 4rem;
-        column-gap: 2rem;
+        grid-column-gap: 10px;
+        grid-row-gap: 2.5rem;
     }
-    
+
     .odooAppsCard {
         display: flex;
         gap: 30px;
         align-items: center;
     }
-    
+
     .odooAppsCard img {
-        width: 100px;
+        width: 70px;
         height: auto;
     }
-    
+
     .odooAppsCard p {
         color: #ffffff;
         line-height: 1.2;
-        font-size: 14px;
+        font-size: 12px;
     }
-    
+
     .odooAppsCard h3 {
         color: #ffffff;
-        font-size: 18px;
+        font-size: 15px;
         font-weight: 600;
         padding-bottom: 10px;
         text-transform: uppercase;
+    }
+
+    .partner_container p {
+        font-size: 14px;
+    }
+
+    .main_card img {
+        width: 90px;
+        height: auto;
+    }
+
+    .main_card h2 {
+        font-size: 20px;
+    }
+
+    .main_card p {
+        font-size: 12px;
+    }
+
+    .side_card {
+        font-size: 15px;
+    }
+
+    .regions_container {
+        row-gap: 3rem;
+    }
+
+    .regions_container .Images {
+        text-align: center;
+        min-width: 140px;
+    }
+
+    .regions_container .Images img {
+        width: 90px;
+        height: auto;
+    }
+
+    .regions_container .Images h3 {
+        font-size: 13px;
+    }
+    .implementationBanner_container .bannerText h3 {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+
+    .odooAppsCard {
+        display: flex;
+        gap: 30px;
+        align-items: center;
+    }
+
+    .odooAppsCard img {
+        width: 60px;
+        height: auto;
+    }
+
+    .odooAppsCard p {
+        color: #ffffff;
+        line-height: 1.2;
+        font-size: 10px;
+    }
+
+    .odooAppsCard h3 {
+        color: #ffffff;
+        font-size: 13px;
+        font-weight: 600;
+        padding-bottom: 10px;
+        text-transform: uppercase;
+    }
+
+    .regions_container .Images {
+        min-width: 130px;
+    }
+
+    .regions_container .Images img {
+        width: 70px;
+    }
+
+    .regions_container .Images h3 {
+        font-size: 12px;
+    }
+}
+
+@media screen and (min-width:500px) {
+    .businessCard_container {
+        margin: 100px 0 30px 0;
     }
 }

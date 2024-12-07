@@ -1,4 +1,5 @@
-import React from "react";
+"use client"
+import React, { useEffect, useState } from "react";
 import styles from "./odoo.module.css";
 import OdooHeader from "./header";
 import Banner from "./banner";
@@ -34,7 +35,7 @@ export default function OdooPage() {
       <Pricing/>
       <Partner/>
       <Services/>
-      <Testimonials/>
+      {/* <Testimonials/> */}
       <ErpBusinessCard/>
       <FaqsOdoo />
       <InteractiveFeatures/>

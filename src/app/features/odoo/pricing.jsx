@@ -1,12 +1,15 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import layout from "../../styles/layout.module.css";
 import styles from "./odoo.module.css";
 import { classNames } from "@/app/utils";
 import Image from "next/image";
 import { image } from "../../../../public/odoo";
 import Button from "@/app/components/button/button";
+import FormModal from "@/app/components/formModal";
 
 export default function Pricing() {
+  const [toggle, setToggle] = useState(false);
   return (
     <section
       className={classNames(
@@ -32,17 +35,26 @@ export default function Pricing() {
                 redirect={""}
                 text={"GET STARTED NOW!"}
                 type="primary"
-              // onClick={() => setToggle(true)}
+                onClick={() => setToggle(true)}
               />
             </div>
             <div className={styles.pricingImageBlock}>
               <Image src={image.usa} alt="usa flag" className={styles.flag} />
-              <Image src={image.pricing} alt="pricing" className={styles.pricingImage} />
-              <Image src={image.pricingMob} alt="pricing" className={styles.pricingImageMob} />
+              <Image
+                src={image.pricing}
+                alt="pricing"
+                className={styles.pricingImage}
+              />
+              <Image
+                src={image.pricingMob}
+                alt="pricing"
+                className={styles.pricingImageMob}
+              />
             </div>
           </div>
         </div>
       </div>
+      <FormModal toggle={toggle} setToggle={setToggle} />
     </section>
   );
 }

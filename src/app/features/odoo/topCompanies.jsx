@@ -52,16 +52,25 @@ export default function TopCompanies() {
           <div className={styles.company_logo_container}>
             <Swiper
               className="blogsSwiper"
-              slidesPerView={4}
+              slidesPerView={2}
               spaceBetween={20}
               autoplay={{
                 delay: 2000,
                 disableOnInteraction: false,
               }}
-              pagination={{
-                clickable: true,
+              modules={[Autoplay]}
+              loop={true}
+              breakpoints= {{
+                900: {
+                  slidesPerView: 5,
+                },
+                676: {
+                  slidesPerView: 4,
+                },
+                380: {
+                  slidesPerView: 3,
+                }
               }}
-              modules={[Pagination, Autoplay]}
             >
               {logosData.map((item, index) => (
                 <SwiperSlide key={index}>
