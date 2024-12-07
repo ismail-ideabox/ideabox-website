@@ -10,7 +10,7 @@ export default function Odoo() {
   }, [data]);
   return (
     <>
-      {/* <head>
+      <head>
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} />
         <link rel="canonical" href={metadata.canonical} />
@@ -29,9 +29,34 @@ export default function Odoo() {
         <meta name="twitter:card" content={metadata.twitter.cardType} />
         <meta name="twitter:site" content={metadata.twitter.site} />
         <meta name="twitter:creator" content={metadata.twitter.handle} />
-      </head> */}
+      </head>
 
       <OdooPage />
     </>
   );
 }
+const metadata = {
+  title: "Odoo | Ideabox",
+  description: "",
+  canonical: "https://ideabox.technology/odoo",
+  openGraph: {
+    url: "https://ideabox.technology/odoo",
+    title: "Odoo | Ideabox",
+    description: "Open Graph Description",
+    images: [
+      {
+        url: "../../../public/footer/ideabox.png",
+        width: 800,
+        height: 600,
+        alt: "Ideabox Logo",
+        type: "image/png",
+      },
+    ],
+    siteName: "Ideabox",
+  },
+  twitter: {
+    handle: "@IdeaboxPakistan",
+    site: "@IdeaboxPakistan:Obaid Rehman",
+    cardType: "summary_large_image",
+  },
+};
