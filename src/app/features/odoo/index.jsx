@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useEffect, useState } from "react";
 import styles from "./odoo.module.css";
 import OdooHeader from "./header";
@@ -24,6 +24,9 @@ import Contact from "./contact";
 import FaqsOdoo from "@/app/components/faqsOdoo";
 
 export default function OdooPage() {
+  useEffect(() => {
+    document.getElementsByTagName("body")[0].style.overflow = "auto";
+  }, []);
   return (
     <div>
       <OdooHeader />
@@ -32,19 +35,19 @@ export default function OdooPage() {
       <Usage />
       <WhyOdoo />
       {/* <OdooBannerImage /> */}
-      <Pricing/>
-      <Partner/>
-      <Services/>
+      <Pricing />
+      <Partner />
+      <Services />
       {/* <Testimonials/> */}
-      <ErpBusinessCard/>
+      <ErpBusinessCard />
       <FaqsOdoo />
-      <InteractiveFeatures/>
-      <TopCompanies/>
-      <Regions/>
-      <GlobalFootprint/>
-      <ImplementationBanner/>
-      <Blogs/>
-      <Contact/>
+      <InteractiveFeatures />
+      <TopCompanies />
+      <Regions />
+      <GlobalFootprint />
+      <ImplementationBanner />
+      <Blogs />
+      <Contact />
       <Footer />
     </div>
   );
