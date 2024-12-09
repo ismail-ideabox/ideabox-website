@@ -109,7 +109,7 @@ export default function GlobalFootprint() {
                 <span>
                   0
                   {inView ? (
-                    <CountUp start={0} end={5} duration={2} delay={0} />
+                    <CountUp start={0} end={5} duration={6} delay={0} />
                   ) : (
                     "0"
                   )}
@@ -120,7 +120,7 @@ export default function GlobalFootprint() {
                 <span>
                   0
                   {inView ? (
-                    <CountUp start={0} end={3} duration={2} delay={0} />
+                    <CountUp start={0} end={3} duration={6} delay={0} />
                   ) : (
                     "0"
                   )}

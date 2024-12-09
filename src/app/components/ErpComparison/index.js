@@ -10,7 +10,6 @@ import "swiper/css";
 import { buildStyles, CircularProgressbar } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 import { useInView } from "react-intersection-observer";
-import { easeIn, easeInOut } from "framer-motion";
 
 export default function ErpComparison() {
   const [progressSap, setProgressSap] = useState(0);
@@ -79,7 +78,7 @@ export default function ErpComparison() {
                 pathTransitionDuration: 0.3, // Smooth animation
                 textColor: "#FFFFFF", // White text color
                 trailColor: "#FFFFFF", // White trail color
-                pathTransition: easeInOut,
+                pathTransition: "ease-in-out",
               })}
             />
           </div>
@@ -120,7 +119,7 @@ export default function ErpComparison() {
                 pathTransitionDuration: 0.2, // Smooth animation
                 textColor: "#FFFFFF", // White text color
                 trailColor: "#FFFFFF", // White trail color
-                pathTransition: easeInOut,
+                pathTransition: "ease-in-out",
               })}
             />
           </div>
@@ -161,7 +160,7 @@ export default function ErpComparison() {
                 pathTransitionDuration: 0.2, // Smooth animation
                 textColor: "#FFFFFF", // White text color
                 trailColor: "#FFFFFF", // White trail color
-                pathTransition: easeInOut,
+                pathTransition: "ease-in-out",
               })}
             />
           </div>
@@ -200,10 +199,10 @@ export default function ErpComparison() {
                 textSize: "24px", // Adjust text size
                 pathColor: "#9c5789", // Blue color for progress
                 pathTransitionDuration: 0.2, // Smooth animation
-                pathTransition: easeIn,
+                
                 textColor: "#714b67", // White text color
                 trailColor: "#FFFFFF", // White trail color
-                pathTransition: easeInOut,
+                pathTransition: "ease-in-out",
               })}
             />
           </div>
