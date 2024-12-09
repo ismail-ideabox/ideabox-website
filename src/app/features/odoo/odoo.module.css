@@ -278,11 +278,18 @@
     position: absolute;
     bottom: 20px;
     right: -20px;
-    width: 130px;
+    width: 120px;
     height: auto;
 }
 
-.partner_container {
+@media screen and (min-width:1280px) {
+    .pricingImageBlock .flag {
+        width: 100px;
+        bottom: 10%;
+    }
+}
+
+.pricingImageBlock .flag .partner_container {
     margin: 50px 0;
 }
 
@@ -686,6 +693,8 @@
         font-size: 16px;
     }
 
+
+
     .pricingImageBlock .flag {
         position: absolute;
         bottom: 20px;
@@ -700,6 +709,14 @@
         width: 130px;
         height: auto;
     }
+
+    @media screen and(min-width:1280px) {
+        .pricingImageBlock .flag {
+            width: 20%;
+        }
+
+    }
+
 
     .main_card h2 {
         font-size: 23px;
@@ -1181,9 +1198,9 @@
     }
 
     .pricingImageBlock .flag {
-        width: 25%;
+        width: 22%;
         right: 5%;
-        bottom: 15%;
+        bottom: 20%;
     }
 
     .pricingImageBlock .pricingImageMob {
