@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Input from '../getInTouch/input';
 import TextArea from '../getInTouch/textarea';
 import Button from '../button/button';
-import { images } from "../../../../public/getInTouch";
+import { image } from "../../../../public/odoo";
 import styles from "../getInTouch/getInTouch.module.css"
 import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';
 import { faClose } from "@fortawesome/free-solid-svg-icons";
@@ -166,7 +166,7 @@ export default function FormModal({toggle,setToggle}) {
                     <div className={styles.form}>
                         <div className={styles.form_image}>
                             <Image
-                                src={images.modal}
+                                src={image.modalImage}
                                 alt="ideabox image of the homepage contact form"
                             />
                         </div>

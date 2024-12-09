@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { images } from "../../../../public/newsBlogs";
+import { image } from "../../../../public/odoo";
 import layout from "../../styles/layout.module.css";
 import styles from "./odoo.module.css";
 import { classNames } from "@/app/utils";
@@ -8,39 +8,39 @@ import BlogsCards from "../newsBlogs/blogsCards";
 
 const blogsData = [
   {
-    cardImage: images.cardbanner,
+    cardImage: image.blog1,
     blogTitle: "Regaining Confidence in ERP: from SAP to Odoo",
-    date: "02 May",
+    date: "21 Apr", //2020
     link:"https://www.odoo.com/blog/customer-reviews-6/regaining-confidence-in-erp-from-sap-to-odoo-595"
   },
   {
-    cardImage: images.cardbanner,
+    cardImage: image.blog2,
     blogTitle: "Transforming a 9,000-employee company in just six months!",
-    date: "02 May",
+    date: "11 Jul",//2024
     link:"https://www.odoo.com/blog/customer-reviews-6/transforming-a-9000-employee-company-in-just-six-months-1342"
   },
   {
-    cardImage: images.cardbanner,
+    cardImage: image.blog3,
     blogTitle: "Odoo Saves Operation Time For Japanese Snack Manufacturer KOIKEYA",
-    date: "02 May",
+    date: "22 Apr",//2024
     link:" https://www.odoo.com/blog/customer-reviews-6/odoo-saves-operation-time-for-japanese-snack-manufacturer-koikeya-1217"
   },
   {
-    cardImage: images.cardbanner,
+    cardImage: image.blog4,
     blogTitle: "Amnesty International Italy: Increasing Efficiency to Help More People",
-    date: "02 May",
+    date: "24 Jun",//2019
     link:"https://www.odoo.com/blog/customer-reviews-6/amnesty-international-italy-increasing-efficiency-to-help-more-people-549"
   },
   {
-    cardImage: images.cardbanner,
+    cardImage: image.blog5,
     blogTitle: "How many eucalyptus trees WWF helped to grow with Odoo?",
-    date: "02 May",
+    date: "19 Sep", // 2014
     link:"https://www.odoo.com/blog/customer-reviews-6/how-many-eucalyptus-trees-wwf-helped-to-grow-with-odoo-188"
   },
   {
-    cardImage: images.cardbanner,
+    cardImage: image.blog6,
     blogTitle: "Unleashing the Power of Odoo in Business and Education",
-    date: "02 May",
+    date: "26 Aug",//2024
     link:"https://www.odoo.com/blog/customer-reviews-6/unleashing-the-power-of-odoo-in-business-and-education-1309"
   },
 ];
