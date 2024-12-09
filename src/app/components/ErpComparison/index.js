@@ -78,7 +78,6 @@ export default function ErpComparison() {
                 pathTransitionDuration: 0.3, // Smooth animation
                 textColor: "#FFFFFF", // White text color
                 trailColor: "#FFFFFF", // White trail color
-                pathTransition: "ease-in-out",
               })}
             />
           </div>
@@ -119,7 +118,6 @@ export default function ErpComparison() {
                 pathTransitionDuration: 0.2, // Smooth animation
                 textColor: "#FFFFFF", // White text color
                 trailColor: "#FFFFFF", // White trail color
-                pathTransition: "ease-in-out",
               })}
             />
           </div>
@@ -160,7 +158,6 @@ export default function ErpComparison() {
                 pathTransitionDuration: 0.2, // Smooth animation
                 textColor: "#FFFFFF", // White text color
                 trailColor: "#FFFFFF", // White trail color
-                pathTransition: "ease-in-out",
               })}
             />
           </div>
@@ -199,10 +196,9 @@ export default function ErpComparison() {
                 textSize: "24px", // Adjust text size
                 pathColor: "#9c5789", // Blue color for progress
                 pathTransitionDuration: 0.2, // Smooth animation
-                
+
                 textColor: "#714b67", // White text color
                 trailColor: "#FFFFFF", // White trail color
-                pathTransition: "ease-in-out",
               })}
             />
           </div>
