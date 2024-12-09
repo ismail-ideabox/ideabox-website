@@ -97,13 +97,13 @@ export default function Services() {
                     <Image src={image.usageIcon1} />
                     <h2>{item.title}</h2>
                     <p>{item.description}</p>
-                    <Button
+                    {/* <Button
                       redirect={""}
                       text={"Explore Now"}
                       type="primary"
                       componentType="button"
                       //   onClick={() => setToggle(true)}
-                    />
+                    /> */}
                   </div>
                 )}
               </div>
