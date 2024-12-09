@@ -6,10 +6,16 @@ import { classNames } from "@/app/utils";
 import Image from "next/image";
 import { image } from "../../../../public/odoo";
 import CountUp from "react-countup";
+import { useInView } from "react-intersection-observer";
 
-export default function GlobalFootprint({ childRef, isVisible = true }) {
+export default function GlobalFootprint() {
+  const { ref, inView } = useInView({
+    triggerOnce: true, // Trigger the animation only once when it comes into view
+    threshold: 0.5, // Trigger when 20% of the section is visible
+  });
   return (
     <section
+      ref={ref}
       className={classNames(
         layout.grid,
         layout.grid_col80,
@@ -31,12 +37,13 @@ export default function GlobalFootprint({ childRef, isVisible = true }) {
             <div className={styles.globalFootprint_stats}>
               <div className={styles.globalFootprint_stats_content}>
                 <span>
-                  {isVisible ? (
+                  {inView ? (
                     <CountUp
                       start={0}
-                      end={214}
+                      end={2014}
                       duration={2}
                       delay={0}
+                      separator=""
                     />
                   ) : (
                     "0"
@@ -47,7 +54,7 @@ export default function GlobalFootprint({ childRef, isVisible = true }) {
               </div>
               <div className={styles.globalFootprint_stats_content}>
                 <span>
-                  {isVisible ? (
+                  {inView ? (
                     <CountUp
                       start={0}
                       end={400}
@@ -63,7 +70,7 @@ export default function GlobalFootprint({ childRef, isVisible = true }) {
               </div>
               <div className={styles.globalFootprint_stats_content}>
                 <span>
-                  {isVisible ? (
+                  {inView ? (
                     <CountUp
                       start={0}
                       end={300}
@@ -76,16 +83,15 @@ export default function GlobalFootprint({ childRef, isVisible = true }) {
                   )}
                 </span>
                 <p>
-                  GROWTH<br />
-                  <span>
-                    IN THE LAST
-                    <br />2 YEARS
-                  </span>
+                  GROWTH
+                  IN THE <br />LAST
+                  2 YEARS
+
                 </p>
               </div>
               <div className={styles.globalFootprint_stats_content}>
                 <span>
-                  {isVisible ? (
+                  {inView ? (
                     <CountUp
                       start={0}
                       end={85}
@@ -102,7 +108,7 @@ export default function GlobalFootprint({ childRef, isVisible = true }) {
               <div className={styles.globalFootprint_stats_content}>
                 <span>
                   0
-                  {isVisible ? (
+                  {inView ? (
                     <CountUp start={0} end={5} duration={2} delay={0} />
                   ) : (
                     "0"
@@ -113,7 +119,7 @@ export default function GlobalFootprint({ childRef, isVisible = true }) {
               <div className={styles.globalFootprint_stats_content}>
                 <span>
                   0
-                  {isVisible ? (
+                  {inView ? (
                     <CountUp start={0} end={3} duration={2} delay={0} />
                   ) : (
                     "0"
