@@ -44,6 +44,10 @@
     position: relative;
 }
 
+/* .comparison_item .percent text {
+    transform: translate(-25%, 10%);
+} */
+
 .comparison_item svg {
     position: relative;
     width: 180px;
@@ -159,7 +163,13 @@
         width: 100%;
         text-align: center;
     }
-    .comparison_item ul{
+
+    .comparison_item ul {
         text-align: center;
     }
+}
+
+.CircularProgressbar-text {
+    transform: rotate(-90deg) !important;
+    /* Counter-rotate the text */
 }
