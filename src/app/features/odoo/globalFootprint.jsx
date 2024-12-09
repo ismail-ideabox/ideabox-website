@@ -37,10 +37,9 @@ export default function GlobalFootprint({ childRef, isVisible = true }) {
                       end={214}
                       duration={2}
                       delay={0}
-                      suffix="+"
                     />
                   ) : (
-                    "0+"
+                    "0"
                   )}
                 </span>
 
@@ -115,7 +114,7 @@ export default function GlobalFootprint({ childRef, isVisible = true }) {
                 <span>
                   0
                   {isVisible ? (
-                    <CountUp start={0} end={7} duration={2} delay={0} />
+                    <CountUp start={0} end={3} duration={2} delay={0} />
                   ) : (
                     "0"
                   )}
