@@ -31,7 +31,7 @@ export default function GlobalFootprint() {
                 Over a span of just three years, we have managed to develop
                 client relationships across the globe.
               </p>
-              <Image src={image.mapImage} />
+              <Image src={image.mapImage} alt="map image"/>
             </div>
 
             <div className={styles.globalFootprint_stats}>

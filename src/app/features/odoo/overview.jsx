@@ -36,6 +36,7 @@ export default function Overview() {
               <Image
                 src={image.ideaboxLineLogo}
                 className={styles.ideaboxLineLogo}
+                alt="ideabox logo"
               />
               <video autoPlay muted>
                 <source src="./odoo/overviewVideo.mp4" type="video/mp4" />

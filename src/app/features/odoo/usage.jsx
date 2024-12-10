@@ -25,7 +25,7 @@ export default function Usage() {
               <Image
                 loading="lazy"
                 src={image.manufacturing}
-                alt="Software Development gif"
+                alt="manufacturing"
               />
               <p>Manufacturing companies</p>
             </div>
@@ -33,7 +33,7 @@ export default function Usage() {
               <Image
                 loading="lazy"
                 src={image.distribution}
-                alt="Software Development gif"
+                alt="distribution"
               />
               <p>Distribution companies</p>
             </div>
@@ -41,7 +41,7 @@ export default function Usage() {
               <Image
                 loading="lazy"
                 src={image.retailers}
-                alt="Software Development gif"
+                alt="retailers"
               />
               <p>Retailers</p>
             </div>
@@ -49,7 +49,7 @@ export default function Usage() {
               <Image
                 loading="lazy"
                 src={image.fieldService}
-                alt="Software Development gif"
+                alt="field service operations"
               />
               <p>field service operations</p>
             </div>
@@ -57,7 +57,7 @@ export default function Usage() {
               <Image
                 loading="lazy"
                 src={image.RAndDCompanies}
-                alt="Software Development gif"
+                alt="R&D companies"
               />
               <p>R&D companies</p>
             </div>
@@ -65,7 +65,7 @@ export default function Usage() {
               <Image
                 loading="lazy"
                 src={image.serviceCompanies}
-                alt="Software Development gif"
+                alt="Service companies"
               />
               <p>Service companies</p>
             </div>
@@ -73,7 +73,7 @@ export default function Usage() {
               <Image
                 loading="lazy"
                 src={image.marketing}
-                alt="Software Development gif"
+                alt="Marketing companies"
               />
               <p>Marketing companies</p>
             </div>
@@ -81,7 +81,7 @@ export default function Usage() {
               <Image
                 loading="lazy"
                 src={image.consultants}
-                alt="Software Development gif"
+                alt="Consultants & Odoo Partners"
               />
               <p>Consultants & Odoo Partners</p>
             </div>
@@ -89,7 +89,7 @@ export default function Usage() {
               <Image
                 loading="lazy"
                 src={image.itCompanies}
-                alt="Software Development gif"
+                alt="IT companies with trained developers"
               />
               <p>IT companies with trained developers</p>
             </div>
@@ -97,7 +97,7 @@ export default function Usage() {
               <Image
                 loading="lazy"
                 src={image.accounting}
-                alt="Software Development gif"
+                alt="Accounting firms"
               />
               <p>Accounting firms</p>
             </div>

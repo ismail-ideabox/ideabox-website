@@ -13,7 +13,7 @@ export default function OdooBanner() {
   return (
     <div className={styles.banner_container}>
       <div className={styles.bannerImage}>
-        <Image src={image.bannerImage} alt="" />
+        <Image src={image.bannerImage} alt="odoo banner" />
         <div className={styles.imageShadow}></div>
       </div>
 

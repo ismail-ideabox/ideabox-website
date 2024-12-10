@@ -25,7 +25,7 @@ export default function InteractiveFeatures() {
           <div className={styles.interactive_container}>
             {interactiveFeaturesData.map((item, index) => (
               <div className={styles.odooAppsCard} key={index}>
-                <Image src={item.image} alt="" />
+                <Image src={item.image} alt={item.title} />
                 <div>
                   <h3>{item.title}</h3>
                   <p>{item.text}</p>

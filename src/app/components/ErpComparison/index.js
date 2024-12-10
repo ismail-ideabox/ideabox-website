@@ -63,7 +63,7 @@ export default function ErpComparison() {
         <div className={styles.comparison_item}>
           <div className={styles.erpLogo}>
             {" "}
-            <Image src={image.sap} className={styles.sapImg} />
+            <Image src={image.sap} className={styles.sapImg} alt="sap logo"/>
           </div>
 
           <div className={styles.percent} style={{ rotate: "90deg" }}>
@@ -104,7 +104,7 @@ export default function ErpComparison() {
         </div>
         <div className={styles.comparison_item}>
           <div className={styles.erpLogo}>
-            <Image src={image.netsuit} className={styles.netsuitImg} />
+            <Image src={image.netsuit} className={styles.netsuitImg} alt="netsuit logo"/>
           </div>
           <div className={styles.percent} style={{ rotate: "90deg" }}>
             <CircularProgressbar
@@ -144,7 +144,7 @@ export default function ErpComparison() {
         </div>
         <div className={styles.comparison_item}>
           <div className={styles.erpLogo}>
-            <Image src={image.dynamic} className={styles.dynamicImg} />
+            <Image src={image.dynamic} className={styles.dynamicImg} alt="dynamic 365 logo"/>
           </div>
           <div className={styles.percent} style={{ rotate: "90deg" }}>
             <CircularProgressbar
@@ -184,7 +184,7 @@ export default function ErpComparison() {
         </div>
         <div className={classNames(styles.comparison_item, styles.odoo)}>
           <div className={styles.erpLogo}>
-            <Image src={image.odoo} className={styles.odooImg} />
+            <Image src={image.odoo} className={styles.odooImg} alt="odoo logo"/>
           </div>
           <div className={styles.percent} style={{ rotate: "90deg" }}>
             <CircularProgressbar
@@ -241,7 +241,7 @@ export default function ErpComparison() {
             <div className={styles.comparison_item}>
               <div className={styles.erpLogo}>
                 {" "}
-                <Image src={image.sap} className={styles.sapImg} />
+                <Image src={image.sap} className={styles.sapImg} alt="sap logo"/>
               </div>
 
               <div className={styles.percent}>
@@ -285,7 +285,7 @@ export default function ErpComparison() {
           <SwiperSlide>
             <div className={styles.comparison_item}>
               <div className={styles.erpLogo}>
-                <Image src={image.netsuit} className={styles.netsuitImg} />
+                <Image src={image.netsuit} className={styles.netsuitImg} alt="netsuit logo"/>
               </div>
               <div className={styles.percent}>
                 <svg>
@@ -329,7 +329,7 @@ export default function ErpComparison() {
           <SwiperSlide>
             <div className={styles.comparison_item}>
               <div className={styles.erpLogo}>
-                <Image src={image.dynamic} className={styles.dynamicImg} />
+                <Image src={image.dynamic} className={styles.dynamicImg} alt="dynamic 365 logo"/>
               </div>
               <div className={styles.percent}>
                 <svg>
@@ -373,7 +373,7 @@ export default function ErpComparison() {
           <SwiperSlide>
             <div className={classNames(styles.comparison_item, styles.odoo)}>
               <div className={styles.erpLogo}>
-                <Image src={image.odoo} className={styles.odooImg} />
+                <Image src={image.odoo} className={styles.odooImg} alt="odoo logo"/>
               </div>
               <div className={styles.percent}>
                 <svg>

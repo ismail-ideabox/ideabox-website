@@ -42,12 +42,12 @@ export default function Pricing() {
               <Image src={image.pakistan} alt="usa flag" className={styles.flag} />
               <Image
                 src={image.pricing}
-                alt="pricing"
+                alt="odoo pricing"
                 className={styles.pricingImage}
               />
               <Image
                 src={image.pricingMob}
-                alt="pricing"
+                alt="odoo pricing"
                 className={styles.pricingImageMob}
               />
             </div>

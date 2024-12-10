@@ -36,7 +36,7 @@ export default function ErpBusinessCard() {
             />
           </div>
           <div className={styles.logoImage}>
-            <Image src={image.odooLogo} alt="odoo"/>
+            <Image src={image.odooLogo} alt="odoo logo"/>
           </div>
         </div>
       </div>

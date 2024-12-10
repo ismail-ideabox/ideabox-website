@@ -48,7 +48,7 @@ import blog3 from "./blog3.jpg";
 import blog4 from "./blog4.png";
 import blog5 from "./blog5.jpg";
 import blog6 from "./blog6.webp";
-import modalImage from "../getInTouch/modal.png";
+import modalImage from "./modal.jpg";
 
 export const image = {
   odoo,

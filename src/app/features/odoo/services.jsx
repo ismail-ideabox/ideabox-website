@@ -94,7 +94,7 @@ export default function Services() {
                   <div className={styles.side_card} onClick={()=>handleActiveService(item.id)} style={{zIndex:odooServices.length-index}}>{item.title}</div>
                 ) : (
                   <div className={styles.content}>
-                    <Image src={image.usageIcon1} />
+                    <Image src={image.usageIcon1} alt={item.title}/>
                     <h2>{item.title}</h2>
                     <p>{item.description}</p>
                     {/* <Button

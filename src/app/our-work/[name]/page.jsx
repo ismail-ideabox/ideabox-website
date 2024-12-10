@@ -50,9 +50,9 @@ function WorkDetail({ params }) {
     address: {
       "@type": "PostalAddress",
       streetAddress:
-        "2nd floor, Plot 1C Khayaban-e-Saadi, Phase 7 Defence Housing Authority, Karachi, Karachi City, Sindh 75500",
+        "Office No: 005, NASTP Sierra, Shahrah-e-Faisal Rd, Faisal Cantonment, Karachi, Karachi City, Sindh 75240",
       addressLocality: "Sindh",
-      postalCode: "75500",
+      postalCode: "75240",
       addressCountry: "PK",
     },
     geo: {

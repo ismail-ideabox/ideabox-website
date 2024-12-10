@@ -72,7 +72,7 @@ export default function Regions() {
           <div className={styles.regions_container}>
             {regionsData.map((item, index) => (
               <div className={styles.Images} key={index}>
-                <Image src={item.image} alt="" />
+                <Image src={item.image} alt={item.name} />
                 <h3>{item.name}</h3>
               </div>
             ))}
