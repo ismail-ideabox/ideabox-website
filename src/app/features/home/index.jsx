@@ -83,8 +83,8 @@ function Home() {
         }
       } else {
         const isChildVisible =
-          childRect.top >= parentRect.top ||
-          childRect.bottom + 300 <= parentRect.bottom;
+          childRect?.top >= parentRect.top ||
+          childRect?.bottom + 300 <= parentRect.bottom;
 
         if (!isChildVisible) {
           setIsVisible(true);
@@ -137,7 +137,7 @@ function Home() {
         <Commitments animateRef={animateRef} animate={animate} />
         <Technical servicesRef={servicesRef} />
         <Odoo />
-        <Overview childRef={childRef} isVisible={isVisible} />
+        <Overview isVisible={isVisible} />
         <ProudProduct />
         <OurPeople />
         <Ideabox />

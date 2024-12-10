@@ -73,13 +73,13 @@ export default function GlobalFootprint() {
                   {inView ? (
                     <CountUp
                       start={0}
-                      end={300}
+                      end={200}
                       duration={2}
                       delay={0}
-                      suffix="+"
+                      suffix="%"
                     />
                   ) : (
-                    "0+"
+                    "0%"
                   )}
                 </span>
                 <p>

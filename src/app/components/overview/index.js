@@ -4,11 +4,17 @@ import layout from "../../styles/layout.module.css";
 import { classNames } from "@/app/utils";
 import { React, useState } from "react";
 import CountUp from "react-countup";
+import { useInView } from "react-intersection-observer";
 
-function Overview({ childRef, isVisible }) {
+
+function Overview({ isVisible }) {
+  const { ref, inView } = useInView({
+    triggerOnce: true, // Trigger the animation only once when it comes into view
+    threshold: 0.5, // Trigger when 20% of the section is visible
+  });
   return (
     <section
-      ref={childRef}
+      ref={ref}
       className={classNames(
         layout.grid,
         layout.grid_col80,
@@ -28,7 +34,7 @@ function Overview({ childRef, isVisible }) {
           <div className={styles.overview_stats}>
             <div className={styles.overview_stats_content}>
               <span>
-                {isVisible ? (
+                {inView ? (
                   <CountUp
                     start={0}
                     end={400}
@@ -45,10 +51,10 @@ function Overview({ childRef, isVisible }) {
             </div>
             <div className={styles.overview_stats_content}>
               <span>
-                {isVisible ? (
+                {inView ? (
                   <CountUp
                     start={0}
-                    end={300}
+                    end={200}
                     duration={2}
                     delay={0}
                     suffix="%"
@@ -61,7 +67,7 @@ function Overview({ childRef, isVisible }) {
             </div>
             <div className={styles.overview_stats_content}>
               <span>
-                {isVisible ? (
+                {inView ? (
                   <CountUp
                     start={0}
                     end={85}
@@ -78,7 +84,7 @@ function Overview({ childRef, isVisible }) {
             <div className={styles.overview_stats_content}>
               <span>
                 0
-                {isVisible ? (
+                {inView ? (
                   <CountUp start={0} end={5} duration={2} delay={0} />
                 ) : (
                   "0"
@@ -88,7 +94,7 @@ function Overview({ childRef, isVisible }) {
             </div>
             <div className={styles.overview_stats_content}>
               <span>
-                {isVisible ? (
+                {inView ? (
                   <CountUp
                     start={0}
                     end={17}
