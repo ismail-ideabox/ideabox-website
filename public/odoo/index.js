@@ -51,7 +51,7 @@ import blog6 from "./blog6.webp";
 import modalImage from "./modal.jpg";
 import silverPartner from "./odoo_silver_partner1.png"
 import odooPartnerLogo from "./odoo_silver_partner.png"
-
+import odooSilverWhite from "./odoo_silver_white.png"
 
 export const image = {
   odoo,
@@ -106,5 +106,6 @@ export const image = {
   blog6,
   modalImage,
   silverPartner,
-  odooPartnerLogo
+  odooPartnerLogo,
+  odooSilverWhite
 };

@@ -16,6 +16,11 @@
   margin: 0 auto;
 }
 
+.odoo_content .silverPartnerLogo {
+  width: 250px;
+  height: auto;
+}
+
 .odoo {
   width: 100%;
   display: flex;
@@ -455,6 +460,11 @@
   .odoo_stats_content_2 p,
   .odoo_stats_content_3 p {
     font-size: 12px;
+  }
+
+  .odoo_content .silverPartnerLogo {
+    width: 150px;
+    height: auto;
   }
 }
 
