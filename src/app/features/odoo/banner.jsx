@@ -27,17 +27,33 @@ export default function OdooBanner() {
               <p>
                 Seamlessly Integrated Apps To Simplify Your Business Processes!
               </p>
+
               <Button
                 redirect={""}
                 text={"Get a Free Consultation"}
                 type="primary"
                 onClick={() => setToggle(true)}
               />
+
+              <div className={styles.logoImage}>
+                <div className={styles.odooWithPartner}>
+                  <Image
+                    src={image.odooLogo}
+                    alt="odoo logo"
+                    className={styles.mainOdooImg}
+                  />
+                  <Image
+                    src={image.silverPartner}
+                    alt=""
+                    className={styles.silverPartner}
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <FormModal toggle={toggle} setToggle={setToggle}/>
+      <FormModal toggle={toggle} setToggle={setToggle} />
     </div>
   );
 }

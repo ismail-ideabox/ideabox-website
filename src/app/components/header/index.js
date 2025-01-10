@@ -5,7 +5,7 @@ import styles from "./header.module.css";
 import layout from "../../styles/layout.module.css";
 import { classNames, isSticky } from "@/app/utils";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLinkedinIn, faXTwitter } from "@fortawesome/free-brands-svg-icons";
+import { faLinkedinIn, faXTwitter, faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { useEffect, useRef, useState } from "react";
 import { useMediaQuery } from "react-responsive";
 import { useRouter, useSearchParams } from "next/navigation";
@@ -84,7 +84,7 @@ function Header({ innerPage, headerVisible, onMenuToggle }) {
                   <FontAwesomeIcon icon={faLinkedinIn} />
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link
                   target="_blank"
                   rel="nofollow"
@@ -92,21 +92,39 @@ function Header({ innerPage, headerVisible, onMenuToggle }) {
                 >
                   <FontAwesomeIcon icon={faXTwitter} />
                 </Link>
+              </li> */}
+              <li>
+                <Link
+                  target="_blank"
+                  rel="nofollow"
+                  href="https://www.facebook.com/profile.php?id=61569658704415"
+                >
+                  <FontAwesomeIcon icon={faFacebook} />
+                </Link>
+              </li>
+              <li>
+                <Link
+                  target="_blank"
+                  rel="nofollow"
+                  href="https://www.instagram.com/ideabox_technology?igsh=MXZvcHI4anZ4OGg1YQ=="
+                >
+                  <FontAwesomeIcon icon={faInstagram} />
+                </Link>
               </li>
               <li style={{ minWidth: "30px " }}>
                 <ul
                   className={
                     toggleMenu
                       ? classNames(
-                          styles.menu_btn,
-                          styles.menu_btn_active,
-                          styles.activeCloseBtn,
-                          innerPage && styles.menu_btn_white
-                        )
+                        styles.menu_btn,
+                        styles.menu_btn_active,
+                        styles.activeCloseBtn,
+                        innerPage && styles.menu_btn_white
+                      )
                       : classNames(
-                          styles.menu_btn,
-                          innerPage && styles.menu_btn_white
-                        )
+                        styles.menu_btn,
+                        innerPage && styles.menu_btn_white
+                      )
                   }
                   onClick={handleToggle}
                 >
@@ -176,12 +194,26 @@ function Header({ innerPage, headerVisible, onMenuToggle }) {
           </div>
           <div className={styles.contact_block}>
             <div className={styles.contact_block_social}>
-              <Link
+              {/* <Link
                 target="_blank"
                 rel="nofollow"
                 href="https://twitter.com/IdeaboxPakistan"
               >
                 <FontAwesomeIcon icon={faXTwitter} />
+              </Link> */}
+              <Link
+                target="_blank"
+                rel="nofollow"
+                href="https://www.facebook.com/profile.php?id=61569658704415"
+              >
+                <FontAwesomeIcon icon={faFacebook} />
+              </Link>
+              <Link
+                target="_blank"
+                rel="nofollow"
+                href="https://www.instagram.com/ideabox_technology?igsh=MXZvcHI4anZ4OGg1YQ=="
+              >
+                <FontAwesomeIcon icon={faInstagram} />
               </Link>
               <Link
                 rel="nofollow"

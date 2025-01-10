@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Button from "@/app/components/button/button";
 import React, { useState } from "react";
 import { image } from "../../../../public/odoo";
@@ -32,11 +32,18 @@ export default function ErpBusinessCard() {
               text={"Contact Us Now"}
               type="primary"
               componentType="button"
-                onClick={() => setToggle(true)}
+              onClick={() => setToggle(true)}
             />
           </div>
           <div className={styles.logoImage}>
-            <Image src={image.odooLogo} alt="odoo logo"/>
+            <div className={styles.odooWithPartner}>
+              <Image src={image.odooLogo} alt="odoo logo" className={styles.mainOdooImg}/>
+              <Image
+                src={image.silverPartner}
+                alt=""
+                className={styles.silverPartner}
+              />
+            </div>
           </div>
         </div>
       </div>

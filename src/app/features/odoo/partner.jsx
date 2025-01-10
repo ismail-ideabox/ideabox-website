@@ -17,10 +17,27 @@ export default function Partner() {
       <div className={layout.block__inner}>
         <div className={styles.section_container}>
           <h4 className="heading">PARTNER</h4>
-          <h2 className="main-heading">
-            Why Choose
-            <br /> Ideabox For Odoo?
-          </h2>
+          <div className={styles.partner_header_Content}>
+            <h2 className="main-heading">
+              Why Choose
+              <br /> Ideabox For Odoo?
+            </h2>
+            <div className={styles.logoImage}>
+              <div className={styles.odooWithPartner}>
+                <Image
+                  src={image.odooLogo}
+                  alt="odoo logo"
+                  className={styles.mainOdooImg}
+                />
+                <Image
+                  src={image.silverPartner}
+                  alt=""
+                  className={styles.silverPartner}
+                />
+              </div>
+            </div>
+          </div>
+
           <div className={styles.partner_container}>
             <p>
               Among the Odoo partners, Ideabox Technology can be positioned as
@@ -38,7 +55,6 @@ export default function Partner() {
               <Image src={image.partner2} alt="partner" />
               <Image src={image.partner3} alt="partner" />
               <Image src={image.partner3} alt="partner" />
-
             </div>
             <p>
               The projects we have completed to date cover areas as wholesale

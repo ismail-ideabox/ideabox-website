@@ -6,8 +6,10 @@ import Link from "next/link";
 import Image from "../image";
 import { images } from "../../../../public/footer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLinkedinIn, faXTwitter } from "@fortawesome/free-brands-svg-icons";
+import { faLinkedinIn, faXTwitter, faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import Button from "../button/button";
+import { image } from "../../../../public/odoo";
+
 
 function Footer() {
   return (
@@ -27,6 +29,11 @@ function Footer() {
                 </p>
               </div>
               <div className={styles.ideabox_social}>
+                <Image
+                  src={image.odooPartnerLogo}
+                  alt=""
+                  className={styles.odooPartnerLogo}
+                />
                 <Link
                   rel="nofollow"
                   target="_blank"
@@ -34,13 +41,29 @@ function Footer() {
                 >
                   <FontAwesomeIcon icon={faLinkedinIn} />
                 </Link>
-                <Link
+                {/* <Link
                   target="_blank"
                   rel="nofollow"
                   href="https://twitter.com/IdeaboxPakistan"
                 >
-                  {/* <FontAwesomeIcon icon={faTwitter} /> */}
+                  
                   <FontAwesomeIcon icon={faXTwitter} />
+                </Link> */}
+                <Link
+                  target="_blank"
+                  rel="nofollow"
+                  href="https://www.facebook.com/profile.php?id=61569658704415"
+                >
+
+                  <FontAwesomeIcon icon={faFacebook} />
+                </Link>
+                <Link
+                  target="_blank"
+                  rel="nofollow"
+                  href="https://www.instagram.com/ideabox_technology?igsh=MXZvcHI4anZ4OGg1YQ=="
+                >
+
+                  <FontAwesomeIcon icon={faInstagram} />
                 </Link>
               </div>
             </div>

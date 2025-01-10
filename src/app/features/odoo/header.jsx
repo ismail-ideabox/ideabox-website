@@ -4,7 +4,12 @@ import layout from "../../styles/layout.module.css";
 import styles from "./odoo.module.css";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLinkedinIn, faXTwitter } from "@fortawesome/free-brands-svg-icons";
+import {
+  faLinkedinIn,
+  faXTwitter,
+  faFacebook,
+  faInstagram,
+} from "@fortawesome/free-brands-svg-icons";
 import { classNames } from "@/app/utils";
 import mainStyles from "../../components/header/header.module.css";
 
@@ -55,7 +60,7 @@ export default function OdooHeader() {
                 <FontAwesomeIcon icon={faLinkedinIn} />
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link
                 target="_blank"
                 rel="nofollow"
@@ -63,7 +68,26 @@ export default function OdooHeader() {
               >
                 <FontAwesomeIcon icon={faXTwitter} />
               </Link>
+            </li> */}
+            <li>
+              <Link
+                target="_blank"
+                rel="nofollow"
+                href="https://www.facebook.com/profile.php?id=61569658704415"
+              >
+                <FontAwesomeIcon icon={faFacebook} />
+              </Link>
             </li>
+            <li>
+              <Link
+                target="_blank"
+                rel="nofollow"
+                href="https://www.instagram.com/ideabox_technology?igsh=MXZvcHI4anZ4OGg1YQ=="
+              >
+                <FontAwesomeIcon icon={faInstagram} />
+              </Link>
+            </li>
+
             <li
               style={{ minWidth: "30px " }}
               className={styles.navbarButtonIcon}
@@ -72,10 +96,10 @@ export default function OdooHeader() {
                 className={
                   toggleMenu
                     ? classNames(
-                      mainStyles.menu_btn,
-                      mainStyles.menu_btn_active,
-                      mainStyles.activeCloseBtn
-                    )
+                        mainStyles.menu_btn,
+                        mainStyles.menu_btn_active,
+                        mainStyles.activeCloseBtn
+                      )
                     : classNames(mainStyles.menu_btn)
                 }
                 onClick={handleToggle}
@@ -158,12 +182,26 @@ export default function OdooHeader() {
         </div>
         <div className={mainStyles.contact_block}>
           <div className={mainStyles.contact_block_social}>
-            <Link
+            {/* <Link
               target="_blank"
               rel="nofollow"
               href="https://twitter.com/IdeaboxPakistan"
             >
               <FontAwesomeIcon icon={faXTwitter} />
+            </Link> */}
+            <Link
+              target="_blank"
+              rel="nofollow"
+              href="https://www.facebook.com/profile.php?id=61569658704415"
+            >
+              <FontAwesomeIcon icon={faFacebook} />
+            </Link>
+            <Link
+              target="_blank"
+              rel="nofollow"
+              href="https://www.instagram.com/ideabox_technology?igsh=MXZvcHI4anZ4OGg1YQ=="
+            >
+              <FontAwesomeIcon icon={faInstagram} />
             </Link>
             <Link
               rel="nofollow"

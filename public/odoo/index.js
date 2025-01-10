@@ -49,6 +49,9 @@ import blog4 from "./blog4.png";
 import blog5 from "./blog5.jpg";
 import blog6 from "./blog6.webp";
 import modalImage from "./modal.jpg";
+import silverPartner from "./odoo_silver_partner1.png"
+import odooPartnerLogo from "./odoo_silver_partner.png"
+
 
 export const image = {
   odoo,
@@ -102,4 +105,6 @@ export const image = {
   blog5,
   blog6,
   modalImage,
+  silverPartner,
+  odooPartnerLogo
 };
