@@ -15,7 +15,7 @@ function Odoo() {
   const [toggleList, setToggleList] = useState(false);
   const { ref, inView } = useInView({
     triggerOnce: true, // Trigger the animation only once when it comes into view
-    threshold: 1, // Trigger when 20% of the section is visible
+    threshold: 0.5, // Trigger when 20% of the section is visible
   });
   return (
     <section
