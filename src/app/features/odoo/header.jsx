@@ -222,7 +222,7 @@ export default function OdooHeader() {
                 hello@ideabox.technology
               </Link>
             </h3>
-            <h3>+92 21 37234945</h3>
+            <h3>+92 308 2224604</h3>
           </div>
         </div>
       </div>

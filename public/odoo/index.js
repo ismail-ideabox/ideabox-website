@@ -48,7 +48,7 @@ import blog3 from "./blog3.jpg";
 import blog4 from "./blog4.png";
 import blog5 from "./blog5.jpg";
 import blog6 from "./blog6.webp";
-import modalImage from "./modal.jpg";
+import modalImage from "./modal.png";
 import silverPartner from "./odoo_silver_partner1.png"
 import odooPartnerLogo from "./odoo_silver_partner.png"
 import odooSilverWhite from "./odoo_silver_white.png"
