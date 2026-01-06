@@ -40,6 +40,8 @@
 
 .founder_flags {
   padding-bottom: 20px;
+  display: flex;
+  gap: 8px;
 }
 
 .founder_flags img {
