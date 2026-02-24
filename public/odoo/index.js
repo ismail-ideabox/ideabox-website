@@ -22,6 +22,15 @@ import accounting from "./accounting.png";
 import odooBannerImage from "./odooBannerImage.png";
 import pricing from "./pricing.png";
 import usa from "./usa.png";
+import malaysia from "./malaysia.png";
+import belgium from "./belgium.png";
+import indonesia from "./indonesia.png";
+import ireland from "./ireland.png";
+import kuwait from "./kuwait.png";
+import netherlands from "./netherlands.png";
+import qatar from "./qatar.png";
+import saudi from "./saudi.png";
+import singapore from "./singapore.png";
 import partner1 from "./partner1.png";
 import partner2 from "./partner2.png";
 import partner3 from "./partner3.png";
@@ -49,9 +58,9 @@ import blog4 from "./blog4.png";
 import blog5 from "./blog5.jpg";
 import blog6 from "./blog6.webp";
 import modalImage from "./modal.png";
-import silverPartner from "./odoo_silver_partner1.png"
-import odooPartnerLogo from "./odoo_silver_partner.png"
-import odooSilverWhite from "./odoo_silver_white.png"
+import silverPartner from "./odoo_silver_partner1.png";
+import odooPartnerLogo from "./odoo_silver_partner.png";
+import odooSilverWhite from "./odoo_silver_white.png";
 
 export const image = {
   odoo,
@@ -107,5 +116,14 @@ export const image = {
   modalImage,
   silverPartner,
   odooPartnerLogo,
-  odooSilverWhite
+  odooSilverWhite,
+  malaysia,
+  belgium,
+  indonesia,
+  ireland,
+  kuwait,
+  qatar,
+  netherlands,
+  saudi,
+  singapore,
 };

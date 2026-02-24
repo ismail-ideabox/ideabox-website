@@ -51,6 +51,51 @@ const regionsData = [
     image: image.india,
     name: "INDIA",
   },
+  {
+    id: 10,
+    image: image.belgium,
+    name: "BELGIUM",
+  },
+  {
+    id: 11,
+    image: image.indonesia,
+    name: "INDONESIA",
+  },
+  {
+    id: 12,
+    image: image.ireland,
+    name: "IRELAND",
+  },
+  {
+    id: 13,
+    image: image.kuwait,
+    name: "KUWAIT",
+  },
+  {
+    id: 14,
+    image: image.malaysia,
+    name: "MALAYSIA",
+  },
+  {
+    id: 15,
+    image: image.netherlands,
+    name: "NETHERLANDS",
+  },
+  {
+    id: 16,
+    image: image.qatar,
+    name: "QATAR",
+  },
+  {
+    id: 17,
+    image: image.saudi,
+    name: "SAUDI ARABIA",
+  },
+  {
+    id: 18,
+    image: image.singapore,
+    name: "SINGAPORE",
+  },
 ];
 
 export default function Regions() {
