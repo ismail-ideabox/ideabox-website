@@ -3,10 +3,11 @@ import OdooPage from "../features/odoo";
 
 export const metadata = {
   metadataBase: new URL("https://ideabox.technology"),
-  title: "Odoo | Ideabox",
+  title: "Odoo Implementation Partner in Pakistan | Ideabox ERP Solutions",
   description:
-    "Simplify your business with Odoo ERP. As official Odoo partners, Ideabox delivers expert implementation, customization, and integration worldwide.",
+    "Ideabox is a leading Odoo implementation partner in Pakistan offering Odoo ERP customization, development, integration, and support services for businesses in Pakistan, USA, and Europe.",
   canonical: "https://ideabox.technology/odoo",
+  keywords: "Odoo Pakistan, Odoo partner Pakistan, Odoo official partner Pakistan, Odoo implementation Pakistan, Odoo ERP Pakistan, Odoo consultants Pakistan, Odoo developers Pakistan, Odoo company Pakistan, Odoo Karachi, Odoo partner Karachi, Odoo implementation company Pakistan, Odoo ERP solutions Pakistan, Odoo customization Pakistan, Odoo development services Pakistan, Odoo integration services Pakistan, Odoo migration services Pakistan, Odoo support services Pakistan, Odoo enterprise implementation, Odoo community version, hire Odoo developer Pakistan, offshore Odoo development, remote Odoo developers, Odoo USA, Odoo partner USA, Odoo implementation USA, Odoo Europe, Odoo partner Europe, global Odoo partner, Odoo international implementation, Ideabox Odoo partner, Ideabox Odoo services, Ideabox ERP solutions",
   openGraph: {
     url: "https://ideabox.technology/odoo",
     title: "Odoo | Ideabox",
@@ -35,6 +36,8 @@ export default function Odoo() {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     name: "Ideabox",
+    description: "Odoo ERP implementation, customization, and consulting services",
+    areaServed: ["Pakistan", "USA", "Europe"],
     image: "https://ideabox.technology/footer/ideabox.png",
     "@id": "",
     url: "https://www.ideabox.technology/",

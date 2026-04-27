@@ -3,6 +3,8 @@ import HomePage from "./features/home";
 export const metadata = {
   metadataBase: new URL("https://ideabox.technology"),
   title: "Ideabox | Official Website ® | Tech Solution Provider",
+  keywords:
+    "Ideabox, Ideabox Pakistan, Ideabox Odoo partner, Odoo Pakistan, Odoo partner Pakistan, Odoo implementation company Pakistan, Odoo ERP Pakistan, Odoo consultants Pakistan, Odoo developers Pakistan, Odoo Karachi, Odoo partner Karachi, ERP company Pakistan, ERP solutions Pakistan, ERP implementation Pakistan, Odoo implementation services, Odoo customization services, Odoo development company, Odoo integration services, Odoo migration services, Odoo support services, Odoo ERP solutions, Odoo enterprise implementation, Odoo community version, hire Odoo developer Pakistan, offshore Odoo development, remote Odoo developers, Odoo USA, Odoo partner USA, Odoo implementation USA, Odoo Europe, Odoo partner Europe, global Odoo partner, Odoo international implementation, ERP software company, business automation solutions, enterprise software solutions, digital transformation company, Ideabox ERP solutions, Ideabox Odoo services, Ideabox global Odoo partner",
   description:
     "We Hand-Craft creative tech solutions with solid strategies & powerful technologies. We have the experience & expertise to develop & deliver complex applications",
   canonical: "https://ideabox.technology",

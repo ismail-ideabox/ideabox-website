@@ -3,6 +3,7 @@ import ContactUsPage from "../features/contactUs";
 export const metadata = {
   metadataBase: new URL("https://ideabox.technology"),
   title: "Contact Us | Ideabox",
+  keywords: "Contact Ideabox, Ideabox contact, Ideabox Pakistan contact, Odoo partner contact Pakistan, Odoo company contact Pakistan, Odoo consultants contact Pakistan, Odoo developers contact Pakistan, hire Odoo developer Pakistan, hire Odoo consultant Pakistan, Odoo implementation company contact, ERP company contact Pakistan, ERP consultants contact, business automation company contact, Ideabox Karachi contact, Odoo Karachi contact, software company Karachi contact, Odoo services contact, Odoo support contact, Odoo implementation inquiry, ERP implementation inquiry, Ideabox Odoo partner contact, Ideabox ERP solutions contact, get in touch Odoo experts Pakistan, Odoo service provider contact Pakistan",
   description:
     "Get in touch with our skilled team for comprehensive technology solutions. Contact us today on hello@ideabox.technology and let us help you with your technology needs",
   canonical: "https://ideabox.technology/contact-us",
