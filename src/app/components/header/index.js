@@ -8,7 +8,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedinIn, faXTwitter, faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { useEffect, useRef, useState } from "react";
 import { useMediaQuery } from "react-responsive";
-import { useRouter, useSearchParams } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 
 function Header({ innerPage, headerVisible, onMenuToggle }) {
   const childRef = useRef(null);
@@ -17,7 +17,7 @@ function Header({ innerPage, headerVisible, onMenuToggle }) {
   const [toggleMenu, setToggleMenu] = useState(false);
   const handleToggle = () => setToggleMenu(!toggleMenu);
   const isSmallScreen = useMediaQuery({ query: "(min-width: 800px)" });
-  const searchParams = useSearchParams();
+  const pathname = usePathname();
   useEffect(() => {
     if (!headerVisible) {
       window.addEventListener("scroll", isSticky);
@@ -38,7 +38,7 @@ function Header({ innerPage, headerVisible, onMenuToggle }) {
 
   useEffect(() => {
     setToggleMenu(false);
-  }, [searchParams]);
+  }, [pathname]);
   useEffect(() => {
     if (onMenuToggle) {
       onMenuToggle(toggleMenu);
@@ -154,6 +154,7 @@ function Header({ innerPage, headerVisible, onMenuToggle }) {
                 <Link
                   href={"/?services=true"}
                   className={classNames(styles.nav_link, "")}
+                  onClick={() => setToggleMenu(false)}
                 >
                   Services
                 </Link>

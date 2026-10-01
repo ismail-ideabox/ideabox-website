@@ -1,77 +1,84 @@
 import OurWorkDetails from "@/app/features/ourWorkDetails";
-import workDetail from "@/app/data/work";
 import workData from "@/app/data/work";
+import {
+  ORGANIZATION_ID,
+  SITE_URL,
+  WEBSITE_ID,
+  createBreadcrumbSchema,
+  createMetadata,
+  createOrganizationGraph,
+} from "@/app/seo/config";
 
-export function generateMetadata({ params, searchParams }, parent) {
-
+function getProject(params) {
   const title = params?.name?.replaceAll("-", " ");
-  const filteredWork = workData.find(
-    (ele) => ele.projectName.toLocaleLowerCase() === title?.toLocaleLowerCase()
+  return workData.find(
+    (project) =>
+      project.projectName.toLocaleLowerCase() === title?.toLocaleLowerCase()
   );
-  return {
-    metadataBase: new URL("https://ideabox.technology"),
-    title: filteredWork?.projectName + " | Ideabox",
-    description: filteredWork?.metaDescription,
-    canonical: filteredWork?.canonicalTag,
-    openGraph: {
-      type: "website",
-      locale: "en_Us",
-      url: "https://ideabox.technology",
-      title: "Ideabox | Official Website ® | Tech Solution Provider",
-      description: filteredWork?.metaDescription,
-      images: [
-        {
-          url: "https://ideabox.technology/footer/ideabox.png",
-          width: 800,
-          height: 600,
-          alt: "Ideabox Logo",
-          type: "image/png",
-        },
-      ],
-      siteName: "Ideabox",
-    },
-    twitter: {
-      handle: "@IdeaboxPakistan",
-      site: "@IdeaboxPakistan:Obaid Rehman",
-      cardType: "summary_large_image",
-    },
-  };
+}
+
+export function generateMetadata({ params }) {
+  const project = getProject(params);
+  const slug = params?.name?.toLowerCase() || "project";
+  const title = project?.projectName
+    ? `${project.projectName} | Ideabox Case Study`
+    : "Project | Ideabox";
+  const description =
+    project?.metaDescription ||
+    "Explore an Ideabox technology project and case study covering software, ERP, web or mobile application development.";
+
+  return createMetadata({
+    title,
+    description,
+    path: `/our-work/${slug}`,
+    image: project?.cardImage?.src,
+    imageWidth: project?.cardImage?.width,
+    imageHeight: project?.cardImage?.height,
+    imageAlt: project?.projectName ? `${project.projectName} case study` : "Ideabox case study",
+  });
 }
 
 function WorkDetail({ params }) {
+  const project = getProject(params);
+  const title = params?.name?.replaceAll("-", " ");
+  const slug = params?.name?.toLowerCase() || "project";
+  const pageTitle = project?.projectName
+    ? `${project.projectName} | Ideabox Case Study`
+    : "Project | Ideabox";
+  const description =
+    project?.metaDescription ||
+    "Explore an Ideabox technology project and case study covering software, ERP, web or mobile application development.";
+
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    name: "Ideabox",
-    image: "https://ideabox.technology/footer/ideabox.png",
-    "@id": "",
-    url: "https://www.ideabox.technology/",
-    telephone: "+92 21 37234945",
-    address: {
-      "@type": "PostalAddress",
-      streetAddress:
-        "Office No: 005, NASTP Sierra, Shahrah-e-Faisal Rd, Faisal Cantonment, Karachi, Karachi City, Sindh 75240",
-      addressLocality: "Sindh",
-      postalCode: "75240",
-      addressCountry: "PK",
-    },
-    geo: {
-      "@type": "GeoCoordinates",
-      latitude: 24.831027967090243,
-      longitude: 67.07490002377298,
-    },
-    openingHoursSpecification: {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-      opens: "10:00",
-      closes: "20:00",
-    },
-    sameAs: [
-      "https://pk.linkedin.com/company/ideaboxpakistan",
-      "https://twitter.com/IdeaboxPakistan",
+    "@graph": [
+      ...createOrganizationGraph(),
+      {
+        "@type": "WebPage",
+        "@id": `${SITE_URL}/our-work/${slug}#webpage`,
+        url: `${SITE_URL}/our-work/${slug}`,
+        name: pageTitle,
+        description,
+        isPartOf: { "@id": WEBSITE_ID },
+        about: { "@id": `${SITE_URL}/our-work/${slug}#case-study` },
+        inLanguage: "en",
+      },
+      {
+        "@type": "CreativeWork",
+        "@id": `${SITE_URL}/our-work/${slug}#case-study`,
+        name: project?.projectName || title,
+        description,
+        url: `${SITE_URL}/our-work/${slug}`,
+        creator: { "@id": ORGANIZATION_ID },
+      },
+      createBreadcrumbSchema([
+        { name: "Home", path: "/" },
+        { name: "Our Work", path: "/our-work" },
+        { name: project?.projectName || title || "Project", path: `/our-work/${slug}` },
+      ]),
     ],
   };
-  const title = params?.name?.replaceAll("-", " ");
+
   return (
     <>
       <script
@@ -80,7 +87,7 @@ function WorkDetail({ params }) {
       />
       <OurWorkDetails workTitle={title} />
     </>
-  )
+  );
 }
 
 export default WorkDetail;

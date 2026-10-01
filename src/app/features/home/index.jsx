@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useRef, useState } from "react";
+import React, { Suspense, useEffect, useRef, useState } from "react";
 import GetInTouch from "../../components/getInTouch";
 import Technical from "../../components/technical";
 import Odoo from "../../components/odoo";
@@ -15,9 +15,9 @@ import OurPeople from "../../components/ourPeople";
 import Footer from "../../components/footer";
 import { ScrollToTop } from "../../components/scrollToTop";
 import styles from "./page.module.css";
+import ServicesQueryScroller from "./servicesQueryScroller";
 import { classNames } from "@/app/utils";
 import { useMediaQuery } from "react-responsive";
-import { useSearchParams, usePathname, useRouter } from "next/navigation";
 
 
 
@@ -34,8 +34,6 @@ function Home() {
   const [menuToggle, setMenuToggle] = useState(false);
   const [testimonialToggle, setTestimonialToggle] = useState(false);
   const isSmallScreen = useMediaQuery({ query: "(max-width: 800px)" });
-  const searchParams = useSearchParams();
-  const params = new URLSearchParams(searchParams);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -106,12 +104,6 @@ function Home() {
     };
   }, [isSmallScreen]);
 
-  useEffect(() => {
-    if (params.get("services")) {
-      const serviceRect = servicesRef?.current?.getBoundingClientRect();
-      parentRef.current.scrollTop = serviceRect.top;
-    }
-  }, [searchParams]);
 
   useEffect(() => {
     if (isSmallScreen && testimonialToggle) {
@@ -126,6 +118,12 @@ function Home() {
 
   return (
     <>
+      <Suspense fallback={null}>
+        <ServicesQueryScroller
+          parentRef={parentRef}
+          servicesRef={servicesRef}
+        />
+      </Suspense>
       <div
         className={classNames(styles.home_scroll_container, "scroll_container")}
         ref={parentRef}

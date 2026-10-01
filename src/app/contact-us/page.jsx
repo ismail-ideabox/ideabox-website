@@ -1,65 +1,47 @@
 import React from "react";
 import ContactUsPage from "../features/contactUs";
-export const metadata = {
-  metadataBase: new URL("https://ideabox.technology"),
-  title: "Contact Us | Ideabox",
-  keywords: "Contact Ideabox, Ideabox contact, Ideabox Pakistan contact, Odoo partner contact Pakistan, Odoo company contact Pakistan, Odoo consultants contact Pakistan, Odoo developers contact Pakistan, hire Odoo developer Pakistan, hire Odoo consultant Pakistan, Odoo implementation company contact, ERP company contact Pakistan, ERP consultants contact, business automation company contact, Ideabox Karachi contact, Odoo Karachi contact, software company Karachi contact, Odoo services contact, Odoo support contact, Odoo implementation inquiry, ERP implementation inquiry, Ideabox Odoo partner contact, Ideabox ERP solutions contact, get in touch Odoo experts Pakistan, Odoo service provider contact Pakistan",
-  description:
-    "Get in touch with our skilled team for comprehensive technology solutions. Contact us today on hello@ideabox.technology and let us help you with your technology needs",
-  canonical: "https://ideabox.technology/contact-us",
-  openGraph: {
-    url: "https://ideabox.technology/contact-us",
-    title: "Contact Us | Ideabox",
-    description: "Get in touch with our skilled team for comprehensive technology solutions. Contact us today on hello@ideabox.technology and let us help you with your technology needs",
-    images: [
-      {
-        url: "../../../public/footer/ideabox.png",
-        width: 800,
-        height: 600,
-        alt: "Ideabox Logo",
-        type: "image/png",
-      },
-    ],
-    siteName: "Ideabox",
-  },
-  twitter: {
-    handle: "@IdeaboxPakistan",
-    site: "@IdeaboxPakistan:Obaid Rehman",
-    cardType: "summary_large_image",
-  },
-};
+import {
+  ORGANIZATION_ID,
+  SITE_URL,
+  WEBSITE_ID,
+  createBreadcrumbSchema,
+  createMetadata,
+  createOrganizationGraph,
+} from "../seo/config";
+
+const title = "Contact Ideabox | UAE & Pakistan ERP & Software Services";
+const description =
+  "Contact Ideabox for Odoo ERP implementation, custom software, web and mobile applications, cloud, AI and enterprise technology services across the UAE, Pakistan and international markets.";
+
+export const metadata = createMetadata({
+  title,
+  description,
+  path: "/contact-us",
+  image: `${SITE_URL}/contactUs/banner.png`,
+  imageWidth: 835,
+  imageHeight: 630,
+  imageAlt: "Contact Ideabox",
+});
 
 function ContactUs() {
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    name: "Ideabox",
-    image: "https://ideabox.technology/footer/ideabox.png",
-    "@id": "",
-    url: "https://www.ideabox.technology/",
-    telephone: "+92 21 37234945",
-    address: {
-      "@type": "PostalAddress",
-      streetAddress:
-        "Office No: 005, NASTP Sierra, Shahrah-e-Faisal Rd, Faisal Cantonment, Karachi, Karachi City, Sindh 75240",
-      addressLocality: "Sindh",
-      postalCode: "75240",
-      addressCountry: "PK",
-    },
-    geo: {
-      "@type": "GeoCoordinates",
-      latitude: 24.831027967090243,
-      longitude: 67.07490002377298,
-    },
-    openingHoursSpecification: {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-      opens: "10:00",
-      closes: "20:00",
-    },
-    sameAs: [
-      "https://pk.linkedin.com/company/ideaboxpakistan",
-      "https://twitter.com/IdeaboxPakistan",
+    "@graph": [
+      ...createOrganizationGraph(),
+      {
+        "@type": "ContactPage",
+        "@id": `${SITE_URL}/contact-us#webpage`,
+        url: `${SITE_URL}/contact-us`,
+        name: title,
+        description,
+        isPartOf: { "@id": WEBSITE_ID },
+        about: { "@id": ORGANIZATION_ID },
+        inLanguage: "en",
+      },
+      createBreadcrumbSchema([
+        { name: "Home", path: "/" },
+        { name: "Contact", path: "/contact-us" },
+      ]),
     ],
   };
 

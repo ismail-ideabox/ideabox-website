@@ -1,52 +1,69 @@
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<url>
-<loc>https://ideabox.technology/</loc>
-<lastmod>2023-04-28T00:00:00+00:00</lastmod>
-<priority>1.00</priority>
-</url>
-<url>
-<loc>https://ideabox.technology/our-work</loc>
-<lastmod>2023-04-28T00:00:00+00:00</lastmod>
-<priority>0.80</priority>
-</url>
-<url>
-<loc>https://ideabox.technology/contact-us</loc>
-<lastmod>2023-04-28T00:00:00+00:00</lastmod>
-<priority>0.80</priority>
-</url>
-<url>
-<loc>https://ideabox.technology/our-work/BYCO</loc>
-<lastmod>2023-04-28T00:00:00+00:00</lastmod>
-<priority>0.80</priority>
-</url>
-<url>
-<loc>https://ideabox.technology/our-work/Takaful-Bazaar</loc>
-<lastmod>2023-04-28T00:00:00+00:00</lastmod>
-<priority>0.50</priority>
-</url>
-<url>
-<loc>https://ideabox.technology/our-work/RENTLY</loc>
-<lastmod>2023-04-28T00:00:00+00:00</lastmod>
-<priority>0.50</priority>
-</url>
-<url>
-<loc>https://ideabox.technology/our-work/Zahra-Ebrahim</loc>
-<lastmod>2023-04-28T00:00:00+00:00</lastmod>
-<priority>0.50</priority>
-</url>
-<url>
-<loc>https://ideabox.technology/our-work/Salon-Plus</loc>
-<lastmod>2023-04-28T00:00:00+00:00</lastmod>
-<priority>0.50</priority>
-</url>
-<url>
-<loc>https://ideabox.technology/our-work/Book-My-Memories</loc>
-<lastmod>2023-04-28T00:00:00+00:00</lastmod>
-<priority>0.50</priority>
-</url>
-<url>
-<loc>https://ideabox.technology/our-work/ZOD</loc>
-<lastmod>2023-04-28T00:00:00+00:00</lastmod>
-<priority>0.50</priority>
-</url>
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://www.ideabox.technology/</loc>
+    <lastmod>2026-09-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.ideabox.technology/odoo</loc>
+    <lastmod>2026-09-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.ideabox.technology/our-work</loc>
+    <lastmod>2026-09-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.ideabox.technology/contact-us</loc>
+    <lastmod>2026-09-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.ideabox.technology/our-work/byco</loc>
+    <lastmod>2026-09-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.ideabox.technology/our-work/takaful-bazaar</loc>
+    <lastmod>2026-09-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.ideabox.technology/our-work/rently</loc>
+    <lastmod>2026-09-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.ideabox.technology/our-work/zahra-ebrahim</loc>
+    <lastmod>2026-09-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.ideabox.technology/our-work/salon-plus</loc>
+    <lastmod>2026-09-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.ideabox.technology/our-work/book-my-memories</loc>
+    <lastmod>2026-09-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.ideabox.technology/our-work/zod</loc>
+    <lastmod>2026-09-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
